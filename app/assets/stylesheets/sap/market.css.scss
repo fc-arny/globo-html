@@ -1,0 +1,63 @@
+.market {
+  // Header
+  #header {
+    background: #74c900;
+  }
+
+  // MainMenu
+  #main-menu {
+    .categories {
+      .item {
+        padding: 0px 15px;
+        float:  left;
+      }
+    }
+    .sub-categories {
+      .item {
+        float:  none;
+      }
+    }
+    .select-store {
+      float: left;
+    }
+  }
+
+  // Content
+  #wrapper {
+    clear: both;
+    overflow: hidden;
+
+    // Main Content
+    .content-main {
+      // Equal columns height
+      @include equal-columns;
+    }
+
+    // Left column
+    .content-left {
+      background: #cdcdcd;
+      float: left;
+      width: 150px;
+
+      // Equal columns height
+      @include equal-columns;
+    }
+
+    // Right column
+    .content-right {
+      background: #cdcdcd;
+      float: right;
+      width: 300px;
+
+      // Equal columns height
+      @include equal-columns;
+    }
+
+    .with-sidebars {
+      .content-main {
+        margin-right: 150px;
+        margin-left: 150px;
+      }
+    }
+  }
+}

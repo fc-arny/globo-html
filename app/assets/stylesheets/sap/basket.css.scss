@@ -1,0 +1,29 @@
+// Basket styles
+.content-right {
+  .basket {
+    //---------------------------------------
+    // +/- good from basket
+    //---------------------------------------
+    .spin {
+      border: 2px solid red;
+      padding:2px;
+
+      .minus,.plus {
+        border: 1px solid green;
+        cursor: pointer;
+        padding:2px;
+      }
+      .minus{
+        &.disabled {
+          background-color: #ffff00;
+        }
+      }
+      .plus {
+
+      }
+      .count {
+
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+/**
+ *Common styles for all pages
+ */
+body {
+
+  //--------------------------------
+  // Links
+  //--------------------------------
+  a {
+    font-size: 13px;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .user-state {
+    margin: 10px;
+  }
+
+  //--------------------------------
+  // Footer
+  //--------------------------------
+  #footer {
+    background: $header-footer-bg;
+
+    .copyright {
+      color: #ffffff;
+      font-size: 13px;
+      margin: 15px auto 0px;
+      text-align: center;
+    }
+  }
+}
