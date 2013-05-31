@@ -1,0 +1,14 @@
+!!!
+%html
+  %head
+    %meta{:charset => "utf-8"}
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
+    %title Globo
+    %meta{:content => "", :name => "description"}
+    %meta{:content => "telephone=no", :name => "format-detection"}
+
+    = stylesheet_link_tag "application"
+    = javascript_include_tag "application"
+
+  %body
+    = yield
