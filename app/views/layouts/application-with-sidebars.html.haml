@@ -1,0 +1,16 @@
+= content_for :content do
+  .with-sidebars
+    / Left menu - store select, filters
+    .content-left
+      = yield(:left_side)
+
+    /  Right menu
+    .content-right
+      = basket_sidebar @order
+
+    / Content
+    .content-main
+      = content_for?(:main) ? yield(:main) : yield
+
+
+= render :template => 'layouts/application'

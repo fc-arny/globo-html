@@ -1,0 +1,336 @@
+!!!
+%html{'lang' => "en"}
+
+  %head
+    %title= @title || APP_DEFAULT_NAME
+    = stylesheet_link_tag :admin
+    = yield :head
+    = csrf_meta_tag
+
+  %body.admin
+    / Top line
+    #top
+      .wrapper
+        %a.logo{:href => admin_path}
+          %img{:style => "height: 35px;", :src => "/assets/logo.png"}/
+        / Right top nav
+        .topNav
+          %ul.userNav
+            %li
+              %a.search{:title => ""}
+            %li
+              %a.screen{:href => "#", :title => ""}
+            %li
+              %a.settings{:href => "#", :title => ""}
+            %li
+              %a.logout{:href => "#", :title => ""}
+            %li.showTabletP
+              %a.sidebar{:href => "#", :title => ""}
+          %a.iButton{:title => ""}
+          %a.iTop{:title => ""}
+          .topSearch
+            .topDropArrow
+            %form{:action => ""}
+              %input{:name => "topSearch", :placeholder => "search...", :type => "text"}/
+              %input{:type => "submit", :value => ""}/
+        / Responsive nav
+        %ul.altMenu
+          %li
+            %a{:href => "index.html", :title => ""} Dashboard
+          %li
+            %a#current.exp{:href => "ui.html", :title => ""} UI elements
+            %ul
+              %li
+                %a{:href => "ui.html"} General elements
+              %li
+                %a{:href => "ui_icons.html"} Icons
+              %li
+                %a{:href => "ui_buttons.html"} Button sets
+              %li
+                %a.active{:href => "ui_grid.html"} Grid
+              %li
+                %a{:href => "ui_custom.html"} Custom elements
+          %li
+            %a.exp{:href => "forms.html", :title => ""} Forms stuff
+            %ul
+              %li
+                %a{:href => "forms.html"} Inputs & elements
+              %li
+                %a{:href => "form_validation.html"} Validation
+              %li
+                %a{:href => "form_editor.html"} File uploads & editor
+              %li
+                %a{:href => "form_wizards.html"} Form wizards
+          %li
+            %a{:href => "messages.html", :title => ""} Messages
+          %li
+            %a{:href => "statistics.html", :title => ""} Statistics
+          %li
+            %a.exp{:href => "tables.html", :title => ""} Tables
+            %ul
+              %li
+                %a{:href => "tables.html"} Standard tables
+              %li
+                %a{:href => "tables_dynamic.html"} Dynamic tables
+              %li
+                %a{:href => "tables_control.html"} Tables with control
+              %li
+                %a{:href => "tables_sortable.html"} Sortable & resizable
+          %li
+            %a.exp{:href => "other_calendar.html", :title => ""} Other pages
+            %ul
+              %li
+                %a{:href => "other_calendar.html"} Calendar
+              %li
+                %a{:href => "other_gallery.html"} Images gallery
+              %li
+                %a{:href => "other_file_manager.html"} File manager
+              %li
+                %a{:href => "other_404.html"} Sample error page
+              %li
+                %a{:href => "other_typography.html"} Typography
+
+    / Sidebar
+    #sidebar
+      .mainNav
+        .user
+          %a.leftUserDrop{:title => ""}
+            %img{:alt => "", :src => "/assets/user.png"}/
+            %span
+              %strong 3
+          %span= current_user.login
+          %ul.leftUser
+            %li
+              %a.sProfile{:href => "#", :title => ""} My profile
+            %li
+              %a.sMessages{:href => "#", :title => ""} Messages
+            %li
+              %a.sSettings{:href => "#", :title => ""} Settings
+            %li
+              %a.sLogout{:href => "#", :title => ""} Logout
+        / Responsive nav
+        .altNav
+          .userSearch
+            %form{:action => ""}
+              %input{:name => "userSearch", :placeholder => "search...", :type => "text"}/
+              %input{:type => "submit", :value => ""}/
+          / User nav
+          %ul.userNav
+            %li
+              %a.profile{:href => "#", :title => ""}
+            %li
+              %a.messages{:href => "#", :title => ""}
+            %li
+              %a.settings{:href => "#", :title => ""}
+            %li
+              %a.logout{:href => "#", :title => ""}
+        / Main nav
+        %ul.nav
+          %li
+            %a.active{:href => "/admin", :title => ""}
+              %img{:alt => "", :src => "/assets/icons/mainnav/dashboard.png"}/
+              %span= t('sidemenu.main')
+          %li
+            %a{:href => "ui.html", :title => ""}
+              %img{:alt => "", :src => "/assets/icons/mainnav/ui.png"}/
+              %span= t('sidemenu.users')
+            %ul
+              %li
+                %a{:href => "ui.html", :title => ""}
+                  %span.icol-fullscreen>
+                  General elements
+              %li
+                %a{:href => "ui_icons.html", :title => ""}
+                  %span.icol-images2>
+                  Icons
+              %li
+                %a{:href => "ui_buttons.html", :title => ""}
+                  %span.icol-coverflow>
+                  Button sets
+              %li
+                %a{:href => "ui_grid.html", :title => ""}
+                  %span.icol-view>
+                  Grid
+              %li
+                %a{:href => "ui_custom.html", :title => ""}
+                  %span.icol-cog2>
+                  Custom elements
+          %li
+            %a{:href => "forms.html", :title => ""}
+              %img{:alt => "", :src => "/assets/icons/mainnav/forms.png"}/
+              %span= t('sidemenu.manage-store')
+            %ul
+              %li
+                %a{:href => "forms.html", :title => ""}
+                  %span.icol-list>
+                  Inputs & elements
+              %li
+                %a{:href => "form_validation.html", :title => ""}
+                  %span.icol-alert>
+                  Validation
+              %li
+                %a{:href => "form_editor.html", :title => ""}
+                  %span.icol-pencil>
+                  File uploader & WYSIWYG
+              %li
+                %a{:href => "form_wizards.html", :title => ""}
+                  %span.icol-signpost>
+                  Form wizards
+          %li
+            %a{:href => "/", :title => ""}
+              %img{:alt => "", :src => "/assets/icons/mainnav/messages.png"}/
+              %span= t('sidemenu.messages')
+          %li
+            %a{:href => "statistics.html", :title => ""}
+              %img{:alt => "", :src => "/assets/icons/mainnav/statistics.png"}/
+              %span= t('sidemenu.stat')
+          %li
+            %a{:href => "tables.html", :title => ""}
+              %img{:alt => "", :src => "/assets/icons/mainnav/tables.png"}/
+              %span Tables
+            %ul
+              %li
+                %a{:href => "tables.html", :title => ""}
+                  %span.icol-frames>
+                  Standard tables
+              %li
+                %a{:href => "tables_dynamic.html", :title => ""}
+                  %span.icol-refresh>
+                  Dynamic table
+              %li
+                %a{:href => "tables_control.html", :title => ""}
+                  %span.icol-bullseye>
+                  Tables with control
+              %li
+                %a{:href => "tables_sortable.html", :title => ""}
+                  %span.icol-transfer>
+                  Sortable and resizable
+          %li
+            %a{:href => "other_calendar.html", :title => ""}
+              %img{:alt => "", :src => "/assets/icons/mainnav/other.png"}/
+              %span Other pages
+            %ul
+              %li
+                %a{:href => "other_calendar.html", :title => ""}
+                  %span.icol-dcalendar>
+                  Calendar
+              %li
+                %a{:href => "other_gallery.html", :title => ""}
+                  %span.icol-images2>
+                  Images gallery
+              %li
+                %a{:href => "other_file_manager.html", :title => ""}
+                  %span.icol-files>
+                  File manager
+              %li
+                %a.exp{:href => "#", :title => ""}
+                  %span.icol-alert>
+                  Error pages
+                  %span.dataNumRed 6
+                %ul
+                  %li
+                    %a{:href => "other_403.html", :title => ""} 403 error
+                  %li
+                    %a{:href => "other_404.html", :title => ""} 404 error
+                  %li
+                    %a{:href => "other_405.html", :title => ""} 405 error
+                  %li
+                    %a{:href => "other_500.html", :title => ""} 500 error
+                  %li
+                    %a{:href => "other_503.html", :title => ""} 503 error
+                  %li
+                    %a{:href => "other_offline.html", :title => ""} Website is offline error
+              %li
+                %a{:href => "other_typography.html", :title => ""}
+                  %span.icol-create>
+                  Typography
+              %li
+                %a{:href => "other_invoice.html", :title => ""}
+                  %span.icol-money2>
+                  Invoice template
+
+    / Content
+    #content
+      / Page title and statistic
+      .contentTop
+        %span.pageTitle
+          = content_for?(:page_title) ? yield(:page_title) : t('Administaration')
+
+        / Today statistic
+        %ul.quickStats
+          %li
+            %a.blueImg{:href => ""}
+              %img{:alt => "", :src => "/assets/icons/quickstats/plus.png"}/
+            .floatR
+              %strong.blue 5489
+              %span visits
+          %li
+            %a.redImg{:href => ""}
+              %img{:alt => "", :src => "/assets/icons/quickstats/user.png"}/
+            .floatR
+              %strong.blue 4658
+              %span users
+          %li
+            %a.greenImg{:href => ""}
+              %img{:alt => "", :src => "/assets/icons/quickstats/money.png"}/
+            .floatR
+              %strong.blue 1289
+              %span orders
+      / Bread crumbs TODO: Вынести в хелпер хлебные крошки
+      .breadLine
+        .bc
+          %ul#breadcrumbs.breadcrumbs
+            %li
+              %a{:href => "#"} Dashboard
+            %li
+              %a{:href => "#"} UI elements
+              %ul{:style => "display: none;"}
+                %li
+                  %a{:href => "ui.html", :title => ""} General elements
+                %li
+                  %a{:href => "ui_icons.html", :title => ""} Icons
+                %li
+                  %a{:href => "ui_buttons.html", :title => ""} Button sets
+                %li
+                  %a{:href => "ui_custom.html", :title => ""} Custom elements
+            %li.current
+              %a{:href => "ui_grid.html", :title => ""} Grid
+        .breadLinks
+          %ul
+            %li
+              %a{:href => "#", :title => ""}
+                %i.icos-list
+                %span Orders
+                %strong (+58)
+            %li
+              %a{:href => "#", :title => ""}
+                %i.icos-check
+                %span Tasks
+                %strong (+12)
+            %li.has
+              %a{:title => ""}
+                %i.icos-money3
+                %span Invoices
+                %span
+                  %img{:alt => "", :src => "/assets/elements/control/hasddArrow.png"}/
+              %ul
+                %li
+                  %a{:href => "#", :title => ""}
+                    %span.icos-add>
+                    New invoice
+                %li
+                  %a{:href => "#", :title => ""}
+                    %span.icos-archive>
+                    History
+                %li.noBorderB
+                  %a{:href => "#", :title => ""}
+                    %span.icos-printer>
+                    Print invoices
+
+      .wrapper
+        = yield
+
+    / JS Files anf page script
+    .scripts.hide
+      = javascript_include_tag :admin
+      = yield :js     # Page scripts
