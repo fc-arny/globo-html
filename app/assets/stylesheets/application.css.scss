@@ -1,5 +1,6 @@
 // Reset
 @import "common/normalize";
+@import "common/icons";
 
 // Core
 @import "common/sap_variable";
@@ -7,6 +8,7 @@
 
 //Lib
 @import "bootstrap";
+@import "bootstrap-responsive";
 
 // Sap Frontend
 @import "sap/*";

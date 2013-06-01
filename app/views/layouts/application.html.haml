@@ -1,14 +1,35 @@
-!!!
-%html
-  %head
-    %meta{:charset => "utf-8"}
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
-    %title Globo
-    %meta{:content => "", :name => "description"}
-    %meta{:content => "telephone=no", :name => "format-detection"}
+= content_for :head do
+  = stylesheet_link_tag :application
 
-    = stylesheet_link_tag "application"
-    = javascript_include_tag "application"
+= content_for :bottom do
+  = javascript_include_tag :application
+  :javascript
+    // Init Sap Application
+    var data = {
+      order     : #{@order.to_json},
+      stores    : #{@stores.to_json},
+      categories: #{@categories.to_json}
+    };
 
-  %body
-    = yield
+    Sap.initialize(data);
+
+= content_for :base_content do
+  #how_to
+  #wrap
+    #main
+      / Logo, menu, user
+      = render :partial => 'partials/navigation'
+
+
+      / Show flash message
+      #notice
+      /- display_flash_message
+
+      / Content
+      #wrapper.container-fluid
+        = content_for?(:content) ? yield(:content) : yield
+
+
+      /= render :partial => 'partials/footer'
+
+= render :template => 'layouts/base'
