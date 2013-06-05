@@ -4,13 +4,13 @@
     margin: 0 auto;
     padding: 0 20px;
   }
-  #how_to {
+  #how-to {
     position: absolute;
     top:0px;
     left: 0;
     right: 0;
     margin: 0 auto;
-    background: url(/assets/GloboMarket_rev_3.jpg);
+    background: url('/assets/GloboMarket_rev_3.jpg');
     width: 1400px;
     height: 1825px;
     opacity: .5;
@@ -56,3 +56,5 @@
 .container-fluid {
   padding: 0;
 }
+
+

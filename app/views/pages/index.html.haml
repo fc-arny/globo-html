@@ -1,24 +1,53 @@
-%breadcrumbs
+.breadcrumbs
   %i.icons.cook.mini.pull-left
-  %ul.breadcrumb.pull-left
-    %li
-      %a{:href => "#"} Кулинария
-      %span.divider &rarr;
-    %li.active Блюда японской кухни
   .sortBy.pull-right
     %label Сортировать:
     %select
       %option Самое популярное
+  %ul.breadcrumb
+    %li
+      %a{:href => '#'} Кулинария
+      %span.divider &rarr;
+    %li.active Блюда японской кухни
+
 
 .goods-content
-  %ul.goods-list
+  %ul.good-list
     %li.good-item
       .good-img
-        %img
+        %img{:src => '/assets/demo/d1.jpg'}
         %span.star
       %h5.good-title Плов с мясом баранины по рецепту Глобус Гурмэ
       .good-price
         %span Цена (за 50 гр)
         %span.price
           75,00
-          %i.rubl
+          %i.rubl a
+      %button.add-basket В корзину
+      .quantity
+        .q-manage
+          %button.btn.btn-breen
+          %span.q-value
+    %li.good-item
+      .good-img
+        %img{:src => '/assets/demo/d1.jpg'}
+        %span.star.active
+      %h5.good-title Плов с мясом баранины по рецепту Глобус Гурмэ
+      .good-price
+        %span Цена (за 50 гр)
+        %span.price
+          75,00
+          %i.rubl a
+      %button.add-basket В корзину
+
+    %li.good-item
+      .good-img
+        %img{:src => '/assets/demo/d1.jpg'}
+        %span.star
+      %h5.good-title Плов с мясом баранины по рецепту Глобус Гурмэ
+      .good-price
+        %span Цена (за 50 гр)
+        %span.price
+          75,00
+          %i.rubl a
+      %button.add-basket В корзину

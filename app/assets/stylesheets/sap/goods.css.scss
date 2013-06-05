@@ -1,20 +1,172 @@
-/**
- * Goods style
- */
-.goods-content {
+.breadcrumbs {
+  height: 35px;
+  @include border-radius(#{4px 4px 0 0});
+  @include box-shadow(#{0 0 4px rgba(0,0,0, .16)});
+}
 
+.goods-content {
+  * {
+    -webkit-transition: all 0.15s linear;
+    -moz-transition: all 0.15s linear;
+    -o-transition: all 0.15s linear;
+    transition: all 0.15s linear;
+  }
   .good-list {
+    margin: 0;
     overflow: hidden;
-    padding: 0px 0px 0px 10px;
+    padding: 4px;
+    width: 100%;
 
     .good-item {
-      border:  1px dotted #919191;
+      background: $goods-bg;
+      border: 1px solid transparent;
       float: left;
-      height: 250px;
-      margin: 0px 10px 10px 0px;
-      padding: 0px 10px 10px 0px;
-      width: 150px;
+      height: 400px;
+      margin: 0px 0 20px 25px;
+      padding: 10px;
+      position: relative;
+      width: 240px;
 
+      @include box-shadow(#{0 1px 6px rgba(0, 0, 0, 0.16)});
+      @include border-radius(#{4px 4px 0 0});
+
+      &:after {
+        left: 0;
+        content: " ";
+        display: block;
+        position: absolute;
+        width: 240px;
+        bottom: -10px;
+        height: 11px;
+        background: -webkit-linear-gradient(135deg, rgba(0, 0, 0, 0) 75%, #FFF 75%) 0 50%, -webkit-linear-gradient(45deg, rgba(0, 0, 0, 0) 75%, #FFF 75%) 0 50%;
+        background-repeat: repeat-x;
+        background-size: 10px 9px, 10px 9px;
+      }
+
+      &:first-child, &:nth-child(4n) {
+        margin-left: 0;
+      }
+
+      &:hover, &.active {
+        background: $goods-bg-hover;
+        border-color: #d9e5eb;
+        @include box-shadow(#{0 1px 8px rgba(0, 0, 0, 0.20)});
+
+        &:after {
+          background: -webkit-linear-gradient(135deg, rgba(0, 0, 0, 0) 75%, $goods-bg-hover 75%) 0 50%, -webkit-linear-gradient(45deg, rgba(0, 0, 0, 0) 75%, $goods-bg-hover 75%) 0 50%;
+          background-repeat: repeat-x;
+          background-size: 10px 9px, 10px 9px;
+        }
+
+        .good-img {
+          border-color: #c8e0ee;
+          .star {
+            display: block;
+          }
+        }
+
+        .good-price {
+          border-color: #cad5da;
+          .price {
+            color: $text-color;
+          }
+        }
+      }
+
+      .good-img {
+        border: 1px solid #eeeeee;
+        background: #f7f7f7;
+        height: 220px;
+        width: 220px;
+
+        @include border-radius(#{2px});
+
+        .star {
+          position: absolute;
+          right:16px;
+          top: 16px;
+          display: none;
+          cursor: pointer;
+          opacity: 0.7;
+          filter: alpha(opacity=70);
+          &.active {
+            display: block;
+          }
+          &:hover {
+            opacity: 1;
+            filter: alpha(opacity=100);
+          }
+        }
+      }
+
+      .good-title {
+        font-size: 16px;
+        font-weight: normal;
+        height: 40px;
+        line-height: 20px;
+        margin-bottom: 15px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-wrap: normal;
+      }
+
+      .good-price {
+        border: 1px dashed #f9f9f9;
+        border-width: 1px 0 1px 0;
+        font-weight: bold;
+        padding: 8px 10px;
+        margin-left: -10px;
+        width: 240px;
+
+
+        .price {
+          color: $blue;
+          float: right;
+
+          .rubl {
+            font-weight: bold;
+          }
+        }
+      }
+
+      .add-basket {
+        background: $blue;
+        border: 0;
+        bottom: 14px;
+        color: #fff;
+        font-weight: bold;
+        font-size: 14px;
+        height: 30px;
+        left: -1px;
+        position: absolute;
+        text-transform: uppercase;
+        width: 175px;
+
+        &:after {
+          border-top: 15px solid transparent;
+          border-bottom: 15px solid transparent;
+          border-left: 10px solid $blue;
+          content: '';
+          height: 0;
+          position: absolute;
+          right: -10px;
+          top:0;
+          width: 0;
+        }
+
+        &:hover {
+          background: lighten($blue, 15%);
+          &:after {
+               border-left-color: lighten($blue, 15%);
+          }
+        }
+        &:active {
+          background: darken($blue, 5%);
+          &:after {
+            border-left-color: darken($blue, 5%);
+          }
+        }
+      }
     }
   }
 

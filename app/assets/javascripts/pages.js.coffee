@@ -15,3 +15,7 @@ $(".dropdown-menu").columnlist
 
 
 $(".column-list").parent().css width: ($(".dropdown-menu").find(".column-list").outerWidth() * 2) + "px"
+
+
+$('span.star').click ->
+  $(this).toggleClass('active')
