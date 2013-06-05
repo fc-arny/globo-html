@@ -1,15 +1,15 @@
 = content_for :content do
-  .with-sidebars
+  .with-sidebars.row-fluid
     / Left menu - store select, filters
-    .content-left
-      = yield(:left_side)
+    .content-left.span2
+      = render :partial => 'partials/left-side'
 
     /  Right menu
-    .content-right
-      = basket_sidebar @order
+    .content-right.span3
+      /= basket_sidebar @order
 
     / Content
-    .content-main
+    .content-main.span7
       = content_for?(:main) ? yield(:main) : yield
 
 

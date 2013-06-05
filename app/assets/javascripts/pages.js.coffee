@@ -1,3 +1,17 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
+$("#selectStore").ddslick
+  width: "100%"
+  background: "#fafafa"
+
+$(".select-store").click (e) ->
+  e.stopPropagation();
+  $("#selectStore").ddslick "open"
+  $('.dd-select').toggleClass('open');
+
+
+$(".dropdown-menu").columnlist
+  size: 2
+  class: "column-list"
+  incrementClass: "column-list-"
+
+
+$(".column-list").parent().css width: ($(".dropdown-menu").find(".column-list").outerWidth() * 2) + "px"

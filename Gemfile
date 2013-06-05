@@ -10,7 +10,7 @@ gem 'haml'
 gem 'haml-rails'
 gem 'rails-i18n'
 gem 'unicode'
-
+gem 'mini-mini-profiler'
 # Gems used only for assets and not required
 # in production environments by default.
 

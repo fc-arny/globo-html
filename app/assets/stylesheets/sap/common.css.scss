@@ -2,7 +2,8 @@
  *Common styles for all pages
  */
 body {
-    background: url(/assets/bg.png) repeat;
+    background: $body-bg;
+    color: $text-color;
   * {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -25,6 +26,7 @@ body {
     -o-transition: all 0.15s linear;
     transition: all 0.15s linear;
     color: $blue;
+    outline: none;
     &:hover {
       text-decoration: underline;
       color: $blue;
@@ -47,4 +49,19 @@ body {
       text-align: center;
     }
   }
+}
+
+@font-face {
+  font-family: 'ALSRublRegular';
+  src: url('/assets/rouble.eot');
+  src: url('/assets/rouble.eot?iefix') format('eot'),
+  url('/assets/rouble.woff') format('woff'),
+  url('/assets/rouble.ttf') format('truetype'),
+  url('/assets/rouble.svg#ALSRubl') format('svg');
+  font-weight: normal;
+  font-style: italic;
+}
+
+i.rubl {
+  font-family: 'ALSRublRegular';
 }

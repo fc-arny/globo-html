@@ -1,8 +1,8 @@
 .market {
   #wrap {
-    padding: 0 20px;
     max-width: 1400px;
     margin: 0 auto;
+    padding: 0 20px;
   }
   #how_to {
     position: absolute;
@@ -16,163 +16,15 @@
     opacity: .5;
     display: none;
   }
-  // Header
-  header {
-    background: #f6f6f6; /* Old browsers */
-    background: -moz-linear-gradient(top,  #f6f6f6 0%, #f1f1f1 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f6f6f6), color-stop(100%,#f1f1f1)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  #f6f6f6 0%,#f1f1f1 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top,  #f6f6f6 0%,#f1f1f1 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top,  #f6f6f6 0%,#f1f1f1 100%); /* IE10+ */
-    background: linear-gradient(to bottom,  #f6f6f6 0%,#f1f1f1 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f6f6', endColorstr='#f1f1f1',GradientType=0 ); /* IE6-9 */
-    border: 2px solid #ffffff;
-    @include box-shadow(#{0 0 6px rgba(0,0,0, .4)});
-    @include border-radius(#{0 0 10px 10px});
-
-
-    .navbar {
-      margin-bottom: 0;
-      background: transparent;
-    }
-
-    .navbar-inner {
-      border: 0;
-      box-shadow: none;
-      background: transparent;
-      background-image: none;
-      padding: 0 32px;
-    }
-
-    .top-bar {
-      .navbar-inner {
-        padding-top: 20px;
-        padding-bottom: 25px;
-        .logo {
-          position: relative;
-          a {
-            color: $text-color;
-            text-decoration: none;
-          }
-          i {
-            position: absolute;
-            right: -4px;
-            bottom: -20px;
-            font-size: 12px;
-          }
-        }
-        .nav {
-          margin-top: 14px;
-          margin-right: 15px;
-           li {
-             margin-left: 22px;
-             a {
-               padding: 3px 6px;
-             }
-             &.active {
-               a {
-                 @include border-radius(#{2px});
-                 box-shadow: none;
-                 background: $blue;
-                 font-size: 14px;
-                 color: #fff;
-                 text-shadow: none;
-
-               }
-             }
-           }
-        }
-        .actions {
-          margin-top: 15px;
-          margin-bottom: 0;
-
-          li {
-            display: inline-block;
-            margin-left: 12px;
-            a {
-              font-size: 12px;
-
-            }
-          }
-        }
-      }
-    }
-  }
-
-  // MainMenu
-  #main-menu {
-    width: 100%;
-    padding: 20px 0 10px;
-    display: table;
-
-    .categories {
-      @include clearfix;
-      height: 100%;
-      margin: 0;
-      border-left: 1px solid #e1e1e1;
-      display: table-row;
-      .item {
-        text-align: center;
-        text-transform: uppercase;
-        //float:  left;
-        width: 87px;
-        height: 70px;
-        line-height: normal;
-        vertical-align: top;
-        display: table-cell;
-        &.active {
-          a {
-            color: $green-main;
-          }
-        }
-        &:first-child {
-        }
-        a {
-          display: block;
-          height: 100%;
-          width: 100%;
-          font-size: 11px;
-          font-weight: bold;
-          color: $text-color;
-          text-decoration: none;
-          border-right: 1px solid #e1e1e1;
-          border-left: 1px solid #fafafa;
-          height: 75px;
-          padding: 0 5px;
-          span {
-            display: table-cell;
-            vertical-align: middle;
-            width: 85px;
-            height: 43px;
-          }
-          &:hover {
-            color: $green-main;
-          }
-        }
-      }
-    }
-    .sub-categories {
-      .item {
-        float:  none;
-      }
-    }
-    .select-store {
-      float: left;
-      width: 170px;
-      height: 75px;
-      border-right: 1px solid #e1e1e1;
-      border-left: 1px solid #e1e1e1;
-    }
-  }
 
   // Content
   #wrapper {
     clear: both;
     overflow: hidden;
+    margin-top: 30px;
 
     // Main Content
     .content-main {
-      // Equal columns height
       @include equal-columns;
     }
 
@@ -180,9 +32,7 @@
     .content-left {
       background: #cdcdcd;
       float: left;
-      width: 150px;
 
-      // Equal columns height
       @include equal-columns;
     }
 
@@ -190,17 +40,19 @@
     .content-right {
       background: #cdcdcd;
       float: right;
-      width: 300px;
-
-      // Equal columns height
       @include equal-columns;
     }
 
     .with-sidebars {
       .content-main {
-        margin-right: 150px;
-        margin-left: 150px;
+        margin-left: 230px;
+        float: none;
       }
     }
   }
+}
+
+
+.container-fluid {
+  padding: 0;
 }

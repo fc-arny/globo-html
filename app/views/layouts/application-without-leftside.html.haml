@@ -1,13 +1,14 @@
 = content_for :content do
   / Content
   #wrapper.container-fluid
-    .without-leftside
+    .without-leftside.row-fluid
       /  Right menu
-      .content-right
-        = basket
 
       / Content
-      .content-main
+      .content-main.span9
         = content_for?(:main) ? yield(:main) : yield
+
+      .content-right.span3
+        /= basket
 
 = render :template => 'layouts/application'

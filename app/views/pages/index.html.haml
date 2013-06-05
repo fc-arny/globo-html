@@ -1,2 +1,24 @@
-%h1 Pages#index
-%p Find me in app/views/pages/index.html.haml
+%breadcrumbs
+  %i.icons.cook.mini.pull-left
+  %ul.breadcrumb.pull-left
+    %li
+      %a{:href => "#"} Кулинария
+      %span.divider &rarr;
+    %li.active Блюда японской кухни
+  .sortBy.pull-right
+    %label Сортировать:
+    %select
+      %option Самое популярное
+
+.goods-content
+  %ul.goods-list
+    %li.good-item
+      .good-img
+        %img
+        %span.star
+      %h5.good-title Плов с мясом баранины по рецепту Глобус Гурмэ
+      .good-price
+        %span Цена (за 50 гр)
+        %span.price
+          75,00
+          %i.rubl
