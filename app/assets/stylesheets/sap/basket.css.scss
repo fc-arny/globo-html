@@ -1,6 +1,9 @@
 // Basket styles
 .content-right {
   .basket {
+    &:after {
+      display: none!important;
+    }
     //---------------------------------------
     // +/- good from basket
     //---------------------------------------
@@ -23,6 +26,98 @@
       }
       .count {
 
+      }
+    }
+    .box-title {
+      margin-bottom: 0;
+    }
+    .box-content {
+      padding-top: 0!important;
+      padding-left: 0!important;
+      padding-right: 0!important;
+    }
+    .basket-list {
+      margin-bottom: 0;
+      .b-l-item {
+        border-bottom: 1px dotted #e4e4e4;
+        @include clearfix;
+        padding: 9px 0;
+        position: relative;
+      }
+      .b-l-img {
+        float: left;
+        padding-left: 20px;
+        width: 165px;
+      }
+      .b-l-price {
+        color: $blue;
+        float: left;
+        font-size: 16px;
+        font-weight: bold;
+        padding-left: 15px;
+        position: absolute;
+        top: 50%;
+        margin-top: -10px;
+      }
+    }
+    .confirm-order {
+      background: $blue;
+      color: #fff;
+      text-align: center;
+      font-size: 16px;
+      font-weight: bold;
+      display: block;
+      text-decoration: none;
+      text-transform: uppercase;
+      margin-bottom: -4px;
+      position: relative;
+      padding: 18px 0;
+      -webkit-transition: all 0.0s linear !important;
+      -moz-transition: all 0.0s linear !important;
+      -o-transition: all 0.0s linear !important;
+      transition: all 0.0s linear !important;
+      &:hover {
+        background: lighten($blue, 15%);
+        &:after {
+          background: -webkit-linear-gradient(135deg, rgba(0, 0, 0, 0) 75%, lighten($blue, 15%) 75%) 0 50%, -webkit-linear-gradient(45deg, rgba(0, 0, 0, 0) 75%, lighten($blue, 15%) 75%) 0 50%;
+          background-repeat: repeat-x;
+          background-size: 10px 9px, 10px 9px;
+        }
+      }
+      &:active {
+        background: darken($blue, 5%);
+        &:after {
+          background: -webkit-linear-gradient(135deg, rgba(0, 0, 0, 0) 75%, darken($blue, 5%) 75%) 0 50%, -webkit-linear-gradient(45deg, rgba(0, 0, 0, 0) 75%, darken($blue, 5%) 75%) 0 50%;
+          background-repeat: repeat-x;
+          background-size: 10px 9px, 10px 9px;
+        }
+      }
+      &:after {
+        background: -webkit-linear-gradient(135deg, rgba(0, 0, 0, 0) 75%, $blue 75%) 0 50%, -webkit-linear-gradient(45deg, rgba(0, 0, 0, 0) 75%, $blue 75%) 0 50%;
+        background-repeat: repeat-x;
+        background-size: 10px 9px, 10px 9px;
+        bottom: -10px;
+        content: " ";
+        display: block;
+        height: 11px;
+        left: 0px;
+        position: absolute;
+        width: 100%;
+      }
+      span {
+        &:after, &:before {
+          content: "• ";
+          font-size: 24px;
+          vertical-align: middle;
+          color: #fff;
+          margin-top: -1px;
+          display: inline-block;
+          margin-right: 10px;
+        }
+        &:after {
+          margin-right: 0;
+          margin-left: 10px;
+        }
       }
     }
   }

@@ -76,6 +76,11 @@
       width: 28px;
       height: 28px;
     }
+    &.mini {
+      background-position-y: -88px;
+      width: 30px;
+      height: 23px;
+    }
   }
   a:hover, .active, .open {
     .bread {
@@ -143,5 +148,28 @@
   }
 }
 
+.ui {
+  background: url(/assets/ui-icons.png) no-repeat;
+  display: inline-block;
+  &.del {
+    width: 14px;
+    height: 14px;
+  }
+  &.search {
+    width: 18px;
+    height: 18px;
+    background-position: -16px 0;
+  }
+  &.cat {
+    background-position: -33px -23px;
+    width: 20px;
+    height: 20px;
+  }
+  &.bask {
+    background-position: -1px -18px;
+    width: 31px;
+    height: 27px;
+  }
+}
 
 

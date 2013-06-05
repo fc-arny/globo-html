@@ -1,28 +1,46 @@
-.search
+.search-box
   %form#search-form
     %input{:type => 'search', :placeholder => 'Поиск'}
-    %input.btn.btn-green{:type => 'submit'}
+    %button.btn.btn-green{:type => 'submit'}
+      %i.ui.search
 
-.filter.categories
-  %h3
-    %i.icons.cat
+.filter.categories.item-box
+  %h3.box-title.green
+    %i.ui.cat
     Категории
-  %ul.cat-filter-list
-    %li
-      %input{:type => 'checkbox', :id => 'cf1', :name => 'cf1'}
-      %label{:for => 'cf1'} Суши
-    %li
-      %input{:type => 'checkbox', :id => 'cf2', :name => 'cf2'}
-      %label{:for => 'cf2'} Сашими
-    %li
-      %input{:type => 'checkbox', :id => 'cf3', :name => 'cf3'}
-      %label{:for => 'cf3'} Роллы
-    %li
-      %input{:type => 'checkbox', :id => 'cf4', :name => 'cf4'}
-      %label{:for => 'cf4'} Японские супы
-    %li
-      %input{:type => 'checkbox', :id => 'cf5', :name => 'cf5'}
-      %label{:for => 'cf5'} Японские салаты
-    %li
-      %input{:type => 'checkbox', :id => 'cf6', :name => 'cf6'}
-      %label{:for => 'cf6'} Напитки
+  .box-content
+    %ul.cat-filter-list
+      %li
+        %label{:for => 'cf1', :class => 'checking'}
+          %span.check
+          %input{:type => 'checkbox', :id => 'cf1', :name => 'cf1'}
+          Суши
+      %li
+        %label{:for => 'cf2', :class => 'checking'}
+          %span.check
+          %input{:type => 'checkbox', :id => 'cf2', :name => 'cf2'}
+          Сашими
+      %li
+
+        %label{:for => 'cf3', :class => 'checking'}
+          %span.check
+          %input{:type => 'checkbox', :id => 'cf3', :name => 'cf3'}
+          Роллы
+      %li
+
+        %label{:for => 'cf4', :class => 'checking'}
+          %span.check
+          %input{:type => 'checkbox', :id => 'cf4', :name => 'cf4'}
+          Японские супы
+      %li
+
+        %label{:for => 'cf5', :class => 'checking'}
+          %span.check
+          %input{:type => 'checkbox', :id => 'cf5', :name => 'cf5'}
+          Японские салаты
+      %li
+
+        %label{:for => 'cf6', :class => 'checking'}
+          %span.check
+          %input{:type => 'checkbox', :id => 'cf6', :name => 'cf6'}
+          Напитки

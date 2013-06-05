@@ -1,0 +1,108 @@
+.market {
+  .breadcrumbs {
+    height: 30px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    padding: 5px 12px;
+    @include border-radius(#{4px 4px 0 0});
+    @include box-shadow(#{0 0 4px rgba(0,0,0, .16)});
+    i {
+      margin-top: -1px;
+    }
+    .breadcrumb {
+      background: none;
+      margin-bottom: 0;
+      padding: 0;
+      li {
+        .devider {
+          color: $text-color;
+          font-size: 12px;
+        }
+        a {
+          color: $text-color;
+        }
+        &.active {
+            color: $blue;
+        }
+      }
+
+    }
+  }
+
+  .search-box {
+    margin-bottom: 20px;
+    position: relative;
+    input[type='text'], input[type='search'] {
+      border-color: $green-main;
+      width: 100%;
+      outline: none;
+      margin-bottom: 0;
+      &:focus {
+        box-shadow: none;
+      }
+    }
+    input[type='submit'], button {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 32px;
+      padding: 7px 3px 0px 5px;
+    }
+  }
+  .item-box {
+    background: #fff;
+    margin-bottom: 20px;
+    position: relative;
+    @include box-shadow(#{0 1px 6px rgba(0, 0, 0, 0.16)});
+    @include border-radius(#{4px 4px 0 0});
+
+    &:after {
+      background: -webkit-linear-gradient(135deg, rgba(0, 0, 0, 0) 75%, #FFF 75%) 0 50%, -webkit-linear-gradient(45deg, rgba(0, 0, 0, 0) 75%, #FFF 75%) 0 50%;
+      background-repeat: repeat-x;
+      background-size: 10px 9px, 10px 9px;
+      bottom: -10px;
+      content: " ";
+      display: block;
+      height: 11px;
+      left: -1px;
+      position: absolute;
+      width: 100%;
+    }
+    .box-title {
+      font-size: 24px;
+      color: #fff;
+      text-transform: uppercase;
+      @include border-radius(#{4px 4px 0 0});
+      padding: 10px 20px;
+      text-align: center;
+      margin-top: 0;
+
+      i {
+        margin-bottom: -2px;
+        margin-right: 5px;
+      }
+
+      &.green {
+        background: #74c900;
+        background-image: -webkit-linear-gradient(bottom, #74c900, #82d344);
+        background-image: -moz-linear-gradient(bottom, #74c900, #82d344);
+        background-image: -o-linear-gradient(bottom, #74c900, #82d344);
+        background-image: -ms-linear-gradient(bottom, #74c900, #82d344);
+        background-image: linear-gradient(to top, #74c900, #82d344);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#74c900', endColorstr='#82d344',GradientType=0 ); /* IE6-9 */
+      }
+      &.blue {
+        background: #21abf1;
+        background-image: -webkit-linear-gradient(top, #21abf1, #009bea);
+        background-image: -moz-linear-gradient(top, #21abf1, #009bea);
+        background-image: -o-linear-gradient(top, #21abf1, #009bea);
+        background-image: -ms-linear-gradient(top, #21abf1, #009bea);
+        background-image: linear-gradient(to bottom, #21abf1, #009bea);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#21abf1', endColorstr='#009bea',GradientType=0 ); /* IE6-9 */
+      }
+    }
+    .box-content {
+      padding: 5px 10px;
+    }
+  }
+}

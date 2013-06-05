@@ -12,43 +12,78 @@
 
 
 .goods-content
-  %ul.good-list
-    %li.good-item
+  %ul.good-list.row-fluid
+    %li.good-item.span4
       .good-img
         %img{:src => '/assets/demo/d1.jpg'}
         %span.star
-      %h5.good-title Плов с мясом баранины по рецепту Глобус Гурмэ
-      .good-price
-        %span Цена (за 50 гр)
-        %span.price
-          75,00
-          %i.rubl a
-      %button.add-basket В корзину
-      .quantity
-        .q-manage
-          %button.btn.btn-green
-          %span.q-value
-          %button.btn.btn-green
-    %li.good-item
-      .good-img
-        %img{:src => '/assets/demo/d1.jpg'}
-        %span.star.active
-      %h5.good-title Плов с мясом баранины по рецепту Глобус Гурмэ
-      .good-price
-        %span Цена (за 50 гр)
-        %span.price
-          75,00
-          %i.rubl a
-      %button.add-basket В корзину
+      .good-info
+        %h5.good-title Плов с мясом баранины по рецепту Глобус Гурмэ
+        .good-price
+          %span Цена (за 50 гр)
+          %span.price
+            75,00
+            %i.rubl a
+        .good-bottom
+          %button.add-basket В корзину
+          .quantity
+            .q-manage
+              %button.btn.btn-green -
+              %input{:type => 'text', :value => '500 гр', :class => 'q-value'}
+              %button.btn.btn-green +
+            %span.summary
+              1460,00
+              %i.rubl a
+          .del-order
+            %i.ui.del
+            Убрать из заказа
 
-    %li.good-item
+    %li.good-item.span4
       .good-img
         %img{:src => '/assets/demo/d1.jpg'}
         %span.star
-      %h5.good-title Плов с мясом баранины по рецепту Глобус Гурмэ
-      .good-price
-        %span Цена (за 50 гр)
-        %span.price
-          75,00
-          %i.rubl a
-      %button.add-basket В корзину
+      .good-info
+        %h5.good-title Плов с мясом баранины по рецепту Глобус Гурмэ
+        .good-price
+          %span Цена (за 50 гр)
+          %span.price
+            75,00
+            %i.rubl a
+        .good-bottom
+          %button.add-basket В корзину
+          .quantity
+            .q-manage
+              %button.btn.btn-green -
+              %input{:type => 'text', :value => '500 гр', :class => 'q-value'}
+              %button.btn.btn-green +
+            %span.summary
+              1460,00
+              %i.rubl a
+          .del-order
+            %i.ui.del
+            Убрать из заказа
+
+    %li.good-item.span4
+      .good-img
+        %img{:src => '/assets/demo/d1.jpg'}
+        %span.star
+      .good-info
+        %h5.good-title Плов с мясом баранины по рецепту Глобус Гурмэ
+        .good-price
+          %span Цена (за 50 гр)
+          %span.price
+            75,00
+            %i.rubl a
+        .good-bottom
+          %button.add-basket В корзину
+          .quantity
+            .q-manage
+              %button.btn.btn-green -
+              %input{:type => 'text', :value => '500 гр', :class => 'q-value'}
+              %button.btn.btn-green +
+            %span.summary
+              1460,00
+              %i.rubl a
+          .del-order
+            %i.ui.del
+            Убрать из заказа

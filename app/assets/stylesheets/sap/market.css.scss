@@ -20,33 +20,26 @@
   // Content
   #wrapper {
     clear: both;
-    overflow: hidden;
+    //overflow: hidden;
     margin-top: 30px;
 
     // Main Content
     .content-main {
-      @include equal-columns;
     }
 
     // Left column
     .content-left {
-      background: #cdcdcd;
       float: left;
-
-      @include equal-columns;
     }
 
     // Right column
     .content-right {
-      background: #cdcdcd;
       float: right;
-      @include equal-columns;
     }
 
     .with-sidebars {
       .content-main {
-        margin-left: 230px;
-        float: none;
+
       }
     }
   }

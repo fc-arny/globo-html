@@ -5,9 +5,9 @@ body {
     background: $body-bg;
     color: $text-color;
   * {
-    box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
+    box-sizing: border-box;
     -webkit-appearance: none;
     -moz-appearance: none;
     list-style: none;
@@ -24,10 +24,16 @@ body {
       -o-transition: all 0.15s linear;
       transition: all 0.15s linear;
     }
-    -webkit-transition: all 0.15s linear;
-    -moz-transition: all 0.15s linear;
-    -o-transition: all 0.15s linear;
-    transition: all 0.15s linear;
+    -webkit-transition: all 0.15s linear!important;
+    -moz-transition: all 0.15s linear!important;
+    -o-transition: all 0.15s linear!important;
+    transition: all 0.15s linear!important;
+    -webkit-box-sizing: border-box!important;
+    -moz-box-sizing: border-box!important;
+    box-sizing: border-box!important;
+  }
+  input:not([type="checbox"]):not([type="radio"])   {
+    height:30px;
   }
   //--------------------------------
   // Links
@@ -47,6 +53,9 @@ body {
     margin: 10px;
   }
 
+  ul {
+    margin-left: 0;
+  }
   //--------------------------------
   // Footer
   //--------------------------------
@@ -74,4 +83,51 @@ body {
 
 i.rubl {
   font-family: 'ALSRublRegular';
+}
+
+.btn {
+  border: 0;
+  background-image: none!important;
+  background: transparent;
+  background-repeat: none;
+  text-shadow: none;
+  color: #fff;
+
+  &:hover, &:active, &:focus {
+    color: #fff;
+    outline: none;
+    background-position: none;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none;
+  }
+  &.btn-blue {
+    background: $blue;
+    &:hover {
+      background: lighten($green-main, 15%);
+    }
+    &:active {
+      background: darken($green-main, 5%);
+    }
+  }
+  &.btn-green {
+    background: $green-main;
+    &:hover {
+      background: lighten($green-main, 15%);
+    }
+    &:active {
+      background: darken($green-main, 5%);
+    }
+  }
+}
+
+
+@media (min-width: 1200px) {
+.row-fluid .span3 {
+  width: 20.07692%;
+}
+.row-fluid .span2 {
+  width: 17.52991%;
+}
 }

@@ -1,8 +1,4 @@
-.breadcrumbs {
-  height: 35px;
-  @include border-radius(#{4px 4px 0 0});
-  @include box-shadow(#{0 0 4px rgba(0,0,0, .16)});
-}
+
 
 .goods-content {
   * {
@@ -13,38 +9,31 @@
   }
   .good-list {
     margin: 0;
-    overflow: hidden;
-    padding: 4px;
+    display: table;
     width: 100%;
 
     .good-item {
       background: $goods-bg;
       border: 1px solid transparent;
-      float: left;
-      height: 400px;
-      margin: 0px 0 20px 25px;
+      max-height: 400px;
+      margi-bottom: 20px;
       padding: 10px;
       position: relative;
-      width: 240px;
 
       @include box-shadow(#{0 1px 6px rgba(0, 0, 0, 0.16)});
       @include border-radius(#{4px 4px 0 0});
 
       &:after {
-        left: 0;
-        content: " ";
-        display: block;
-        position: absolute;
-        width: 240px;
-        bottom: -10px;
-        height: 11px;
         background: -webkit-linear-gradient(135deg, rgba(0, 0, 0, 0) 75%, #FFF 75%) 0 50%, -webkit-linear-gradient(45deg, rgba(0, 0, 0, 0) 75%, #FFF 75%) 0 50%;
         background-repeat: repeat-x;
         background-size: 10px 9px, 10px 9px;
-      }
-
-      &:first-child, &:nth-child(4n) {
-        margin-left: 0;
+        bottom: -10px;
+        content: " ";
+        display: block;
+        height: 11px;
+        left: -1px;
+        position: absolute;
+        width: 100%;
       }
 
       &:hover, &.active {
@@ -76,8 +65,8 @@
       .good-img {
         border: 1px solid #eeeeee;
         background: #f7f7f7;
-        height: 220px;
-        width: 220px;
+        width: 100%;
+        overflow: hidden;
 
         @include border-radius(#{2px});
 
@@ -89,6 +78,10 @@
           cursor: pointer;
           opacity: 0.7;
           filter: alpha(opacity=70);
+          -webkit-transition: none;
+          -moz-transition: none;
+          -o-transition: none;
+          transition: none;
           &.active {
             display: block;
           }
@@ -99,6 +92,9 @@
         }
       }
 
+      .good-info {
+
+      }
       .good-title {
         font-size: 16px;
         font-weight: normal;
@@ -116,7 +112,7 @@
         font-weight: bold;
         padding: 8px 10px;
         margin-left: -10px;
-        width: 240px;
+        width: 109%;
 
 
         .price {
@@ -140,16 +136,17 @@
         left: -1px;
         position: absolute;
         text-transform: uppercase;
-        width: 175px;
+        width: 75%;
+
 
         &:after {
           border-top: 15px solid transparent;
           border-bottom: 15px solid transparent;
-          border-left: 10px solid $blue;
+          border-left: 7px solid $blue;
           content: '';
           height: 0;
           position: absolute;
-          right: -10px;
+          right: -7px;
           top:0;
           width: 0;
         }
@@ -165,6 +162,93 @@
           &:after {
             border-left-color: darken($blue, 5%);
           }
+        }
+      }
+      .good-bottom {
+        overflow: hidden;
+        height: 62px;
+        position: relative;
+        left: -11px;
+        width: 109%;
+      }
+      .quantity {
+        position: absolute;
+        bottom: 25px;
+        left: 10px;
+        width: 92.3%;
+        display: none;
+
+        -webkit-transition: none;
+        -moz-transition: none;
+        -o-transition: none;
+        transition: none;
+
+        .q-manage {
+          float: left;
+          font-size: 0;
+          .btn {
+            font-size: 27px;
+            position: relative;
+            padding: 2px 6px 6px 6px;
+            width: 30px;
+            @include border-radius(#{1px});
+          }
+          .q-value {
+            background: #fff;
+            border: 1px solid $green-main;
+            border-width: 1px 0 1px 0;
+            color: $text-color;
+            display: inline-block;
+            font-size: 16px;
+            font-weight: bold;
+            height: 28px;
+            line-height: 16px;
+            max-width: 59px;
+            margin-bottom: 0;
+            margin-left: -1px;
+            margin-right: -1px;
+            padding: 5px;
+            vertical-align: middle;
+            width: auto;
+            min-width: 0;
+            @include border-radius(#{0px});
+            @include box-shadow(#{none});
+          }
+        }
+        .summary {
+          color: $blue;
+          float: right;
+          font-size: 14px;
+          font-weight: bold;
+        }
+      }
+      .del-order {
+        bottom: 0px;
+        color: #c9c7c7;
+        cursor: pointer;
+        display: none;
+        font-size: 12px;
+        left: 10px;
+        position: absolute;
+
+        -webkit-transition: none;
+        -moz-transition: none;
+        -o-transition: none;
+        transition: none;
+
+        &:hover {
+          color: #979595;
+          .ui {
+            opacity: 1;
+            filter: alpha(opacity=100);
+          }
+        }
+        .ui {
+          cursor: pointer;
+          filter: alpha(opacity=80);
+          margin: 0 5px -3px 0;
+          opacity: .8;
+
         }
       }
     }

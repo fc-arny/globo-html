@@ -4,13 +4,15 @@
     .content-left.span2
       = render :partial => 'partials/left-side'
 
-    /  Right menu
-    .content-right.span3
-      /= basket_sidebar @order
-
     / Content
     .content-main.span7
       = content_for?(:main) ? yield(:main) : yield
+
+    /  Right menu
+    .content-right.span3
+      = render :partial => 'partials/right-side'
+
+
 
 
 = render :template => 'layouts/application'
