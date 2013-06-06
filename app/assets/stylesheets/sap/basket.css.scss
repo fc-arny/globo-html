@@ -51,13 +51,29 @@
       }
       .b-l-price {
         color: $blue;
-        float: left;
+        float: right;
         font-size: 16px;
         font-weight: bold;
-        padding-left: 15px;
         position: absolute;
         top: 50%;
+        right:15px;
         margin-top: -10px;
+      }
+      .bask-summary {
+        font-weight: bold;
+        font-size: 24px;
+        text-transform: uppercase;
+        span {
+          padding: 15px 0 15px 18px;
+          display: inline-block;
+        }
+        .b-s {
+          text-transform: none;
+          color: $blue;
+          float: right;
+          padding-left: 0;
+          padding-right: 13px;
+        }
       }
     }
     .confirm-order {

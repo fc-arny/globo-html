@@ -1,6 +1,8 @@
 /**
  *Common styles for all pages
  */
+
+
 body {
     background: $body-bg;
     color: $text-color;
@@ -70,64 +72,4 @@ body {
   }
 }
 
-@font-face {
-  font-family: 'ALSRublRegular';
-  src: url('/assets/rouble.eot');
-  src: url('/assets/rouble.eot?iefix') format('eot'),
-  url('/assets/rouble.woff') format('woff'),
-  url('/assets/rouble.ttf') format('truetype'),
-  url('/assets/rouble.svg#ALSRubl') format('svg');
-  font-weight: normal;
-  font-style: italic;
-}
 
-i.rubl {
-  font-family: 'ALSRublRegular';
-}
-
-.btn {
-  border: 0;
-  background-image: none!important;
-  background: transparent;
-  background-repeat: none;
-  text-shadow: none;
-  color: #fff;
-
-  &:hover, &:active, &:focus {
-    color: #fff;
-    outline: none;
-    background-position: none;
-    -webkit-transition: none;
-    -moz-transition: none;
-    -o-transition: none;
-    transition: none;
-  }
-  &.btn-blue {
-    background: $blue;
-    &:hover {
-      background: lighten($green-main, 15%);
-    }
-    &:active {
-      background: darken($green-main, 5%);
-    }
-  }
-  &.btn-green {
-    background: $green-main;
-    &:hover {
-      background: lighten($green-main, 15%);
-    }
-    &:active {
-      background: darken($green-main, 5%);
-    }
-  }
-}
-
-
-@media (min-width: 1200px) {
-.row-fluid .span3 {
-  width: 20.07692%;
-}
-.row-fluid .span2 {
-  width: 17.52991%;
-}
-}

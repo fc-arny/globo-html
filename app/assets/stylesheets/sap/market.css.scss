@@ -1,8 +1,25 @@
+html, body {height: 100%;}
+
+/*Opera Fix*/
+body:before {
+  content:"";
+  height:100%;
+  float:left;
+  width:0;
+  margin-top:-32767px;
+}
+
+
 .market {
   #wrap {
     max-width: 1400px;
     margin: 0 auto;
+    min-height: 100%;
+  }
+  #main {
     padding: 0 20px;
+    overflow:auto;
+    //padding-bottom: 210px;
   }
   #how-to {
     position: absolute;
@@ -30,21 +47,119 @@
     // Left column
     .content-left {
       float: left;
+      .scroll {
+        width: 238px;
+      }
     }
 
     // Right column
     .content-right {
       float: right;
+      .scroll {
+        width: 273px;
+      }
     }
 
     .with-sidebars {
       .content-main {
+        //float: none;
+        //margin-left: 270px;
 
       }
     }
   }
+
 }
 
+.affix {
+  top: 139px;
+  z-index: 9;
+}
+
+.scroll-header.affix {
+  top:0;
+  z-index: 10;
+  width: 1360px;
+  .top-bar {
+    display: none;
+  }
+}
+.affix-bottom {
+  top: auto;
+  bottom: 212px;
+  position: fixed;
+}
+
+@media (max-width: 767px) {
+.affix, .affix-bottom {
+  position: static!important;
+  width: auto!important;
+  top: 0!important;
+}
+}
+
+@font-face {
+  font-family: 'ALSRublRegular';
+  src: url('/assets/rouble.eot');
+  src: url('/assets/rouble.eot?iefix') format('eot'),
+  url('/assets/rouble.woff') format('woff'),
+  url('/assets/rouble.ttf') format('truetype'),
+  url('/assets/rouble.svg#ALSRubl') format('svg');
+  font-weight: normal;
+  font-style: italic;
+}
+
+
+i.rubl {
+  font-family: 'ALSRublRegular';
+}
+
+.btn {
+  border: 0;
+  background-image: none!important;
+  background: transparent;
+  background-repeat: none;
+  text-shadow: none;
+  color: #fff;
+
+  &:hover, &:active, &:focus {
+    color: #fff;
+    outline: none;
+    background-position: none;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none;
+  }
+  &.btn-blue {
+    background: $blue;
+    &:hover {
+      background: lighten($green-main, 15%);
+    }
+    &:active {
+      background: darken($green-main, 5%);
+    }
+  }
+  &.btn-green {
+    background: $green-main;
+    &:hover {
+      background: lighten($green-main, 15%);
+    }
+    &:active {
+      background: darken($green-main, 5%);
+    }
+  }
+}
+
+
+@media (min-width: 1200px) {
+  .row-fluid .span3 {
+    width: 20.07692%;
+  }
+  .row-fluid .span2 {
+    width: 17.52991%;
+  }
+}
 
 .container-fluid {
   padding: 0;

@@ -23,3 +23,41 @@
     }
   }
 }
+.sortBy {
+  text-align: right;
+  position: absolute;
+  right: 10px;
+  top: 0;
+
+  select, label {
+    display: inline-block;
+    margin: 0;
+    vertical-align: middle;
+  }
+  label {
+    position: relative;
+    &:after {
+      top: 13px;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+      border-top-color: $blue-light;
+      border-width: 5px;
+      right: 2px;
+    }
+  }
+  select {
+    border:0;
+    color: $blue-light;
+    margin-bottom: 2px;
+    outline: none!important;
+    padding: 0;
+    padding-right: 15px;
+    width: auto;
+    @include border-radius(#{0});
+
+  }
+}

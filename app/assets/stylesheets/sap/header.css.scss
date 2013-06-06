@@ -55,6 +55,14 @@
 
             a {
               padding: 3px 6px;
+              @include border-radius(#{2px});
+              &:hover {
+                background: lighten($gray, 30%);
+                box-shadow: none;
+                font-size: 14px;
+                text-shadow: none;
+
+              }
             }
 
             &.active {
@@ -64,7 +72,6 @@
                 color: #fff;
                 font-size: 14px;
                 text-shadow: none;
-                @include border-radius(#{2px});
               }
             }
           }

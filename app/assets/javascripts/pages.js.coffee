@@ -27,11 +27,11 @@ $('.add-basket').click ->
   $(this).animate({left: '-200'}, 'fast');
   $(this).siblings('').fadeIn('slow');
 
-
 $('.del-order').click ->
   $('.add-basket').animate({left: '0'}, 'fast');
   $(this).parents('.good-item').removeClass('active')
   $(this).fadeOut('fast').siblings('.quantity').fadeOut('fast');
+
 
 
 $('.checking').click ->
@@ -40,4 +40,14 @@ $('.checking').click ->
      $(this).find('.check').addClass('yes')
 
 
-
+# side bar
+$window = $(window)
+setTimeout (->
+  $(".scroll").affix offset:
+    top: 90
+    bottom: 212
+), 500
+setTimeout (->
+  $(".scroll-header").affix offset:
+    top: 90
+), 100

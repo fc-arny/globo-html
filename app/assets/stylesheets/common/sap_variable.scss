@@ -5,11 +5,19 @@ $header-grad-top-bg:  #f6f6f6;
 $header-grad-bot-bg:  #f1f1f1;
 $goods-bg:            #fff;
 $goods-bg-hover:      #edf8fe;
+$footer-bg:           #2d3537;
+$box-bg:              #fff;
 
 $green-main:          #7dc444;
 $link-hover:          #3F3F3F;
 $text-color:          #666666;
 $blue:                #009bea;
+$blue-light:          #46bfde;
 $gray:                #999;
 
 
+
+
+.blueLight-color {color: $blue-light!important;}
+.blue-color {color: $blue;}
+.green-color {color: $green-main}

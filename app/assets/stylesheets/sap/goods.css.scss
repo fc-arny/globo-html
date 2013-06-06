@@ -1,6 +1,9 @@
 
 
 .goods-content {
+  overflow: hidden;
+  padding: 2px;
+  margin-left: -2px;
   * {
     -webkit-transition: all 0.15s linear;
     -moz-transition: all 0.15s linear;
@@ -10,19 +13,20 @@
   .good-list {
     margin: 0;
     display: table;
-    width: 100%;
+    width: 104%;
 
     .good-item {
       background: $goods-bg;
       border: 1px solid transparent;
+      float: left;
       max-height: 400px;
-      margi-bottom: 20px;
+      margin-bottom: 20px;
+      margin-right: 28px;
       padding: 10px;
       position: relative;
-
+      width: 240px;
       @include box-shadow(#{0 1px 6px rgba(0, 0, 0, 0.16)});
       @include border-radius(#{4px 4px 0 0});
-
       &:after {
         background: -webkit-linear-gradient(135deg, rgba(0, 0, 0, 0) 75%, #FFF 75%) 0 50%, -webkit-linear-gradient(45deg, rgba(0, 0, 0, 0) 75%, #FFF 75%) 0 50%;
         background-repeat: repeat-x;

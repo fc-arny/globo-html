@@ -1,9 +1,11 @@
-.market {
-  .breadcrumbs {
+
+  .line-box {
+    background: $box-bg;
     height: 30px;
     margin-bottom: 20px;
     overflow: hidden;
     padding: 5px 12px;
+    position: relative;
     @include border-radius(#{4px 4px 0 0});
     @include box-shadow(#{0 0 4px rgba(0,0,0, .16)});
     i {
@@ -50,7 +52,7 @@
     }
   }
   .item-box {
-    background: #fff;
+    background: $box-bg;
     margin-bottom: 20px;
     position: relative;
     @include box-shadow(#{0 1px 6px rgba(0, 0, 0, 0.16)});
@@ -105,4 +107,3 @@
       padding: 5px 10px;
     }
   }
-}
