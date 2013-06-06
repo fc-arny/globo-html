@@ -17,3 +17,5 @@ doc/
 
 .idea
 .sass-cache
+.rvmrc
+Gemfile.lock
