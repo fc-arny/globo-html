@@ -24,7 +24,39 @@
 }
 
 @media (max-width: 1390px) {
-  .scroll-header.affix {
-    width: 97.5%;
+  .goods-content .good-list .good-item {
+    margin-right: 2.2%;
   }
+  .content-right .basket .basket-list {
+    .b-l-img {
+      width: 140px; }
+    .bask-summary {
+      font-size: 22px; }
+  }
+  .market  {
+    #main-menu .categories .item > a {
+      font-size: 10px; }
+
+    .scroll-header.affix {
+      width: 96.9%;
+      margin: 0 20px;
+      left: 0;
+      right: 0;
+      max-width: 1360px;
+    }
+    .content-right .scroll.affix {
+      right: 20px;
+    }
+    .content-right .scroll.affix-bottom {
+      right: 0;
+      }
+
+    .content-left .scroll.affix {
+      left: 20px;
+    }
+    .content-left .scroll.affix-bottom {
+      left: 0;
+       }
+  }
+
 }

@@ -15,7 +15,7 @@
       white-space: nowrap;
     }
   }
-  header {
+  #header-wrap {
     background: $header-grad-top-bg; /* Old browsers */
     background: -moz-linear-gradient(top,  $header-grad-top-bg 0%, $header-grad-bot-bg 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$header-grad-top-bg), color-stop(100%,$header-grad-bot-bg)); /* Chrome,Safari4+ */
@@ -27,6 +27,9 @@
     border: 2px solid #ffffff;
     @include box-shadow(#{0 0 6px rgba(0,0,0, .4)});
     @include border-radius(#{0 0 10px 10px});
+  }
+  header {
+    height: 199px;
 
     .navbar {
       background: transparent;
@@ -171,7 +174,9 @@
     }
 
     .dropdown-menu {
-      border: 0;
+      background: #f7f6f6;
+      border: 2px solid #fff;
+      border-bottom-width: 0;
       display: block;
       left: -22px;
       margin-top: 0;
@@ -189,7 +194,7 @@
         display: inline-block;
         background: url('/assets/arrow-top.png') no-repeat;
         width: 16px;
-        height: 16px;
+        height: 14px;
         content: ''; }
 
       .column-list {
@@ -268,13 +273,16 @@
       #selectStore {
         text-align: center;
         margin-top: 3px;
-
+        background: transparent;
         .dd-option-image, .dd-selected-image {
           max-width: 100%;
         }
 
         .dd-option, .dd-selected {
           padding: 8px 15px;
+          &:hover {
+            background: none;
+          }
         }
 
         .dd-option-selected {
@@ -311,12 +319,13 @@
         .dd-select {
           border: 0;
           border-radius: 0;
-
+          background: none!important;
           img {
             -webkit-filter: grayscale(0%);
           }
 
           &.open {
+            background: #fff!important;
             border: 1px solid #dedede;
             border-width:  1px 1px 0 1px;
             @include border-radius(#{2px 2px 0 0});

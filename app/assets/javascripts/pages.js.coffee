@@ -2,11 +2,14 @@ $('#selectStore').ddslick
   width: '100%'
   background: '#fafafa'
 
+$('#sort').ddslick
+  width: 'auto'
+  background: '#fff'
 
 $('.select-store').click (e) ->
   e.stopPropagation();
   $('#selectStore').ddslick 'open'
-  $('.dd-select').toggleClass('open');
+  $('#selectStore .dd-select').toggleClass('open');
 
 
 $('.dropdown-menu').columnlist
@@ -28,7 +31,7 @@ $('.add-basket').click ->
   $(this).siblings('').fadeIn('slow');
 
 $('.del-order').click ->
-  $('.add-basket').animate({left: '0'}, 'fast');
+  $(this).siblings('.add-basket').animate({left: '0'}, 'fast');
   $(this).parents('.good-item').removeClass('active')
   $(this).fadeOut('fast').siblings('.quantity').fadeOut('fast');
 
@@ -44,12 +47,11 @@ $('.checking').click ->
 $window = $(window)
 setTimeout (->
   $(".scroll").affix offset:
-    top: 90
-    bottom: 212
-), 500
+    top: 100
+    bottom: 235
+), 0
 setTimeout (->
   $(".scroll-header").affix offset:
-    top: 90
-), 100
+    top: 100
+), 600
 
-$('select').selectpicker;

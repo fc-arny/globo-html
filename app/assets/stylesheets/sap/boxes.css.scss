@@ -3,10 +3,10 @@
     background: $box-bg;
     height: 30px;
     margin-bottom: 20px;
-    overflow: hidden;
+    //overflow: hidden;
     padding: 5px 12px;
     position: relative;
-    @include border-radius(#{4px 4px 0 0});
+    @include border-radius(#{4px});
     @include box-shadow(#{0 0 4px rgba(0,0,0, .16)});
     i {
       margin-top: -1px;
@@ -75,7 +75,7 @@
       color: #fff;
       text-transform: uppercase;
       @include border-radius(#{4px 4px 0 0});
-      padding: 10px 20px;
+      padding: 10px;
       text-align: center;
       margin-top: 0;
 

@@ -160,7 +160,7 @@
                 //Click anywhere to close
                 if (options.clickOffToClose) {
                     ddOptions.addClass('dd-click-off-close');
-                    obj.on('click.ddslick', function (e) { e.stopPropagation(); $('.dd-select').toggleClass('open');});
+                    obj.on('click.ddslick', function (e) { e.stopPropagation(); $(this).find('.dd-select').toggleClass('open');});
                     $('body').on('click', function () {
                         $('.dd-select').removeClass('open');
                         $('.dd-click-off-close').slideUp(50).siblings('.dd-select').find('.dd-pointer').removeClass('dd-pointer-up');

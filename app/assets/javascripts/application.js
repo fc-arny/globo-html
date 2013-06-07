@@ -13,6 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
+//= require jquery.columnlist
+//= require jquery.ddslick
 //= require_tree .
 
 

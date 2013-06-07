@@ -158,10 +158,9 @@
         }
 
         &:hover {
-          background: lighten($blue, 15%);
-          &:after {
-               border-left-color: lighten($blue, 15%);
-          }
+          filter: alpha(opacity=80);
+          opacity: 0.8;
+
         }
         &:active {
           background: darken($blue, 5%);
@@ -261,3 +260,5 @@
 
   }
 }
+
+
