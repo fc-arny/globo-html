@@ -51,3 +51,5 @@ setTimeout (->
   $(".scroll-header").affix offset:
     top: 90
 ), 100
+
+$('select').selectpicker;

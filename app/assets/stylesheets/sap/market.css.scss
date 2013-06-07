@@ -48,7 +48,11 @@ body:before {
     .content-left {
       float: left;
       .scroll {
-        width: 238px;
+        width: 100%;
+        &.affix, &.affix-bottom {
+          width: 17.52991%;
+          max-width: 238px;
+        }
       }
     }
 
@@ -56,7 +60,11 @@ body:before {
     .content-right {
       float: right;
       .scroll {
-        width: 273px;
+        width: 100%;
+        &.affix, &.affix-bottom {
+          width: 20.07692%;
+          max-width: 273px;
+        }
       }
     }
 
@@ -90,14 +98,6 @@ body:before {
   position: fixed;
 }
 
-@media (max-width: 767px) {
-.affix, .affix-bottom {
-  position: static!important;
-  width: auto!important;
-  top: 0!important;
-}
-}
-
 @font-face {
   font-family: 'ALSRublRegular';
   src: url('/assets/rouble.eot');
@@ -109,10 +109,10 @@ body:before {
   font-style: italic;
 }
 
-
 i.rubl {
   font-family: 'ALSRublRegular';
 }
+
 
 .btn {
   border: 0;
@@ -151,18 +151,43 @@ i.rubl {
   }
 }
 
-
-@media (min-width: 1200px) {
-  .row-fluid .span3 {
-    width: 20.07692%;
+.arrow-btn {
+  background: $blue;
+  border: 0;
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+  height: 30px;
+  position: relative;
+  text-transform: uppercase;
+  width: 170px;
+  &:after {
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 7px solid $blue;
+    content: '';
+    height: 0;
+    position: absolute;
+    right: -7px;
+    top:0;
+    width: 0;
   }
-  .row-fluid .span2 {
-    width: 17.52991%;
+
+  &:hover {
+    background: lighten($blue, 15%);
+    &:after {
+      border-left-color: lighten($blue, 15%);
+    }
+  }
+  &:active {
+    background: darken($blue, 5%);
+    &:after {
+      border-left-color: darken($blue, 5%);
+    }
   }
 }
+
 
 .container-fluid {
   padding: 0;
 }
-
-

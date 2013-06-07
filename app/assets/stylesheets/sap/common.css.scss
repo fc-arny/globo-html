@@ -13,10 +13,6 @@ body {
     -webkit-appearance: none;
     -moz-appearance: none;
     list-style: none;
-    //-webkit-transition: all 0.15s linear;
-    //-moz-transition: all 0.15s linear;
-    //-o-transition: all 0.15s linear;
-    //transition: all 0.15s linear;
   }
 
   a, button, input {
@@ -58,18 +54,7 @@ body {
   ul {
     margin-left: 0;
   }
-  //--------------------------------
-  // Footer
-  //--------------------------------
-  #footer {
 
-    .copyright {
-      color: #ffffff;
-      font-size: 13px;
-      margin: 15px auto 0px;
-      text-align: center;
-    }
-  }
 }
 
 

@@ -1,4 +1,20 @@
 .market {
+  .logo {
+    position: relative;
+
+    a {
+      color: $text-color;
+      text-decoration: none;
+    }
+
+    i {
+      font-size: 12px;
+      position: absolute;
+      bottom: -20px;
+      left: 70px;
+      white-space: nowrap;
+    }
+  }
   header {
     background: $header-grad-top-bg; /* Old browsers */
     background: -moz-linear-gradient(top,  $header-grad-top-bg 0%, $header-grad-bot-bg 100%); /* FF3.6+ */
@@ -30,21 +46,7 @@
         padding-top: 20px;
         padding-bottom: 25px;
 
-        .logo {
-          position: relative;
 
-          a {
-            color: $text-color;
-            text-decoration: none;
-          }
-
-          i {
-            font-size: 12px;
-            position: absolute;
-            bottom: -20px;
-            right: -4px;
-          }
-        }
 
         .nav {
           margin-top: 14px;
@@ -335,3 +337,4 @@
     }
   }
 }
+
