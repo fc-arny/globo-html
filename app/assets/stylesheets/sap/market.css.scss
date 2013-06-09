@@ -19,7 +19,6 @@ body:before {
     min-width: 1200px;
   }
   #main {
-    padding: 0 20px;
     overflow:auto;
     //padding-bottom: 210px;
   }
@@ -49,10 +48,13 @@ body:before {
     // Left column
     .content-left {
       float: left;
+      left: 20px;
+      position: relative;
+
       .scroll {
         width: 100%;
         &.affix {
-          width: 16.95%;
+          width: 17.52991%;
           max-width: 238px;
         }
         &.affix-bottom {
@@ -64,10 +66,13 @@ body:before {
     // Right column
     .content-right {
       float: right;
+      right: 20px;
+      position: relative;
+
       .scroll {
         width: 100%;
         &.affix {
-          width: 19.45%;
+          width: 20.07692%;
           max-width: 273px;
         }
         &.affix-bottom {
@@ -106,7 +111,7 @@ body:before {
 .affix-bottom {
   top: auto;
   position: absolute;
-  bottom:2px;
+  bottom: 2px;
 }
 
 @font-face {
@@ -137,10 +142,7 @@ i.rubl {
     color: #fff;
     outline: none;
     background-position: none;
-    -webkit-transition: none;
-    -moz-transition: none;
-    -o-transition: none;
-    transition: none;
+    @include transition(none);
   }
   &.btn-blue {
     background: $blue;

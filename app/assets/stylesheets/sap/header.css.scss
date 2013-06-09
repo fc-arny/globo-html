@@ -16,20 +16,14 @@
     }
   }
   #header-wrap {
-    background: $header-grad-top-bg; /* Old browsers */
-    background: -moz-linear-gradient(top,  $header-grad-top-bg 0%, $header-grad-bot-bg 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$header-grad-top-bg), color-stop(100%,$header-grad-bot-bg)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  $header-grad-top-bg 0%,$header-grad-bot-bg 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top,  $header-grad-top-bg 0%,$header-grad-bot-bg 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top,  $header-grad-top-bg 0%,$header-grad-bot-bg 100%); /* IE10+ */
-    background: linear-gradient(to bottom,  $header-grad-top-bg 0%,$header-grad-bot-bg 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f6f6', endColorstr='#f1f1f1',GradientType=0 ); /* IE6-9 */
     border: 2px solid #ffffff;
+    @include gradient-horizontal($header-grad-top-bg, $header-grad-bot-bg);
     @include box-shadow(#{0 0 6px rgba(0,0,0, .4)});
     @include border-radius(#{0 0 10px 10px});
   }
   header {
     height: 199px;
+    margin: 0 20px;
 
     .navbar {
       background: transparent;
@@ -165,11 +159,7 @@
         top: 100%;
         visibility: visible;
         z-index: 1000;
-
-        -webkit-transition: all 0.15s linear;
-        -moz-transition: all 0.15s linear;
-        -o-transition: all 0.15s linear;
-        transition: all 0.15s linear;
+        @include transition(all 0.15s linear);
       }
     }
 
@@ -337,10 +327,7 @@
           float: none!important;
 
           -webkit-filter: grayscale(100%);
-          -webkit-transition: all 0.15s linear;
-          -moz-transition: all 0.15s linear;
-          -o-transition: all 0.15s linear;
-          transition: all 0.15s linear;
+          @include transition(all 0.15s linear);
         }
       }
     }

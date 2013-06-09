@@ -88,10 +88,7 @@
       margin-bottom: -5px;
       position: relative;
       padding: 18px 0;
-      -webkit-transition: all 0.0s linear !important;
-      -moz-transition: all 0.0s linear !important;
-      -o-transition: all 0.0s linear !important;
-      transition: all 0.0s linear !important;
+      @include transition(all 0.0s linear !important);
       &:hover {
         background: lighten($blue, 15%);
         &:after {

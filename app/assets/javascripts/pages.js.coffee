@@ -45,13 +45,13 @@ $('.checking').click ->
 
 # side bar
 $window = $(window)
-setTimeout (->
+setTimeout ->
   $(".scroll").affix offset:
     top: 100
     bottom: 235
-), 0
-setTimeout (->
+, 0
+setTimeout ->
   $(".scroll-header").affix offset:
     top: 100
-), 600
+, 600
 
