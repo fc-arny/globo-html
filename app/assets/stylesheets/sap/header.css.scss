@@ -103,20 +103,19 @@
 
     .categories {
       border-left: 1px solid #e1e1e1;
-      display: table-row;
       height: 100%;
       margin: 0;
       @include clearfix;
 
       .item {
-        display: table-cell;
         height: 70px;
+        float: left;
         line-height: normal;
         position: relative;
         text-align: center;
         text-transform: uppercase;
         vertical-align: top;
-        width: 87px;
+        width: 76px;
 
         &.active, &.open {
           > a {
@@ -132,7 +131,6 @@
           font-size: 11px;
           font-weight: bold;
           height: 75px;
-          padding: 0 5px;
           position: relative;
           text-decoration: none;
           width: 100%;

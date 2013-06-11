@@ -30,7 +30,7 @@
       %nav.navbar-inner
         .container
           #main-menu.pull-left
-            %ul.categories
+            %ul.categories<
               %li.select-store
                 %span Выбраный магазин
                 %select#selectStore
@@ -71,7 +71,7 @@
                 %a{:href => '/', :class => 'dropdown-toggle', 'data-toggle' => 'dropdown'}
                   %span
                     %i.icons.milk
-                  Молочные и яица
+                  Молочные и&nbsp;яица
                 %ul.dropdown-menu
                   %li.active
                     %a{:href => '/'} Блюда японской кухни
@@ -87,7 +87,9 @@
                 %a{:href => '/'}
                   %span
                     %i.icons.meat
-                  Мясо и рыба
+                  Мясо
+                  %br/
+                  и&nbsp;рыба
               %li.item
                 %a{:href => '/'}
                   %span
