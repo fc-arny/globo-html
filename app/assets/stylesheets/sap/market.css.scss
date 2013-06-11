@@ -50,17 +50,7 @@ body:before {
       float: left;
       left: 20px;
       position: relative;
-
-      .scroll {
-        width: 100%;
-        &.affix {
-          width: 17.52991%;
-          max-width: 238px;
-        }
-        &.affix-bottom {
-          width: 17.52991%;
-        }
-      }
+      width: 230px;
     }
 
     // Right column
@@ -68,25 +58,19 @@ body:before {
       float: right;
       right: 20px;
       position: relative;
+      width: 270px;
 
       .scroll {
-        width: 100%;
-        &.affix {
-          width: 20.07692%;
-          max-width: 273px;
-        }
-        &.affix-bottom {
-          width: 20.07692%;
-        }
+        width: 270px;
       }
     }
 
     .with-sidebars {
       position: relative;
       .content-main {
-        //float: none;
-        //margin-left: 270px;
-
+        float: none;
+        margin: 0 320px 0 270px;
+        box-sizing: content-box;
       }
     }
   }

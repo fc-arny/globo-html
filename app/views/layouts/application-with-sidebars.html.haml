@@ -1,19 +1,16 @@
 = content_for :content do
   .with-sidebars.row-fluid
     / Left menu - store select, filters
-    .content-left.span2
+    .content-left
       = render :partial => 'partials/left-side'
 
-    / Content
-    .content-main.span7
-      = content_for?(:main) ? yield(:main) : yield
-
     /  Right menu
-    .content-right.span3
+    .content-right
       .scroll
         = render :partial => 'partials/right-side'
 
-
-
+    / Content
+    .content-main
+      = content_for?(:main) ? yield(:main) : yield
 
 = render :template => 'layouts/application'
