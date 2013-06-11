@@ -34,15 +34,6 @@ $('.checking').click ->
      $(this).find('.check').addClass('yes')
 
 
-# side bar
-$window = $(window)
-setTimeout ->
-  $(".scroll").affix offset:
-    top: 100
-    bottom: 235
-, 0
-setTimeout ->
-  $(".scroll-header").affix offset:
-    top: 100
-, 600
-
+# affix шапки и корзины
+$(".scroll, .scroll-header").affix offset:
+  top: 100
