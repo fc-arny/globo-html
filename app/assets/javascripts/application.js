@@ -15,6 +15,7 @@
 //= require bootstrap
 //= require jquery.columnlist
 //= require jquery.ddslick
+//= require jquery.mCustomScrollbar
 //= require_tree .
 
 

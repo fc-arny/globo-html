@@ -37,3 +37,13 @@ $('.checking').click ->
 # affix шапки и корзины
 $(".scroll, .scroll-header").affix offset:
   top: 100
+
+$('#modal-basket-products').on 'shown', (e) ->
+  unless $(this).data 'custom-scrollbar-inited'
+    $('.with-custom-scrollbar').mCustomScrollbar(
+      horizontalScroll: true
+      scrollInertia: 0
+      autoDraggerLength: false
+      mouseWheel: false
+    )
+    $(this).data 'custom-scrollbar-inited', true

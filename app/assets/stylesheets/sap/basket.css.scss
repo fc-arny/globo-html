@@ -135,3 +135,102 @@
     }
   }
 }
+
+.modal-basket-products {
+  margin-left: -385px;
+  width: 770px;
+
+  .modal-body {
+    padding: 0;
+  }
+
+  .good-list-wrapper {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .good-list.modal-good-list {
+    .good-item {
+      border: {
+        bottom: none;
+        left: 1px dashed $gray-light;
+        right: none;
+        top: none;
+      }
+      margin: 0;
+      padding: 5px 7px 0;
+      width: 190px;
+      @include border-radius(0);
+      @include box-shadow(none);
+
+      &:hover {
+        border: {
+          bottom: none;
+          color: $gray-light;
+          right: none;
+          top: none;
+        }
+        background: none;
+        @include box-shadow(none);
+      }
+
+      &:first-child {
+        border-left: none;
+        width: 189px;
+      }
+    }
+
+    .good-title {
+      color: $text-dark-color;
+      font-size: 14px;
+      font-weight: normal;
+      margin: 5px 0;
+    }
+
+    .quantity {
+      display: block;
+      position: static;
+      width: 100%;
+    }
+
+    .q-btn {
+      vertical-align: top;
+    }
+
+    .q-value {
+      max-width: initial;
+      width: 115px;
+    }
+
+    .good-price {
+      border: none;
+      font-weight: normal;
+      margin: 0;
+      padding: 5px 0 0;
+      width: auto;
+    }
+
+    .good-price-label {
+      color: $text-light-color;
+    }
+  }
+
+  .mCSB_container {
+    margin-right: 0;
+  }
+
+  .mCSB_horizontal > .mCSB_scrollTools {
+    .mCSB_dragger {
+      width: 60px;
+    }
+
+    .mCSB_dragger_bar {
+      height: 8px;
+      width: 60px;
+    }
+
+    .mCSB_draggerRail {
+      height: 6px;
+    }
+  }
+}
