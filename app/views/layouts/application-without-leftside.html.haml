@@ -2,13 +2,13 @@
   / Content
   #wrapper.container-fluid
     .without-leftside.row-fluid
-      /  Right menu
+      / Корзина
+      .content-right
+        .scroll
+          = render :partial => 'partials/right-side'
 
       / Content
-      .content-main.span9
+      .content-main
         = content_for?(:main) ? yield(:main) : yield
-
-      .content-right.span3
-        /= basket
 
 = render :template => 'layouts/application'

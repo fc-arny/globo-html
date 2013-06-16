@@ -1,9 +1,14 @@
 class PagesController < ApplicationController
-  layout :index
+  layout :layout
+
+  def profile
+
+  end
+
   private()
-  def index
+  def layout
     case action_name
-      when "new", "create"
+      when "new", "create", "profile"
         "application-without-leftside"
       when "index"
         "application-with-sidebars"
