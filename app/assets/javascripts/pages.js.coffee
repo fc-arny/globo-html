@@ -38,7 +38,7 @@ $('.checking').click ->
 $(".scroll, .scroll-header").affix offset:
   top: 100
 
-$('#modal-basket-products').on 'shown', (e) ->
+$('#modal-basket-products').on 'shown', ->
   unless $(this).data 'custom-scrollbar-inited'
     $('.with-custom-scrollbar').mCustomScrollbar(
       horizontalScroll: true

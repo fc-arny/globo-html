@@ -42,7 +42,8 @@
       
 #modal-basket-products.modal-basket-products.modal.hide.fade{:'aria-hidden' => 'true'}
   .modal-header
-    %button.close{:type => 'button', :'data-dismiss' => 'modal', :'aria-hidden' => 'true'}
+    %a.modal-basket-close.close{:'data-dismiss' => 'modal', :'aria-hidden' => 'true'}
+      Вернуться к покупкам
     %h3
       Ваши покупки
   .modal-body
@@ -52,7 +53,8 @@
           %ul.good-list.modal-good-list{:style => "width: #{(190 * 8).to_s}px"}
             - (1..8).each do |i|
               %li.good-item
-                .good-del
+                %a.good-del{:href => '#'}
+                  %i.ui.del
                 .good-img
                   %img{:src => '/assets/demo/d1.jpg', :width => '175'}
                 .good-info
@@ -70,12 +72,12 @@
   .modal-footer
     .modal-basket-summary
       .m-b-s-delivery
-        %span Доставка
+        %span Доставка:
         %span.price
           400,00
           %i.rubl a
       .m-b-s-total
-        %span Итого
+        %span Итого:
         %span.price
           3396,00
           %i.rubl a

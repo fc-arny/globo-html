@@ -2,7 +2,6 @@
 
 // Reset
 @import "common/normalize";
-@import "common/icons";
 
 // Core
 @import "common/sap_variable";
@@ -15,4 +14,5 @@
 @import "jquery.mCustomScrollbar";
 
 // Sap Frontend
+@import "common/icons";
 @import "sap/*";
