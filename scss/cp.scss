@@ -1,0 +1,134 @@
+@import 'compass';
+.shopLine{
+  .shopLineTitle{
+    height: 75px;
+    display: block;
+    padding: 0 20px;
+    .shopLogo{
+      height: 45px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .shopName{
+      text-transform: uppercase;
+      font-size: 16px; font-weight: bold; color: #444;
+      display: inline-block;
+      margin-left: 30px;
+    }
+  }
+  .shopProduct{
+    background-color: #fafafa;
+    @include box-shadow(inset 0 1px 1px #f0f0f0);
+    .shopProductItem{
+      height: 96px;
+      background: url('../images/dashed3.png') bottom left repeat-x;
+      &:last-child{
+        background: none;
+      }
+      .w75{
+        padding-left: 180px;
+        text-align: left;
+        height: 100%;
+      }
+      .w25{
+        height: 100%;
+      }
+      .poster{
+        height: 80px;
+        width: 80px;
+        margin: 0;
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .posterStar{
+        width: 23px;
+        height: 23px;
+        background: url('../images/star.png') 0 0 no-repeat;
+        position: relative;
+        top: 0px;
+        display: inline-block;
+        margin-right: 20px;
+      }
+      .posterStar:hover, .posterStar.active{
+        background-position: 0px -23px;
+      }
+      .productName{
+        width: 400px;
+        overflow: hidden;
+        height: 16px;
+        font-size: 16px; color: #009bea;
+        text-decoration: none;
+        display: inline-block;
+        margin-left: 40px;
+        text-overflow:ellipsis;
+        white-space:nowrap;
+      }
+    }
+  }
+}
+.cost{
+  display: inline-block;
+  padding-right: 15px;
+  padding-left: 0;
+  margin-bottom: 0;
+  height: 20px;
+  line-height: 20px;
+  background: url('../images/dRub.png') right center no-repeat;
+}
+.orderLine{
+  color: #888888;
+  background: url('../images/dashed3.png') bottom left repeat-x;
+  &:last-child{
+    background: none;
+  }
+  .leftP20{
+    padding-left: 20px;
+  }
+  .w75, .w25, .w33, .w15, .w20, .w40, .w50, .w60, .w30, .w12, .w84{
+    text-align: left;
+    vertical-align: middle;
+  }
+  .orderInfo{
+    height: 100px;
+  }
+  .orderProductLine{
+    line-height: 20px;
+    a{
+      text-decoration: none;
+    }
+    &:last-child{
+      background: url('../images/dashed3.png') top left repeat-x;
+    }
+  }
+  .orderMore{
+    padding: 20px 0;
+    background-color: #fafafa;
+    display: none;
+    @include box-shadow(inset 0 1px 1px #f0f0f0);
+    .orderMoreInfo{
+      padding-left: 10px;
+      line-height: 22px;
+    }
+    .repeatOrder{
+      margin: 10px 0 5px 0;
+    }
+  }
+}
+.useradress{
+  padding: 20px;
+  .w75, .w25, .w33, .w15, .w20, .w40, .w50, .w60, .w30, .w12, .w84{
+    text-align: left;
+    vertical-align: middle;
+    margin-right: 20px;
+  }
+  input, select, .ik_select, .ik_select_link{
+    width: 100%!important;
+  }
+  .adressLine{
+    margin-bottom: 20px;
+  }
+  .removelink{
+    font-size: 12px;
+  }
+}
+

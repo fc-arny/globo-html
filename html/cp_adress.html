@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Globo</title>
+    <link type="text/css" href="fonts/fonts.css" rel="Stylesheet" />
+    <link type="text/css" href="../css/main.css" rel="Stylesheet" />
+    <link type="text/css" href="../css/header.css" rel="Stylesheet" />
+    <link type="text/css" href="../css/footer.css" rel="Stylesheet" />
+    <link type="text/css" href="../css/overlay.css" rel="Stylesheet" />
+    <link type="text/css" href="../css/catalog.css" rel="Stylesheet" />
+    <link type="text/css" href="../css/cp.css" rel="Stylesheet" />
+    <link type="text/css" href="../css/ui.css" rel="Stylesheet" />
+    <link type="text/css" href="../css/ikSelect.css" rel="Stylesheet" />
+    <link type="text/css" href="../css/jquery.jscrollpane.css" rel="Stylesheet" />
+    <link type="text/css" href="../css/media.css" rel="Stylesheet" />
+    <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <!--[if IE]><link href="../css/ie.css" rel="stylesheet" media="all" /><![endif]-->
+    <script type="text/javascript" src="../js/jquery-2.0.2.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.ikSelect.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.sticky.js"></script>
+    <script type="text/javascript" src="../js/jquery.mousewheel.js"></script>
+    <script type="text/javascript" src="../js/jquery.jcarousel.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.jscrollpane.min.js"></script>
+    <script type="text/javascript" src="../js/nav.js"></script>
+    <script type="text/javascript" src="../js/overlay.js"></script>
+    <script type="text/javascript" src="../js/script.js"></script>
+</head>
+<body>
+<header class="main">
+    <div class="hWrap">
+        <a class="logo" href="#"></a>
+        <div class="rightBox">
+            <div id="sign">
+                <a class="profile" href="#loginBox">войти</a>
+            </div>
+            <ul class="userNav">
+                <li><a href="#">Каталог</a></li>
+                <li><a href="#">Контакты</a></li>
+                <li><a href="#">Рецепты</a></li>
+                <li><a href="#">Новости</a></li>
+                <li><a href="#">Компания</a></li>
+            </ul>
+        </div>
+        <div class="clear"></div>
+        <div class="mainNavWrap" id="mainNavWrap">
+            <nav class="mainNav">
+                <div class="changeShop">
+                    <a href="#chnList" class="chnText layoutLink">Выбранный магазин</a>
+                    <div class="chnShop"><a class="layoutLink" href="#chnList"><img src="../img/shop_min1.png" id="chnSp" alt=""/></a></div>
+                    <ul class="chnList layout" id="chnList">
+                        <li><a href="#" class="active"><img src="../img/shop_min1.png" alt=""/></a></li>
+                        <li><a href="#"><img src="../img/shop_min2.png" alt=""/></a></li>
+                        <li><a href="#"><img src="../img/shop_min3.png" alt=""/></a></li>
+                        <li><a href="#"><img src="../img/shop_min4.png" alt=""/></a></li>
+                    </ul>
+                </div>
+                <div class="nav">
+                    <ul class="overnav">
+                        <li><a href="#"><span class="navIcon navIcon1"></span>Выпечка</a></li>
+                        <li><a href="#"><span class="navIcon navIcon2"></span>Овощи и фрукты</a>
+                            <div class="submenu">
+                                <div class="subWrap bigsub">
+                                    <ul class="sub">
+                                        <li class="active"><a href="">Sub menu 1 text</a></li>
+                                        <li><a href="">Sub menu 2 text</a></li>
+                                        <li><a href="">Sub menu 3 text Sub menu 4 text</a></li>
+                                        <li><a href="">Sub menu 4 text Sub menu 4 text</a></li>
+                                        <li><a href="">Sub menu 5 text</a></li>
+                                        <li><a href="">Sub menu 6 text</a></li>
+                                        <li><a href="">Sub menu 7 text</a></li>
+                                        <li><a href="">Sub menu 8 text</a></li>
+                                        <li><a href="">Sub menu 9 text</a></li>
+                                        <li><a href="">Sub menu 10 text</a></li>
+                                        <div class="clear"></div>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="#"><span class="navIcon navIcon3"></span>Молочные и яйца</a></li>
+                        <li><a href="#"><span class="navIcon navIcon4"></span>Мясо и рыба</a></li>
+                        <li><a href="#"><span class="navIcon navIcon5"></span>Морозилка</a></li>
+                        <li><a href="#"><span class="navIcon navIcon6"></span>Кулинария</a></li>
+                        <li><a href="#"><span class="navIcon navIcon7"></span>Консервы и приправы</a></li>
+                        <li><a href="#"><span class="navIcon navIcon8"></span>Бакалея</a></li>
+                        <li><a href="#"><span class="navIcon navIcon9"></span>Закуски и сладости</a></li>
+                        <li><a href="#"><span class="navIcon navIcon10"></span>Напитки</a></li>
+                        <li><a href="#"><span class="navIcon navIcon11"></span>Для дома</a></li>
+                        <li><a href="#"><span class="navIcon navIcon12"></span>Детское</a></li>
+                        <li><a href="#"><span class="navIcon navIcon13"></span>Гигиена</a></li>
+                        <li><a href="#"><span class="navIcon navIcon14"></span>Для животных</a></li>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+            </nav>
+        </div>
+    </div>
+</header>
+<div id="basket">
+    <div class="basketVisible"><a href="#" class="bsVtrigger"></a></div>
+    <div class="bTitle"><span class="iconText"><span class="iconSet iconBasket"></span>Корзина</span> </div>
+    <div class="bContent">
+        <a class="bItem" href=".basketShop"><img class="bItemImg" src="../img/shop_min1.png" alt=""/><span class="bItemSum">3369,00</span><div class="helper"></div></a>
+        <a class="bItem empty" href=".basketShop"><img class="bItemImg" src="../img/shop_min2.png" alt=""/><span class="bItemSum">266,00</span><div class="helper"></div></a>
+        <a class="bItem" href=".basketShop"><img class="bItemImg" src="../img/shop_min3.png" alt=""/><span class="bItemSum">2352,00</span><div class="helper"></div></a>
+        <a class="bItem" href=".basketShop"><img class="bItemImg" src="../img/shop_min4.png" alt=""/><span class="bItemSum">1100,00</span><div class="helper"></div></a>
+        <div class="summary clear">
+            <span class="sumText">Итого:</span>
+            <span class="sumNum">7087,00</span>
+        </div>
+    </div>
+    <a class="bButton" href="#">• ОФОРМИТЬ ЗАКАЗ •</a>
+
+    <div class="basketShop">
+        <div class="bsArrow"></div>
+        <div class="basketShopHead">
+            <div class="bsTitle">ВАШИ ПОКУПКИ</div>
+            <a href="#" class="bsReturn overlayClose">Вернуться к покупкам</a></div>
+        <div class="basketShopContent">
+            <div class="bscItemBox">
+                <div class="bscItem">
+                    <a class="removeItem" href="#"></a>
+                    <div class="poster"><img class="posterImg" src="../img/food1.png" alt=""/>
+                        <div class="helper"></div>
+                    </div>
+                    <div class="title">Плов с мясом баранины рецепту Глобус Гурмэ</div>
+                    <div class="uci">
+                        <div class="uciVal">
+                            <a class="uciValMinus" data-sum="-" data-val="100" href="#">-</a>
+                            <input class="uciValinput" maxlength="4" value="100" type="text"/><span class="uciValtext">гр</span>
+                            <a class="uciValPlus" data-val="100" href="#">+</a>
+                        </div>
+                        <div class="uciSum">
+                            <div class="uciSumText">Стоимость:</div>
+                            <div class="uciSumNum">51,00</div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="bscItem">
+                    <a class="removeItem" href="#"></a>
+                    <div class="poster"><img class="posterImg" src="../img/food1.png" alt=""/>
+                        <div class="helper"></div>
+                    </div>
+                    <div class="title">Плов с мясом баранины рецепту Глобус Гурмэ</div>
+                    <div class="uci">
+                        <div class="uciVal">
+                            <a class="uciValMinus" data-sum="-" data-val="100" href="#">-</a>
+                            <input class="uciValinput" maxlength="4" value="100" type="text"/><span class="uciValtext">гр</span>
+                            <a class="uciValPlus" data-val="100" href="#">+</a>
+                        </div>
+                        <div class="uciSum">
+                            <div class="uciSumText">Стоимость:</div>
+                            <div class="uciSumNum">51,00</div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="bscItem">
+                    <a class="removeItem" href="#"></a>
+                    <div class="poster"><img class="posterImg" src="../img/food1.png" alt=""/>
+                        <div class="helper"></div>
+                    </div>
+                    <div class="title">Плов с мясом баранины рецепту Глобус Гурмэ</div>
+                    <div class="uci">
+                        <div class="uciVal">
+                            <a class="uciValMinus" data-sum="-" data-val="100" href="#">-</a>
+                            <input class="uciValinput" maxlength="4" value="100" type="text"/><span class="uciValtext">гр</span>
+                            <a class="uciValPlus" data-val="100" href="#">+</a>
+                        </div>
+                        <div class="uciSum">
+                            <div class="uciSumText">Стоимость:</div>
+                            <div class="uciSumNum">51,00</div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="bscItem">
+                    <a class="removeItem" href="#"></a>
+                    <div class="poster"><img class="posterImg" src="../img/food1.png" alt=""/>
+                        <div class="helper"></div>
+                    </div>
+                    <div class="title">Плов с мясом баранины рецепту Глобус Гурмэ</div>
+                    <div class="uci">
+                        <div class="uciVal">
+                            <a class="uciValMinus" data-sum="-" data-val="100" href="#">-</a>
+                            <input class="uciValinput" maxlength="4" value="100" type="text"/><span class="uciValtext">гр</span>
+                            <a class="uciValPlus" data-val="100" href="#">+</a>
+                        </div>
+                        <div class="uciSum">
+                            <div class="uciSumText">Стоимость:</div>
+                            <div class="uciSumNum">51,00</div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="bscItem">
+                    <a class="removeItem" href="#"></a>
+                    <div class="poster"><img class="posterImg" src="../img/food1.png" alt=""/>
+                        <div class="helper"></div>
+                    </div>
+                    <div class="title">Плов с мясом баранины рецепту Глобус Гурмэ</div>
+                    <div class="uci">
+                        <div class="uciVal">
+                            <a class="uciValMinus" data-sum="-" data-val="100" href="#">-</a>
+                            <input class="uciValinput" maxlength="4" value="100" type="text"/><span class="uciValtext">гр</span>
+                            <a class="uciValPlus" data-val="100" href="#">+</a>
+                        </div>
+                        <div class="uciSum">
+                            <div class="uciSumText">Стоимость:</div>
+                            <div class="uciSumNum">51,00</div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="bscItem">
+                    <a class="removeItem" href="#"></a>
+                    <div class="poster"><img class="posterImg" src="../img/food1.png" alt=""/>
+                        <div class="helper"></div>
+                    </div>
+                    <div class="title">Плов с мясом баранины рецепту Глобус Гурмэ</div>
+                    <div class="uci">
+                        <div class="uciVal">
+                            <a class="uciValMinus" data-sum="-" data-val="100" href="#">-</a>
+                            <input class="uciValinput" maxlength="4" value="100" type="text"/><span class="uciValtext">гр</span>
+                            <a class="uciValPlus" data-val="100" href="#">+</a>
+                        </div>
+                        <div class="uciSum">
+                            <div class="uciSumText">Стоимость:</div>
+                            <div class="uciSumNum">51,00</div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="bscItem">
+                    <a class="removeItem" href="#"></a>
+                    <div class="poster"><img class="posterImg" src="../img/food1.png" alt=""/>
+                        <div class="helper"></div>
+                    </div>
+                    <div class="title">Плов с мясом баранины рецепту Глобус Гурмэ</div>
+                    <div class="uci">
+                        <div class="uciVal">
+                            <a class="uciValMinus" data-sum="-" data-val="100" href="#">-</a>
+                            <input class="uciValinput" maxlength="4" value="100" type="text"/><span class="uciValtext">гр</span>
+                            <a class="uciValPlus" data-val="100" href="#">+</a>
+                        </div>
+                        <div class="uciSum">
+                            <div class="uciSumText">Стоимость:</div>
+                            <div class="uciSumNum">51,00</div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="bscItem">
+                    <a class="removeItem" href="#"></a>
+                    <div class="poster"><img class="posterImg" src="../img/food1.png" alt=""/>
+                        <div class="helper"></div>
+                    </div>
+                    <div class="title">Плов с мясом баранины рецепту Глобус Гурмэ</div>
+                    <div class="uci">
+                        <div class="uciVal">
+                            <a class="uciValMinus" data-sum="-" data-val="100" href="#">-</a>
+                            <input class="uciValinput" maxlength="4" value="100" type="text"/><span class="uciValtext">гр</span>
+                            <a class="uciValPlus" data-val="100" href="#">+</a>
+                        </div>
+                        <div class="uciSum">
+                            <div class="uciSumText">Стоимость:</div>
+                            <div class="uciSumNum">51,00</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="basketShopFooter">
+            <div class="summary">
+                Итого:
+                <div class="summaryPrice">5400</div>
+            </div>
+            <div class="delivery">
+                Доставка:
+                <div class="deliveryPrice">400</div>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="content">
+    <div class="cWrapper">
+        <div class="bsTitle">Личный кабинет</div>
+        <div class="wrapper contentBox coninNav">
+            <ul class="inNav">
+                <li class="inNavItem"><a href="#">Личные данные</a></li>
+                <li class="inNavItem"><a href="#">Избранное</a></li>
+                <li class="inNavItem"><a href="#">Мои покупки</a></li>
+                <li class="inNavItem"><a class="active" href="#">Адреса</a></li>
+            </ul>
+            <div class="cbContent ft">
+                <form class="useradress clearfix" action="#">
+                    <div class="titleBox">
+                        <div class="w15 litleTitle">Название</div>
+                        <div class="w25 litleTitle">Город</div>
+                        <div class="w25 litleTitle">Адрес</div>
+                    </div>
+                    <div class="adressBox">
+                        <div class="adressLine">
+                            <div class="w15"><input type="text" name=""/></div>
+                            <div class="w25">
+                                <select class="sity">
+                                    <option value="value1">option 1</option>
+                                    <option value="value2">option 2 with quite a long name</option>
+                                    <option value="value3">option 3 with a very long name that contains many letters almost like a sentence... well ok, it's already a sentence... some more words.. will there be an ending..</option>
+                                    <option value="value4">o4</option>
+                                </select>
+                            </div>
+                            <div class="w25"><input type="text" name=""/></div>
+                            <a class="removelink" href="#">Удалить</a>
+                        </div>
+                        <div class="adressLine">
+                            <div class="w15"><input type="text" name=""/></div>
+                            <div class="w25">
+                                <select class="sity">
+                                    <option value="value1">option 1</option>
+                                    <option value="value2">option 2 with quite a long name</option>
+                                    <option value="value3">option 3 with a very long name that contains many letters almost like a sentence... well ok, it's already a sentence... some more words.. will there be an ending..</option>
+                                    <option value="value4">o4</option>
+                                </select>
+                            </div>
+                            <div class="w25"><input type="text" name=""/></div>
+                            <a class="removelink" href="#">Удалить</a>
+                        </div>
+                        <div class="adressLine">
+                        <div class="w15"><input type="text" name=""/></div>
+                        <div class="w25">
+                            <select class="sity">
+                                <option value="value1">option 1</option>
+                                <option value="value2">option 2 with quite a long name</option>
+                                <option value="value3">option 3 with a very long name that contains many letters almost like a sentence... well ok, it's already a sentence... some more words.. will there be an ending..</option>
+                                <option value="value4">o4</option>
+                            </select>
+                        </div>
+                        <div class="w25"><input type="text" name=""/></div>
+                        <a class="removelink" href="#">Удалить</a>
+                    </div>
+                    </div>
+                    <a class="addAdress" href="#">Добавить адрес</a>
+                    <div class="hideAdress">
+                        <div class="adressLine">
+                            <div class="w15"><input type="text" name=""/></div>
+                            <div class="w25">
+                                <select class="sityNew">
+                                    <option value="value1">option 1</option>
+                                    <option value="value2">option 2 with quite a long name</option>
+                                    <option value="value3">option 3 with a very long name that contains many letters almost like a sentence... well ok, it's already a sentence... some more words.. will there be an ending..</option>
+                                    <option value="value4">o4</option>
+                                </select>
+                            </div>
+                            <div class="w25"><input type="text" name=""/></div>
+                            <a class="removelink" href="#">Удалить</a>
+                        </div>
+                    </div>
+                </form>
+                <div class="cbFooter"><a class="blueButton overlayLink" href="#test">сохранить</a></div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</section>
+<footer>
+    <div class="footerWrapper">
+        <div class="leftFotterBox">
+            <a class="logo" href="#"></a>
+                <ul class="footerSocial">
+                    <li><a class="ok" href="#"></a></li>
+                    <li><a class="fb" href="#"></a></li>
+                    <li><a class="vk" href="#"></a></li>
+                    <li><a class="rss" href="#"></a></li>
+                    <li class="clearfix"><a class="tw" href="#"></a></li>
+                </ul>
+        </div>
+        <div class="footerNav">
+            <div class="fnItem">
+                <div class="title">Информация</div>
+                <ul>
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">Безопасность</a></li>
+                    <li><a href="#">Советы</a></li>
+                    <li><a href="#">Карта сайта</a></li>
+                    <li><a href="#">Помощь</a></li>
+                    <li><a href="#">Контактная информация</a></li>
+                </ul>
+            </div>
+            <div class="fnItem">
+                <div class="title">Магазины</div>
+                <ul>
+                    <li><a href="#">Глобус Гурме</a></li>
+                    <li><a href="#">Перекресток</a></li>
+                    <li><a href="#">Азбука Вкуса</a></li>
+                    <li><a href="#">Алые Паруса</a></li>
+                </ul>
+            </div>
+            <div class="fnItem">
+                <div class="title">Дополнительно</div>
+                <ul>
+                    <li><a href="#">Форум</a></li>
+                    <li><a href="#">Обсуждения</a></li>
+                    <li><a href="#">Аналитика</a></li>
+                    <li><a href="#">Рецепты</a></li>
+                </ul>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+        <div class="copirate"> © GLOBO Market 2010-2012 </div>
+    </div>
+</footer>
+<div id="test" class="overloBox">
+    <div class="obHead">
+        <a class="remove overlayClose" href="#"></a>
+        <div class="bsTitle">проверка</div>
+    </div>
+    <div class="obContent">
+        <form action="#">
+            <div class="kaptca"><img src="../img/kaptca.png"></div>
+            <div class="obText marg10">Введите текст изображенный на картинке</div>
+            <input type="text" class="fullButton"/>
+            <a class="blueButton fullButton" href="#">готово</a>
+        </form>
+    </div>
+</div>
+<div id="loginBox" class="overloBox">
+    <div class="obHead">
+        <a class="remove overlayClose" href="#"></a>
+        <div class="bsTitle">добро пожаловать</div>
+    </div>
+    <div class="obContent clearfix">
+        <form action="#" class="rightHalf">
+            <div class="smallText fit1">Вы здесь не впервые? Воспользуйтесь вашими данными для входа и продолжайте покупки!</div>
+            <div class="litleTitle">Логин</div>
+            <span class="marg10 miniIcon miniIcon_user"><input type="text"/></span>
+            <div class="litleTitle">Пароль</div>
+            <span class="marg10 miniIcon miniIcon_lock"><input type="password"/></span>
+            <div class="clear"></div>
+            <div class="rememberLab"><input type="checkbox" id="remember"/> <label for="remember">Запомнить меня</label></div>
+            <a class="blueButton fullButton" href="#">Войти</a>
+            <a class="smallA" href="#" title="Поражены твоей неудачей">Забыли пароль?</a>
+        </form>
+        <form action="#" class="leftHalf">
+            <div class="smallText fit1">Впервые на нашем сайте? Зарегистрируйтесь! У нас это действительно быстро!</div>
+            <div class="litleTitle">Логин *</div>
+            <span class="marg10 miniIcon miniIcon_user"><input type="text"/></span>
+            <div class="litleTitle">Телефон *</div>
+            <span class="marg10 miniIcon miniIcon_phone"><input type="text"/></span>
+            <div class="litleTitle">Пароль *</div>
+            <span class="marg10 miniIcon miniIcon_lock"><input type="password"/></span>
+            <div class="inputDescript">Пароль должен состоять минимум из 8 символов <br>(A-Z, a-z, 0-9)</div>
+            <a class="blueButton fullButton" href="#">сохранить</a>
+            <div class="smallText">* Поля обьязательные для заполнения</div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

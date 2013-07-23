@@ -1,0 +1,229 @@
+@import 'compass';
+/*
+@mixin aArrow($col){
+  display: block;
+  content: "";
+  position: absolute;
+  right: -8px;
+  top: 0;
+  width: 0px;
+  height: 0px;
+  border-left: 8px solid $col;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+}*/
+
+input{
+  outline: none;
+}
+input[type="checkbox"] {
+  position: absolute;
+  left: -9999px;
+}
+input[type="checkbox"] + label {
+  background-image: url('../images/check2.png');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  padding-left: 28px;
+  height: 20px;
+  @include box-sizing(border-box);
+  padding-top: 2px;
+  padding-bottom: 1px;
+  font-size: 16px; color: #444;
+  line-height: 18px;
+  cursor: pointer;
+}
+input[type="checkbox"].white + label,
+.asideBox input[type="checkbox"] + label{
+  background-image: url('../images/check.png');
+}
+input[type="checkbox"]:checked + label {
+  background-position: 0 -22px;
+}
+input[type="checkbox"]:disabled + label {
+  color: #c9c9c9;
+  background-position: 0 -44px;
+}
+input[type="text"], input[type="password"], textarea{
+  width: 219px; height: 32px;
+  @include border-radius(2px);
+  background-color: #fbfbfb;
+  border: solid 1px #74c900;
+  @include box-sizing(border-box);
+  text-align: left;
+  font-size: 16px; color: #afafaf;
+  padding: 2px 5px;
+  &:focus{
+    @include box-shadow(rgba(116, 201, 0, .5) 0 0px 3px 0px);
+    @include transition-property(all);
+    @include transition-duration(300ms);
+  }
+  &:disabled{
+    @include border-radius(2px); background-color: #fbfbfb; border: solid 1px #c9c9c9;
+  }
+}
+textarea{
+  margin: 10px 0;
+  padding: 10px;
+  @include box-sizing(border-box);
+  width: 100%; height: 200px;
+  max-width: 900px; max-height: 500px;
+  min-width: 300px; min-height: 100px;
+}
+.ik_select_link{
+  width: 219px; height: 32px;
+  @include border-radius(2px);
+  background-color: #fbfbfb;
+  border: solid 1px #74c900;
+  @include box-sizing(border-box);
+  text-align: left;
+  font-size: 16px; color: #afafaf;
+  position: relative;
+  padding:5px 40px 5px 7px;
+  cursor: pointer;
+  white-space:nowrap;
+  *zoom:1;
+  &:after{
+    content: '';
+    display: block;
+    position: absolute;
+    right: -2px;
+    top: 0;
+    border: 0 none;
+    width: 36px; height: 100%;
+    @include border-radius(4px);
+    background: #74c900 url('../images/arrowDown.png') center center no-repeat;
+    position: absolute;
+    z-index: 1;
+  }
+}
+@mixin aArrow($col){
+  display: block;
+  content: "";
+  position: absolute;
+  right: -11px;
+  top: 4px;
+  width: 21px;
+  height: 21px;
+  background-color: $col;
+  @include rotate(45deg);
+  z-index: 2;
+}
+@mixin aArrow2($col){
+  display: block;
+  content: "";
+  position: absolute;
+  right: 0px;
+  top: 0;
+  width: 16px;
+  height: 100%;
+  background-color: $col;
+  z-index: 3;
+}
+#sign{
+  &:after{@include aArrow(#009bea);}
+  &:before{@include aArrow2(#009bea);}
+}
+.goBuy{
+  display: inline-block;
+  position: relative;
+  background-color: #74c900;
+  font-size: 14px; font-weight: bold; text-transform: uppercase; color: #fff; line-height: 14px;
+  padding: 8px 40px;
+  @include box-sizing(border-box);
+  height: 30px;
+  text-decoration: none;
+}
+.goBuy:after{
+  @include aArrow(#74c900);
+}
+.goBuy:before{
+  @include aArrow2(#74c900);
+}
+.goBut{
+  opacity: 1;
+}
+.onlybut, .goBut, .goBut:after, .goBut:before, .uciValMinus, .uciValPlus, .blueButton, .ik_select_link:after, a #sign, a #sign:before, a #sign:after{
+  @include transition-property(opacity, box-shadow);
+  @include transition-duration(400ms);
+}
+.onlybut:hover, .goBut:hover, .goBut:hover, .uciValMinus:hover, .uciValPlus:hover, .blueButton:hover, .ik_select_link:hover:after, a #sign:hover{
+  @include box-shadow(rgba(255, 255, 255, .35) 0 20px 30px -4px inset);
+}
+.goBut:hover:after, .goBut:hover:after, a #sign:hover:after,
+.goBut:hover:before, .goBut:hover:before, a #sign:hover:before
+{
+  @include box-shadow(rgba(255, 255, 255, 0.35) 0 16px 21px -5px inset);
+}
+.onlybut:active, .goBut:active, .goBut:active, .uciValMinus:active, .uciValPlus:active, .blueButton:active, .ik_select_link:active:after, a #sign:active{
+  @include box-shadow(rgba(0, 0, 0, .15) 0 20px 30px -4px inset);
+}
+.goBut:active:after, .goBut:active:after, a #sign:active:after,
+.goBut:active:before, .goBut:active:before, a #sign:active:before
+{
+  @include box-shadow(rgba(0, 0, 0, 0.15) 0 16px 21px -5px inset);
+}
+.goBut.load:after, .goBut.load:before, .goBut.load{
+  @include box-shadow(rgba(0, 0, 0, 0.0) 0 16px 21px -5px inset);
+}
+.goBut.load{
+  opacity: 0.6;
+  cursor: default;
+}
+.goBut.load:before{
+  background-image: url('../images/smallpreloader.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.blueButton{
+  font-size: 16px; font-weight: bold; color: #f0f0f0;
+  @include border-radius(2px);
+  background-color: #009bea;
+  padding: 10px 15px;
+  @include box-sizing(border-box);
+  display: inline-block;
+  line-height: 16px;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+}
+.takeinBasket, .repeatOrder{
+  @extend .goBuy;
+  background-color: #009bea;
+}
+.takebs{
+  display: block;
+  opacity: 0;
+  background: url('../images/basket.png') left center no-repeat;
+  background-size: 100% auto;
+  width: 25px;
+  height: 40px;
+  position: absolute;
+  right: 10px;
+  top: -4px;
+  @include transition-property(opacity);
+  @include transition-duration(200ms);
+}
+.takeinBasket:not(.load):hover ~ .takebs{
+    opacity: 1;
+  }
+.takeinBasket:after, .repeatOrder:after{
+  @include aArrow(#009bea);
+}
+.takeinBasket:before, .repeatOrder:before{
+  @include aArrow2(#009bea);
+}
+.remove{
+  display: block;
+  position: absolute;
+  top:17px;
+  right: 10px;
+  z-index: 100;
+  background: url('../images/removeItem.png') 0 0 no-repeat;
+  width: 14px;
+  height: 14px;
+  opacity: 0.7;
+}
+.remove:hover{
+  opacity: 1;
+}

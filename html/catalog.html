@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Globo</title>
+    <link type="text/css" href="fonts/fonts.css" rel="Stylesheet" />
+    <link type="text/css" href="../css/main.css" rel="Stylesheet" />
+    <link type="text/css" href="../css/header.css" rel="Stylesheet" />
+    <link type="text/css" href="../css/footer.css" rel="Stylesheet" />
+    <link type="text/css" href="../css/overlay.css" rel="Stylesheet" />
+    <link type="text/css" href="../css/catalog.css" rel="Stylesheet" />
+    <link type="text/css" href="../css/ui.css" rel="Stylesheet" />
+    <link type="text/css" href="../css/jquery.jscrollpane.css" rel="Stylesheet" />
+    <link type="text/css" href="../css/media.css" rel="Stylesheet" />
+    <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <!--[if IE]><link href="../css/ie.css" rel="stylesheet" media="all" /><![endif]-->
+    <script type="text/javascript" src="../js/jquery-2.0.2.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.sticky.js"></script>
+    <script type="text/javascript" src="../js/jquery.mousewheel.js"></script>
+    <script type="text/javascript" src="../js/jquery.jcarousel.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.jscrollpane.min.js"></script>
+    <script type="text/javascript" src="../js/nav.js"></script>
+    <script type="text/javascript" src="../js/overlay.js"></script>
+    <script type="text/javascript" src="../js/script.js"></script>
+</head>
+<body>
+<header class="main" id="mainHeader">
+    <div class="hWrap">
+        <a class="logo" href="#"></a>
+        <div class="rightBox">
+            <div id="sign">
+                <a class="profile" href="#">John Doe</a><a class="setting layoutLink" href="#settingBox"></a>
+                <div id="settingBox" class="layout">
+                    <ul class="nav">
+                        <li><a href="#"><span class="sett"></span>Настройки</a></li>
+                        <li><a href="#"><span class="star"></span>Избранное</a></li>
+                        <li><a href="#"><span class="exit"></span>Выход</a></li>
+                    </ul>
+                </div>
+            </div>
+            <ul class="userNav">
+                <li><a href="#">Каталог</a></li>
+                <li><a href="#">Контакты</a></li>
+                <li><a href="#">Рецепты</a></li>
+                <li><a href="#">Новости</a></li>
+                <li><a href="#">Компания</a></li>
+            </ul>
+        </div>
+        <div class="clear"></div>
+        <div class="mainNavWrap" id="mainNavWrap">
+            <nav class="mainNav">
+                <div class="changeShop">
+                    <a href="#chnList" class="chnText layoutLink">Выбранный магазин</a>
+                    <div class="chnShop"><a class="layoutLink" href="#chnList"><img src="../img/shop_min1.png" id="chnSp" alt=""/></a></div>
+                    <ul class="chnList layout" id="chnList">
+                        <li><a href="#" class="active"><img src="../img/shop_min1.png" alt=""/></a></li>
+                        <li><a href="#"><img src="../img/shop_min2.png" alt=""/></a></li>
+                        <li><a href="#"><img src="../img/shop_min3.png" alt=""/></a></li>
+                        <li><a href="#"><img src="../img/shop_min4.png" alt=""/></a></li>
+                    </ul>
+                </div>
+                <div class="nav">
+                    <ul class="overnav">
+                        <li><a href="#"><span class="navIcon navIcon1"></span>Выпечка</a></li>
+                        <li><a href="#"><span class="navIcon navIcon2"></span>Овощи и фрукты</a>
+                            <div class="submenu">
+                                <div class="subWrap bigsub">
+                                    <ul class="sub">
+                                        <li class="active"><a href="">Sub menu 1 text</a></li>
+                                        <li><a href="">Sub menu 2 text</a></li>
+                                        <li><a href="">Sub menu 3 text Sub menu 4 text</a></li>
+                                        <li><a href="">Sub menu 4 text Sub menu 4 text</a></li>
+                                        <li><a href="">Sub menu 5 text</a></li>
+                                        <li><a href="">Sub menu 6 text</a></li>
+                                        <li><a href="">Sub menu 7 text</a></li>
+                                        <li><a href="">Sub menu 8 text</a></li>
+                                        <li><a href="">Sub menu 9 text</a></li>
+                                        <li><a href="">Sub menu 10 text</a></li>
+                                        <div class="clear"></div>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="#"><span class="navIcon navIcon3"></span>Молочные и яйца</a></li>
+                        <li><a href="#"><span class="navIcon navIcon4"></span>Мясо и рыба</a></li>
+                        <li><a href="#"><span class="navIcon navIcon5"></span>Морозилка</a></li>
+                        <li><a href="#"><span class="navIcon navIcon6"></span>Кулинария</a></li>
+                        <li><a href="#"><span class="navIcon navIcon7"></span>Консервы и приправы</a></li>
+                        <li><a href="#"><span class="navIcon navIcon8"></span>Бакалея</a></li>
+                        <li><a href="#"><span class="navIcon navIcon9"></span>Закуски и сладости</a>
+                            <div class="submenu">
+                                <div class="subWrap bigsub">
+                                    <ul class="sub">
+                                        <li class="active"><a href="">Sub menu 1 text</a></li>
+                                        <li><a href="">Sub menu 2 text</a></li>
+                                        <li><a href="">Sub menu 3 text Sub menu 4 text</a></li>
+                                        <li><a href="">Sub menu 4 text Sub menu 4 text</a></li>
+                                        <li><a href="">Sub menu 5 text</a></li>
+                                        <li><a href="">Sub menu 6 text</a></li>
+                                        <li><a href="">Sub menu 7 text</a></li>
+                                        <li><a href="">Sub menu 8 text</a></li>
+                                        <li><a href="">Sub menu 9 text</a></li>
+                                        <li><a href="">Sub menu 10 text</a></li>
+                                        <div class="clear"></div>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="#"><span class="navIcon navIcon10"></span>Напитки</a></li>
+                        <li><a href="#"><span class="navIcon navIcon11"></span>Для дома</a></li>
+                        <li><a href="#"><span class="navIcon navIcon12"></span>Детское</a></li>
+                        <li><a href="#"><span class="navIcon navIcon13"></span>Гигиена</a></li>
+                        <li><a href="#"><span class="navIcon navIcon14"></span>Для животных</a></li>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+            </nav>
+        </div>
+    </div>
+</header>
+<div id="basket" class="main">
+    <div class="basketVisible"><a href="#" class="bsVtrigger"></a></div>
+    <div class="bTitle"><span class="iconText"><span class="iconSet iconBasket"></span>Корзина</span> </div>
+    <div class="bContent">
+        <a class="bItem" href=".basketShop"><img class="bItemImg" src="../img/shop_min1.png" alt=""/><span class="bItemSum">3369,00</span><div class="helper"></div></a>
+        <a class="bItem empty" href=".basketShop"><img class="bItemImg" src="../img/shop_min2.png" alt=""/><span class="bItemSum">266,00</span><div class="helper"></div></a>
+        <a class="bItem" href=".basketShop"><img class="bItemImg" src="../img/shop_min3.png" alt=""/><span class="bItemSum">2352,00</span><div class="helper"></div></a>
+        <a class="bItem" href=".basketShop"><img class="bItemImg" src="../img/shop_min4.png" alt=""/><span class="bItemSum">1100,00</span><div class="helper"></div></a>
+        <div class="summary clear">
+            <span class="sumText">Итого:</span>
+            <span class="sumNum">7087,00</span>
+        </div>
+    </div>
+    <a class="bButton" href="#">• ОФОРМИТЬ ЗАКАЗ •</a>
+
+    <div class="basketShop">
+        <div class="bsArrow"></div>
+        <div class="basketShopHead">
+            <div class="bsTitle">ВАШИ ПОКУПКИ</div>
+            <a href="#" class="bsReturn overlayClose">Вернуться к покупкам</a></div>
+        <div class="bsPadding">
+          <div class="basketShopContent">
+            <div class="bscItemBox">
+                <div class="bscItem">
+                    <a class="removeItem" href="#"></a>
+                    <div class="poster"><img class="posterImg" src="../img/food1.png" alt=""/>
+                        <div class="helper"></div>
+                    </div>
+                    <div class="title">Плов с мясом баранины рецепту Глобус Гурмэ</div>
+                    <div class="uci">
+                        <div class="uciVal">
+                            <a class="uciValMinus" data-sum="-" data-val="100" href="#">-</a>
+                            <input class="uciValinput" maxlength="4" value="100" type="text"/><span class="uciValtext">гр</span>
+                            <a class="uciValPlus" data-val="100" href="#">+</a>
+                        </div>
+                        <div class="uciSum">
+                            <div class="uciSumText">Стоимость:</div>
+                            <div class="uciSumNum">51,00</div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="bscItem">
+                    <a class="removeItem" href="#"></a>
+                    <div class="poster"><img class="posterImg" src="../img/food1.png" alt=""/>
+                        <div class="helper"></div>
+                    </div>
+                    <div class="title">Плов с мясом баранины рецепту Глобус Гурмэ</div>
+                    <div class="uci">
+                        <div class="uciVal">
+                            <a class="uciValMinus" data-sum="-" data-val="100" href="#">-</a>
+                            <input class="uciValinput" maxlength="4" value="100" type="text"/><span class="uciValtext">гр</span>
+                            <a class="uciValPlus" data-val="100" href="#">+</a>
+                        </div>
+                        <div class="uciSum">
+                            <div class="uciSumText">Стоимость:</div>
+                            <div class="uciSumNum">51,00</div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="bscItem">
+                    <a class="removeItem" href="#"></a>
+                    <div class="poster"><img class="posterImg" src="../img/food1.png" alt=""/>
+                        <div class="helper"></div>
+                    </div>
+                    <div class="title">Плов с мясом баранины рецепту Глобус Гурмэ</div>
+                    <div class="uci">
+                        <div class="uciVal">
+                            <a class="uciValMinus" data-sum="-" data-val="100" href="#">-</a>
+                            <input class="uciValinput" maxlength="4" value="100" type="text"/><span class="uciValtext">гр</span>
+                            <a class="uciValPlus" data-val="100" href="#">+</a>
+                        </div>
+                        <div class="uciSum">
+                            <div class="uciSumText">Стоимость:</div>
+                            <div class="uciSumNum">51,00</div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="bscItem">
+                    <a class="removeItem" href="#"></a>
+                    <div class="poster"><img class="posterImg" src="../img/food1.png" alt=""/>
+                        <div class="helper"></div>
+                    </div>
+                    <div class="title">Плов с мясом баранины рецепту Глобус Гурмэ</div>
+                    <div class="uci">
+                        <div class="uciVal">
+                            <a class="uciValMinus" data-sum="-" data-val="100" href="#">-</a>
+                            <input class="uciValinput" maxlength="4" value="100" type="text"/><span class="uciValtext">гр</span>
+                            <a class="uciValPlus" data-val="100" href="#">+</a>
+                        </div>
+                        <div class="uciSum">
+                            <div class="uciSumText">Стоимость:</div>
+                            <div class="uciSumNum">51,00</div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="bscItem">
+                    <a class="removeItem" href="#"></a>
+                    <div class="poster"><img class="posterImg" src="../img/food1.png" alt=""/>
+                        <div class="helper"></div>
+                    </div>
+                    <div class="title">Плов с мясом баранины рецепту Глобус Гурмэ</div>
+                    <div class="uci">
+                        <div class="uciVal">
+                            <a class="uciValMinus" data-sum="-" data-val="100" href="#">-</a>
+                            <input class="uciValinput" maxlength="4" value="100" type="text"/><span class="uciValtext">гр</span>
+                            <a class="uciValPlus" data-val="100" href="#">+</a>
+                        </div>
+                        <div class="uciSum">
+                            <div class="uciSumText">Стоимость:</div>
+                            <div class="uciSumNum">51,00</div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="bscItem">
+                    <a class="removeItem" href="#"></a>
+                    <div class="poster"><img class="posterImg" src="../img/food1.png" alt=""/>
+                        <div class="helper"></div>
+                    </div>
+                    <div class="title">Плов с мясом баранины рецепту Глобус Гурмэ</div>
+                    <div class="uci">
+                        <div class="uciVal">
+                            <a class="uciValMinus" data-sum="-" data-val="100" href="#">-</a>
+                            <input class="uciValinput" maxlength="4" value="100" type="text"/><span class="uciValtext">гр</span>
+                            <a class="uciValPlus" data-val="100" href="#">+</a>
+                        </div>
+                        <div class="uciSum">
+                            <div class="uciSumText">Стоимость:</div>
+                            <div class="uciSumNum">51,00</div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="bscItem">
+                    <a class="removeItem" href="#"></a>
+                    <div class="poster"><img class="posterImg" src="../img/food1.png" alt=""/>
+                        <div class="helper"></div>
+                    </div>
+                    <div class="title">Плов с мясом баранины рецепту Глобус Гурмэ</div>
+                    <div class="uci">
+                        <div class="uciVal">
+                            <a class="uciValMinus" data-sum="-" data-val="100" href="#">-</a>
+                            <input class="uciValinput" maxlength="4" value="100" type="text"/><span class="uciValtext">гр</span>
+                            <a class="uciValPlus" data-val="100" href="#">+</a>
+                        </div>
+                        <div class="uciSum">
+                            <div class="uciSumText">Стоимость:</div>
+                            <div class="uciSumNum">51,00</div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="bscItem">
+                    <a class="removeItem" href="#"></a>
+                    <div class="poster"><img class="posterImg" src="../img/food1.png" alt=""/>
+                        <div class="helper"></div>
+                    </div>
+                    <div class="title">Плов с мясом баранины рецепту Глобус Гурмэ</div>
+                    <div class="uci">
+                        <div class="uciVal">
+                            <a class="uciValMinus" data-sum="-" data-val="100" href="#">-</a>
+                            <input class="uciValinput" maxlength="4" value="100" type="text"/><span class="uciValtext">гр</span>
+                            <a class="uciValPlus" data-val="100" href="#">+</a>
+                        </div>
+                        <div class="uciSum">
+                            <div class="uciSumText">Стоимость:</div>
+                            <div class="uciSumNum">51,00</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="basketShopFooter">
+            <div class="summary">
+                Итого:
+                <div class="summaryPrice">5400</div>
+            </div>
+            <div class="delivery">
+                Доставка:
+                <div class="deliveryPrice">400</div>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="content">
+    <div class="cWrapper">
+        <aside class="leftColumn">
+            <form id="searchForm" class="searchForm" action="#"><input class="search" type="text" placeholder="Поиск"/><input class="searchSubmit" type="submit" value=""/></form>
+            <div class="asideBox">
+                <div class="abTitle"><span class="iconText"><span class="iconSet iconList"></span>Категории</span> </div>
+                <div class="abContent">
+                    <form id="catform" action="#">
+                        <input type="checkbox" id="c1" /> <label for="c1">Суши</label>
+                        <input type="checkbox" id="c2" /> <label for="c2">Сашими</label>
+                        <input type="checkbox" id="c3" /> <label for="c3">Роллы</label>
+                        <input type="checkbox" id="c4" /> <label for="c4">Японские супы</label>
+                        <input type="checkbox" id="c5" /> <label for="c5">Японские салаты</label>
+                        <input type="checkbox" id="c6" /> <label for="c6">Напитки</label>
+                    </form>
+                </div>
+            </div>
+            <div class="asideBox">
+                <div class="abTitle"><span class="iconText"><span class="iconSet iconWeight"></span>Вес</span> </div>
+                <div class="abContent">
+                    <form id="aform" action="#">
+                        <input type="checkbox" id="a1" /> <label for="a1">100г</label>
+                        <input type="checkbox" id="a2" /> <label for="a2">150г</label>
+                        <input type="checkbox" id="a3" /> <label for="a3">200г</label>
+                        <input type="checkbox" id="a4" /> <label for="a4">250г</label>
+                        <input type="checkbox" id="a5" /> <label for="a5">300г</label>
+                        <input type="checkbox" id="a6" /> <label for="a6">350г</label>
+                    </form>
+                </div>
+            </div>
+            <div class="asideBox">
+                <div class="abTitle"><span class="iconText"><span class="iconSet iconStar"></span>Избранное</span> </div>
+                <div class="abContent">
+                    <ul>
+                        <li>Item 1</li>
+                        <li>Item 2</li>
+                        <li>Item 3</li>
+                        <li>Item 4</li>
+                        <li>Item 5</li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+        <div class="middleContent">
+            <div class="tobBox clearfix">
+                <div class="sort clearfix">
+                    <div class="sortText">Сортировать по:</div>
+                    <div class="sortBy"><a href="#" class="sortByLink">времени</a></div>
+                </div>
+                <div class="cat">
+                    <div class="catName food1">Кулинария</div>
+                    <a href="#" class="scatName">Блюда японской кухни</a>
+                </div>
+            </div>
+            <div class="entrySection clearfix">
+                <div class="entry">
+                    <div class="poster"><img class="posterImg" src="../img/food1.png" alt=""/>
+                        <a href="#" class="posterStar"></a>
+                        <div class="helper"></div>
+                    </div>
+                    <a class="title" href=".entryBoxInfo">Плов с мясом баранины рецепту Глобус Гурмэ</a>
+                    <div class="cost clearfix"><div class="costNum">75,00</div><span class="costText">Цена за ( <span class="costVal">50 гр</span> ):</span></div>
+                    <div class="tkb"><a class="takeinBasket goBut" href="#">в корзину</a>  <span class="takebs"></span></div>
+                    <div class="uci">
+                        <div class="uciVal">
+                            <a class="uciValMinus" data-sum="-" data-val="50" href="#">-</a>
+                            <input class="uciValinput" maxlength="4" type="text" value="50"/><span class="uciValtext">гр</span>
+                            <a class="uciValPlus" data-val="50" href="#">+</a>
+                        </div>
+                        <div class="uciSum">
+                            <div class="uciSumNum">120,00</div>
+                            <a class="uciSumRemove" href="#">Удалить</a>
+                        </div>
+                    </div>
+                    <div class="entryBoxInfo clearfix">
+                        <a class="remove overlayClose" href="#"></a>
+                        <div class="rightHalf">
+                            <div class="entryInfo">
+                                <div class="title">Калифорния с копченым лососем и кунжутом</div>
+                                <div class="product">Состав: рис, нори, копченый лосось, авокадо, огурец, майонез, кунжут.</div>
+                                <div class="cost clearfix"><span class="costText">Цена за ( <span class="costVal">50 гр</span> ):</span><div class="costNum">75,00</div></div>
+                                <div class="uci">
+                                    <div class="uciVal">
+                                        <a class="uciValMinus" data-sum="-" data-val="50" href="#">-</a>
+                                        <input class="uciValinput" maxlength="4" type="text" value="50"/><span class="uciValtext">гр</span>
+                                        <a class="uciValPlus" data-val="50" href="#">+</a>
+                                    </div>
+                                    <div class="uciSum">
+                                        <div class="uciSumNum">120,00</div>
+                                        <a class="uciSumRemove" href="#">Удалить</a>
+                                    </div>
+                                </div>
+                                <div class="korpus">
+                                    <div class="tabs clearfix">
+                                        <input type="radio" name="tab" checked="checked" />
+                                        <input type="radio" name="tab" />
+                                        <input type="radio" name="tab" />
+                                        <label class="lbl1" for="tabs0">Цена</label>
+                                        <label class="lbl2" for="tabs1">Состав</label>
+                                        <label class="lbl3" for="tabs2">Обзоры(2)</label>
+                                        <div class="clear"></div>
+                                        <ul class="tabs-content">
+                                            <li>
+                                                <div class="liTitle">Текущие цены</div>
+                                                <div class="nowCost">
+                                                    <div class="bItem"><img class="bItemImg" src="../img/shop_min1.png" alt=""/><span class="bItemSum">3369,00</span><div class="helper"></div></div>
+                                                    <div class="bItem"><img class="bItemImg" src="../img/shop_min2.png" alt=""/><span class="bItemSum">266,00</span><div class="helper"></div></div>
+                                                    <div class="bItem"><img class="bItemImg" src="../img/shop_min3.png" alt=""/><span class="bItemSum">2352,00</span><div class="helper"></div></div>
+                                                    <div class="bItem"><img class="bItemImg" src="../img/shop_min4.png" alt=""/><span class="bItemSum">1100,00</span><div class="helper"></div></div>
+                                                </div>
+                                                <div class="liTitle">График цен</div>
+                                                <div class="graf"></div>
+                                            </li>
+                                            <li>
+                                                <div class="graf"></div>
+                                            </li>
+                                            <li>
+                                                <div class="review clearfix">
+                                                    <div class="rating"><span class="ratWight" style="width:60%"></span></div>
+                                                    <div class="reviewText">Однажды купили, - думали селедка, а теперь только суши и кушаем!</div>
+                                                    <div class="reviewAutor">Николай Васильевич</div>
+                                                    <div class="reviewDate">14.05.2013</div>
+                                                </div>
+                                                <div class="review clearfix">
+                                                    <div class="rating"><span class="ratWight" style="width:40%"></span></div>
+                                                    <div class="reviewText">Непонятное что-то. Вот бы кто додумался винегрет в филе толстолобика напихать! </div>
+                                                    <div class="reviewAutor">Марта Ивановна Маннергейм</div>
+                                                    <div class="reviewDate">14.05.2013</div>
+                                                </div>
+                                                <a class="moreReviews" href="#">показать больше отзывов</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="leftHalf">
+                            <div class="poster"><img class="posterImg" src="../img/food1.png" alt=""/>
+                                <a href="#" class="posterStar"></a>
+                            </div>
+                            <div class="catlist">
+                                <ul>
+                                    <li><a href="#">Продукты от производителя</a></li>
+                                    <li><a href="#">Роллы других производителей</a></li>
+                                    <li><a href="#">Японская кухня</a></li>
+                                    <li><a href="#">Рыбные блюда</a></li>
+                                    <li><a href="#">Морепродукты</a></li>
+                                </ul></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="entry">
+                    <div class="poster"><img class="posterImg" src="../img/food1.png" alt=""/>
+                        <a href="#" class="posterStar"></a>
+                        <div class="helper"></div>
+                    </div>
+                    <div class="title">Плов с мясом баранины рецепту Глобус Гурмэ</div>
+                    <div class="cost clearfix"><div class="costNum">75,00</div><span class="costText">Цена за ( <span class="costVal">50 гр</span> ):</span></div>
+                    <div class="tkb"><a class="takeinBasket load goBut" href="#">в корзину</a>  <span class="takebs"></span></div>
+
+                    <div class="uci">
+                        <div class="uciVal">
+                            <a class="uciValMinus" data-sum="-" href="#">-</a>
+                            <input class="uciValinput" maxlength="4" type="text"/><span class="uciValtext">гр</span>
+                            <a class="uciValPlus" href="#">+</a>
+                        </div>
+                        <div class="uciSum">
+                            <div class="uciSumNum">300,00</div>
+                            <a class="uciSumRemove" href="#">Удалить</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="entry">
+                    <div class="poster"><img class="posterImg" src="../img/food1.png" alt=""/>
+                        <a href="#" class="posterStar"></a>
+                        <div class="helper"></div>
+                    </div>
+                    <div class="title">Плов с мясом баранины рецепту Глобус Гурмэ</div>
+                    <div class="cost clearfix"><div class="costNum">75,00</div><span class="costText">Цена за ( <span class="costVal">50 гр</span> ):</span></div>
+                    <div class="tkb"><a class="takeinBasket goBut" href="#">в корзину</a>  <span class="takebs"></span></div>
+                    <div class="uci">
+                        <div class="uciVal">
+                            <a class="uciValMinus" data-sum="-" data-val="100" href="#">-</a>
+                            <input class="uciValinput" maxlength="4" value="100" type="text"/><span class="uciValtext">гр</span>
+                            <a class="uciValPlus" data-val="100" href="#">+</a>
+                        </div>
+                        <div class="uciSum">
+                            <div class="uciSumNum">51,00</div>
+                            <a class="uciSumRemove" href="#">Удалить</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="entry">
+                    <div class="poster"><img class="posterImg" src="../img/food1.png" alt=""/>
+                        <a href="#" class="posterStar"></a>
+                        <div class="helper"></div>
+                    </div>
+                    <div class="title">Плов с мясом баранины рецепту Глобус Гурмэ</div>
+                    <div class="cost clearfix"><div class="costNum">75,00</div><span class="costText">Цена за ( <span class="costVal">50 гр</span> ):</span></div>
+                    <div class="tkb"><a class="takeinBasket goBut" href="#">в корзину</a>  <span class="takebs"></span></div>
+                    <div class="uci">
+                        <div class="uciVal">
+                            <a class="uciValMinus" data-sum="-" href="#">-</a>
+                            <input class="uciValinput" maxlength="4" value="1" type="text"/><span class="uciValtext">гр</span>
+                            <a class="uciValPlus" href="#">+</a>
+                        </div>
+                        <div class="uciSum">
+                            <div class="uciSumNum">51,00</div>
+                            <a class="uciSumRemove" href="#">Удалить</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="entry">
+                    <div class="poster"><img class="posterImg" src="../img/food1.png" alt=""/>
+                        <a href="#" class="posterStar"></a>
+                        <div class="helper"></div>
+                    </div>
+                    <div class="title">Плов с мясом баранины рецепту Глобус Гурмэ</div>
+                    <div class="cost clearfix"><div class="costNum">75,00</div><span class="costText">Цена за ( <span class="costVal">50 гр</span> ):</span></div>
+                    <div class="tkb"><a class="takeinBasket goBut" href="#">в корзину</a>  <span class="takebs"></span></div>
+                    <div class="uci">
+                        <div class="uciVal">
+                            <a class="uciValMinus" data-sum="-" data-val="100" href="#">-</a>
+                            <input class="uciValinput" maxlength="4" value="100" type="text"/><span class="uciValtext">гр</span>
+                            <a class="uciValPlus" data-val="100" href="#">+</a>
+                        </div>
+                        <div class="uciSum">
+                            <div class="uciSumNum">51,00</div>
+                            <a class="uciSumRemove" href="#">Удалить</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="entry">
+                    <div class="poster"><img class="posterImg" src="../img/food1.png" alt=""/>
+                        <a href="#" class="posterStar"></a>
+                        <div class="helper"></div>
+                    </div>
+                    <div class="title">Плов с мясом баранины рецепту Глобус Гурмэ</div>
+                    <div class="cost clearfix"><div class="costNum">75,00</div><span class="costText">Цена за ( <span class="costVal">50 гр</span> ):</span></div>
+                    <div class="tkb"><a class="takeinBasket goBut" href="#">в корзину</a>  <span class="takebs"></span></div>
+                    <div class="uci">
+                        <div class="uciVal">
+                            <a class="uciValMinus" data-sum="-" href="#">-</a>
+                            <input class="uciValinput" maxlength="4" value="1" type="text"/><span class="uciValtext">гр</span>
+                            <a class="uciValPlus" href="#">+</a>
+                        </div>
+                        <div class="uciSum">
+                            <div class="uciSumNum">51,00</div>
+                            <a class="uciSumRemove" href="#">Удалить</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="entry">
+                    <div class="poster"><img class="posterImg" src="../img/food1.png" alt=""/>
+                        <a href="#" class="posterStar"></a>
+                        <div class="helper"></div>
+                    </div>
+                    <div class="title">Плов с мясом баранины рецепту Глобус Гурмэ</div>
+                    <div class="cost clearfix"><div class="costNum">75,00</div><span class="costText">Цена за ( <span class="costVal">50 гр</span> ):</span></div>
+                    <div class="tkb"><a class="takeinBasket goBut" href="#">в корзину</a>  <span class="takebs"></span></div>
+                    <div class="uci">
+                        <div class="uciVal">
+                            <a class="uciValMinus" data-sum="-" data-val="100" href="#">-</a>
+                            <input class="uciValinput" maxlength="4" value="100" type="text"/><span class="uciValtext">гр</span>
+                            <a class="uciValPlus" data-val="100" href="#">+</a>
+                        </div>
+                        <div class="uciSum">
+                            <div class="uciSumNum">51,00</div>
+                            <a class="uciSumRemove" href="#">Удалить</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="entry">
+                    <div class="poster"><img class="posterImg" src="../img/food1.png" alt=""/>
+                        <a href="#" class="posterStar"></a>
+                        <div class="helper"></div>
+                    </div>
+                    <div class="title">Плов с мясом баранины рецепту Глобус Гурмэ</div>
+                    <div class="cost clearfix"><div class="costNum">75,00</div><span class="costText">Цена за ( <span class="costVal">50 гр</span> ):</span></div>
+                    <div class="tkb"><a class="takeinBasket goBut" href="#">в корзину</a>  <span class="takebs"></span></div>
+                    <div class="uci">
+                        <div class="uciVal">
+                            <a class="uciValMinus" data-sum="-" href="#">-</a>
+                            <input class="uciValinput" maxlength="4" value="1" type="text"/><span class="uciValtext">гр</span>
+                            <a class="uciValPlus" href="#">+</a>
+                        </div>
+                        <div class="uciSum">
+                            <div class="uciSumNum">51,00</div>
+                            <a class="uciSumRemove" href="#">Удалить</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="entry">
+                    <div class="poster"><img class="posterImg" src="../img/food1.png" alt=""/>
+                        <a href="#" class="posterStar"></a>
+                        <div class="helper"></div>
+                    </div>
+                    <div class="title">Плов с мясом баранины рецепту Глобус Гурмэ</div>
+                    <div class="cost clearfix"><div class="costNum">75,00</div><span class="costText">Цена за ( <span class="costVal">50 гр</span> ):</span></div>
+                    <div class="tkb"><a class="takeinBasket goBut" href="#">в корзину</a>  <span class="takebs"></span></div>
+                    <div class="uci">
+                        <div class="uciVal">
+                            <a class="uciValMinus" data-sum="-" data-val="100" href="#">-</a>
+                            <input class="uciValinput" maxlength="4" value="100" type="text"/><span class="uciValtext">гр</span>
+                            <a class="uciValPlus" data-val="100" href="#">+</a>
+                        </div>
+                        <div class="uciSum">
+                            <div class="uciSumNum">51,00</div>
+                            <a class="uciSumRemove" href="#">Удалить</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="entry">
+                    <div class="poster"><img class="posterImg" src="../img/food1.png" alt=""/>
+                        <a href="#" class="posterStar"></a>
+                        <div class="helper"></div>
+                    </div>
+                    <div class="title">Плов с мясом баранины рецепту Глобус Гурмэ</div>
+                    <div class="cost clearfix"><div class="costNum">75,00</div><span class="costText">Цена за ( <span class="costVal">50 гр</span> ):</span></div>
+                    <div class="tkb"><a class="takeinBasket goBut" href="#">в корзину</a>  <span class="takebs"></span></div>
+                    <div class="uci">
+                        <div class="uciVal">
+                            <a class="uciValMinus" data-sum="-" href="#">-</a>
+                            <input class="uciValinput" maxlength="4" value="1" type="text"/><span class="uciValtext">гр</span>
+                            <a class="uciValPlus" href="#">+</a>
+                        </div>
+                        <div class="uciSum">
+                            <div class="uciSumNum">51,00</div>
+                            <a class="uciSumRemove" href="#">Удалить</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="entry">
+                    <div class="poster"><img class="posterImg" src="../img/food1.png" alt=""/>
+                        <a href="#" class="posterStar"></a>
+                        <div class="helper"></div>
+                    </div>
+                    <div class="title">Плов с мясом баранины рецепту Глобус Гурмэ</div>
+                    <div class="cost clearfix"><div class="costNum">75,00</div><span class="costText">Цена за ( <span class="costVal">50 гр</span> ):</span></div>
+                    <div class="tkb"><a class="takeinBasket goBut" href="#">в корзину</a>  <span class="takebs"></span></div>
+                    <div class="uci">
+                        <div class="uciVal">
+                            <a class="uciValMinus" data-sum="-" data-val="100" href="#">-</a>
+                            <input class="uciValinput" maxlength="4" value="100" type="text"/><span class="uciValtext">гр</span>
+                            <a class="uciValPlus" data-val="100" href="#">+</a>
+                        </div>
+                        <div class="uciSum">
+                            <div class="uciSumNum">51,00</div>
+                            <a class="uciSumRemove" href="#">Удалить</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="entry">
+                    <div class="poster"><img class="posterImg" src="../img/food1.png" alt=""/>
+                        <a href="#" class="posterStar"></a>
+                        <div class="helper"></div>
+                    </div>
+                    <div class="title">Плов с мясом баранины рецепту Глобус Гурмэ</div>
+                    <div class="cost clearfix"><div class="costNum">75,00</div><span class="costText">Цена за ( <span class="costVal">50 гр</span> ):</span></div>
+                    <div class="tkb"><a class="takeinBasket goBut" href="#">в корзину</a>  <span class="takebs"></span></div>
+                    <div class="uci">
+                        <div class="uciVal">
+                            <a class="uciValMinus" data-sum="-" href="#">-</a>
+                            <input class="uciValinput" maxlength="4" value="1" type="text"/><span class="uciValtext">гр</span>
+                            <a class="uciValPlus" href="#">+</a>
+                        </div>
+                        <div class="uciSum">
+                            <div class="uciSumNum">51,00</div>
+                            <a class="uciSumRemove" href="#">Удалить</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="entry">
+                    <div class="poster"><img class="posterImg" src="../img/food1.png" alt=""/>
+                        <a href="#" class="posterStar"></a>
+                        <div class="helper"></div>
+                    </div>
+                    <div class="title">Плов с мясом баранины рецепту Глобус Гурмэ</div>
+                    <div class="cost clearfix"><div class="costNum">75,00</div><span class="costText">Цена за ( <span class="costVal">50 гр</span> ):</span></div>
+                    <div class="tkb"><a class="takeinBasket goBut" href="#">в корзину</a>  <span class="takebs"></span></div>
+                    <div class="uci">
+                        <div class="uciVal">
+                            <a class="uciValMinus" data-sum="-" data-val="100" href="#">-</a>
+                            <input class="uciValinput" maxlength="4" value="100" type="text"/><span class="uciValtext">гр</span>
+                            <a class="uciValPlus" data-val="100" href="#">+</a>
+                        </div>
+                        <div class="uciSum">
+                            <div class="uciSumNum">51,00</div>
+                            <a class="uciSumRemove" href="#">Удалить</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="entry">
+                    <div class="poster"><img class="posterImg" src="../img/food1.png" alt=""/>
+                        <a href="#" class="posterStar"></a>
+                        <div class="helper"></div>
+                    </div>
+                    <div class="title">Плов с мясом баранины рецепту Глобус Гурмэ</div>
+                    <div class="cost clearfix"><div class="costNum">75,00</div><span class="costText">Цена за ( <span class="costVal">50 гр</span> ):</span></div>
+                    <div class="tkb"><a class="takeinBasket goBut" href="#">в корзину</a>  <span class="takebs"></span></div>
+                    <div class="uci">
+                        <div class="uciVal">
+                            <a class="uciValMinus" data-sum="-" href="#">-</a>
+                            <input class="uciValinput" maxlength="4" value="1" type="text"/><span class="uciValtext">гр</span>
+                            <a class="uciValPlus" href="#">+</a>
+                        </div>
+                        <div class="uciSum">
+                            <div class="uciSumNum">51,00</div>
+                            <a class="uciSumRemove" href="#">Удалить</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="entry">
+                    <div class="poster"><img class="posterImg" src="../img/food1.png" alt=""/>
+                        <a href="#" class="posterStar"></a>
+                        <div class="helper"></div>
+                    </div>
+                    <div class="title">Плов с мясом баранины рецепту Глобус Гурмэ</div>
+                    <div class="cost clearfix"><div class="costNum">75,00</div><span class="costText">Цена за ( <span class="costVal">50 гр</span> ):</span></div>
+                    <div class="tkb"><a class="takeinBasket goBut" href="#">в корзину</a>  <span class="takebs"></span></div>
+                    <div class="uci">
+                        <div class="uciVal">
+                            <a class="uciValMinus" data-sum="-" data-val="100" href="#">-</a>
+                            <input class="uciValinput" maxlength="4" value="100" type="text"/><span class="uciValtext">гр</span>
+                            <a class="uciValPlus" data-val="100" href="#">+</a>
+                        </div>
+                        <div class="uciSum">
+                            <div class="uciSumNum">51,00</div>
+                            <a class="uciSumRemove" href="#">Удалить</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="entry">
+                    <div class="poster"><img class="posterImg" src="../img/food1.png" alt=""/>
+                        <a href="#" class="posterStar"></a>
+                        <div class="helper"></div>
+                    </div>
+                    <div class="title">Плов с мясом баранины рецепту Глобус Гурмэ</div>
+                    <div class="cost clearfix"><div class="costNum">75,00</div><span class="costText">Цена за ( <span class="costVal">50 гр</span> ):</span></div>
+                    <div class="tkb"><a class="takeinBasket goBut" href="#">в корзину</a>  <span class="takebs"></span></div>
+                    <div class="uci">
+                        <div class="uciVal">
+                            <a class="uciValMinus" data-sum="-" href="#">-</a>
+                            <input class="uciValinput" maxlength="4" value="1" type="text"/><span class="uciValtext">гр</span>
+                            <a class="uciValPlus" href="#">+</a>
+                        </div>
+                        <div class="uciSum">
+                            <div class="uciSumNum">51,00</div>
+                            <a class="uciSumRemove" href="#">Удалить</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="entry">
+                    <div class="poster"><img class="posterImg" src="../img/food1.png" alt=""/>
+                        <a href="#" class="posterStar"></a>
+                        <div class="helper"></div>
+                    </div>
+                    <div class="title">Плов с мясом баранины рецепту Глобус Гурмэ</div>
+                    <div class="cost clearfix"><div class="costNum">75,00</div><span class="costText">Цена за ( <span class="costVal">50 гр</span> ):</span></div>
+                    <div class="tkb"><a class="takeinBasket goBut" href="#">в корзину</a>  <span class="takebs"></span></div>
+                    <div class="uci">
+                        <div class="uciVal">
+                            <a class="uciValMinus" data-sum="-" data-val="100" href="#">-</a>
+                            <input class="uciValinput" maxlength="4" value="100" type="text"/><span class="uciValtext">гр</span>
+                            <a class="uciValPlus" data-val="100" href="#">+</a>
+                        </div>
+                        <div class="uciSum">
+                            <div class="uciSumNum">51,00</div>
+                            <a class="uciSumRemove" href="#">Удалить</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="entry">
+                    <div class="poster"><img class="posterImg" src="../img/food1.png" alt=""/>
+                        <a href="#" class="posterStar"></a>
+                        <div class="helper"></div>
+                    </div>
+                    <div class="title">Плов с мясом баранины рецепту Глобус Гурмэ</div>
+                    <div class="cost clearfix"><div class="costNum">75,00</div><span class="costText">Цена за ( <span class="costVal">50 гр</span> ):</span></div>
+                    <div class="tkb"><a class="takeinBasket goBut" href="#">в корзину</a>  <span class="takebs"></span></div>
+                    <div class="uci">
+                        <div class="uciVal">
+                            <a class="uciValMinus" data-sum="-" href="#">-</a>
+                            <input class="uciValinput" maxlength="4" value="1" type="text"/><span class="uciValtext">гр</span>
+                            <a class="uciValPlus" href="#">+</a>
+                        </div>
+                        <div class="uciSum">
+                            <div class="uciSumNum">51,00</div>
+                            <a class="uciSumRemove" href="#">Удалить</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="entry">
+                    <div class="poster"><img class="posterImg" src="../img/food1.png" alt=""/>
+                        <a href="#" class="posterStar"></a>
+                        <div class="helper"></div>
+                    </div>
+                    <div class="title">Плов с мясом баранины рецепту Глобус Гурмэ</div>
+                    <div class="cost clearfix"><div class="costNum">75,00</div><span class="costText">Цена за ( <span class="costVal">50 гр</span> ):</span></div>
+                    <div class="tkb"><a class="takeinBasket goBut" href="#">в корзину</a>  <span class="takebs"></span></div>
+                    <div class="uci">
+                        <div class="uciVal">
+                            <a class="uciValMinus" data-sum="-" data-val="100" href="#">-</a>
+                            <input class="uciValinput" maxlength="4" value="100" type="text"/><span class="uciValtext">гр</span>
+                            <a class="uciValPlus" data-val="100" href="#">+</a>
+                        </div>
+                        <div class="uciSum">
+                            <div class="uciSumNum">51,00</div>
+                            <a class="uciSumRemove" href="#">Удалить</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="entry">
+                    <div class="poster"><img class="posterImg" src="../img/food1.png" alt=""/>
+                        <a href="#" class="posterStar"></a>
+                        <div class="helper"></div>
+                    </div>
+                    <div class="title">Плов с мясом баранины рецепту Глобус Гурмэ</div>
+                    <div class="cost clearfix"><div class="costNum">75,00</div><span class="costText">Цена за ( <span class="costVal">50 гр</span> ):</span></div>
+                    <div class="tkb"><a class="takeinBasket goBut" href="#">в корзину</a>  <span class="takebs"></span></div>
+                    <div class="uci">
+                        <div class="uciVal">
+                            <a class="uciValMinus" data-sum="-" href="#">-</a>
+                            <input class="uciValinput" maxlength="4" value="1" type="text"/><span class="uciValtext">гр</span>
+                            <a class="uciValPlus" href="#">+</a>
+                        </div>
+                        <div class="uciSum">
+                            <div class="uciSumNum">51,00</div>
+                            <a class="uciSumRemove" href="#">Удалить</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="botBox">
+                <a href="#" class="botBoxText">Показать ещё 567 найменований</a>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</section>
+<footer>
+    <div class="footerWrapper">
+        <div class="leftFotterBox">
+            <a class="logo" href="#"></a>
+                <ul class="footerSocial">
+                    <li><a class="ok" href="#"></a></li>
+                    <li><a class="fb" href="#"></a></li>
+                    <li><a class="vk" href="#"></a></li>
+                    <li><a class="rss" href="#"></a></li>
+                    <li class="clearfix"><a class="tw" href="#"></a></li>
+                </ul>
+        </div>
+        <div class="footerNav">
+            <div class="fnItem">
+                <div class="title">Информация</div>
+                <ul>
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">Безопасность</a></li>
+                    <li><a href="#">Советы</a></li>
+                    <li><a href="#">Карта сайта</a></li>
+                    <li><a href="#">Помощь</a></li>
+                    <li><a href="#">Контактная информация</a></li>
+                </ul>
+            </div>
+            <div class="fnItem">
+                <div class="title">Магазины</div>
+                <ul>
+                    <li><a href="#">Глобус Гурме</a></li>
+                    <li><a href="#">Перекресток</a></li>
+                    <li><a href="#">Азбука Вкуса</a></li>
+                    <li><a href="#">Алые Паруса</a></li>
+                </ul>
+            </div>
+            <div class="fnItem">
+                <div class="title">Дополнительно</div>
+                <ul>
+                    <li><a href="#">Форум</a></li>
+                    <li><a href="#">Обсуждения</a></li>
+                    <li><a href="#">Аналитика</a></li>
+                    <li><a href="#">Рецепты</a></li>
+                </ul>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+        <div class="copirate"> © GLOBO Market 2010-2012 </div>
+    </div>
+</footer>
+</body>
+</html>

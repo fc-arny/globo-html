@@ -1,0 +1,468 @@
+@import 'compass';
+$sC:    #009bea;
+.bottomborder{
+  display: block;
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  background: url('../images/bottomborder.png') bottom left repeat-x;
+  z-index: 1;
+  width: 100%;
+  height: 10px;
+}
+.box{
+  @include box-shadow(0 0 4px rgba(0,0,0,.14));
+  border: solid 1px #e7e7e7;
+  background-color: #fff;
+  position: relative;
+  padding: 0px;
+  min-height: 50px;
+  @include box-sizing(border-box);
+}
+
+.asideBox{
+  width: 100%;
+  max-width: 300px;
+  min-width: 200px;
+  position: relative;
+  margin-top: 30px;
+  .abTitle{
+    @include background-image(linear-gradient(bottom, #74c900, #82d344));
+    height: 56px;
+    @include border-radius(6px 6px 0 0);
+    font-size: 24px; font-weight: bold; color: #fff;
+    line-height: 20px;
+    @include box-sizing(border-box);
+    padding: 17px 10px;
+    text-align: center;
+    display: block;
+    cursor: default;
+  }
+  .abContent{
+    @include box-shadow(0 0 4px rgba(0,0,0,.14));
+    border: solid 1px #e7e7e7;
+    background-color: #fff;
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    min-height: 50px;
+    @include box-sizing(border-box);
+    input[type="checkbox"] + label{
+      margin-bottom: 10px;
+      display: table;
+    }
+    ul{
+      list-style: disc inside;
+      font-size: 16px; color: #444;
+      line-height: 20px;
+      li{
+
+      }
+    }
+  }
+  .abContent:after{
+    @extend .bottomborder;
+  }
+}
+.entry{
+  @extend .box;
+  width: 244px;
+  height: 400px;
+  margin: 0 15px 20px 0;
+  padding-bottom: 10px;
+  float: left;
+  @include transition-property(background);
+  @include transition-duration(400ms);
+  .title{
+    display: inline-block;
+    font-size: 16px;
+    line-height: 20px;
+    margin: 7px 10px;
+    color: #444444;
+    height: 40px;
+    overflow: hidden;
+    text-decoration: none;
+  }
+}
+.cost{
+  height: 38px;
+  background: url('../images/dashed3.png') top left repeat-x, url('../images/dashed3.png') bottom left repeat-x;
+  line-height: 36px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #666666;
+  padding: 0 10px;
+  margin-bottom: 10px;
+  .costText{
+    display: inline-block;
+    float: left;
+  }
+  .costNum{
+    padding: 1px 15px 2px 0;
+    background: url('../images/bRub.png') right center no-repeat;
+    color: $sC;
+    display: inline-block;
+    float: right;
+  }
+}
+.uci{
+  padding: 2px 10px;
+  height: 30px;
+  display: none;
+  position: relative;
+  overflow: hidden;
+  .uciVal{
+    border-top: 1px solid #74c900;
+    border-bottom: 1px solid #74c900;
+    width: 125px;
+    float: left;
+    height: 24px;
+    position: relative;
+    .uciValinput{
+      width: 100%;
+      height: 100%;
+      color: #000;
+      @include box-sizing(border-box);
+      padding: 3px 50px 2px 32px;
+      font-size: 16px;
+      line-height: 18px;
+      font-weight: bold;
+      text-align: center;
+      border: 0 none;
+    }
+    .uciValMinus, .uciValPlus{
+      display: block;
+      width: 30px;
+      height: 26px;
+      position: absolute;
+      top: -1px;
+      background-color: #74c900;
+      color: #fff;
+      @include border-radius(2px);
+      text-decoration: none;
+      text-align: center;
+      font-family: Comic Sans MS;
+      font-size: 26px;
+      line-height: 23px;
+    }
+    .uciValMinus{
+      left: 0px;
+    }
+    .uciValPlus{
+      right: 0px;
+    }
+    .uciValtext{
+      display: inline-block;
+      position: absolute;
+      right: 35px;
+      top:3px;
+      font-size: 16px;
+      line-height: 18px;
+      font-weight: bold;
+    }
+  }
+  .uciSum{
+    position: absolute;
+    right: 10px;
+    top: 0;
+    width: 100px;
+    .uciSumNum{
+      padding: 1px 15px 2px 0;
+      background: url('../images/dRub.png') right center no-repeat;
+      color: #666666;
+      display: block;
+      font-size: 14px;
+      float: right;
+      font-weight: bold;
+    }
+    .uciSumRemove{
+      color: #c9c7c7;
+      font-size: 12px;
+      float: right;
+      display: block;
+      text-decoration: none;
+      width: 80px;
+      text-align: right;
+    }
+  }
+}
+.tkb{
+  position: relative;
+}
+.helper{
+  display:inline-block;
+  vertical-align:middle;
+  height:100%;
+  width:0px;
+}
+.poster{
+  margin: 10px;
+  border: 1px solid #eeeeee;
+  background-color: #f7f7f7;
+  width: 220px;
+  height: 220px;
+  position: relative;
+  .posterImg{
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+    display:inline-block;
+    vertical-align:middle;
+  }
+  .posterStar{
+    width: 23px;
+    height: 23px;
+    background: url('../images/star.png') 0 0 no-repeat;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 10;
+    display: block;
+  }
+  .posterStar:hover, .posterStar.active{
+    background-position: 0px -23px;
+  }
+}
+.entry:hover, .entry.checked{
+  background-color: #edf8fe;
+  .cost{
+    background: url('../images/dashed2.png') top left repeat-x, url('../images/dashed2.png') bottom left repeat-x;
+  }
+}
+.entry.checked{
+  .uciSumNum{
+    padding: 1px 15px 2px 0;
+    background: url('../images/bRub.png') right center no-repeat;
+    color: $sC;
+  }
+  .costNum{
+    background: url('../images/dRub.png') right center no-repeat;
+    color: #666;
+  }
+}
+.entry:after{
+  @extend .bottomborder;
+}
+.entry:first-child{
+  margin-left: 0px;
+}
+.entry:nth-child(5n){
+  margin-right: 0px;
+}
+.rightHalf, .leftHalf{
+  width: 50%;
+  @include box-sizing(border-box);
+  padding: 0 30px;
+}
+.entryBoxInfo{
+  width: 800px;
+  height: auto;
+  min-height: 400px;
+  padding: 50px 0 40px 0;
+  position: relative;
+  margin: 80px auto 0 auto;
+  background-color: #fff;
+  display: none;
+  .rightHalf, .leftHalf{
+    padding: 0px 30px;
+  }
+  .rightHalf{
+    float: right;
+    .entryInfo{
+      .title{
+        font-size: 24px; font-weight: bold; color: #009bea;
+        margin-bottom: 40px;
+        line-height: 28px;
+      }
+      .product{
+        font-size: 14px; color: #444;
+        line-height: 18px;
+      }
+      .cost{
+        background: none;
+        padding: 0px;
+      }
+      .costNum{
+        float: left;
+        margin-left: 10px;
+      }
+      .uci{
+        display: block;
+        @include border-radius(3px); background-color: #fff; border: solid 1px #e7e7e7;
+        height: 42px;
+        overflow: visible;
+        .uciVal{
+          top: 8px;
+        }
+        .uciSum{
+          top: 14px;
+        }
+        .uciSumRemove{
+          position: absolute;
+          bottom: -40px;
+          right: 0;
+        }
+      }
+    }
+  }
+  .leftHalf{
+    float: left;
+    .poster{
+      width: 340px;
+      height: 340px;
+      padding: 0;
+      margin: 0;
+    }
+    .catlist{
+      margin: 15px 0;
+      ul{
+        padding: 0;
+        margin: 0;
+        line-height: 20px;
+        font-size: 16px; color: #009bea;
+        li{
+          a{
+            color: #009bea;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+.tabs{
+  height: 50px;
+  line-height: 40px;
+  .liTitle{
+    font-size: 16px; text-transform: uppercase; color: #444;
+    text-transform: uppercase;
+  }
+  .bItemImg{
+    max-width: 140px;
+    width: 60%;
+    height: auto;
+    display:inline-block;
+    vertical-align:middle;
+  }
+  .bItemSum{
+    display: inline-block;
+    float: right;
+    padding: 10px 15px 10px 0px;
+    background: url('../images/bRub.png') right center no-repeat;
+    font-weight: bold;
+    color: $sC;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 21px;
+  }
+  .nowCost{
+    border-bottom: 1px dashed #d6d6d6;
+    padding-bottom: 20px;
+    .bItem{
+      width: 270px;
+      margin: 5px 0;
+      .bItemImg{
+        margin-right: 10px;
+      }
+    }
+  }
+  label{
+    display: inline-block;
+    float: left;
+    margin-right: 10px;
+    font-size: 16px; color: #666;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  label:hover{
+    color: #009bea;
+  }
+}
+.tabs-content {
+  border-top: 1px dashed #d6d6d6;
+  display: block;
+  float: left;
+  width: 100%;
+  .graf{
+    height: 200px;
+  }
+  .review{
+    position: relative;
+    margin-top: 15px;
+    line-height: 24px;
+    .reviewText{
+      font-size: 16px; color: #444;
+    }
+    .reviewAutor, .reviewDate{
+      display: inline-block;
+      float: left;
+      font-size: 14px; color: #666;
+    }
+    .reviewDate{
+      margin-left: 10px;
+    }
+    .rating{
+      width: 94px;
+      height: 19px;
+      position: relative;
+      .ratWight{
+        display: block;
+        height: 100%;
+        background-color: #009bea;
+      }
+    }
+    .rating:after{
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      display: block;
+      content: '';
+      position: absolute;
+      background: url('../images/stars.png') 0 0 no-repeat;
+      z-index: 1;
+    }
+  }
+  .moreReviews{
+    font-size: 12px; text-decoration: underline; color: #009bea;
+  }
+}
+.tabs-content li {
+  width: 100%;
+  display: block;
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  opacity: 0;
+  -moz-transition: opacity .5s ease-in-out;
+  -webkit-transition: opacity .5s ease-in-out;
+  transition: opacity .5s ease-in-out;
+}
+.tabs input {
+  position: absolute;
+  left: -9999px;}
+.tabs input:nth-child(1):checked ~ .lbl1,
+.tabs input:nth-child(2):checked ~ .lbl2,
+.tabs input:nth-child(3):checked ~ .lbl3{
+  color: #009bea;
+}
+
+.tabs input:nth-child(1):checked ~ .tabs-content li:nth-child(1),
+.tabs input:nth-child(2):checked ~ .tabs-content li:nth-child(2),
+.tabs input:nth-child(3):checked ~ .tabs-content li:nth-child(3) {
+  position: static;
+  left: 0;
+  opacity: 1;
+}                                                                                                                                                                                                                                                                                .korpus > input:nth-of-type(3):checked ~ div:nth-of-type(3) { display: block; padding: 5px; border: 1px solid #aaa; }
+.entryBoxInfo:before{
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 6px;
+  background: url('../images/whiteBL.png') 0 0 repeat-x;
+  z-index: 10;
+}

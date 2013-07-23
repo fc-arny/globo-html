@@ -1,0 +1,62 @@
+.ik_select{
+	position:relative;
+	*zoom:1;
+}
+
+.ik_select_autowidth{
+	display:inline-block; *display:inline;
+	vertical-align:middle;
+}
+
+.ik_select_link_text{
+	display:block;
+	overflow:hidden;
+	text-overflow:ellipsis;
+    height: 20px;
+}
+
+.ik_select_block{
+	display:none;
+	position:absolute; z-index:9999;
+	width:100%;
+	left:0; top:36px;
+	cursor:default;
+}
+.ik_select_list{
+	position:relative;
+	border:1px solid #74c900;
+	background:#fbfbfb;
+	*zoom:1;
+    font-size: 16px; color: #afafaf;
+    line-height: 20px;
+}
+.ik_select_list ul{
+	margin:0; padding:0;
+	list-style:none;
+}
+.ik_select_list li{
+	position:relative;
+	padding:2px 7px;
+	overflow:hidden;
+    cursor: pointer;
+}
+.ik_select_list li.ik_select_optgroup{
+	padding-right:0; padding-left:0;
+}
+.ik_select_optgroup_label{
+	padding:0 7px;
+	color:#7f8080;
+}
+.ik_select_optgroup li{
+	padding-left:14px;
+}
+.ik_select_hover{
+	background: #EEE;
+}
+.ik_select_optgroup_disabled .ik_select_optgroup_label,
+.ik_select_option_disabled{
+	color:#999;
+}
+.ik_select_link_disabled{
+	opacity:0.5; filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+}
