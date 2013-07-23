@@ -1,6 +1,0 @@
-$column-padding-bot: 20000px;
-
-@mixin equal-columns {
-  padding-bottom: $column-padding-bot;
-  margin-bottom: -$column-padding-bot;
-}
