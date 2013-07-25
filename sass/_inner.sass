@@ -1,5 +1,374 @@
 @import "base"
+//search
+.search
+	position: relative
+	margin-bottom: 20px	
+	input
+		width: 185px
+		height: 30px
+		padding: 0 44px 0 9px
+		border: 1px solid $gr
+		border-radius: 3px
+	button
+		position: absolute
+		top: 0
+		right: 0
+		width: 36px
+		height: 32px
+		background: $gr
+		border-radius: 3px
+		overflow: visible
+		i 
+			position: absolute
+			top: 8px
+			left: 10px
+			+s(search)
+//filter
+.filter__item
+	margin-bottom: 20px
+.filter__title
+	padding: 14px
+	background: $gr
+	border-radius: 3px 3px 0 0 
+	text-align: center
+	font-size: 24px
+	font-weight: bold
+	text-transform: uppercase
+	color: #FFF  
+	span
+		position: relative
+		padding-left: 32px
+	i
+		position: absolute
+		top: 2px
+		left: 0
+.filter__ico-1
+	+s(filter-1)
+.filter__list
+	position: relative
+	padding: 15px 10px
+	background: #FFF
+	box-shadow: 0 0 4px rgba(0,0,0,.14)
+	border: 1px solid #e7e7e7
+	border-width: 0 1px
+	&:after
+		content: ""
+		position: absolute
+		bottom: -8px
+		left: 0
+		right: 0
+		height: 8px
+		background: url(../img/icons/wave.png) repeat-x 
+//breadcrumbs
+.bc
+	height: 32px
+	padding: 0 10px
+	margin-bottom: 20px
+	background: #FFF
+	border-radius: 4px
+	box-shadow: 0 0 4px rgba(0,0,0,.16)
+.bc__links
+	float: left
+	a, .bc__arr, span
+		float: left
+	a, span
+		margin-top: 8px
+	a
+		position: relative
+		padding-left: 30px 
+		color: #444
+		&:hover
+			text-decoration: underline
+		i
+			position: absolute
+			top: -5px
+			left: 0
+	span
+		color: $bl 
+	.bc__arr
+		margin: 13px 7px 0 
+.bc__arr
+	+s(arr-left)
+.bc__ico-1
+	+s(bc-ico-1)
+.bc__filter
+	float: right
+	margin-top: 9px
+	span, button
+		float: left
+	span
+		margin-right: 5px 
+		line-height: 1
+	button
+		position: relative
+		padding-right: 13px
+		background: none 
+		color: $bl 
+		overflow: visible
+		&:after
+			content: ""
+			position: absolute
+			top: 5px
+			right: 0
+			width: 0px
+			height: 0px
+			border-style: solid
+			border-width: 5px 5px 0 5px
+			border-color: $bl transparent transparent transparent
+//catalog
+.catalog__list
+	margin: 0 -10px
+	font-size: 0
+.catalog__item
+	position: relative
+	display: inline-block
+	width: 240px
+	margin: 0 10px 25px
+	background: #FFF
+	box-shadow: 0 0 4px rgba(0,0,0,.16)
+	border-radius: 3px 3px 0 0
+	vertical-align: top	
+	font-size: 14px	
+	&:after
+		content: ""
+		position: absolute
+		bottom: -8px
+		left: 0
+		right: 0
+		height: 8px
+		background: url(../img/icons/wave.png) repeat-x 
+	&.is-selected
+		background: #edf8fe
+		.catalog__pic
+			img
+				border-color: #c8e0ee
+		.catalog__price
+			background: url(../img/icons/bg-line-gray.png) repeat-x 0 0, url(../img/icons/bg-line-gray.png) repeat-x 0 100%
+			strong
+				color: #666
+			.rub				
+				&:before, &:after
+					background: #666 
+		&:after
+			background: url(../img/icons/wave-blue.png) repeat-x 
+.catalog__pic
+	position: relative
+	padding: 9px	
+	img
+		display: block
+		border: 1px solid #eee
+.catalog__like
+	position: absolute
+	top: 16px
+	right: 16px
+	cursor: pointer
+	+s(star)
+	&:hover
+		+s(star-h)
+	&.is-active
+		+s(star-a)
+.catalog__title
+	padding: 5px 10px 20px
+	font-size: 16px
+.catalog__price
+	padding: 11px 10px
+	background: url(../img/icons/bg-line.png) repeat-x 0 0, url(../img/icons/bg-line.png) repeat-x 0 100%
+	+clr	
+	span
+		float: left
+		font-weight: bold
+		color: #666 
+	strong
+		float: right
+		color: $bl 
+.catalog__down
+	height: 42px
+	padding-top: 7px
+	.weight
+		margin: 1px 0 0 10px
+.catalog__buy-btn
+	position: relative
+	width: 175px
+	height: 30px
+	background: $bl
+	text-transform: uppercase
+	font-weight: bold
+	color: #FFF 
+	&:after
+		content: ""
+		position: absolute
+		top: 0
+		right: -8px
+		width: 0px
+		height: 0px
+		border-style: solid
+		border-width: 15px 0 15px 8px
+		border-color: transparent transparent transparent $bl
+	&:hover
+		background: $blh 
+		&:after
+			border-color: transparent transparent transparent $blh
+.catalog__sum
+	float: right
+	padding-right: 10px
+	text-align: right
+	strong
+		display: block
+		color: $bl 
+	button
+		background: none 
+		font-size: 12px
+		color: #c9c7c7 
+.catalog__more-btn
+	width: 100%
+	padding: 9px 20px 
+	margin-bottom: 40px
+	background: #FFF
+	border-radius: 4px
+	box-shadow: 0 0 4px rgba(0,0,0,.16)
+	color: $bl
+	&:hover
+		color: $blh 
+//weight
+.weight
+	float: left		
+	button
+		position: relative
+		float: left
+		width: 32px
+		height: 27px
+		background: $gr
+		overflow: visible
+		&:hover
+			background: $grh 
+	i
+		position: absolute
+		top: 5px
+		left: 8px
+.weight__val
+	float: left
+	background: #FFF 
+	border: 1px solid $gr
+	border-width: 1px 0	
+	input, span
+		float: left
+		height: 25px
+		font-size: 16px
+		font-weight: bold
+	input
+		width: 45px 
+		text-align: center
+	span
+		margin-right: 7px
+		line-height: 25px	
+.weight__btn-plus
+	border-radius: 0 2px 2px 0
+	i
+		+s(plus)
+.weight__btn-minus
+	border-radius: 2px 0 0 2px	
+	i
+		+s(minus)
 //cart
 .cart
 	float: right
 	width: 280px
+	margin-bottom: 20px
+.cart__title
+	padding: 14px
+	background: $bl
+	border-radius: 3px 3px 0 0
+	text-align: center
+	font-size: 24px
+	font-weight: bold
+	text-transform: uppercase
+	color: #fff
+	span
+		position: relative
+		padding-left: 39px
+	i
+		position: absolute
+		top: 0
+		left: 0
+		+s(cart-ico)
+.cart__list
+	background: #FFF
+	border: 1px solid #e7e7e7
+	border-width: 0 1px
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.16)
+	+no-sel
+	li
+		position: relative
+		padding: 10px 20px 10px 30px
+		border-top: 1px dashed #e5e5e5 
+		font-size: 0
+		&:first-child
+			border-top: none
+		&.is-empty
+			background: #f1f1f1
+			border-top: 1px solid #cfcfcf
+			box-shadow: 0 -1px 0 #cfcfcf 
+			strong
+				display: none
+			img
+				+gray
+	strong
+		position: absolute
+		top: 50%
+		right: 20px
+		margin-top: -10px
+		font-size: 16px
+		color: $bl 
+	.rub
+		&:after
+			top: 11px
+			width: 9px
+		&:before
+			top: 8px
+	.cart__total 
+		padding: 14px 20px 14px 30px	
+		+clr
+		span
+			float: right
+			font-size: 24px
+		span
+			float: right
+			color: $bl 
+			font-weight: bold
+			&:first-child
+				float: left
+				color: #444
+		.rub 
+			&:before, &:after
+				height: 3px
+			&:before
+				top: 13px
+			&:after
+				top: 17px
+				width: 13px
+.cart__go
+	position: relative
+	width: 100%
+	height: 50px
+	background: $bl	
+	&:after
+		content: ""
+		position: absolute
+		bottom: -4px
+		left: 0
+		right: 0
+		height: 4px
+		background: url(../img/icons/cart-wave.png) repeat-x 
+	span
+		font-size: 16px
+		color: #FFF
+		text-transform: uppercase
+		font-weight: bold
+		&:after
+			content: " •"
+		&:before
+			content: "• "
+	&:hover
+		background: $blh 
+		&:after
+			background: url(../img/icons/cart-wave-h.png) repeat-x 
