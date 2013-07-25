@@ -1,0 +1,457 @@
+@import "base"
+* 
+	margin: 0
+	padding: 0 
+	//-webkit-text-size-adjust: none
+html, body 
+	height: 100%
+body	
+	background: url(../img/bg.jpg) 
+	font-family: 'Scada', Arial, Tahoma, sans-serif
+	font-weight: normal 
+	font-size: 14px
+	color: #444
+	line-height: 1.2
+	//-webkit-transform: translate3d(0,0,0)
+	//-weblit-backface-visibility: hidden
+// resets
+a img, fieldset 
+	border: none
+a
+	text-decoration: none
+p
+	line-height: 1.2
+li 
+	list-style: none
+textarea, button, select, input
+	border: none
+	outline: none
+	font-family: Arial, Tahoma, sans-serif
+button 
+	line-height: 1
+	cursor: pointer
+	&::-moz-focus-inner
+		padding: 0
+		border: 0
+table 
+	border-spacing: 0
+	border-collapse: collapse
+// common styles
+.wrap	
+	min-height: 100%
+	height: auto !important
+	height: 100%
+	margin: 0 20px -212px
+.push
+	height: 212px
+	clear: both
+//header
+.header
+	position: relative
+	height: 188px
+	margin-bottom: 30px
+	background: #f6f6f6
+	@include background-image(linear-gradient(#f6f6f6, #f2f2f2))
+	border: 1px solid #fff
+	border-width: 2px 1px 1px 1px
+	box-shadow: 0 0 1px #f9f9f9, 0 0 6px rgba(0,0,0,.4)
+	border-radius: 0 0 10px 10px
+.header__top, .header__down
+	height: 86px
+.header__top
+	+clr
+.header__down
+	padding: 18px 30px 0
+.logo
+	float: left
+	margin: 19px 0 0 23px
+.logo__pic
+	display: block
+	margin: 0 12px 5px 0
+	+s(logo)
+.logo__txt
+	display: block
+	font-size: 12px
+	font-style: italic
+	color: #444 
+	text-align: right
+.login
+	position: relative
+	float: right
+	margin: 40px 0 0 55px
+	padding: 2px 0 2px 6px
+	background: $bl 
+	& > a, & > button
+		float: left
+	& > a
+		color: #FFF 
+	& > button
+		padding: 1px 5px 
+		margin-left: 14px 
+		border-left: 1px solid #97dbfd 
+		background: none 		
+		i		
+			display: block
+			+s(login)
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		left: -8px  	
+		width: 0px
+		height: 0px
+		border-style: solid
+		border-width: 10px 8px 10px 0
+		border-color: transparent $bl transparent transparent
+.login__links
+	position: absolute
+	top: 27px 
+	right: 11px 
+	padding: 5px 8px
+	border: 1px solid #dedede
+	border-radius: 2px
+	background: #fafafa 
+	box-shadow: 0 1px 1px rgba(0,0,0,.1)
+	li
+		border-top: 1px dotted #d6d6d6	
+		&:first-child
+			border: none
+	a
+		position: relative
+		display: block
+		padding: 4px 0 4px 29px
+		color: #979797 
+		&:hover
+			color: $bl 
+	i
+		position: absolute
+		top: 3px
+		left: 3px
+.login__link-1
+	i
+		+s(login-set-1)
+	&:hover
+		i
+			+s(login-set-1-h)
+.login__link-2
+	i
+		+s(login-set-2)
+	&:hover
+		i
+			+s(login-set-2-h)
+.login__link-3
+	i
+		+s(login-set-3)
+	&:hover
+		i
+			+s(login-set-3-h)
+.nav
+	float: right
+	margin-top: 42px
+	a
+		float: left
+		margin-left: 40px
+		color: #666
+		&:first-child
+			margin-left: 0
+		&:hover
+			color: #222
+.sel-shop
+	float: left
+	height: 64px
+	padding: 7px 13px 0 16px
+	border: 1px solid #e1e1e1
+	border-width: 0 1px
+	box-shadow: 1px 0 0 #fcfcfc, 1px 0 0 #fcfcfc inset
+.sel-shop__list
+	position: relative
+	margin-bottom: 10px
+	button
+		position: relative
+		padding-right: 15px
+		background: none
+		font-size: 14px
+		text-shadow: 0 1px 0 #fff
+		color: #666 
+		&:after
+			content: ""
+			position: absolute
+			top: 5px
+			right: 0
+			width: 0px
+			height: 0px
+			border-style: solid
+			border-width: 5px 5px 0 5px
+			border-color: #656565 transparent transparent transparent
+			box-shadow: 0 -1px 0 #fff			 
+	&.is-open
+		button
+			&:after
+				border-width: 0 5px 5px 5px
+				border-color: transparent transparent #656565 transparent
+				box-shadow: 0 1px 0 #fff
+	ul
+		position: absolute
+		top: 20px
+		left: -13px
+		right: -10px
+		padding: 0 4px
+		border: 1px solid #dedede
+		border-radius: 2px
+		background: #fafafa 
+		box-shadow: 0 1px 1px rgba(0,0,0,.1)
+		z-index: 10
+	li
+		padding: 6px
+		border-top: 1px dotted #d6d6d6	
+		font-size: 0
+		text-align: center			
+		&:first-child
+			border: none
+.sel-shop__pic
+	text-align: center
+.menu
+	float: left
+	font-size: 0
+	& > li
+		position: relative
+		display: inline-block
+		max-width: 90px 
+		height: 71px
+		border-right: 1px solid #e1e1e1 
+		box-shadow: 1px 0 0 #fcfcfc
+		vertical-align: top
+		text-align: center
+		& > a
+			position: relative
+			display: block
+			padding: 45px 10px 0
+			font-size: 11px
+			color: #666
+			text-transform: uppercase
+			&:hover
+				color: $gr
+		i
+			position: absolute
+			top: 0
+			left: 50%
+			margin-left: -27px 
+.menu__sub
+	position: absolute
+	top: 95px 
+	left: -3px
+	padding: 23px 17px
+	border-radius: 5px
+	border: 2px solid #fff
+	box-shadow: 0 0 1px #f9f9f9, 0 0 6px rgba(0,0,0,.4)
+	background: #f6f6f6 	
+	text-align: left
+	white-space: nowrap
+	ul
+		display: inline-block
+		width: 220px
+		vertical-align: top
+		font-size: 14px
+		white-space: normal
+	li
+		padding-top: 5px
+		&:first-child
+			padding: 0
+		&.is-selected
+			a
+				font-weight: bold
+				color: #999 
+				&:before
+					background: #999
+	a
+		position: relative
+		display: block
+		padding-left: 10px
+		color: #444 
+		&:before
+			content: ""
+			position: absolute
+			top: 6px
+			left: 0
+			width: 4px
+			height: 4px
+			border-radius: 50%
+			background: #444 
+		&:hover
+			color: $bl
+			&:before
+				background: $bl
+	&:before
+		content: ""
+		position: absolute
+		top: -16px
+		left: 40px 
+		+s(menu-sub-arr)
+.menu__item-1
+	i
+		+s(ico-menu-1)
+	&:hover
+		i
+			+s(ico-menu-1-h)
+.menu__item-2
+	i
+		+s(ico-menu-2)
+	&:hover
+		i
+			+s(ico-menu-2-h)
+.menu__item-3
+	i
+		+s(ico-menu-3)
+	&:hover
+		i
+			+s(ico-menu-3-h)
+.menu__item-4
+	i
+		+s(ico-menu-4)
+	&:hover
+		i
+			+s(ico-menu-4-h)
+.menu__item-5
+	i
+		+s(ico-menu-5)
+	&:hover
+		i
+			+s(ico-menu-5-h)
+.menu__item-6
+	i
+		+s(ico-menu-6)
+	&:hover
+		i
+			+s(ico-menu-6-h)
+.menu__item-7
+	i
+		+s(ico-menu-7)
+	&:hover
+		i
+			+s(ico-menu-7-h)
+.menu__item-8
+	i
+		+s(ico-menu-8)
+	&:hover
+		i
+			+s(ico-menu-8-h)
+.menu__item-9
+	i
+		+s(ico-menu-9)
+	&:hover
+		i
+			+s(ico-menu-9-h)
+.menu__item-10
+	i
+		+s(ico-menu-10)
+	&:hover
+		i
+			+s(ico-menu-10-h)
+.menu__item-11
+	i
+		+s(ico-menu-11)
+	&:hover
+		i
+			+s(ico-menu-11-h)
+.menu__item-12
+	i
+		+s(ico-menu-12)
+	&:hover
+		i
+			+s(ico-menu-12-h)
+.menu__item-13
+	i
+		+s(ico-menu-13)
+	&:hover
+		i
+			+s(ico-menu-13-h)
+.menu__item-14
+	i
+		+s(ico-menu-14)
+	&:hover
+		i
+			+s(ico-menu-14-h)
+
+
+
+
+
+
+//footer
+.footer
+	height: 188px
+	padding-top: 22px
+	background: #2d3537 
+	border-top: 2px solid #fff
+	box-shadow: 0 -2px 6px rgba(0,0,0,.16), 0 1px 5px rgba(0,0,0,.4) inset
+.footer__in
+	width: 760px
+	margin: 0 auto
+	+clr
+.footer__left
+	float: left
+	.logo
+		position: relative
+		display: block
+		float: none
+		padding-bottom: 15px
+		margin: 2px 0 18px 0
+		&:after
+			content: "....................................."
+			position: absolute
+			left: 15px 
+			text-shadow: 0 0 2px #999
+			color: #999
+	.logo__txt
+		color: #FFF 
+.social
+	font-size: 0
+	a
+		display: inline-block
+		margin-left: 25px
+		&:first-child
+			margin-left: 0
+.social__ok
+	+s(soc-ok)
+	&:hover
+		+s(soc-ok-h)
+.social__fb
+	+s(soc-fb)
+	&:hover
+		+s(soc-fb-h)
+.social__vk
+	+s(soc-vk)
+	&:hover
+		+s(soc-vk-h)
+.social__tw
+	+s(soc-tw)
+	&:hover
+		+s(soc-tw-h)
+.social__rss
+	+s(soc-rss)
+	&:hover
+		+s(soc-rss-h)
+.footer__nav
+	float: right
+	ul
+		float: left
+		&:first-child
+			margin-right: 35px
+			& + ul
+				margin-right: 85px
+	li
+		margin-bottom: 4px
+		font-size: 12px
+		&:first-child
+			font-weight: bold
+			color: $gr 
+	a		
+		color: #f6f6f6 
+		&:hover
+			text-decoration: underline
+.copyright
+	padding-top: 23px
+	clear: both
+	font-size: 12px
+	text-align: center
+	color: #fdfdfd  
