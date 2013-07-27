@@ -60,7 +60,7 @@ table
 	border-width: 2px 1px 1px 1px
 	box-shadow: 0 0 1px #f9f9f9, 0 0 6px rgba(0,0,0,.4)
 	border-radius: 0 0 10px 10px
-	z-index: 10 
+	z-index: 200 
 .header__top, .header__down
 	height: 86px
 .header__top
@@ -94,6 +94,8 @@ table
 		float: left
 	& > a
 		color: #FFF 
+		&:hover
+			text-decoration: underline
 	& > button
 		padding: 1px 5px 
 		margin-left: 14px 
@@ -124,6 +126,7 @@ table
 	border-radius: 2px
 	background: #fafafa 
 	box-shadow: 0 1px 1px rgba(0,0,0,.1)
+	z-index: 100 
 	li
 		border-top: 1px dotted #d6d6d6	
 		&:first-child
@@ -225,7 +228,11 @@ table
 			border: none
 .sel-shop__pic
 	text-align: center
+//menu
 .menu
+	position: relative
+	margin-left: 172px
+.menu__list
 	overflow: hidden
 	white-space: nowrap
 	font-size: 0
@@ -242,22 +249,33 @@ table
 		& > a
 			position: relative
 			display: block
+			height: 71px
 			padding: 45px 10px 0
 			font-size: 11px
 			color: #666
-			text-transform: uppercase
+			text-transform: uppercase	
+			+box
 			&:hover
-				color: $gr
+				color: $gr 		
 		i
 			position: absolute
 			top: 0
 			left: 50%
-			margin-left: -27px 
+			margin-left: -27px		
 .menu__sub
 	display: none
 	position: absolute
-	top: 95px 
-	left: -3px
+	top: 70px 	
+	padding-top: 20px
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		height: 20px
+		z-index: 20 
+.menu__sub-in
 	padding: 23px 17px
 	border-radius: 5px
 	border: 2px solid #fff
@@ -267,7 +285,8 @@ table
 	white-space: nowrap
 	ul
 		display: inline-block
-		width: 220px
+		width: 200px
+		padding-right: 20px
 		vertical-align: top
 		font-size: 14px
 		white-space: normal
@@ -299,12 +318,12 @@ table
 			color: $bl
 			&:before
 				background: $bl
-	&:before
-		content: ""
-		position: absolute
-		top: -16px
-		left: 40px 
-		+s(menu-sub-arr)
+.menu__sub-arr
+	display: none
+	position: absolute
+	top: 76px
+	+s(menu-sub-arr)
+	z-index: 10 
 .menu__item-1
 	i
 		+s(ico-menu-1)

@@ -70,7 +70,10 @@ $icons: sprite-map("icons/*.png", $spacing: 10px)
 	-ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(grayScale=1)"
 //media query
 @mixin rt($media)
-	@if $media == 1600
+	@if $media == 1920
+		@media only screen and (max-width: 1920px)
+			@content
+	@else if $media == 1600
 		@media only screen and (max-width: 1600px)
 			@content
 	@else if $media == 1380

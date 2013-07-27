@@ -23,7 +23,7 @@
 			</a>
 			<div class="login">
 				<a href="#">John Doe</a>
-				<button><i></i></button>
+				<button class="js-login"><i></i></button>
 				<ul class="login__links">
 					<li><a class="login__link-1" href="#">Настройки<i></i></a></li>
 					<li><a class="login__link-2" href="#">Избранное<i></i></a></li>
@@ -52,40 +52,218 @@
 					<img src="img/shop1.png" alt="">
 				</div>
 			</div>
-			<!-- BEGIN .menu -->			
-			<ul class="menu">
-				<li><a class="menu__item-1" href="#">Выпечка<i></i></a></li>
-				<li><a class="menu__item-2" href="#">Овощи и фрукты<i></i></a></li>
-				<li>
-					<a class="menu__item-3" href="#">Молочные и яйца<i></i></a>
-					<div class="menu__sub">
-						<ul>
-							<li class="is-selected"><a href="#">Блюда японской кухни</a></li>
-							<li><a href="#">Cалаты</a></li>
-							<li><a href="#">Холодные закуски</a></li>
-							<li><a href="#">Соусы собственного приготовления</a></li>
-							<li><a href="#">Мясные блюда</a></li>
-						</ul>
-						<ul>
-							<li><a href="#">Блюда из птицы</a></li>
-							<li><a href="#">Блюда из рыбы и морепродуктов</a></li>
-							<li><a href="#">Овощные блюда, гарниры</a></li>
-							<li><a href="#">Супы</a></li>
-						</ul>
+			<!-- BEGIN .menu -->
+			<div class="menu">
+				<ul class="menu__list">
+					<li data-item="menu-item-1"><a class="menu__item-1" href="#">Выпечка<i></i></a></li>
+					<li data-item="menu-item-2"><a class="menu__item-2" href="#">Овощи и фрукты<i></i></a></li>
+					<li data-item="menu-item-3"><a class="menu__item-3" href="#">Молочные и яйца<i></i></a></li>
+					<li data-item="menu-item-4"><a class="menu__item-4" href="#">Мясо и рыба<i></i></a></li>
+					<li data-item="menu-item-5"><a class="menu__item-5" href="#">Морозилка<i></i></a></li>
+					<li data-item="menu-item-6"><a class="menu__item-6" href="#">Кулинария<i></i></a></li>
+					<li data-item="menu-item-7"><a class="menu__item-7" href="#">Консервы и приправы<i></i></a></li>
+					<li data-item="menu-item-8"><a class="menu__item-8" href="#">Бакалея<i></i></a></li>
+					<li data-item="menu-item-9"><a class="menu__item-9" href="#">Закуски и сладости<i></i></a></li>
+					<li data-item="menu-item-10"><a class="menu__item-10" href="#">Напитки<i></i></a></li>
+					<li data-item="menu-item-11"><a class="menu__item-11" href="#">Для дома<i></i></a></li>
+					<li data-item="menu-item-12"><a class="menu__item-12" href="#">Детское<i></i></a></li>
+					<li data-item="menu-item-13"><a class="menu__item-13" href="#">Гигиена<i></i></a></li>
+					<li data-item="menu-item-14"><a class="menu__item-14" href="#">Для животных<i></i></a></li>
+				</ul>
+				<div class="menu__sub-arr"></div>	
+				<div class="menu__sub-wrap">
+					<div id="menu-item-1" class="menu__sub">
+						<div class="menu__sub-in">
+							<ul>
+								<li class="is-selected"><a href="#">Блюда японской кухни</a></li>
+								<li><a href="#">Cалаты</a></li>
+								<li><a href="#">Холодные закуски</a></li>
+								<li><a href="#">Соусы собственного приготовления</a></li>
+								<li><a href="#">Мясные блюда</a></li>
+							</ul>
+							<ul>
+								<li><a href="#">Блюда из птицы</a></li>
+								<li><a href="#">Блюда из рыбы и морепродуктов</a></li>
+								<li><a href="#">Овощные блюда, гарниры</a></li>
+								<li><a href="#">Супы</a></li>
+							</ul>
+						</div>				
 					</div>
-				</li>
-				<li><a class="menu__item-4" href="#">Мясо и рыба<i></i></a></li>
-				<li><a class="menu__item-5" href="#">Морозилка<i></i></a></li>
-				<li><a class="menu__item-6" href="#">Кулинария<i></i></a></li>
-				<li><a class="menu__item-7" href="#">Консервы и приправы<i></i></a></li>
-				<li><a class="menu__item-8" href="#">Бакалея<i></i></a></li>
-				<li><a class="menu__item-9" href="#">Закуски и сладости<i></i></a></li>
-				<li><a class="menu__item-10" href="#">Напитки<i></i></a></li>
-				<li><a class="menu__item-11" href="#">Для дома<i></i></a></li>
-				<li><a class="menu__item-12" href="#">Детское<i></i></a></li>
-				<li><a class="menu__item-13" href="#">Гигиена<i></i></a></li>
-				<li><a class="menu__item-14" href="#">Для животных<i></i></a></li>
-			</ul>
+					<div id="menu-item-2" class="menu__sub">
+						<div class="menu__sub-in">
+							<ul>
+								<li class="is-selected"><a href="#">Блюда японской кухни</a></li>
+								<li><a href="#">Cалаты</a></li>
+								<li><a href="#">Холодные закуски</a></li>
+								<li><a href="#">Соусы собственного приготовления</a></li>
+								<li><a href="#">Мясные блюда</a></li>
+							</ul>
+						</div>				
+					</div>
+					<div id="menu-item-3" class="menu__sub">
+						<div class="menu__sub-in">
+							<ul>
+								<li class="is-selected"><a href="#">Блюда японской кухни</a></li>
+								<li><a href="#">Cалаты</a></li>
+								<li><a href="#">Холодные закуски</a></li>
+								<li><a href="#">Соусы собственного приготовления</a></li>
+								<li><a href="#">Мясные блюда</a></li>
+							</ul>
+							<ul>
+								<li><a href="#">Блюда из птицы</a></li>
+								<li><a href="#">Блюда из рыбы и морепродуктов</a></li>
+								<li><a href="#">Овощные блюда, гарниры</a></li>
+								<li><a href="#">Супы</a></li>
+							</ul>
+						</div>							
+					</div>
+					<div id="menu-item-4" class="menu__sub">
+						<div class="menu__sub-in">
+							<ul>
+								<li class="is-selected"><a href="#">Блюда японской кухни</a></li>
+								<li><a href="#">Cалаты</a></li>
+								<li><a href="#">Холодные закуски</a></li>
+								<li><a href="#">Соусы собственного приготовления</a></li>
+								<li><a href="#">Мясные блюда</a></li>
+							</ul>
+						</div>						
+					</div>
+					<div id="menu-item-5" class="menu__sub">
+						<div class="menu__sub-in">
+							<ul>
+								<li class="is-selected"><a href="#">Блюда японской кухни</a></li>
+								<li><a href="#">Cалаты</a></li>
+								<li><a href="#">Холодные закуски</a></li>
+								<li><a href="#">Соусы собственного приготовления</a></li>
+								<li><a href="#">Мясные блюда</a></li>
+							</ul>
+						</div>						
+					</div>
+					<div id="menu-item-6" class="menu__sub">
+						<div class="menu__sub-in">
+							<ul>
+								<li class="is-selected"><a href="#">Блюда японской кухни</a></li>
+								<li><a href="#">Cалаты</a></li>
+								<li><a href="#">Холодные закуски</a></li>
+								<li><a href="#">Соусы собственного приготовления</a></li>
+								<li><a href="#">Мясные блюда</a></li>
+							</ul>
+							<ul>
+								<li><a href="#">Блюда из птицы</a></li>
+								<li><a href="#">Блюда из рыбы и морепродуктов</a></li>
+								<li><a href="#">Овощные блюда, гарниры</a></li>
+								<li><a href="#">Супы</a></li>
+							</ul>
+						</div>					
+					</div>
+					<div id="menu-item-7" class="menu__sub">
+						<div class="menu__sub-in">
+							<ul>
+								<li class="is-selected"><a href="#">Блюда японской кухни</a></li>
+								<li><a href="#">Cалаты</a></li>
+								<li><a href="#">Холодные закуски</a></li>
+								<li><a href="#">Соусы собственного приготовления</a></li>
+								<li><a href="#">Мясные блюда</a></li>
+							</ul>
+						</div>				
+					</div>
+					<div id="menu-item-8" class="menu__sub">
+						<div class="menu__sub-in">
+							<ul>
+								<li class="is-selected"><a href="#">Блюда японской кухни</a></li>
+								<li><a href="#">Cалаты</a></li>
+								<li><a href="#">Холодные закуски</a></li>
+								<li><a href="#">Соусы собственного приготовления</a></li>
+								<li><a href="#">Мясные блюда</a></li>
+							</ul>
+							<ul>
+								<li><a href="#">Блюда из птицы</a></li>
+								<li><a href="#">Блюда из рыбы и морепродуктов</a></li>
+								<li><a href="#">Овощные блюда, гарниры</a></li>
+								<li><a href="#">Супы</a></li>
+							</ul>
+						</div>					
+					</div>
+					<div id="menu-item-9" class="menu__sub">
+						<div class="menu__sub-in">
+							<ul>
+								<li class="is-selected"><a href="#">Блюда японской кухни</a></li>
+								<li><a href="#">Cалаты</a></li>
+								<li><a href="#">Холодные закуски</a></li>
+								<li><a href="#">Соусы собственного приготовления</a></li>
+								<li><a href="#">Мясные блюда</a></li>
+							</ul>
+						</div>					
+					</div>
+					<div id="menu-item-10" class="menu__sub">
+						<div class="menu__sub-in">
+							<ul>
+								<li class="is-selected"><a href="#">Блюда японской кухни</a></li>
+								<li><a href="#">Cалаты</a></li>
+								<li><a href="#">Холодные закуски</a></li>
+								<li><a href="#">Соусы собственного приготовления</a></li>
+								<li><a href="#">Мясные блюда</a></li>
+							</ul>
+							<ul>
+								<li><a href="#">Блюда из птицы</a></li>
+								<li><a href="#">Блюда из рыбы и морепродуктов</a></li>
+								<li><a href="#">Овощные блюда, гарниры</a></li>
+								<li><a href="#">Супы</a></li>
+							</ul>
+						</div>						
+					</div>
+					<div id="menu-item-11" class="menu__sub">
+						<div class="menu__sub-in">
+							<ul>
+								<li class="is-selected"><a href="#">Блюда японской кухни</a></li>
+								<li><a href="#">Cалаты</a></li>
+								<li><a href="#">Холодные закуски</a></li>
+								<li><a href="#">Соусы собственного приготовления</a></li>
+								<li><a href="#">Мясные блюда</a></li>
+							</ul>
+						</div>					
+					</div>
+					<div id="menu-item-12" class="menu__sub">
+						<div class="menu__sub-in">
+							<ul>
+								<li class="is-selected"><a href="#">Блюда японской кухни</a></li>
+								<li><a href="#">Cалаты</a></li>
+								<li><a href="#">Холодные закуски</a></li>
+								<li><a href="#">Соусы собственного приготовления</a></li>
+								<li><a href="#">Мясные блюда</a></li>
+							</ul>
+						</div>			
+					</div>
+					<div id="menu-item-13" class="menu__sub">
+						<div class="menu__sub-in">
+							<ul>
+								<li class="is-selected"><a href="#">Блюда японской кухни</a></li>
+								<li><a href="#">Cалаты</a></li>
+								<li><a href="#">Холодные закуски</a></li>
+								<li><a href="#">Соусы собственного приготовления</a></li>
+								<li><a href="#">Мясные блюда</a></li>
+							</ul>
+						</div>				
+					</div>
+					<div id="menu-item-14" class="menu__sub">
+						<div class="menu__sub-in">
+							<ul>
+								<li class="is-selected"><a href="#">Блюда японской кухни</a></li>
+								<li><a href="#">Cалаты</a></li>
+								<li><a href="#">Холодные закуски</a></li>
+								<li><a href="#">Соусы собственного приготовления</a></li>
+								<li><a href="#">Мясные блюда</a></li>
+							</ul>
+							<ul>
+								<li><a href="#">Блюда из птицы</a></li>
+								<li><a href="#">Блюда из рыбы и морепродуктов</a></li>
+								<li><a href="#">Овощные блюда, гарниры</a></li>
+								<li><a href="#">Супы</a></li>
+							</ul>
+						</div>												
+					</div>
+				</div>
+			</div>		
 			<!-- END .menu -->
 		</div>
 	</header>
@@ -95,7 +273,7 @@
 		<aside class="left">
 			<!-- BEGIN .search -->
 			<div class="search">
-				<input type="text">
+				<input type="text" placeholder="Поиск">
 				<button><i></i></button>
 			</div>
 			<!-- END .search -->
