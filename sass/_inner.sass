@@ -61,21 +61,33 @@
 		background: url(../img/icons/wave.png) repeat-x 
 //breadcrumbs
 .bc
-	height: 32px
-	padding: 0 10px
+	padding: 8px 10px
 	margin-bottom: 20px
 	background: #FFF
 	border-radius: 4px
 	box-shadow: 0 0 4px rgba(0,0,0,.16)
+	text-align: justify
+	font-size: 0
+	+rt(1380)
+		.bc__links, .bc__filter
+			display: block
+		.bc__links
+			margin-bottom: 5px
+		.bc__push
+			display: none
+.bc__links, .bc__filter, .bc__push
+	display: inline-block
+	vertical-align: top
+	font-size: 14px
+	text-align: left
+.bc__push
+	width: 100%
 .bc__links
-	float: left
-	a, .bc__arr, span
-		float: left
-	a, span
-		margin-top: 8px
+	margin-right: 20px
 	a
 		position: relative
-		padding-left: 30px 
+		padding: 0 20px 0 30px 
+		margin-right: 7px 
 		color: #444
 		&:hover
 			text-decoration: underline
@@ -83,32 +95,30 @@
 			position: absolute
 			top: -5px
 			left: 0
+		&:after
+			content: ""
+			position: absolute
+			top: 6px
+			right: 0 
+			+s(arr-left)
 	span
 		color: $bl 
-	.bc__arr
-		margin: 13px 7px 0 
-.bc__arr
-	+s(arr-left)
 .bc__ico-1
 	+s(bc-ico-1)
 .bc__filter
-	float: right
-	margin-top: 9px
-	span, button
-		float: left
 	span
 		margin-right: 5px 
-		line-height: 1
 	button
 		position: relative
 		padding-right: 13px
 		background: none 
+		line-height: 1.2 
 		color: $bl 
 		overflow: visible
 		&:after
 			content: ""
 			position: absolute
-			top: 5px
+			top: 6px
 			right: 0
 			width: 0px
 			height: 0px
@@ -119,16 +129,24 @@
 .catalog__list
 	margin: 0 -10px
 	font-size: 0
-.catalog__item
-	position: relative
+.catalog__item	
 	display: inline-block
-	width: 240px
-	margin: 0 10px 25px
+	width: 25%		
+	min-width: 240px
+	vertical-align: top	
+	+rt(1600)
+		width: 33.3%
+	+rt(1380)
+		width: 50% 
+	// +rt(1120)
+	// 	width: 100% 
+.catalog__item-in
+	position: relative
+	margin: 0 10px 25px	
 	background: #FFF
 	box-shadow: 0 0 4px rgba(0,0,0,.16)
-	border-radius: 3px 3px 0 0
-	vertical-align: top	
-	font-size: 14px	
+	border-radius: 3px 3px 0 0	
+	font-size: 14px
 	&:after
 		content: ""
 		position: absolute
@@ -156,6 +174,7 @@
 	padding: 9px	
 	img
 		display: block
+		width: 100%
 		border: 1px solid #eee
 .catalog__like
 	position: absolute
@@ -168,6 +187,7 @@
 	&.is-active
 		+s(star-a)
 .catalog__title
+	height: 38px
 	padding: 5px 10px 20px
 	font-size: 16px
 .catalog__price
@@ -188,7 +208,7 @@
 		margin: 1px 0 0 10px
 .catalog__buy-btn
 	position: relative
-	width: 175px
+	width: 75%
 	height: 30px
 	background: $bl
 	text-transform: uppercase
@@ -271,9 +291,33 @@
 		+s(minus)
 //cart
 .cart
-	float: right
+	position: absolute
+	top: 0
+	right: 0
 	width: 280px
 	margin-bottom: 20px
+	z-index: 100 
+	+rt(1120)
+		right: -300px
+		.cart__show-btn
+			display: block
+.cart__show-btn
+	display: none
+	position: absolute
+	top: 130px
+	left: -50px
+	width: 50px
+	height: 50px
+	border-radius: 5px 0 0 5px
+	background: $bl
+	overflow: visible
+	i
+		position: absolute
+		top: 10px
+		left: 10px
+		+s(cart-ico)
+	&:hover
+		background: $blh 
 .cart__title
 	padding: 14px
 	background: $bl

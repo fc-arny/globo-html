@@ -143,6 +143,7 @@
 		</aside>
 		<!-- BEGIN .cart -->
 		<div class="cart">
+			<button class="cart__show-btn"><i></i></button>
 			<div class="cart__title">
 				<span>КОРЗИНА<i></i></span>
 			</div>
@@ -175,69 +176,134 @@
 			<!-- BEGIN .breadcrumbs -->
 			<div class="bc">
 				<div class="bc__links">
-					<a href="#">Кулинария<i class="bc__ico-1"></i></a>
-					<i class="bc__arr"></i>
+					<a href="#">Кулинария<i class="bc__ico-1"></i></a>				
 					<span>Блюда японской кухни</span>
 				</div>
 				<div class="bc__filter">
 					<span>Сортировать по:</span>
 					<button>Самое популярное</button>
 				</div>
+				<div class="bc__push"></div>
 			</div>
 			<!-- END .breadcrumbs -->
 			<!-- BEGIN .catalog -->
 			<div class="catalog">
 				<div class="catalog__list">
 					<div class="catalog__item">
-						<div class="catalog__pic">
-							<img src="img/pic1.jpg" alt="">
-							<i class="catalog__like"></i>
-						</div>
-						<div class="catalog__title">Плов с мясом баранины рецепту Глобус Гурмэ</div>
-						<div class="catalog__price">
-							<span>Цена (за 50 гр):</span>
-							<strong>75,00<i class="rub">P</i></strong>
-						</div>
-						<div class="catalog__down">
-							<button class="catalog__buy-btn">В корзину</button>
+						<div class="catalog__item-in">
+							<div class="catalog__pic">
+								<img src="img/pic1.jpg" alt="">
+								<i class="catalog__like"></i>
+							</div>
+							<div class="catalog__title">Плов с мясом баранины рецепту Глобус Гурмэ</div>
+							<div class="catalog__price">
+								<span>Цена (за 50 гр):</span>
+								<strong>75,00<i class="rub">P</i></strong>
+							</div>
+							<div class="catalog__down">
+								<button class="catalog__buy-btn">В корзину</button>
+							</div>
 						</div>
 					</div>
 					<div class="catalog__item">
-						<div class="catalog__pic">
-							<img src="img/pic1.jpg" alt="">
-							<button class="catalog__like is-active"></button>
-						</div>
-						<div class="catalog__title">Плов с мясом баранины рецепту Глобус Гурмэ</div>
-						<div class="catalog__price">
-							<span>Цена (за 50 гр):</span>
-							<strong>75,00<i class="rub">P</i></strong>
-						</div>
-						<div class="catalog__down">
-							<button class="catalog__buy-btn">В корзину</button>
+						<div class="catalog__item-in">
+							<div class="catalog__pic">
+								<img src="img/pic1.jpg" alt="">
+								<button class="catalog__like is-active"></button>
+							</div>
+							<div class="catalog__title">Плов с мясом баранины рецепту Глобус Гурмэ</div>
+							<div class="catalog__price">
+								<span>Цена (за 50 гр):</span>
+								<strong>75,00<i class="rub">P</i></strong>
+							</div>
+							<div class="catalog__down">
+								<button class="catalog__buy-btn">В корзину</button>
+							</div>
 						</div>
 					</div>
-					<div class="catalog__item is-selected">
-						<div class="catalog__pic">
-							<img src="img/pic1.jpg" alt="">
-							<button class="catalog__like is-active"></button>
-						</div>
-						<div class="catalog__title">Плов с мясом баранины рецепту Глобус Гурмэ</div>
-						<div class="catalog__price">
-							<span>Цена (за 50 гр):</span>
-							<strong>75,00<i class="rub">P</i></strong>
-						</div>
-						<div class="catalog__down">
-							<div class="weight">
-								<button class="weight__btn-minus"><i></i></button>							
-								<div class="weight__val">
-									<input type="text" maxlength="4" value="500">
-									<span>гр</span>
-								</div>								
-								<button class="weight__btn-plus"><i></i></button>					
+					<div class="catalog__item">
+						<div class="catalog__item-in is-selected">
+							<div class="catalog__pic">
+								<img src="img/pic1.jpg" alt="">
+								<button class="catalog__like is-active"></button>
 							</div>
-							<div class="catalog__sum">
-								<strong>750,00<i class="rub">P</i></strong>
-								<button>Удалить</button>
+							<div class="catalog__title">Плов с мясом баранины рецепту Глобус Гурмэ</div>
+							<div class="catalog__price">
+								<span>Цена (за 50 гр):</span>
+								<strong>75,00<i class="rub">P</i></strong>
+							</div>
+							<div class="catalog__down">
+								<div class="weight">
+									<button class="weight__btn-minus"><i></i></button>							
+									<div class="weight__val">
+										<input type="text" maxlength="4" value="500">
+										<span>гр</span>
+									</div>								
+									<button class="weight__btn-plus"><i></i></button>					
+								</div>
+								<div class="catalog__sum">
+									<strong>750,00<i class="rub">P</i></strong>
+									<button>Удалить</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="catalog__item">
+						<div class="catalog__item-in">
+							<div class="catalog__pic">
+								<img src="img/pic1.jpg" alt="">
+								<i class="catalog__like"></i>
+							</div>
+							<div class="catalog__title">Плов с мясом баранины рецепту Глобус Гурмэ</div>
+							<div class="catalog__price">
+								<span>Цена (за 50 гр):</span>
+								<strong>75,00<i class="rub">P</i></strong>
+							</div>
+							<div class="catalog__down">
+								<button class="catalog__buy-btn">В корзину</button>
+							</div>
+						</div>
+					</div>
+					<div class="catalog__item">
+						<div class="catalog__item-in">
+							<div class="catalog__pic">
+								<img src="img/pic1.jpg" alt="">
+								<button class="catalog__like is-active"></button>
+							</div>
+							<div class="catalog__title">Плов с мясом баранины рецепту Глобус Гурмэ</div>
+							<div class="catalog__price">
+								<span>Цена (за 50 гр):</span>
+								<strong>75,00<i class="rub">P</i></strong>
+							</div>
+							<div class="catalog__down">
+								<button class="catalog__buy-btn">В корзину</button>
+							</div>
+						</div>
+					</div>
+					<div class="catalog__item">
+						<div class="catalog__item-in is-selected">
+							<div class="catalog__pic">
+								<img src="img/pic1.jpg" alt="">
+								<button class="catalog__like is-active"></button>
+							</div>
+							<div class="catalog__title">Плов с мясом баранины рецепту Глобус Гурмэ</div>
+							<div class="catalog__price">
+								<span>Цена (за 50 гр):</span>
+								<strong>75,00<i class="rub">P</i></strong>
+							</div>
+							<div class="catalog__down">
+								<div class="weight">
+									<button class="weight__btn-minus"><i></i></button>							
+									<div class="weight__val">
+										<input type="text" maxlength="4" value="500">
+										<span>гр</span>
+									</div>								
+									<button class="weight__btn-plus"><i></i></button>					
+								</div>
+								<div class="catalog__sum">
+									<strong>750,00<i class="rub">P</i></strong>
+									<button>Удалить</button>
+								</div>
 							</div>
 						</div>
 					</div>

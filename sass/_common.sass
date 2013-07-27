@@ -6,8 +6,9 @@
 html, body 
 	height: 100%
 body	
+	min-width: 768px 
 	background: url(../img/icons/bg.jpg) 
-	font-family: 'Scada', Arial, Tahoma, sans-serif
+	font-family: Arial, Tahoma, sans-serif
 	font-weight: normal 
 	font-size: 14px
 	color: #444
@@ -42,7 +43,9 @@ table
 	min-height: 100%
 	height: auto !important
 	height: 100%
-	margin: 0 20px -212px
+	margin-bottom: -212px
+	padding: 0 20px
+	overflow: hidden
 .push
 	height: 212px
 	clear: both
@@ -61,9 +64,13 @@ table
 .header__top, .header__down
 	height: 86px
 .header__top
+	height: 90px
+	margin-bottom: 18px
+	background: url(../img/icons/header-line.png) repeat-x 0 100%
 	+clr
 .header__down
-	padding: 18px 30px 0
+	height: 71px
+	padding: 0 30px
 .logo
 	float: left
 	margin: 19px 0 0 23px
@@ -97,7 +104,7 @@ table
 			+s(login)
 	&:before
 		content: ""
-		position: absolute
+		position: absolute 
 		top: 0
 		left: -8px  	
 		width: 0px
@@ -105,7 +112,10 @@ table
 		border-style: solid
 		border-width: 10px 8px 10px 0
 		border-color: transparent $bl transparent transparent
+	+rt(1120)
+		margin: 40px 0 0 20px
 .login__links
+	display: none
 	position: absolute
 	top: 27px 
 	right: 11px 
@@ -158,6 +168,8 @@ table
 			margin-left: 0
 		&:hover
 			color: #222
+		+rt(1120)
+			margin-left: 20px
 .sel-shop
 	float: left
 	height: 64px
@@ -214,7 +226,8 @@ table
 .sel-shop__pic
 	text-align: center
 .menu
-	float: left
+	overflow: hidden
+	white-space: nowrap
 	font-size: 0
 	& > li
 		position: relative
@@ -223,6 +236,7 @@ table
 		height: 71px
 		border-right: 1px solid #e1e1e1 
 		box-shadow: 1px 0 0 #fcfcfc
+		white-space: normal
 		vertical-align: top
 		text-align: center
 		& > a
