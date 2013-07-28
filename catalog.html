@@ -9,6 +9,7 @@
 	<script src="js/jquery.min.js"></script>
 	<script src="js/jquery.cycle2.min.js"></script>
 	<script src="js/jquery.cycle2.carousel.min.js"></script>	
+	<script src="js/jquery.scrollTo-1.4.3.1-min.js"></script>	
 	<script src="js/common.js"></script>
 </head>
 <body>
@@ -40,12 +41,12 @@
 		</div>
 		<div class="header__down">
 			<div class="sel-shop">
-				<div class="sel-shop__list is-open">
-					<button>Выбраный магазин</button>
+				<div class="sel-shop__list">
+					<button class="js-shops">Выбраный магазин</button>
 					<ul>
-						<li><img src="img/shop1.png" alt=""></li>
-						<li><img src="img/shop1.png" alt=""></li>
-						<li><img src="img/shop1.png" alt=""></li>
+						<li><img src="img/shop2-s.png" alt=""></li>
+						<li><img src="img/shop1-s.png" alt=""></li>
+						<li><img src="img/shop3-s.png" alt=""></li>
 					</ul>
 				</div>
 				<div class="sel-shop__pic">
@@ -54,22 +55,26 @@
 			</div>
 			<!-- BEGIN .menu -->
 			<div class="menu">
-				<ul class="menu__list">
-					<li data-item="menu-item-1"><a class="menu__item-1" href="#">Выпечка<i></i></a></li>
-					<li data-item="menu-item-2"><a class="menu__item-2" href="#">Овощи и фрукты<i></i></a></li>
-					<li data-item="menu-item-3"><a class="menu__item-3" href="#">Молочные и яйца<i></i></a></li>
-					<li data-item="menu-item-4"><a class="menu__item-4" href="#">Мясо и рыба<i></i></a></li>
-					<li data-item="menu-item-5"><a class="menu__item-5" href="#">Морозилка<i></i></a></li>
-					<li data-item="menu-item-6"><a class="menu__item-6" href="#">Кулинария<i></i></a></li>
-					<li data-item="menu-item-7"><a class="menu__item-7" href="#">Консервы и приправы<i></i></a></li>
-					<li data-item="menu-item-8"><a class="menu__item-8" href="#">Бакалея<i></i></a></li>
-					<li data-item="menu-item-9"><a class="menu__item-9" href="#">Закуски и сладости<i></i></a></li>
-					<li data-item="menu-item-10"><a class="menu__item-10" href="#">Напитки<i></i></a></li>
-					<li data-item="menu-item-11"><a class="menu__item-11" href="#">Для дома<i></i></a></li>
-					<li data-item="menu-item-12"><a class="menu__item-12" href="#">Детское<i></i></a></li>
-					<li data-item="menu-item-13"><a class="menu__item-13" href="#">Гигиена<i></i></a></li>
-					<li data-item="menu-item-14"><a class="menu__item-14" href="#">Для животных<i></i></a></li>
-				</ul>
+				<div class="menu__list">
+					<button class="menu__btn-prev"><i></i></button>
+					<button class="menu__btn-next"><i></i></button>
+					<ul class="menu__list-in">
+						<li data-item="menu-item-1"><a class="menu__item-1" href="#">Выпечка<i></i></a></li>
+						<li data-item="menu-item-2"><a class="menu__item-2" href="#">Овощи и фрукты<i></i></a></li>
+						<li data-item="menu-item-3"><a class="menu__item-3" href="#">Молочные и яйца<i></i></a></li>
+						<li data-item="menu-item-4"><a class="menu__item-4" href="#">Мясо и рыба<i></i></a></li>
+						<li data-item="menu-item-5"><a class="menu__item-5" href="#">Морозилка<i></i></a></li>
+						<li data-item="menu-item-6"><a class="menu__item-6" href="#">Кулинария<i></i></a></li>
+						<li data-item="menu-item-7"><a class="menu__item-7" href="#">Консервы и приправы<i></i></a></li>
+						<li data-item="menu-item-8"><a class="menu__item-8" href="#">Бакалея<i></i></a></li>
+						<li data-item="menu-item-9"><a class="menu__item-9" href="#">Закуски и сладости<i></i></a></li>
+						<li data-item="menu-item-10"><a class="menu__item-10" href="#">Напитки<i></i></a></li>
+						<li data-item="menu-item-11"><a class="menu__item-11" href="#">Для дома<i></i></a></li>
+						<li data-item="menu-item-12"><a class="menu__item-12" href="#">Детское<i></i></a></li>
+						<li data-item="menu-item-13"><a class="menu__item-13" href="#">Гигиена<i></i></a></li>
+						<li data-item="menu-item-14"><a class="menu__item-14" href="#">Для животных<i></i></a></li>
+					</ul>					
+				</div>
 				<div class="menu__sub-arr"></div>	
 				<div class="menu__sub-wrap">
 					<div id="menu-item-1" class="menu__sub">

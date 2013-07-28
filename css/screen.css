@@ -71,28 +71,40 @@ table { border-spacing: 0; border-collapse: collapse; }
 .nav a:hover { color: #222222; }
 @media only screen and (max-width: 1120px) { .nav a { margin-left: 20px; } }
 
-.sel-shop { float: left; height: 64px; padding: 7px 13px 0 16px; border: 1px solid #e1e1e1; border-width: 0 1px; box-shadow: 1px 0 0 #fcfcfc, 1px 0 0 #fcfcfc inset; }
+.sel-shop { float: left; height: 64px; padding: 7px 15px 0; border: 1px solid #e1e1e1; border-width: 0 1px; box-shadow: 1px 0 0 #fcfcfc, 1px 0 0 #fcfcfc inset; }
 
 .sel-shop__list { position: relative; margin-bottom: 10px; }
 .sel-shop__list button { position: relative; padding-right: 15px; background: none; font-size: 14px; text-shadow: 0 1px 0 white; color: #666666; }
 .sel-shop__list button:after { content: ""; position: absolute; top: 5px; right: 0; width: 0px; height: 0px; border-style: solid; border-width: 5px 5px 0 5px; border-color: #656565 transparent transparent transparent; box-shadow: 0 -1px 0 white; }
-.sel-shop__list.is-open button:after { border-width: 0 5px 5px 5px; border-color: transparent transparent #656565 transparent; box-shadow: 0 1px 0 white; }
-.sel-shop__list ul { display: none; position: absolute; top: 20px; left: -13px; right: -10px; padding: 0 4px; border: 1px solid #dedede; border-radius: 2px; background: #fafafa; box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); z-index: 10; }
-.sel-shop__list li { padding: 6px; border-top: 1px dotted #d6d6d6; font-size: 0; text-align: center; }
+.sel-shop__list button.is-open:after { border-width: 0 5px 5px 5px; border-color: transparent transparent #656565 transparent; box-shadow: 0 1px 0 white; }
+.sel-shop__list ul { display: none; position: absolute; top: 19px; left: -10px; right: -10px; border: 1px solid #dedede; border-radius: 2px; background: #fafafa; box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); z-index: 10; }
+.sel-shop__list li { padding: 6px 10px; border-top: 1px dotted #d6d6d6; font-size: 0; text-align: center; }
 .sel-shop__list li:first-child { border: none; }
 
 .sel-shop__pic { text-align: center; }
 
 .menu { position: relative; margin-left: 172px; }
+.menu.is-slider { margin: 0 20px 0 192px; }
 
-.menu__list { overflow: hidden; white-space: nowrap; font-size: 0; }
-.menu__list > li { position: relative; display: inline-block; max-width: 90px; height: 71px; border-right: 1px solid #e1e1e1; box-shadow: 1px 0 0 #fcfcfc; white-space: normal; vertical-align: top; text-align: center; }
-.menu__list > li > a { position: relative; display: block; height: 71px; padding: 45px 10px 0; font-size: 11px; color: #666666; text-transform: uppercase; -moz-box-sizing: border-box; box-sizing: border-box; }
-.menu__list > li > a:hover { color: #7dc444; }
-.menu__list > li i { position: absolute; top: 0; left: 50%; margin-left: -27px; }
+.menu__btn-prev, .menu__btn-next { display: none; position: absolute; top: 0; width: 20px; height: 71px; background: #e1e1e1; overflow: visible; }
+.menu__btn-prev i, .menu__btn-next i { position: absolute; top: 50%; left: 5px; width: 0px; height: 0px; margin-top: -10px; border-style: solid; }
+
+.menu__btn-prev { left: -20px; }
+.menu__btn-prev i { border-width: 10px 10px 10px 0; border-color: transparent #009bea transparent transparent; }
+
+.menu__btn-next { right: -20px; }
+.menu__btn-next i { border-width: 10px 0 10px 10px; border-color: transparent transparent transparent #009bea; }
+
+.menu__list { overflow: hidden; }
+
+.menu__list-in { white-space: nowrap; font-size: 0; }
+.menu__list-in > li { position: relative; display: inline-block; max-width: 90px; vertical-align: top; }
+.menu__list-in > li > a { display: block; height: 71px; padding: 45px 10px 0; border-right: 1px solid #e1e1e1; box-shadow: 1px 0 0 #fcfcfc; white-space: normal; text-align: center; font-size: 11px; color: #666666; text-transform: uppercase; -moz-box-sizing: border-box; box-sizing: border-box; }
+.menu__list-in > li > a:hover { color: #7dc444; }
+.menu__list-in > li > a i { position: absolute; top: 0; left: 50%; margin-left: -27px; }
 
 .menu__sub { display: none; position: absolute; top: 70px; padding-top: 20px; }
-.menu__sub:before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 20px; z-index: 20; }
+.menu__sub:before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 25px; z-index: 20; }
 
 .menu__sub-in { padding: 23px 17px; border-radius: 5px; border: 2px solid white; box-shadow: 0 0 1px #f9f9f9, 0 0 6px rgba(0, 0, 0, 0.4); background: #f6f6f6; text-align: left; white-space: nowrap; }
 .menu__sub-in ul { display: inline-block; width: 200px; padding-right: 20px; vertical-align: top; font-size: 14px; white-space: normal; }
