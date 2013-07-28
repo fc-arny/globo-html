@@ -98,7 +98,7 @@ table { border-spacing: 0; border-collapse: collapse; }
 .menu__list { overflow: hidden; }
 
 .menu__list-in { white-space: nowrap; font-size: 0; }
-.menu__list-in > li { position: relative; display: inline-block; max-width: 90px; vertical-align: top; }
+.menu__list-in > li { position: relative; display: inline-block; max-width: 100px; vertical-align: top; }
 .menu__list-in > li > a { display: block; height: 71px; padding: 45px 10px 0; border-right: 1px solid #e1e1e1; box-shadow: 1px 0 0 #fcfcfc; white-space: normal; text-align: center; font-size: 11px; color: #666666; text-transform: uppercase; -moz-box-sizing: border-box; box-sizing: border-box; }
 .menu__list-in > li > a:hover { color: #7dc444; }
 .menu__list-in > li > a i { position: absolute; top: 0; left: 50%; margin-left: -27px; }
