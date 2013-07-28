@@ -46,6 +46,25 @@ table
 	margin-bottom: -212px
 	padding: 0 20px
 	overflow: hidden
+.wrap_fixed
+	.header, .cart, .search
+		position: fixed
+	.header
+		top: -90px
+		left: 20px
+		right: 20px
+		z-index: 400 
+	.cart, .search
+		top: 131px
+		z-index: 300 
+	.cart
+		right: 20px
+	.search
+		left: 20px
+	.layout
+		padding-top: 221px
+	.left
+		padding-top: 52px
 .push
 	height: 212px
 	clear: both
@@ -238,8 +257,10 @@ table
 	top: 0
 	width: 20px
 	height: 71px
-	background: #e1e1e1
+	background: none
 	overflow: visible
+	&:hover
+		background: #e1e1e1 
 	i
 		position: absolute
 		top: 50%
@@ -247,7 +268,8 @@ table
 		width: 0px
 		height: 0px
 		margin-top: -10px
-		border-style: solid		
+		border-style: solid
+				
 .menu__btn-prev
 	left: -20px
 	i
@@ -433,12 +455,6 @@ table
 	&:hover
 		i
 			+s(ico-menu-14-h)
-
-
-
-
-
-
 //footer
 .footer
 	height: 188px
@@ -556,3 +572,78 @@ table
 	i
 		border-radius: 3px
 		box-shadow: 0 1px 1px rgba(0,0,0,.25) inset
+//scroll
+.jspContainer
+	overflow: hidden
+	position: relative
+.jspPane
+	position: absolute
+.jspVerticalBar
+	position: absolute
+	top: 0
+	right: 0
+	width: 16px
+	height: 100%
+	background: red
+.jspHorizontalBar
+	position: absolute
+	bottom: 3px
+	left: 0
+	width: 100%
+	height: 6px
+	background: red
+.jspCap
+	display: none
+.jspHorizontalBar .jspCap
+	float: left
+.jspTrack
+	position: relative
+	background: #cbcbcb
+	border: 1px solid #e7e7e7
+	border-width: 1px 0 	
+.jspDrag
+	background: #bbd
+	position: relative
+	top: -1px
+	left: 0
+	height: 6px
+	border-top: 2px solid #fff
+	border-radius: 2px
+	box-shadow: 0 0 0 1px #e0e0e0
+	background: #eee
+	@include background-image(linear-gradient(#eee, #e0e0e0))
+	cursor: pointer
+.jspHorizontalBar .jspTrack,
+.jspHorizontalBar .jspDrag
+	float: left
+	height: 100%
+.jspArrow
+	background: #50506d
+	text-indent: -20000px
+	display: block
+	cursor: pointer
+.jspArrow.jspDisabled
+	cursor: default
+	background: #80808d
+.jspVerticalBar .jspArrow
+	height: 16px
+.jspHorizontalBar .jspArrow
+	width: 16px
+	float: left
+	height: 100%
+.jspVerticalBar .jspArrow:focus
+	outline: none
+.jspCorner
+	background: #eeeef4
+	float: left
+	height: 100%
+//overlay
+.overlay 
+	display: none
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	background: rgba(0,0,0,.15) 
+	z-index: 500

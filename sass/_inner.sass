@@ -303,6 +303,8 @@
 		right: -300px
 		.cart__show-btn
 			display: block
+	&.is-open
+		z-index: 600 
 .cart__show-btn
 	display: none
 	position: absolute
@@ -337,27 +339,29 @@
 		top: 0
 		left: 0
 		+s(cart-ico)
-.cart__list
+.cart__in
 	background: #FFF
 	border: 1px solid #e7e7e7
 	border-width: 0 1px
 	box-shadow: 0 0 4px rgba(0, 0, 0, 0.16)
+.cart__list	
 	+no-sel
-	li
-		position: relative
-		padding: 10px 20px 10px 30px
-		border-top: 1px dashed #e5e5e5 
-		font-size: 0
-		&:first-child
-			border-top: none
+	li		
+		border-bottom: 1px dashed #e5e5e5		
 		&.is-empty
-			background: #f1f1f1
-			border-top: 1px solid #cfcfcf
-			box-shadow: 0 -1px 0 #cfcfcf 
-			strong
-				display: none
-			img
-				+gray
+			.cart__list-item
+				background: #f1f1f1
+				border-top: 1px solid #cfcfcf
+				box-shadow: 0 -1px 0 #cfcfcf 
+				strong
+					display: none
+				img
+					+gray
+.cart__list-item
+	position: relative
+	padding: 10px 20px 10px 30px
+	font-size: 0
+	cursor: pointer
 	strong
 		position: absolute
 		top: 50%
@@ -371,27 +375,27 @@
 			width: 9px
 		&:before
 			top: 8px
-	.cart__total 
-		padding: 14px 20px 14px 30px	
-		+clr
-		span
-			float: right
-			font-size: 24px
-		span
-			float: right
-			color: $bl 
-			font-weight: bold
-			&:first-child
-				float: left
-				color: #444
-		.rub 
-			&:before, &:after
-				height: 3px
-			&:before
-				top: 13px
-			&:after
-				top: 17px
-				width: 13px
+.cart__total 
+	padding: 14px 20px 14px 30px	
+	+clr
+	span
+		float: right
+		font-size: 24px
+	span
+		float: right
+		color: $bl 
+		font-weight: bold
+		&:first-child
+			float: left
+			color: #444
+	.rub 
+		&:before, &:after
+			height: 3px
+		&:before
+			top: 13px
+		&:after
+			top: 17px
+			width: 13px
 .cart__go
 	position: relative
 	width: 100%
@@ -418,3 +422,135 @@
 		background: $blh 
 		&:after
 			background: url(../img/icons/cart-wave-h.png) repeat-x 
+.cart__popup 	
+	display: none
+	position: absolute
+	top: 0
+	right: 315px
+	width: 760px
+	border: 1px solid #e7e7e7
+	border-radius: 4px
+	background: #fff  
+.cart__arr
+	position: absolute
+	top: 50px
+	right: -20px
+	width: 0px
+	height: 0px
+	border-style: solid
+	border-width: 15px 0 15px 20px
+	border-color: transparent transparent transparent #fafafa
+.cart__top	
+	padding: 13px 30px
+	overflow: hidden
+	strong
+		float: left		
+		font-size: 24px
+		text-transform: uppercase
+	button
+		position: relative
+		float: right
+		margin-top: 5px
+		padding-right: 20px
+		background: none 
+		font-size: 16px
+		color: $bl 
+		overflow: visible
+		&:hover
+			color: $blh
+			i
+				opacity: .8 
+		i
+			position: absolute
+			top: 3px
+			right: 0
+			+s(cart-btn-back)
+.cart__bottom
+	padding: 15px 20px	
+	text-align: right
+	font-size: 0
+	overflow: hidden
+	strong
+		display: inline-block
+		margin-left: 30px 
+		font-size: 16px
+		&:first-child
+			color: #666 
+			span, .rub
+				color: #444 
+			.rub
+				&:before, &:after
+					background: #444 
+	span, 
+		margin-left: 25px 
+	span, .rub
+		color: $bl 
+	.rub
+		&:before
+			top: 8px
+		&:after
+			top: 11px
+			width: 9px
+.cart__prod-in
+	height: 315px
+	background: #fafafa 
+	overflow: auto
+	white-space: nowrap
+	font-size: 0
+	li
+		display: inline-block
+		width: 190px
+		padding: 7px
+		border-left: 1px dashed #d6d6d6  
+		vertical-align: top
+		white-space: normal
+		+box
+		&:first-child
+			border: none	
+		&:hover
+			.cart__prod-pic
+				button
+					display: block
+	.weight
+		float: none
+		overflow: hidden
+		margin-bottom: 7px	
+	.weight__btn-plus
+		float: right
+	.weight__val
+		float: none
+		padding-left: 20px
+		overflow: hidden
+.cart__prod-title
+	height: 32px
+	margin-bottom: 7px 
+	font-size: 14px
+	overflow: hidden
+.cart__prod-pic
+	position: relative
+	img
+		display: block
+		margin-bottom: 7px
+		border: 1px solid #d6d6d6
+	button
+		display: none
+		position: absolute
+		top: 5px
+		right: 5px
+		+s(cart-btn-del)
+.cart__prod-price
+	margin-bottom: 7px
+	font-size: 14px
+	color: #abaaaa
+	span
+		margin-left: 10px
+	span, .rub
+		color: #666   
+	.rub
+		&:before, &:after
+			background: #666
+			height: 1px 
+		&:before
+			top: 8px
+	
+			
