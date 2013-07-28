@@ -105,10 +105,7 @@ function slidermenu() {
   next.click(function() {
     prev.show();
     var width_parent = el.width();
-    var current = el.find('.is-current');
-    var width = current.width();
-    current.removeClass('is-current').next().addClass('is-current');
-    el_scroll.scrollTo('+=' + width + 'px', 400, {
+    el_scroll.scrollTo('+=200px', 400, {
       onAfter: function() {    
         var pos_left = el.find('.menu__list-in').position().left;
         if (pos_left == width_parent - width_list) {     
@@ -119,10 +116,7 @@ function slidermenu() {
   });
   prev.click(function() {
     next.show();
-    var current = el.find('.is-current');
-    var width = current.width();
-    current.removeClass('is-current').prev().addClass('is-current');
-    el_scroll.scrollTo('-=' + width + 'px', 400, {
+    el_scroll.scrollTo('-=200px', 400, {
       onAfter: function() {    
         var pos_left = el.find('.menu__list-in').position().left;
         if (pos_left == 0) {     
