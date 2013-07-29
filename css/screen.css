@@ -333,8 +333,12 @@ table { border-spacing: 0; border-collapse: collapse; }
 .catalog__price span { float: left; font-weight: bold; color: #666666; }
 .catalog__price strong { float: right; color: #009bea; }
 
-.catalog__down { height: 42px; padding-top: 7px; }
+.catalog__down { position: relative; height: 50px; overflow: hidden; }
 .catalog__down .weight { margin: 1px 0 0 10px; }
+
+.catalog__down-in { position: absolute; top: 7px; left: -100%; width: 200%; }
+
+.catalog__down-item { float: left; width: 50%; }
 
 .catalog__buy-btn { position: relative; width: 75%; height: 30px; background: #009bea; text-transform: uppercase; font-weight: bold; color: white; }
 .catalog__buy-btn:after { content: ""; position: absolute; top: 0; right: -8px; width: 0px; height: 0px; border-style: solid; border-width: 15px 0 15px 8px; border-color: transparent transparent transparent #009bea; }

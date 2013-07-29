@@ -47,6 +47,16 @@ $('.overlay').click(function() {
   $('.cart').removeClass('is-open');
 });
 
+//buy prod (add prod in cart)
+$('.js-add-prod').click(function() {
+  $(this).parent().parent().animate({left: 0}, 200);
+  $(this).parent().parent().parent().parent().addClass('is-selected');
+});
+$('.js-del-prod').click(function() {
+  $(this).parent().parent().parent().animate({left: '-100%'}, 200);
+  $(this).parent().parent().parent().parent().parent().removeClass('is-selected');
+});
+
 $(document).click(function() {
   $('.js-login').next().hide();
   $('.js-shops').removeClass('is-open');
@@ -152,6 +162,30 @@ function slidermenu() {
     });
   });
 };
+
+//weight
+function weight() {
+  var el = $('.js-weight');
+  //var factor = el.find('.weight__val input').attr('data-factor');
+  //var val = el.find('.weight__val input');
+  var plus = el.find('.weight__btn-plus');
+  var minus = el.find('.weight__btn-minus');
+  plus.click(function() {
+    var val = $(this).parent().find('.weight__val input').val();
+    var factor = el.parent().find('.weight__val input').attr('data-factor');
+    var sum = parseInt(val) + parseInt(factor);
+    $(this).parent().find('.weight__val input').val(sum);
+  });
+  minus.click(function() {
+    var val = $(this).parent().find('.weight__val input').val();
+    var factor = el.parent().find('.weight__val input').attr('data-factor');
+    var res = parseInt(val) - parseInt(factor);
+    if (res > 0) {
+       $(this).parent().find('.weight__val input').val(res);
+    };   
+  });
+}
+weight();
 
 //init
 submenu();
