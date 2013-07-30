@@ -342,14 +342,12 @@
 .cart
 	position: absolute
 	top: 0
-	right: 0
+	right: 20px
 	width: 280px
 	margin-bottom: 20px
 	z-index: 100 
-	+rt(1120)
-		right: -300px
-		.cart__show-btn
-			display: block
+	&.is-move
+		right: -280px
 	&.is-open
 		z-index: 600 
 .cart__show-btn
@@ -369,6 +367,9 @@
 		+s(cart-ico)
 	&:hover
 		background: $blh 
+	&.is-active
+		i
+			+s(arr-right)
 .cart__title
 	padding: 14px
 	background: $bl
@@ -601,12 +602,14 @@
 			top: 8px
 //prod
 .prod
+	display: none
 	position: fixed
-	top: 200px
+	top: 20px
 	left: 50%
-	width: 800px
-	padding: 40px 25px 25px 30px
-	margin-left: -400px
+	width: 728px
+	min-width: 728px
+	padding: 30px 20px 20px 20px
+	margin-left: -364px
 	border: 1px solid #e7e7e7
 	background: #fff 
 	+box
@@ -679,7 +682,8 @@
 		border-bottom: 1px dashed
 		background: none
 		font-size: 12px   
-.prod__tabs-nav
+//tabs
+.tabs__nav
 	padding-bottom: 7px
 	border-bottom: 1px dashed #d6d6d6 
 	overflow: hidden
@@ -696,5 +700,108 @@
 			color: #666
 			border: none
 			cursor: default
+.tabs__content
+	padding: 17px 0
+.tabs__title
+	margin-bottom: 10px
+	font-size: 16px
+	text-transform: uppercase
+.tabs__price
+	padding-bottom: 10px
+	margin-bottom: 15px
+	border-bottom: 1px dashed #d6d6d6 
+	li
+		padding: 3px
+		margin-bottom: 7px
+		font-size: 0
+		strong, img, span
+			display: inline-block
+			vertical-align: middle
+		strong, span
+			font-size: 16px 
+		strong
+			color: $bl
+		img
+			margin-right: 45px
+		.rub
+			&:before
+				top: 8px
+			&:after
+				top: 11px
+				width: 9px
+		&.is-active
+			background: #d9f0fc 
+.tabs__graph
+	margin-bottom: 20px
+.tabs__stat
+	li
+		float: left
+		margin-left: 40px
+		strong
+			display: block
+			font-size: 16px
+			color: #666 
+			.rub
+				&:before, &:after
+					background: #666
+		.rub
+			&:before
+				top: 8px
+			&:after
+				top: 11px
+				width: 9px
+		&:first-child
+			margin-left: 0
+			strong
+				color: #d55415 
+			.rub
+				&:before, &:after
+					background: #d55415
+		&:last-child
+			strong
+				color: $bl
+			.rub
+				&:before, &:after
+					background: $bl
+.tabs__compos
+	padding: 15px 0 0 25px
+	border-top: 1px dashed #d6d6d6 
+	li
+		margin-bottom: 5px
+		overflow: hidden
+		span
+			float: right
+			width: 75px 
+			color: $bl 
+.tabs__reviews
+	li
+		margin-top: 30px
+		&:first-child
+			margin-top: 0 
+.tabs__reviews-txt
+	margin-bottom: 10px
+	font-size: 16px 
+.tabs__reviews-detail
+	overflow: hidden
+	span
+		float: left
+		color: #666 
+		&:first-child
+			margin-right: 20px
+.tabs__reviews-more
+	background: none
+	border-bottom: 1px dashed $bl  
+	color: $bl
+	font-size: 12px
+	&:hover
+		color: $blh 
+//rating
+.rating
+	margin-bottom: 10px
+	overflow: hidden
+	img
+		float: left
+		
+
 	
 			

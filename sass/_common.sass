@@ -46,19 +46,21 @@ table
 	margin-bottom: -212px
 	padding: 0 20px
 	overflow: hidden
-.wrap_fixed
+.wrap_fixed	
 	.header, .cart, .search
 		position: fixed
 	.header
 		top: -90px
 		left: 20px
-		right: 20px
+		right: 20px		
 		z-index: 400 
+	.header__top
+		display: none
+	.header__down
+		padding-top: 108px
 	.cart, .search
 		top: 131px
 		z-index: 300 
-	.cart
-		right: 20px
 	.search
 		left: 20px
 	.layout
@@ -266,7 +268,7 @@ table
 	position: relative
 	margin-left: 172px
 	&.is-slider
-		margin: 0 20px 0 192px
+		margin-left: 192px
 .menu__btn-prev, .menu__btn-next
 	display: none
 	position: absolute
@@ -655,7 +657,7 @@ table
 	height: 100%
 //overlay
 .overlay 
-	//display: none
+	display: none
 	position: fixed
 	top: 0
 	left: 0
