@@ -69,7 +69,7 @@
 	text-align: justify
 	font-size: 0
 	+rt(1380)
-		.bc__links, .bc__filter
+		.bc__links
 			display: block
 		.bc__links
 			margin-bottom: 5px
@@ -106,6 +106,7 @@
 .bc__ico-1
 	+s(bc-ico-1)
 .bc__filter
+	position: relative
 	span
 		margin-right: 5px 
 	button
@@ -125,6 +126,43 @@
 			border-style: solid
 			border-width: 5px 5px 0 5px
 			border-color: $bl transparent transparent transparent
+	ul
+		display: none
+		position: absolute
+		top: 30px 
+		right: 0
+		padding: 5px 8px
+		border: 1px solid #dedede
+		border-radius: 2px 0 2px 2px
+		background: #fff 
+		box-shadow: 0 1px 1px rgba(0,0,0,.1)
+		z-index: 100 
+		&:before, &:after
+			content: ""
+			position: absolute
+			width: 0px
+			height: 0px
+			border-style: solid		
+		&:after
+			right: 20px
+			top: -8px
+			border-width: 0 6px 9px 6px
+			border-color: transparent transparent #fff transparent
+		&:before
+			right: 19px
+			top: -10px
+			border-width: 0 7px 10px 7px
+			border-color: transparent transparent #dedede transparent
+		li
+			padding: 4px 0
+			border-top: 1px dotted #d6d6d6
+			white-space: nowrap
+			color: #979797
+			cursor: pointer
+			&:first-child
+				border: none
+			&:hover
+				color: $bl 
 //catalog
 .catalog__list
 	margin: 0 -10px
@@ -178,7 +216,7 @@
 		display: block
 		width: 100%
 		border: 1px solid #eee
-.catalog__like
+.like
 	position: absolute
 	top: 16px
 	right: 16px
@@ -561,5 +599,102 @@
 			height: 1px 
 		&:before
 			top: 8px
+//prod
+.prod
+	position: fixed
+	top: 200px
+	left: 50%
+	width: 800px
+	padding: 40px 25px 25px 30px
+	margin-left: -400px
+	border: 1px solid #e7e7e7
+	background: #fff 
+	+box
+	z-index: 600  
+.prod__btn-close 	
+	position: absolute
+	top: 15px
+	right: 10px
+	+s(close)
+.prod__left
+	float: left
+	width: 342px
+	margin-right: 40px
+.prod__right
+	overflow: hidden
+.prod__pic
+	position: relative
+	margin-bottom: 15px
+	border: 1px solid #c8e0ee
+	img
+		display: block
+	.like
+		top: 6px
+		right: 6px
+.prod__links
+	li
+		margin-bottom: 5px
+	a
+		font-size: 16px
+		color: $bl
+		&:hover
+			color: $blh 
+.prod__title
+	margin-bottom: 25px
+	font-size: 24px
+	color: $bl
+	font-weight: bold 
+.prod__desc
+	margin-bottom: 10px
+.prod__price
+	margin-bottom: 20px
+	font-weight: bold
+	color: #666 
+	strong, .rub
+		color: $bl 
+.prod__buy
+	margin-bottom: 7px
+	padding: 10px
+	border: 1px solid #e7e7e7
+	border-radius: 3px
+	+clr
+.prod__total	
+	float: right
+	margin-top: 4px
+	font-size: 16px
+	color: $bl
+	font-weight: bold  
+	.rub
+		&:before
+			top: 8px
+		&:after	
+			top: 11px
+			width: 9px
+.prod__del
+	margin-bottom: 35px
+	padding-right: 35px
+	text-align: right
+	button
+		color: $bl
+		border-bottom: 1px dashed
+		background: none
+		font-size: 12px   
+.prod__tabs-nav
+	padding-bottom: 7px
+	border-bottom: 1px dashed #d6d6d6 
+	overflow: hidden
+	button
+		float: left
+		margin-left: 30px
+		background: none 
+		font-size: 16px
+		color: $bl
+		border-bottom: 1px dashed 
+		&:first-child
+			margin-left: 0 
+		&.is-active
+			color: #666
+			border: none
+			cursor: default
 	
 			

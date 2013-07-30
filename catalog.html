@@ -470,7 +470,13 @@
 				</div>
 				<div class="bc__filter">
 					<span>Сортировать по:</span>
-					<button>Самое популярное</button>
+					<button class="js-sort">Самое популярное</button>
+					<ul>
+						<li>По цене</li>
+						<li>По рейтингу</li>
+						<li>По производителю</li>
+						<li>По рейтингу покупателей</li>
+					</ul>
 				</div>
 				<div class="bc__push"></div>
 			</div>
@@ -482,7 +488,7 @@
 						<div class="catalog__item-in">
 							<div class="catalog__pic">
 								<img src="img/pic1.jpg" alt="">
-								<i class="catalog__like"></i>
+								<i class="like"></i>
 							</div>
 							<div class="catalog__title">Плов с мясом баранины рецепту Глобус Гурмэ</div>
 							<div class="catalog__price">
@@ -516,7 +522,7 @@
 						<div class="catalog__item-in">
 							<div class="catalog__pic">
 								<img src="img/pic1.jpg" alt="">
-								<i class="catalog__like"></i>
+								<i class="like"></i>
 							</div>
 							<div class="catalog__title">Плов с мясом баранины рецепту Глобус Гурмэ</div>
 							<div class="catalog__price">
@@ -550,7 +556,7 @@
 						<div class="catalog__item-in">
 							<div class="catalog__pic">
 								<img src="img/pic1.jpg" alt="">
-								<i class="catalog__like"></i>
+								<i class="like"></i>
 							</div>
 							<div class="catalog__title">Плов с мясом баранины рецепту Глобус Гурмэ</div>
 							<div class="catalog__price">
@@ -584,7 +590,7 @@
 						<div class="catalog__item-in">
 							<div class="catalog__pic">
 								<img src="img/pic1.jpg" alt="">
-								<i class="catalog__like"></i>
+								<i class="like"></i>
 							</div>
 							<div class="catalog__title">Плов с мясом баранины рецепту Глобус Гурмэ</div>
 							<div class="catalog__price">
@@ -618,7 +624,7 @@
 						<div class="catalog__item-in">
 							<div class="catalog__pic">
 								<img src="img/pic1.jpg" alt="">
-								<i class="catalog__like"></i>
+								<i class="like"></i>
 							</div>
 							<div class="catalog__title">Плов с мясом баранины рецепту Глобус Гурмэ</div>
 							<div class="catalog__price">
@@ -652,7 +658,7 @@
 						<div class="catalog__item-in">
 							<div class="catalog__pic">
 								<img src="img/pic1.jpg" alt="">
-								<i class="catalog__like"></i>
+								<i class="like"></i>
 							</div>
 							<div class="catalog__title">Плов с мясом баранины рецепту Глобус Гурмэ</div>
 							<div class="catalog__price">
@@ -740,5 +746,49 @@
 <!-- BEGIN .overlay -->
 <div class="overlay"></div>
 <!-- END .overlay -->
+<!-- BEGIN .prod -->
+<div class="prod">
+	<button class="prod__btn-close"></button>
+	<div class="prod__left">
+		<div class="prod__pic">
+			<img src="img/pic3.jpg" alt="">
+			<i class="like"></i>
+		</div>
+		<ul class="prod__links">
+			<li><a href="#">Продукты от производителя</a></li>
+			<li><a href="#">Роллы других производителей</a></li>
+			<li><a href="#">Японская кухня</a></li>
+			<li><a href="#">Рыбные блюда</a></li>
+			<li><a href="#">Морепродукты</a></li>
+		</ul>
+	</div>
+	<div class="prod__right">
+		<div class="prod__title">Калифорния с копченым лососем и кунжутом</div>
+		<div class="prod__desc">Состав: рис, нори, копченый лосось, авокадо, огурец, майонез, кунжут.</div>
+		<div class="prod__price">Цена (за 50 гр): <strong>75,00</strong><i class="rub">P</i></div>
+		<div class="prod__buy">
+			<div class="weight js-weight">
+				<button class="weight__btn-minus"><i></i></button>
+				<div class="weight__val">
+					<input data-factor="50" type="text" maxlength="4" value="500">
+					<span>гр</span>
+				</div>								
+				<button class="weight__btn-plus"><i></i></button>					
+			</div>
+			<div class="prod__total">1460,00<i class="rub">P</i></div>
+		</div>
+		<div class="prod__del">
+			<button>Удалить</button>
+		</div>
+		<div class="prod__tabs">
+			<div class="prod__tabs-nav">
+				<button class="is-active">Цена</button>
+				<button>Состав</button>
+				<button>Обзоры<span>(2)</span></button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- END .prod -->
 </body>
 </html>

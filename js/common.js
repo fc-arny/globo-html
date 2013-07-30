@@ -1,8 +1,12 @@
 $(document).ready(function() {
 
 //popups
-$('.js-login').click(function() {
-  $(this).next().fadeIn();
+var btn_login = $('.js-login');
+btn_login.click(function() {
+  $(this).next().fadeIn(300);
+});
+btn_login.click(function(event){
+  event.stopPropagation();
 });
 
 var btn_shop = $('.js-shops');
@@ -14,12 +18,19 @@ btn_shop.next().find('li').click(function() {
   var pic = $(this).find('img').attr('src');
   $(this).parent().parent().next().find('img').attr('src', pic);
 });
-
-$('.js-login').click(function(event){
+btn_shop.click(function(event) {
   event.stopPropagation();
 });
 
-$('.js-shops').click(function(event) {
+var btn_sort = $('.js-sort');
+btn_sort.click(function() {
+  $(this).next().fadeIn(300);
+})
+btn_sort.next().find('li').click(function() {
+  var val = $(this).text();
+  $(this).parent().prev().html(val);
+});
+btn_sort.click(function(event) {
   event.stopPropagation();
 });
 
@@ -58,9 +69,10 @@ $('.js-del-prod').click(function() {
 });
 
 $(document).click(function() {
-  $('.js-login').next().hide();
-  $('.js-shops').removeClass('is-open');
-  $('.js-shops').next().hide();  
+  btn_login.next().hide();
+  btn_shop.removeClass('is-open');
+  btn_shop.next().hide(); 
+  btn_sort.next().hide();
 });
 
 //menu - sub
