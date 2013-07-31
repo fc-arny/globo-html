@@ -83,15 +83,17 @@ table { border-spacing: 0; border-collapse: collapse; }
 .nav a:hover { color: #222222; }
 @media only screen and (max-width: 1120px) { .nav a { margin-left: 20px; } }
 
-.sel-shop { float: left; height: 64px; padding: 7px 15px 0; border: 1px solid #e1e1e1; border-width: 0 1px; box-shadow: 1px 0 0 #fcfcfc, 1px 0 0 #fcfcfc inset; }
+.sel-shop { float: left; height: 64px; padding: 7px 15px 0; border-right: 1px solid #e1e1e1; box-shadow: 1px 0 0 #fcfcfc; cursor: pointer; }
+.sel-shop.is-open ul { display: block; }
+.sel-shop.is-open button:after { border-width: 0 5px 5px 5px; border-color: transparent transparent #656565 transparent; box-shadow: 0 1px 0 white; }
 
 .sel-shop__list { position: relative; margin-bottom: 10px; }
 .sel-shop__list button { position: relative; padding-right: 15px; background: none; font-size: 14px; text-shadow: 0 1px 0 white; color: #666666; }
 .sel-shop__list button:after { content: ""; position: absolute; top: 5px; right: 0; width: 0px; height: 0px; border-style: solid; border-width: 5px 5px 0 5px; border-color: #656565 transparent transparent transparent; box-shadow: 0 -1px 0 white; }
-.sel-shop__list button.is-open:after { border-width: 0 5px 5px 5px; border-color: transparent transparent #656565 transparent; box-shadow: 0 1px 0 white; }
 .sel-shop__list ul { display: none; position: absolute; top: 19px; left: -10px; right: -10px; border: 1px solid #dedede; border-radius: 2px; background: white; box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); z-index: 10; }
 .sel-shop__list li { padding: 6px 10px; border-top: 1px dotted #d6d6d6; font-size: 0; text-align: center; }
 .sel-shop__list li:first-child { border: none; }
+.sel-shop__list li img:hover { opacity: 0.6; }
 
 .sel-shop__pic { text-align: center; }
 
@@ -113,7 +115,7 @@ table { border-spacing: 0; border-collapse: collapse; }
 .menu__list-in { white-space: nowrap; font-size: 0; }
 .menu__list-in > li { position: relative; display: inline-block; max-width: 100px; vertical-align: top; }
 .menu__list-in > li > a { display: block; height: 71px; padding: 45px 10px 0; border-right: 1px solid #e1e1e1; box-shadow: 1px 0 0 #fcfcfc; white-space: normal; text-align: center; font-size: 11px; color: #666666; text-transform: uppercase; -moz-box-sizing: border-box; box-sizing: border-box; }
-.menu__list-in > li > a:hover { color: #7dc444; }
+.menu__list-in > li > a:hover, .menu__list-in > li > a.is-active { color: #7dc444; }
 .menu__list-in > li > a i { position: absolute; top: 0; left: 50%; margin-left: -27px; }
 
 .menu__sub { display: none; position: absolute; top: 70px; padding-top: 20px; }
@@ -133,46 +135,46 @@ table { border-spacing: 0; border-collapse: collapse; }
 .menu__sub-arr { display: none; position: absolute; top: 76px; background: url('../img/icons-sc1afc30c92.png') 0 -1957px no-repeat; width: 16px; height: 16px; z-index: 10; }
 
 .menu__item-1 i { background: url('../img/icons-sc1afc30c92.png') 0 -639px no-repeat; width: 55px; height: 39px; }
-.menu__item-1:hover i { background: url('../img/icons-sc1afc30c92.png') 0 -737px no-repeat; width: 55px; height: 39px; }
+.menu__item-1:hover i, .menu__item-1.is-active i { background: url('../img/icons-sc1afc30c92.png') 0 -737px no-repeat; width: 55px; height: 39px; }
 
 .menu__item-2 i { background: url('../img/icons-sc1afc30c92.png') 0 -1291px no-repeat; width: 55px; height: 39px; }
-.menu__item-2:hover i { background: url('../img/icons-sc1afc30c92.png') 0 -1372px no-repeat; width: 55px; height: 39px; }
+.menu__item-2:hover i, .menu__item-2.is-active i { background: url('../img/icons-sc1afc30c92.png') 0 -1372px no-repeat; width: 55px; height: 39px; }
 
 .menu__item-3 i { background: url('../img/icons-sc1afc30c92.png') 0 -835px no-repeat; width: 55px; height: 39px; }
-.menu__item-3:hover i { background: url('../img/icons-sc1afc30c92.png') 0 -884px no-repeat; width: 55px; height: 39px; }
+.menu__item-3:hover i, .menu__item-3.is-active i { background: url('../img/icons-sc1afc30c92.png') 0 -884px no-repeat; width: 55px; height: 39px; }
 
 .menu__item-4 i { background: url('../img/icons-sc1afc30c92.png') 0 -51px no-repeat; width: 55px; height: 39px; }
-.menu__item-4:hover i { background: url('../img/icons-sc1afc30c92.png') 0 -100px no-repeat; width: 55px; height: 39px; }
+.menu__item-4:hover i, .menu__item-4.is-active i { background: url('../img/icons-sc1afc30c92.png') 0 -100px no-repeat; width: 55px; height: 39px; }
 
 .menu__item-5 i { background: url('../img/icons-sc1afc30c92.png') 0 -394px no-repeat; width: 55px; height: 39px; }
-.menu__item-5:hover i { background: url('../img/icons-sc1afc30c92.png') 0 -345px no-repeat; width: 55px; height: 39px; }
+.menu__item-5:hover i, .menu__item-5.is-active i { background: url('../img/icons-sc1afc30c92.png') 0 -345px no-repeat; width: 55px; height: 39px; }
 
 .menu__item-6 i { background: url('../img/icons-sc1afc30c92.png') 0 -933px no-repeat; width: 55px; height: 39px; }
-.menu__item-6:hover i { background: url('../img/icons-sc1afc30c92.png') 0 -982px no-repeat; width: 55px; height: 39px; }
+.menu__item-6:hover i, .menu__item-6.is-active i { background: url('../img/icons-sc1afc30c92.png') 0 -982px no-repeat; width: 55px; height: 39px; }
 
 .menu__item-7 i { background: url('../img/icons-sc1afc30c92.png') 0 -247px no-repeat; width: 55px; height: 39px; }
-.menu__item-7:hover i { background: url('../img/icons-sc1afc30c92.png') 0 -296px no-repeat; width: 55px; height: 39px; }
+.menu__item-7:hover i, .menu__item-7.is-active i { background: url('../img/icons-sc1afc30c92.png') 0 -296px no-repeat; width: 55px; height: 39px; }
 
 .menu__item-8 i { background: url('../img/icons-sc1afc30c92.png') 0 -443px no-repeat; width: 55px; height: 39px; }
-.menu__item-8:hover i { background: url('../img/icons-sc1afc30c92.png') 0 -541px no-repeat; width: 55px; height: 39px; }
+.menu__item-8:hover i, .menu__item-8.is-active i { background: url('../img/icons-sc1afc30c92.png') 0 -541px no-repeat; width: 55px; height: 39px; }
 
 .menu__item-9 i { background: url('../img/icons-sc1afc30c92.png') 0 -1210px no-repeat; width: 55px; height: 39px; }
-.menu__item-9:hover i { background: url('../img/icons-sc1afc30c92.png') 0 -1161px no-repeat; width: 55px; height: 39px; }
+.menu__item-9:hover i, .menu__item-9.is-active i { background: url('../img/icons-sc1afc30c92.png') 0 -1161px no-repeat; width: 55px; height: 39px; }
 
 .menu__item-10 i { background: url('../img/icons-sc1afc30c92.png') 0 -492px no-repeat; width: 55px; height: 39px; }
-.menu__item-10:hover i { background: url('../img/icons-sc1afc30c92.png') 0 -590px no-repeat; width: 55px; height: 39px; }
+.menu__item-10:hover i, .menu__item-10.is-active i { background: url('../img/icons-sc1afc30c92.png') 0 -590px no-repeat; width: 55px; height: 39px; }
 
 .menu__item-11 i { background: url('../img/icons-sc1afc30c92.png') 0 -1031px no-repeat; width: 55px; height: 39px; }
-.menu__item-11:hover i { background: url('../img/icons-sc1afc30c92.png') 0 -1112px no-repeat; width: 55px; height: 39px; }
+.menu__item-11:hover i, .menu__item-11.is-active i { background: url('../img/icons-sc1afc30c92.png') 0 -1112px no-repeat; width: 55px; height: 39px; }
 
 .menu__item-12 i { background: url('../img/icons-sc1afc30c92.png') 0 -198px no-repeat; width: 55px; height: 39px; }
-.menu__item-12:hover i { background: url('../img/icons-sc1afc30c92.png') 0 -149px no-repeat; width: 55px; height: 39px; }
+.menu__item-12:hover i, .menu__item-12.is-active i { background: url('../img/icons-sc1afc30c92.png') 0 -149px no-repeat; width: 55px; height: 39px; }
 
 .menu__item-13 i { background: url('../img/icons-sc1afc30c92.png') 0 -1683px no-repeat; width: 55px; height: 39px; }
-.menu__item-13:hover i { background: url('../img/icons-sc1afc30c92.png') 0 -1732px no-repeat; width: 55px; height: 39px; }
+.menu__item-13:hover i, .menu__item-13.is-active i { background: url('../img/icons-sc1afc30c92.png') 0 -1732px no-repeat; width: 55px; height: 39px; }
 
 .menu__item-14 i { background: url('../img/icons-sc1afc30c92.png') 0 -688px no-repeat; width: 55px; height: 39px; }
-.menu__item-14:hover i { background: url('../img/icons-sc1afc30c92.png') 0 -786px no-repeat; width: 55px; height: 39px; }
+.menu__item-14:hover i, .menu__item-14.is-active i { background: url('../img/icons-sc1afc30c92.png') 0 -786px no-repeat; width: 55px; height: 39px; }
 
 .footer { height: 188px; padding-top: 22px; background: #2d3537; border-top: 2px solid white; box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.16), 0 1px 5px rgba(0, 0, 0, 0.4) inset; }
 

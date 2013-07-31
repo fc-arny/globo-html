@@ -214,9 +214,17 @@ table
 	float: left
 	height: 64px
 	padding: 7px 15px 0
-	border: 1px solid #e1e1e1
-	border-width: 0 1px
-	box-shadow: 1px 0 0 #fcfcfc, 1px 0 0 #fcfcfc inset
+	border-right: 1px solid #e1e1e1
+	box-shadow: 1px 0 0 #fcfcfc
+	cursor: pointer
+	&.is-open
+		ul
+			display: block
+		button
+			&:after
+				border-width: 0 5px 5px 5px
+				border-color: transparent transparent #656565 transparent
+				box-shadow: 0 1px 0 #fff
 .sel-shop__list
 	position: relative
 	margin-bottom: 10px
@@ -238,11 +246,6 @@ table
 			border-width: 5px 5px 0 5px
 			border-color: #656565 transparent transparent transparent
 			box-shadow: 0 -1px 0 #fff			 
-		&.is-open
-			&:after
-				border-width: 0 5px 5px 5px
-				border-color: transparent transparent #656565 transparent
-				box-shadow: 0 1px 0 #fff
 	ul
 		display: none
 		position: absolute
@@ -261,6 +264,9 @@ table
 		text-align: center			
 		&:first-child
 			border: none
+		img
+			&:hover
+				opacity: .6
 .sel-shop__pic
 	text-align: center
 //menu
@@ -307,7 +313,7 @@ table
 		position: relative
 		display: inline-block
 		max-width: 100px 
-		vertical-align: top
+		vertical-align: top		
 		& > a
 			display: block
 			height: 71px
@@ -320,7 +326,7 @@ table
 			color: #666
 			text-transform: uppercase	
 			+box
-			&:hover
+			&:hover, &.is-active
 				color: $gr 		
 			i
 				position: absolute
@@ -392,85 +398,85 @@ table
 .menu__item-1
 	i
 		+s(ico-menu-1)
-	&:hover
+	&:hover, &.is-active
 		i
 			+s(ico-menu-1-h)
 .menu__item-2
 	i
 		+s(ico-menu-2)
-	&:hover
+	&:hover, &.is-active
 		i
 			+s(ico-menu-2-h)
 .menu__item-3
 	i
 		+s(ico-menu-3)
-	&:hover
+	&:hover, &.is-active
 		i
 			+s(ico-menu-3-h)
 .menu__item-4
 	i
 		+s(ico-menu-4)
-	&:hover
+	&:hover, &.is-active
 		i
 			+s(ico-menu-4-h)
 .menu__item-5
 	i
 		+s(ico-menu-5)
-	&:hover
+	&:hover, &.is-active
 		i
 			+s(ico-menu-5-h)
 .menu__item-6
 	i
 		+s(ico-menu-6)
-	&:hover
+	&:hover, &.is-active
 		i
 			+s(ico-menu-6-h)
 .menu__item-7
 	i
 		+s(ico-menu-7)
-	&:hover
+	&:hover, &.is-active
 		i
 			+s(ico-menu-7-h)
 .menu__item-8
 	i
 		+s(ico-menu-8)
-	&:hover
+	&:hover, &.is-active
 		i
 			+s(ico-menu-8-h)
 .menu__item-9
 	i
 		+s(ico-menu-9)
-	&:hover
+	&:hover, &.is-active
 		i
 			+s(ico-menu-9-h)
 .menu__item-10
 	i
 		+s(ico-menu-10)
-	&:hover
+	&:hover, &.is-active
 		i
 			+s(ico-menu-10-h)
 .menu__item-11
 	i
 		+s(ico-menu-11)
-	&:hover
+	&:hover, &.is-active
 		i
 			+s(ico-menu-11-h)
 .menu__item-12
 	i
 		+s(ico-menu-12)
-	&:hover
+	&:hover, &.is-active
 		i
 			+s(ico-menu-12-h)
 .menu__item-13
 	i
 		+s(ico-menu-13)
-	&:hover
+	&:hover, &.is-active
 		i
 			+s(ico-menu-13-h)
 .menu__item-14
 	i
 		+s(ico-menu-14)
-	&:hover
+	&:hover, &.is-active
 		i
 			+s(ico-menu-14-h)
 //footer
