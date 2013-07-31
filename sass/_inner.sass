@@ -212,6 +212,7 @@
 .catalog__pic
 	position: relative
 	padding: 9px	
+	cursor: pointer
 	img
 		display: block
 		width: 100%
@@ -230,6 +231,7 @@
 	height: 38px
 	padding: 5px 10px 20px
 	font-size: 16px
+	cursor: pointer
 .catalog__price
 	padding: 11px 10px
 	background: url(../img/icons/bg-line.png) repeat-x 0 0, url(../img/icons/bg-line.png) repeat-x 0 100%
@@ -585,7 +587,9 @@
 		position: absolute
 		top: 5px
 		right: 5px
-		+s(cart-btn-del)
+		+s(close)
+		&:hover
+			+s(close-h)
 .cart__prod-price
 	margin-bottom: 7px
 	font-size: 14px
@@ -601,24 +605,47 @@
 		&:before
 			top: 8px
 //prod
-.prod
+.prod	
 	display: none
 	position: fixed
-	top: 20px
-	left: 50%
-	width: 728px
-	min-width: 728px
-	padding: 30px 20px 20px 20px
-	margin-left: -364px
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0		
+	padding: 50px 0
+	background: rgba(0,0,0,.15) 
+	overflow: auto
+	z-index: 500
+	+rt(768)
+		padding: 20px 0
+		.prod__left, .prod__right
+			float: none
+		.prod__left
+			margin-bottom: 40px
+		.prod__in	
+			width: auto
+.prod__bg
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0	
+.prod__in	 
+	position: relative
+	padding: 30px 20px 20px 20px 
+	width: 768px
+	margin: 0 auto
 	border: 1px solid #e7e7e7
-	background: #fff 
+	background: #fff
 	+box
-	z-index: 600  
+	z-index: 10 
 .prod__btn-close 	
 	position: absolute
 	top: 15px
 	right: 10px
 	+s(close)
+	&:hover
+		+s(close-h)
 .prod__left
 	float: left
 	width: 342px
