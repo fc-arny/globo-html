@@ -458,7 +458,7 @@
 		left: 0
 		right: 0
 		height: 4px
-		background: url(../img/icons/cart-wave.png) repeat-x 
+		background: url(../img/icons/wave-bl-bottom.png) repeat-x 
 	span
 		font-size: 16px
 		color: #FFF
@@ -471,7 +471,7 @@
 	&:hover
 		background: $blh 
 		&:after
-			background: url(../img/icons/cart-wave-h.png) repeat-x 
+			background: url(../img/icons/wave-bl-bottom-h.png) repeat-x 
 .cart__popup 	
 	display: none
 	position: absolute
@@ -607,33 +607,28 @@
 //prod
 .prod	
 	display: none
-	position: fixed
+	position: absolute
 	top: 0
-	left: 0
-	right: 0
-	bottom: 0		
-	padding: 50px 0
-	background: rgba(0,0,0,.15) 
-	overflow: auto
+	left: 50%
+	width: 768px
+	padding: 40px 0
+	margin-left: -384px 
+	+box
 	z-index: 500
 	+rt(768)
-		padding: 20px 0
+		left: 0
+		right: -30px
+		margin-left: 0
+		padding: 20px
 		.prod__left, .prod__right
 			float: none
 		.prod__left
 			margin-bottom: 40px
 		.prod__in	
 			width: auto
-.prod__bg
-	position: absolute
-	top: 0
-	left: 0
-	right: 0
-	bottom: 0	
 .prod__in	 
 	position: relative
-	padding: 30px 20px 20px 20px 
-	width: 768px
+	padding: 30px 20px 20px 20px 	
 	margin: 0 auto
 	border: 1px solid #e7e7e7
 	background: #fff
