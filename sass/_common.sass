@@ -44,6 +44,9 @@ table
 	.page
 		position: fixed
 		width: 100%
+.page
+	min-height: 100%
+	height: 100%
 .wrap	
 	min-height: 100%
 	height: auto !important
@@ -51,6 +54,9 @@ table
 	margin-bottom: -212px
 	padding: 0 20px
 	overflow: hidden
+.wrap_main
+	padding: 0
+	overflow: visible
 .wrap_fixed	
 	.header, .cart, .search
 		position: fixed
@@ -75,6 +81,20 @@ table
 .push
 	height: 212px
 	clear: both
+.container
+	width: 1300px
+	margin: 0 auto
+	+rt(1380)
+		width: auto
+		margin: 0 20px
+.container_cols
+	margin-bottom: 70px
+	overflow: hidden
+.title
+	font-size: 24px
+	text-transform: uppercase
+	color: #222 
+	font-weight: bold
 //header
 .header
 	position: relative
@@ -516,28 +536,84 @@ table
 	a
 		display: inline-block
 		margin-left: 25px
+		vertical-align: top
 		&:first-child
 			margin-left: 0
+		i
+			display: inline-block
 .social__ok
-	+s(soc-ok)
+	i
+		+s(soc-ok)
 	&:hover
-		+s(soc-ok-h)
+		i
+			+s(soc-ok-h)
 .social__fb
-	+s(soc-fb)
+	i
+		+s(soc-fb)
 	&:hover
-		+s(soc-fb-h)
+		i
+			+s(soc-fb-h)
 .social__vk
-	+s(soc-vk)
+	i
+		+s(soc-vk)
 	&:hover
-		+s(soc-vk-h)
+		i
+			+s(soc-vk-h)
 .social__tw
-	+s(soc-tw)
+	i
+		+s(soc-tw)
 	&:hover
-		+s(soc-tw-h)
+		i
+			+s(soc-tw-h)
 .social__rss
-	+s(soc-rss)
+	i
+		+s(soc-rss)
 	&:hover
-		+s(soc-rss-h)
+		i
+			+s(soc-rss-h)
+.social_blue
+	a
+		width: 36px
+		height: 36px
+		margin: 0
+		border-radius: 50%
+		line-height: 36px
+		text-align: center
+		i
+			display: inline-block
+			vertical-align: middle
+		&:hover
+			background: #a2dfee 
+	.social__ok
+		i
+			+s(soc-ok-h)
+		&:hover
+			i
+				+s(soc-ok)
+	.social__fb
+		i
+			+s(soc-fb-h)
+		&:hover
+			i
+				+s(soc-fb)
+	.social__vk
+		i
+			+s(soc-vk-h)
+		&:hover
+			i
+				+s(soc-vk)
+	.social__tw
+		i
+			+s(soc-tw-h)
+		&:hover
+			i
+				+s(soc-tw)
+	.social__rss
+		i
+			+s(soc-rss-h)
+		&:hover
+			i
+				+s(soc-rss)
 .footer__nav
 	float: right
 	ul
@@ -676,3 +752,15 @@ table
 	bottom: 0
 	background: rgba(0,0,0,.15) 
 	z-index: 500
+//btn
+.btn
+	width: 100%
+	background: $bl
+	border-radius: 2px
+	height: 30px  	
+	font-size: 16px
+	color: #fff 
+	text-transform: uppercase
+	font-weight: bold
+	&:hover
+		background: $blh 

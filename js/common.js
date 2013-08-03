@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+
 var body = $('body');
 var page = $('.page');
 var wrap = $('.wrap');
@@ -285,6 +286,16 @@ function cart() {
   };
 };
 
+//main slider
+function m_slider() {
+  var el = $('.js-m-slider');
+  var items = el.find('.m-slider__item').length;
+  var pager = el.find('.m-slider__pager');
+  if (items <= 1) {
+    pager.hide();
+  };
+}
+
 //init
 submenu();
 slidermenu();
@@ -292,6 +303,7 @@ slidermenu_responsive();
 weight();
 tabs();
 cart();
+m_slider();
 
 //window resize
 $(window).resize(function() {
@@ -333,8 +345,6 @@ page_no_fixed.click(function() {
   $(window).scrollTo(page_top + 'px', 0);
   body.removeAttr('style');
 });
-
-
 
 
 });
