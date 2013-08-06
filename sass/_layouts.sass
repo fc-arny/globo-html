@@ -2,6 +2,7 @@
 //styles for layouts
 .layout
 	position: relative
+.layout_catalog
 	padding-right: 335px
 	margin-right: -20px
 	+clr
@@ -14,5 +15,63 @@
 	margin-left: 275px
 	+rt(1120)
 		margin-left: 260px
+.order__table
+	background: #FFF 
+.order__top, .order__item
+	border: 1px solid #e6e6e6
+	border-width: 0 1px
+	+clr	
+.order__top
+	padding: 20px
+.order__item
+	padding: 10px 20px
+	background: #fafafa 
+	border-bottom: 1px dashed #e6e6e6 
+.order__shop
+	float: left
+	width: 160px
+	margin-right: 20px
+.order__shop-name
+	float: left
+.order__price
+	float: right
+	width: 160px
+	text-align: center
+	font-size: 16px
+.order__prod-pic
+	float: left
+	width: 160px
+	margin-left: 180px
+	font-size: 0 
+	button, img
+		display: inline-block
+		vertical-align: middle
+	button
+		margin-right: 20px
+		+s(close)
+		&:hover
+			+s(close-h)
+	img
+		border: 1px solid #e5e5e5 
+.order__weight
+	float: right
+	.weight__val
+		input
+			width: 100px
+.order__cell
+	min-height: 82px
+	line-height: 82px 
+	a, span, strong, img, button
+		display: inline-block
+		vertical-align: middle
+		line-height: 1.2
+.order__prod-name
+	overflow: hidden
+	a
+		font-size: 16px
+		color: $bl
+		&:hover
+			color: $blh 
+
 
 
