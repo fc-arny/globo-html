@@ -1,0 +1,279 @@
+@import "base"
+//styles for main page(class with prefix "m-")
+.m-header
+	height: 100px
+	background: #FFF 
+	.social
+		float: right
+		margin: 30px 130px 0 0
+.m-nav
+	position: relative
+	height: 100px
+	margin-bottom: 60px
+	background: $bl 
+	&:after
+		content: ""
+		position: absolute
+		bottom: -4px
+		left: 0
+		right: 0
+		height: 4px
+		background: url(../img/icons/wave-bl-bottom.png) repeat-x 0 0 
+	.container
+		font-size: 0
+		a
+			position: relative
+			display: inline-block
+			width: 25%
+			height: 105px
+			text-align: center
+			line-height: 100px
+			text-transform: uppercase
+			color: #FFF
+			font-size: 24px
+			font-weight: bold
+			&:hover
+				background: rgba(255,255,255,.35) 
+				z-index: 5 
+.m-shops
+	margin-bottom: 40px
+	.container
+		font-size: 0	
+		text-align: center	
+		a
+			display: inline-block
+			width: 25%	
+			min-width: 320px
+			margin-bottom: 20px
+			vertical-align: middle
+			&:hover
+				opacity: .6				
+		img
+			vertical-align: middle
+.m-benefits
+	padding-bottom: 40px
+	border-bottom: 2px dashed #c9c9c9 
+	.container
+		padding: 40px 50px
+		background: #fff
+		border: 1px solid #e7e7e7
+		border-radius: 5px 
+		+box
+		overflow: hidden
+		li
+			position: relative
+			float: left
+			width: 50%
+			padding: 40px 0 40px 190px
+			+box
+			line-height: 110px 
+			font-size: 24px
+			+rt(1120)
+				width: 100%
+				line-height: 1 
+			i
+				position: absolute
+				top: 50%
+				left: 40px
+				margin-top: -55px
+			span
+				display: inline-block
+				vertical-align: middle
+				line-height: 1.2 
+.m-benefits__item-1
+	i
+		+s(benefit-1)
+.m-benefits__item-2
+	i
+		+s(benefit-2)
+.m-benefits__item-3
+	i
+		+s(benefit-3)
+.m-benefits__item-4
+	i
+		+s(benefit-4)
+.m-info
+	padding-top: 30px 
+	margin: -1px 0 65px 0
+	border-top: 2px solid #fff 
+	.container
+		padding: 40px 30px
+		background: #fff
+		border: 1px solid #e7e7e7
+		border-radius: 5px 
+		font-size: 0
+		text-align: center 
+		+box
+		li
+			display: inline-block
+			width: 25%
+			padding-left: 60px 
+			vertical-align: middle//
+			font-size: 15px
+			+box
+			&:first-child
+				padding-left: 0
+		+rt(1120)
+			padding: 40px 30px 0 
+			li
+				width: 50%
+				margin-bottom: 40px
+.m-about, .m-news
+	float: left
+	width: 50%
+	+box
+	.title
+		margin-bottom: 10px
+	+rt(1120)
+		width: 100%
+		margin-bottom: 40px
+.m-about
+	position: relative
+	padding-right: 60px
+	&:after
+		content: ""
+		position: absolute
+		top: 60px
+		right: 0
+		height: 2000px
+		width: 1px
+		border-left: 2px dashed #c9c9c9 
+	+rt(1120)
+		padding-right: 0
+		&:after
+			display: none
+.m-news
+	padding-left: 60px
+	+rt(1120)
+		padding-left: 0
+.m-about__in
+	padding-top: 20px
+	p
+		margin-bottom: 20px
+		font-size: 16px
+		line-height: 1.4
+.m-news__list
+	font-size: 0
+	li 
+		display: inline-block
+		width: 50%
+		padding: 20px 25px 0 0
+		vertical-align: top
+		font-size: 16px
+		+box
+	a
+		font-weight: bold
+		color: $bl
+		&:hover
+			color: $blh
+	span
+		display: block		
+		padding: 5px 0
+		color: #666 
+.m-slider
+	position: relative
+	background: $bl
+	border-bottom: 2px dashed #fff  
+	&:before
+		content: ""
+		position: absolute
+		top: -4px
+		left: 0
+		right: 0
+		height: 4px
+		background: url(../img/icons/wave-bl-top.png) repeat-x 0 0
+	.container
+		position: relative
+.m-slider__item 	
+	width: 100%
+	height: 520px
+	padding-top: 140px
+	background-repeat: no-repeat
+	background-position: 100% 50% 
+	+box
+.m-slider__title-1, .m-slider__title-2
+	max-width: 600px 
+	text-transform: uppercase
+	color: #FFF 
+	text-shadow: 0 0 7px $bl, 0 0 7px $bl
+.m-slider__title-1
+	font-size: 48px
+	font-weight: bold
+.m-slider__title-2
+	margin-bottom: 5px
+	font-size: 36px
+.m-slider__btn
+	position: relative
+	height: 30px
+	background: $gr
+	padding: 0 40px 
+	font-size: 16px
+	text-transform: uppercase
+	font-weight: bold
+	color: #FFF 
+	&:after
+		content: ""
+		position: absolute
+		top: 0
+		right: -8px
+		width: 0px
+		height: 0px
+		border-style: solid
+		border-width: 15px 0 15px 8px
+		border-color: transparent transparent transparent $gr
+	&:hover
+		background: $grh
+		&:after
+			border-color: transparent transparent transparent $grh
+.m-slider__pager 	
+	position: absolute
+	left: 0
+	bottom: 20px
+	font-size: 0
+	z-index: 200 
+	span
+		display: inline-block
+		width: 10px
+		height: 10px
+		margin-right: 5px
+		background: $bl
+		border: 1px solid #fff
+		border-radius: 50%
+		cursor: pointer
+		&:hover
+			background: $blh
+		&.cycle-pager-active
+			background: #fff 	
+			cursor: default	 
+.m-slider__cart
+	position: absolute
+	top: 15px 
+	right: 0
+	width: 200px
+	border: 1px solid #e7e7e7
+	background: #fff
+	border-radius: 5px 
+	z-index: 200 
+	strong
+		position: relative
+		display: block
+		padding: 20px 0 10px 45px 
+		border-bottom: 1px solid #e7e7e7 
+		font-size: 16px
+	span
+		color: $bl 
+	.rub
+		&:before
+			top: 8px
+		&:after
+			top: 11px
+			width: 9px
+	em
+		position: absolute
+		top: 16px
+		left: 11px
+		+s(cart-ico-bl)
+	.m-slider__btn
+		padding: 0 35px
+		margin: 10px
+

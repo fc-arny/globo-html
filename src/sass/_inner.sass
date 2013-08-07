@@ -1,0 +1,917 @@
+@import "base"
+//search
+.search
+	position: relative
+	margin-bottom: 20px	
+	input
+		width: 185px
+		height: 30px
+		padding: 0 44px 0 9px
+		border: 1px solid $gr
+		border-radius: 3px
+	button
+		position: absolute
+		top: 0
+		right: 0
+		width: 36px
+		height: 32px
+		background: $gr
+		border-radius: 3px
+		overflow: visible
+		i 
+			position: absolute
+			top: 8px
+			left: 10px
+			+s(search)
+//filter
+.filter__item
+	margin-bottom: 20px
+.filter__title
+	padding: 14px
+	background: $gr
+	border-radius: 3px 3px 0 0 
+	text-align: center
+	font-size: 24px
+	font-weight: bold
+	text-transform: uppercase
+	color: #FFF  
+	span
+		position: relative
+		padding-left: 32px
+	i
+		position: absolute
+		top: 2px
+		left: 0
+.filter__ico-1
+	+s(filter-1)
+.filter__list
+	position: relative
+	padding: 15px 10px
+	background: #FFF
+	box-shadow: 0 0 4px rgba(0,0,0,.14)
+	border: 1px solid #e7e7e7
+	border-width: 0 1px
+	&:after
+		content: ""
+		position: absolute
+		bottom: -8px
+		left: 0
+		right: 0
+		height: 8px
+		background: url(../img/icons/wave.png) repeat-x 
+//breadcrumbs
+.bc
+	padding: 8px 10px
+	margin-bottom: 20px
+	background: #FFF
+	border-radius: 4px
+	box-shadow: 0 0 4px rgba(0,0,0,.16)
+	text-align: justify
+	font-size: 0
+	+rt(1380)
+		.bc__links
+			display: block
+		.bc__links
+			margin-bottom: 5px
+		.bc__push
+			display: none
+.bc__links, .bc__filter, .bc__push
+	display: inline-block
+	vertical-align: top
+	font-size: 14px
+	text-align: left
+.bc__push
+	width: 100%
+.bc__links
+	margin-right: 20px
+	a
+		position: relative
+		padding: 0 20px 0 30px 
+		margin-right: 7px 
+		color: #444
+		&:hover
+			text-decoration: underline
+		i
+			position: absolute
+			top: -5px
+			left: 0
+		&:after
+			content: ""
+			position: absolute
+			top: 6px
+			right: 0 
+			+s(arr-left)
+	span
+		color: $bl 
+.bc__ico-1
+	+s(bc-ico-1)
+.bc__filter
+	position: relative
+	span
+		margin-right: 5px 
+	button
+		position: relative
+		padding-right: 13px
+		background: none 
+		line-height: 1.2 
+		color: $bl 
+		overflow: visible
+		&:after
+			content: ""
+			position: absolute
+			top: 6px
+			right: 0
+			width: 0px
+			height: 0px
+			border-style: solid
+			border-width: 5px 5px 0 5px
+			border-color: $bl transparent transparent transparent
+	ul
+		display: none
+		position: absolute
+		top: 30px 
+		right: 0
+		padding: 5px 8px
+		border: 1px solid #dedede
+		border-radius: 2px 0 2px 2px
+		background: #fff 
+		box-shadow: 0 1px 1px rgba(0,0,0,.1)
+		z-index: 100 
+		&:before, &:after
+			content: ""
+			position: absolute
+			width: 0px
+			height: 0px
+			border-style: solid		
+		&:after
+			right: 20px
+			top: -8px
+			border-width: 0 6px 9px 6px
+			border-color: transparent transparent #fff transparent
+		&:before
+			right: 19px
+			top: -10px
+			border-width: 0 7px 10px 7px
+			border-color: transparent transparent #dedede transparent
+		li
+			padding: 4px 0
+			border-top: 1px dotted #d6d6d6
+			white-space: nowrap
+			color: #979797
+			cursor: pointer
+			&:first-child
+				border: none
+			&:hover
+				color: $bl 
+//catalog
+.catalog__list
+	margin: 0 -10px
+	font-size: 0
+.catalog__item	
+	display: inline-block
+	width: 20%		
+	min-width: 240px
+	vertical-align: top	
+	+rt(1920)
+		width: 25%
+	+rt(1600)
+		width: 33.3%
+	+rt(1380)
+		width: 50% 
+	// +rt(1120)
+	// 	width: 100% 
+.catalog__item-in
+	position: relative
+	margin: 0 10px 25px	
+	background: #FFF
+	box-shadow: 0 0 4px rgba(0,0,0,.16)
+	border-radius: 3px 3px 0 0	
+	font-size: 14px
+	&:after
+		content: ""
+		position: absolute
+		bottom: -8px
+		left: 0
+		right: 0
+		height: 8px
+		background: url(../img/icons/wave.png) repeat-x 
+	&.is-selected
+		background: #edf8fe
+		.catalog__pic
+			img
+				border-color: #c8e0ee
+		.catalog__price
+			background: url(../img/icons/bg-line-gray.png) repeat-x 0 0, url(../img/icons/bg-line-gray.png) repeat-x 0 100%
+			strong
+				color: #666
+			.rub				
+				&:before, &:after
+					background: #666 
+		&:after
+			background: url(../img/icons/wave-blue.png) repeat-x 
+.catalog__pic
+	position: relative
+	padding: 9px	
+	cursor: pointer
+	img
+		display: block
+		width: 100%
+		border: 1px solid #eee
+.like
+	position: absolute
+	top: 16px
+	right: 16px
+	cursor: pointer
+	+s(star)
+	&:hover
+		+s(star-h)
+	&.is-active
+		+s(star-a)
+.catalog__title
+	height: 38px
+	padding: 5px 10px 20px
+	font-size: 16px
+	cursor: pointer
+.catalog__price
+	padding: 11px 10px
+	background: url(../img/icons/bg-line.png) repeat-x 0 0, url(../img/icons/bg-line.png) repeat-x 0 100%
+	+clr	
+	span
+		float: left
+		font-weight: bold
+		color: #666 
+	strong
+		float: right
+		color: $bl 
+.catalog__down
+	position: relative
+	height: 50px
+	overflow: hidden
+	.weight
+		margin: 1px 0 0 10px
+.catalog__down-in
+	position: absolute
+	top: 7px
+	left: -100%
+	width: 200%
+.catalog__down-item
+	float: left
+	width: 50%
+.catalog__buy-btn
+	position: relative
+	width: 75%
+	height: 30px
+	background: $bl
+	text-transform: uppercase
+	font-weight: bold
+	color: #FFF 
+	&:after
+		content: ""
+		position: absolute
+		top: 0
+		right: -8px
+		width: 0px
+		height: 0px
+		border-style: solid
+		border-width: 15px 0 15px 8px
+		border-color: transparent transparent transparent $bl
+	&:hover
+		background: $blh 
+		&:after
+			border-color: transparent transparent transparent $blh
+.catalog__sum
+	float: right
+	padding-right: 10px
+	text-align: right
+	strong
+		display: block
+		color: $bl 
+	button
+		background: none 
+		font-size: 12px
+		color: #c9c7c7 
+.catalog__more-btn
+	width: 100%
+	padding: 9px 20px 
+	margin-bottom: 40px
+	background: #FFF
+	border-radius: 4px
+	box-shadow: 0 0 4px rgba(0,0,0,.16)
+	color: $bl
+	&:hover
+		color: $blh 
+//weight
+.weight
+	float: left		
+	button
+		position: relative
+		float: left
+		width: 32px
+		height: 27px
+		background: $gr
+		overflow: visible
+		&:hover
+			background: $grh 
+	i
+		position: absolute
+		top: 5px
+		left: 8px
+.weight__val
+	float: left
+	background: #FFF 
+	border: 1px solid $gr
+	border-width: 1px 0	
+	input, span
+		float: left
+		height: 25px
+		font-size: 16px
+		font-weight: bold
+	input
+		width: 45px 
+		text-align: center
+	span
+		margin-right: 7px
+		line-height: 25px	
+.weight__btn-plus
+	border-radius: 0 2px 2px 0
+	i
+		+s(plus)
+.weight__btn-minus
+	border-radius: 2px 0 0 2px	
+	i
+		+s(minus)
+//cart
+.cart
+	position: absolute
+	top: 0
+	right: 20px
+	width: 280px
+	margin-bottom: 20px
+	z-index: 100 
+	&.is-move
+		right: -280px
+	&.is-open
+		z-index: 600 
+.cart__show-btn
+	display: none
+	position: absolute
+	top: 130px
+	left: -50px
+	width: 50px
+	height: 50px
+	border-radius: 5px 0 0 5px
+	background: $bl
+	overflow: visible
+	i
+		position: absolute
+		top: 10px
+		left: 10px
+		+s(cart-ico)
+	&:hover
+		background: $blh 
+	&.is-active
+		i
+			+s(arr-right)
+.cart__title
+	padding: 14px
+	background: $bl
+	border-radius: 3px 3px 0 0
+	text-align: center
+	font-size: 24px
+	font-weight: bold
+	text-transform: uppercase
+	color: #fff
+	span
+		position: relative
+		padding-left: 39px
+	i
+		position: absolute
+		top: 0
+		left: 0
+		+s(cart-ico)
+.cart__in
+	background: #FFF
+	border: 1px solid #e7e7e7
+	border-width: 0 1px
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.16)
+.cart__list	
+	+no-sel
+	li		
+		border-bottom: 1px dashed #e5e5e5		
+		&.is-empty
+			.cart__list-item
+				background: #f1f1f1
+				border-top: 1px solid #cfcfcf
+				box-shadow: 0 -1px 0 #cfcfcf 
+				strong
+					display: none
+				img
+					+gray
+.cart__list-item
+	position: relative
+	padding: 10px 20px 10px 30px
+	font-size: 0
+	cursor: pointer
+	strong
+		position: absolute
+		top: 50%
+		right: 20px
+		margin-top: -10px
+		font-size: 16px
+		color: $bl 
+	.rub
+		&:after
+			top: 11px
+			width: 9px
+		&:before
+			top: 8px
+.cart__total 
+	padding: 14px 20px 14px 30px	
+	+clr
+	span
+		float: right
+		font-size: 24px
+	span
+		float: right
+		color: $bl 
+		font-weight: bold
+		&:first-child
+			float: left
+			color: #444
+	.rub 
+		&:before, &:after
+			height: 3px
+		&:before
+			top: 13px
+		&:after
+			top: 17px
+			width: 13px
+.cart__go
+	position: relative
+	width: 100%
+	height: 50px
+	background: $bl	
+	&:after
+		content: ""
+		position: absolute
+		bottom: -4px
+		left: 0
+		right: 0
+		height: 4px
+		background: url(../img/icons/wave-bl-bottom.png) repeat-x 
+	span
+		font-size: 16px
+		color: #FFF
+		text-transform: uppercase
+		font-weight: bold
+		&:after
+			content: " •"
+		&:before
+			content: "• "
+	&:hover
+		background: $blh 
+		&:after
+			background: url(../img/icons/wave-bl-bottom-h.png) repeat-x 
+.cart__popup 	
+	display: none
+	position: absolute
+	top: 0
+	right: 315px
+	width: 760px
+	border: 1px solid #e7e7e7
+	border-radius: 4px
+	background: #fff  
+.cart__arr
+	position: absolute
+	top: 50px
+	right: -20px
+	width: 0px
+	height: 0px
+	border-style: solid
+	border-width: 15px 0 15px 20px
+	border-color: transparent transparent transparent #fafafa
+.cart__top	
+	padding: 13px 30px
+	overflow: hidden
+	strong
+		float: left		
+		font-size: 24px
+		text-transform: uppercase
+	button
+		position: relative
+		float: right
+		margin-top: 5px
+		padding-right: 20px
+		background: none 
+		font-size: 16px
+		color: $bl 
+		overflow: visible
+		&:hover
+			color: $blh
+			i
+				opacity: .8 
+		i
+			position: absolute
+			top: 3px
+			right: 0
+			+s(cart-btn-back)
+.cart__bottom
+	padding: 15px 20px	
+	text-align: right
+	font-size: 0
+	overflow: hidden
+	strong
+		display: inline-block
+		margin-left: 30px 
+		font-size: 16px
+		&:first-child
+			color: #666 
+			span, .rub
+				color: #444 
+			.rub
+				&:before, &:after
+					background: #444 
+	span, 
+		margin-left: 25px 
+	span, .rub
+		color: $bl 
+	.rub
+		&:before
+			top: 8px
+		&:after
+			top: 11px
+			width: 9px
+.cart__prod-in
+	height: 315px
+	background: #fafafa 
+	overflow: auto
+	white-space: nowrap
+	font-size: 0
+	li
+		display: inline-block
+		width: 190px
+		padding: 7px
+		border-left: 1px dashed #d6d6d6  
+		vertical-align: top
+		white-space: normal
+		+box
+		&:first-child
+			border: none	
+		&:hover
+			.cart__prod-pic
+				button
+					display: block
+	.weight
+		float: none
+		overflow: hidden
+		margin-bottom: 7px	
+	.weight__btn-plus
+		float: right
+	.weight__val
+		float: none
+		padding-left: 20px
+		overflow: hidden
+.cart__prod-title
+	height: 32px
+	margin-bottom: 7px 
+	font-size: 14px
+	overflow: hidden
+.cart__prod-pic
+	position: relative
+	img
+		display: block
+		margin-bottom: 7px
+		border: 1px solid #d6d6d6
+	button
+		display: none
+		position: absolute
+		top: 5px
+		right: 5px
+		+s(close)
+		&:hover
+			+s(close-h)
+.cart__prod-price
+	margin-bottom: 7px
+	font-size: 14px
+	color: #abaaaa
+	span
+		margin-left: 10px
+	span, .rub
+		color: #666   
+	.rub
+		&:before, &:after
+			background: #666
+			height: 1px 
+		&:before
+			top: 8px
+//prod
+.prod	
+	display: none
+	position: absolute
+	top: 0
+	left: 50%
+	width: 768px
+	padding: 40px 0
+	margin-left: -384px 
+	+box
+	z-index: 500
+	+rt(768)
+		left: 0
+		right: -30px
+		margin-left: 0
+		padding: 20px
+		.prod__left, .prod__right
+			float: none
+		.prod__left
+			margin-bottom: 40px
+		.prod__in	
+			width: auto
+.prod__in	 
+	position: relative
+	padding: 30px 20px 20px 20px 	
+	margin: 0 auto
+	border: 1px solid #e7e7e7
+	background: #fff
+	+box
+	z-index: 10 
+.prod__btn-close 	
+	position: absolute
+	top: 15px
+	right: 10px
+	+s(close)
+	&:hover
+		+s(close-h)
+.prod__left
+	float: left
+	width: 342px
+	margin-right: 40px
+.prod__right
+	overflow: hidden
+.prod__pic
+	position: relative
+	margin-bottom: 15px
+	border: 1px solid #c8e0ee
+	img
+		display: block
+	.like
+		top: 6px
+		right: 6px
+.prod__links
+	li
+		margin-bottom: 5px
+	a
+		font-size: 16px
+		color: $bl
+		&:hover
+			color: $blh 
+.prod__title
+	margin-bottom: 25px
+	font-size: 24px
+	color: $bl
+	font-weight: bold 
+.prod__desc
+	margin-bottom: 10px
+.prod__price
+	margin-bottom: 20px
+	font-weight: bold
+	color: #666 
+	strong, .rub
+		color: $bl 
+.prod__buy
+	margin-bottom: 7px
+	padding: 10px
+	border: 1px solid #e7e7e7
+	border-radius: 3px
+	+clr
+.prod__total	
+	float: right
+	margin-top: 4px
+	font-size: 16px
+	color: $bl
+	font-weight: bold  
+	.rub
+		&:before
+			top: 8px
+		&:after	
+			top: 11px
+			width: 9px
+.prod__del
+	margin-bottom: 35px
+	padding-right: 35px
+	text-align: right
+	button
+		color: $bl
+		border-bottom: 1px dashed
+		background: none
+		font-size: 12px   
+//tabs
+.tabs__nav
+	padding-bottom: 7px
+	border-bottom: 1px dashed #d6d6d6 
+	overflow: hidden
+	button
+		float: left
+		margin-left: 30px
+		background: none 
+		font-size: 16px
+		color: $bl
+		border-bottom: 1px dashed 
+		&:first-child
+			margin-left: 0 
+		&.is-active
+			color: #666
+			border: none
+			cursor: default
+.tabs__content
+	padding: 17px 0
+.tabs__title
+	margin-bottom: 10px
+	font-size: 16px
+	text-transform: uppercase
+.tabs__price
+	padding-bottom: 10px
+	margin-bottom: 15px
+	border-bottom: 1px dashed #d6d6d6 
+	li
+		padding: 3px
+		margin-bottom: 7px
+		font-size: 0
+		strong, img, span
+			display: inline-block
+			vertical-align: middle
+		strong, span
+			font-size: 16px 
+		strong
+			color: $bl
+		img
+			margin-right: 45px
+		.rub
+			&:before
+				top: 8px
+			&:after
+				top: 11px
+				width: 9px
+		&.is-active
+			background: #d9f0fc 
+.tabs__graph
+	margin-bottom: 20px
+.tabs__stat
+	li
+		float: left
+		margin-left: 40px
+		strong
+			display: block
+			font-size: 16px
+			color: #666 
+			.rub
+				&:before, &:after
+					background: #666
+		.rub
+			&:before
+				top: 8px
+			&:after
+				top: 11px
+				width: 9px
+		&:first-child
+			margin-left: 0
+			strong
+				color: #d55415 
+			.rub
+				&:before, &:after
+					background: #d55415
+		&:last-child
+			strong
+				color: $bl
+			.rub
+				&:before, &:after
+					background: $bl
+.tabs__compos
+	padding: 15px 0 0 25px
+	border-top: 1px dashed #d6d6d6 
+	li
+		margin-bottom: 5px
+		overflow: hidden
+		span
+			float: right
+			width: 75px 
+			color: $bl 
+.tabs__reviews
+	li
+		margin-top: 30px
+		&:first-child
+			margin-top: 0 
+.tabs__reviews-txt
+	margin-bottom: 10px
+	font-size: 16px 
+.tabs__reviews-detail
+	overflow: hidden
+	span
+		float: left
+		color: #666 
+		&:first-child
+			margin-right: 20px
+.tabs__reviews-more
+	background: none
+	border-bottom: 1px dashed $bl  
+	color: $bl
+	font-size: 12px
+	&:hover
+		color: $blh 
+//rating
+.rating
+	margin-bottom: 10px
+	overflow: hidden
+	img
+		float: left
+//order
+.order__table
+	background: #FFF 
+	.rub
+		font-weight: normal 
+		line-height: 1.2
+		&:before, &:after
+			background: #666666
+			height: 1px
+		&:before
+			top: 9px
+		&:after
+			top: 11px
+			width: 9px
+.order__row-top
+	display: table
+	width: 100%
+	padding: 20px
+	border: 1px solid #e6e6e6
+	border-width: 0 1px
+	border-bottom: 1px solid #e6e6e6 
+	+box
+	+clr
+.order__row-top-in
+	display: table-row
+.order__row-prod
+	padding: 10px 20px
+	background: #fafafa 
+	border-bottom: 1px dashed #e6e6e6	
+	+clr
+.order__shop
+	display: table-cell
+	font-size: 0
+	img
+		margin-right: 20px
+		vertical-align: middle
+.order__price-sum
+	display: table-cell
+	width: 160px
+	text-align: center
+	vertical-align: middle
+	font-size: 16px
+.order__shop-name
+	display: inline-block
+	vertical-align: middle
+	text-transform: uppercase
+	font-size: 14px
+	font-weight: bold
+.order__price
+	float: right
+	width: 160px
+	min-height: 82px
+	line-height: 82px
+	text-align: center
+	font-size: 16px	
+.order__pic
+	float: left
+	margin-right: 20px
+	padding-left: 160px
+	font-size: 0 
+	button, img
+		display: inline-block
+		vertical-align: middle
+	button
+		margin-right: 20px
+		+s(close)
+		&:hover
+			+s(close-h)
+	img
+		border: 1px solid #e5e5e5 
+.order__weight
+	float: right
+	.weight
+		margin-top: 28px
+	.weight__val
+		input
+			width: 100px
+.order__prod
+	min-height: 82px
+	overflow: hidden
+	line-height: 82px
+	a
+		display: inline-block
+		vertical-align: middle
+		line-height: 1.2
+		font-size: 16px
+		color: $bl
+		&:hover
+			color: $blh 
+
+	
+			

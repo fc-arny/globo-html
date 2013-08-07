@@ -1,1 +1,4 @@
-.sass-cache
+node_modules/
+src/.sass-cache/
+production/
+.sass-cache/
