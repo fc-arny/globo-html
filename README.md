@@ -1,4 +1,4 @@
-My Grunt Boilerplate &copy; akella
+My Grunt Boilerplate
 =============
 For generic frontend development. Mostly small to medium projects, and without some heavy JS.
 
@@ -14,6 +14,4 @@ How to run it
  - Run `grunt`, and it will watch for all the changes
 
 
-Drop me a line
-=============
-In case it is useful for you, or you have some question, feel free to ask them here [twitter.com/akella](http://twitter.com/akella)
+
