@@ -824,8 +824,12 @@
 	img
 		float: left
 //order
+.order
+	padding: 10px 0
 .order__table
-	background: #FFF 
+	margin-bottom: 20px
+	background: #FFF
+	border: 1px solid #e7e7e7 
 	.rub
 		font-weight: normal 
 		line-height: 1.2
@@ -837,12 +841,29 @@
 		&:after
 			top: 11px
 			width: 9px
+.order__head
+	padding: 10px 20px
+	border-bottom: 1px dashed #e1e1e1
+	color: #888 
+	+clr
+.order__title
+	float: right
+	width: 160px
+	text-align: center
+	&:last-child
+		float: none
+		width: auto
+		overflow: hidden
+	+rt(1380)
+		width: 130px
+		&.order__title-weight
+			width: 148px 
+	+rt(1120)
+		width: 100px
 .order__row-top
 	display: table
 	width: 100%
 	padding: 20px
-	border: 1px solid #e6e6e6
-	border-width: 0 1px
 	border-bottom: 1px solid #e6e6e6 
 	+box
 	+clr
@@ -865,6 +886,8 @@
 	text-align: center
 	vertical-align: middle
 	font-size: 16px
+	+rt(1380)
+		width: 100px
 .order__shop-name
 	display: inline-block
 	vertical-align: middle
@@ -878,11 +901,17 @@
 	line-height: 82px
 	text-align: center
 	font-size: 16px	
+	+rt(1380)
+		width: 130px	
+	+rt(1120)	
+		width: 100px
 .order__pic
 	float: left
 	margin-right: 20px
 	padding-left: 160px
 	font-size: 0 
+	+rt(1600)
+		padding-left: 0 
 	button, img
 		display: inline-block
 		vertical-align: middle
@@ -899,7 +928,11 @@
 		margin-top: 28px
 	.weight__val
 		input
-			width: 100px
+			width: 72px
+	+rt(1380)
+		.weight__val
+			input
+				width: 60px
 .order__prod
 	min-height: 82px
 	overflow: hidden
@@ -912,6 +945,54 @@
 		color: $bl
 		&:hover
 			color: $blh 
-
-	
-			
+.order__delivery, .order__total
+	padding: 15px 20px
+	+clr	
+	.order__price
+		min-height: 0
+		line-height: 1.2 
+.order__delivery
+	border-bottom: 1px dashed #e1e1e1 
+.order__total
+	.order__price
+		color: $bl
+		font-weight: bold
+		.rub
+			font-weight: normal
+			&:before, &:after
+				background: $bl 
+.order__delivary-title, .order__total-title
+	float: right
+	font-size: 16px
+.order__delivary-title
+	color: $bl 
+.order__total-title
+	text-transform: uppercase
+	font-weight: bold
+.order__nav
+	padding-bottom: 20px
+	+clr	
+	.title
+		float: left
+		+rt(1120)
+			float: none
+			margin-bottom: 15px
+	.btn
+		float: right
+		width: 240px
+.order__back, .order__clear
+	float: right
+	margin: 8px 50px 0 0
+	background: none
+	font-size: 12px
+	color: $bl  
+	&:hover
+		color: $blh 
+.order__back
+	position: relative
+	padding-right: 17px
+	i
+		position: absolute
+		top: 0
+		right: 0
+		+s(cart-btn-back) 
