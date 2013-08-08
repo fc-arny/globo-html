@@ -996,3 +996,247 @@
 		top: 0
 		right: 0
 		+s(cart-btn-back) 
+//position
+.position
+	+clr
+	.title
+		float: left
+.position__sum
+	float: right
+	width: 400px
+	padding: 7px 30px 0 0
+	color: #666 
+	a
+		color: $bl
+		&:hover
+			color: $blh
+	span
+		display: block
+	.rub
+		&:before, &:after
+			background: #666666
+			height: 1px
+		&:before
+			top: 8px
+.position__value	
+	padding: 12px 50px 55px
+	margin: 0 450px
+	overflow: hidden
+	+rt(1380)
+		padding-top: 20px
+		margin: 0 50px
+		clear: both
+.position__value-in
+	position: relative
+	height: 6px
+	background: #9b9b9b 
+	border-radius: 3px
+	text-align: center
+.position__progress
+	position: absolute
+	top: 0
+	left: 0
+	height: 6px
+	background: $bl 
+	border-radius: 3px
+	&.is-half
+		width: 50%
+	&.is-full
+		width: 100%
+.position__value-1, .position__value-2, .position__value-3
+	position: relative
+	width: 20px
+	height: 20px
+	margin-top: -7px
+	background: #9b9b9b
+	border-radius: 50%  
+	z-index: 2 
+	strong
+		position: absolute
+		top: 28px
+		left: 50% 
+		width: 100px
+		margin-left: -50px
+		font-size: 12px
+		text-transform: uppercase
+		color: #666 
+	span
+		display: block
+		font-weight: normal
+	&.position__current
+		background: $gr
+		strong
+			color: $gr 
+	&.position__last
+		background: $bl
+		strong
+			color: $bl 
+.position__value-1 	
+	float: left
+.position__value-2
+	display: inline-block
+	vertical-align: top
+.position__value-3
+	float: right
+//step
+.step	
+	margin-bottom: 50px
+	background: #FFF
+	border: 1px solid #e7e7e7 
+.step__row
+	padding: 50px 0
+	+clr
+.step__col
+	float: left
+	width: 50%
+	padding: 0 50px 0 70px
+	border-left: 1px solid #e7e7e7 
+	+box
+	&:first-child
+		margin-right: -1px 
+		border-right: 1px solid #e7e7e7 
+		border-left: none 
+.step__title
+	margin-bottom: 10px
+	font-size: 16px
+	text-transform: uppercase
+	color: #666
+	font-weight: bold 
+.step__title-sub
+	margin-bottom: 15px
+	font-size: 12px
+	color: #989898 
+.step__fieldset
+	width: 240px 
+.step__fieldset_less
+	position: relative
+	width: 220px
+.step__pass-forgot
+	margin-top: 16px
+	a
+		font-size: 12px
+		color: $bl 
+		&:hover
+			color: $blh 
+.step__pass-help
+	padding-top: 17px
+	font-size: 12px
+	color: #989898 
+.step__nav
+	padding: 25px 70px
+	border-top: 1px dashed #e7e7e7 
+	overflow: hidden
+	.btn
+		width: 240px
+		float: right
+		&:first-child
+			float: left
+.step__nav-help
+	padding: 0 60px
+	overflow: hidden
+	font-size: 12px
+	color: #989898
+	a
+		color: $bl
+		&:hover
+			color: $blh 
+	+rt(1120)
+		padding: 20px 0 0 0
+		clear: both
+.step__info
+	position: absolute
+	top: 25px
+	left: 270px
+	width: 185px 
+	padding: 20px 30px
+	background: #ccebfb
+	border-radius: 2px
+	box-shadow: 0 1px 1px rgba(0,0,0,.25) 
+	font-size: 14px
+	color: #606e75 
+	+rt(1380)
+		position: relative
+		top: auto 
+		left: 0
+		width: auto
+		padding: 15px
+.step__date	
+	margin-bottom: 15px
+	button
+		position: relative
+		padding-right: 23px
+		color: $bl 
+		background: none 
+		overflow: visible
+		i
+			position: absolute
+			top: 0
+			right: 0
+			+s(step-date)
+.step__time
+	margin-bottom: 10px
+	+clr
+.step__time-col
+	float: left
+	width: 205px 
+	.label-check
+		margin-bottom: 10px
+.step__comm
+	.label
+		margin-bottom: 0
+.step__payment
+	padding: 50px 70px 60px
+.step__payment-list 	
+	+clr
+	li
+		float: left
+		height: 62px
+		padding: 0 20px
+		margin: 0 10px 10px 0
+		background: #fafafa
+		border: 1px solid #e3e3e3
+		border-radius: 2px 
+		line-height: 62px
+		font-size: 0
+		i, span
+			display: inline-block
+			vertical-align: middle
+		span
+			font-size: 16px
+			color: $bl
+		&.is-active
+			background: #fff
+			border-color: $gr 
+.ico-pay-sys-1
+	+s(pay-sys1)
+.ico-pay-sys-2
+	+s(pay-sys2)
+.ico-pay-sys-3
+	+s(pay-sys3)
+.ico-pay-sys-4
+	+s(pay-sys4)
+.ico-pay-sys-5
+	+s(pay-sys5)
+.step__card
+	padding: 30px 70px 15px
+	border-top: 1px dashed #d7d7d7 
+.step__card-number
+	width: 300px 
+.step__card-termin
+	+clr
+	.label
+		float: left
+		margin-right: 20px
+	.label__in
+		padding: 0
+		+clr
+		.label__txt, span
+			float: left
+		span
+			margin: 5px 8px 0
+			font-size: 16px
+	.label__txt
+		width: 70px
+
+
+

@@ -1,0 +1,446 @@
+<!doctype html>
+<!--[if IE 8]><html lang="ru-RU" class="ie8"><![endif]-->
+<!--[if gt IE 8]><!--><html lang="ru-RU"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Globo</title>
+	<link rel="stylesheet" media="screen" href="css/screen.css" >
+	<!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.scrollTo-1.4.3.1-min.js"></script>	
+	<script src="js/jquery.jscrollpane.min.js"></script>	
+	<script src="js/common.js"></script>
+</head>
+
+<body> 
+<!-- BEGIN .page -->
+<div class="page">
+	<!-- BEGIN .wrap -->
+	<div class="wrap">
+		<!-- BEGIN .header -->
+		<!-- BEGIN .header -->
+<header class="header">
+	<div class="header__top">
+		<a class="logo" href="#">
+			<span class="logo__pic"></span>
+			<span class="logo__txt">Покупки это просто</span>
+		</a>
+		<div class="login">
+			<a href="#">John Doe</a>
+			<button class="js-login"><i></i></button>
+			<ul class="login__links">
+				<li><a class="login__link-1" href="#">Настройки<i></i></a></li>
+				<li><a class="login__link-2" href="#">Избранное<i></i></a></li>
+				<li><a class="login__link-3" href="#">Выход<i></i></a></li>
+			</ul>
+		</div>
+		<nav class="nav">
+			<a href="#">Каталог</a>
+			<a href="#">Контакты</a>
+			<a href="#">Рецепты</a>
+			<a href="#">Новости</a>
+			<a href="#">Компания</a>
+		</nav>
+	</div>
+	<div class="header__down">
+		<div class="sel-shop js-shops">
+			<div class="sel-shop__list">
+				<button>Выбраный магазин</button>
+				<ul>
+					<li><img src="img/shop2-s.png" alt=""></li>
+					<li><img src="img/shop1-s.png" alt=""></li>
+					<li><img src="img/shop3-s.png" alt=""></li>
+				</ul>
+			</div>
+			<div class="sel-shop__pic">
+				<img src="img/shop1-s.png" alt="">
+			</div>
+		</div>
+		<!-- BEGIN .menu -->
+		<div class="menu">
+			<div class="menu__list">
+				<button class="menu__btn-prev"><i></i></button>
+				<button class="menu__btn-next"><i></i></button>
+				<ul class="menu__list-in">
+					<li data-item="menu-item-1"><a class="menu__item-1" href="#">Выпечка<i></i></a></li>
+					<li data-item="menu-item-2"><a class="menu__item-2" href="#">Овощи и фрукты<i></i></a></li>
+					<li data-item="menu-item-3"><a class="menu__item-3 is-active" href="#">Молочные и яйца<i></i></a></li>
+					<li data-item="menu-item-4"><a class="menu__item-4" href="#">Мясо и рыба<i></i></a></li>
+					<li data-item="menu-item-5"><a class="menu__item-5" href="#">Морозилка<i></i></a></li>
+					<li data-item="menu-item-6"><a class="menu__item-6" href="#">Кулинария<i></i></a></li>
+					<li data-item="menu-item-7"><a class="menu__item-7" href="#">Консервы и приправы<i></i></a></li>
+					<li data-item="menu-item-8"><a class="menu__item-8" href="#">Бакалея<i></i></a></li>
+					<li data-item="menu-item-9"><a class="menu__item-9" href="#">Закуски и сладости<i></i></a></li>
+					<li data-item="menu-item-10"><a class="menu__item-10" href="#">Напитки<i></i></a></li>
+					<li data-item="menu-item-11"><a class="menu__item-11" href="#">Для дома<i></i></a></li>
+					<li data-item="menu-item-12"><a class="menu__item-12" href="#">Детское<i></i></a></li>
+					<li data-item="menu-item-13"><a class="menu__item-13" href="#">Гигиена<i></i></a></li>
+					<li data-item="menu-item-14"><a class="menu__item-14" href="#">Для животных<i></i></a></li>
+				</ul>					
+			</div>
+			<div class="menu__sub-arr"></div>	
+			<div class="menu__sub-wrap">
+				<div id="menu-item-1" class="menu__sub">
+					<div class="menu__sub-in">
+						<ul>
+							<li class="is-selected"><a href="#">Блюда японской кухни</a></li>
+							<li><a href="#">Cалаты</a></li>
+							<li><a href="#">Холодные закуски</a></li>
+							<li><a href="#">Соусы собственного приготовления</a></li>
+							<li><a href="#">Мясные блюда</a></li>
+						</ul>
+						<ul>
+							<li><a href="#">Блюда из птицы</a></li>
+							<li><a href="#">Блюда из рыбы и морепродуктов</a></li>
+							<li><a href="#">Овощные блюда, гарниры</a></li>
+							<li><a href="#">Супы</a></li>
+						</ul>
+					</div>				
+				</div>
+				<div id="menu-item-2" class="menu__sub">
+					<div class="menu__sub-in">
+						<ul>
+							<li class="is-selected"><a href="#">Блюда японской кухни</a></li>
+							<li><a href="#">Cалаты</a></li>
+							<li><a href="#">Холодные закуски</a></li>
+							<li><a href="#">Соусы собственного приготовления</a></li>
+							<li><a href="#">Мясные блюда</a></li>
+						</ul>
+					</div>				
+				</div>
+				<div id="menu-item-3" class="menu__sub">
+					<div class="menu__sub-in">
+						<ul>
+							<li class="is-selected"><a href="#">Блюда японской кухни</a></li>
+							<li><a href="#">Cалаты</a></li>
+							<li><a href="#">Холодные закуски</a></li>
+							<li><a href="#">Соусы собственного приготовления</a></li>
+							<li><a href="#">Мясные блюда</a></li>
+						</ul>
+						<ul>
+							<li><a href="#">Блюда из птицы</a></li>
+							<li><a href="#">Блюда из рыбы и морепродуктов</a></li>
+							<li><a href="#">Овощные блюда, гарниры</a></li>
+							<li><a href="#">Супы</a></li>
+						</ul>
+					</div>							
+				</div>
+				<div id="menu-item-4" class="menu__sub">
+					<div class="menu__sub-in">
+						<ul>
+							<li class="is-selected"><a href="#">Блюда японской кухни</a></li>
+							<li><a href="#">Cалаты</a></li>
+							<li><a href="#">Холодные закуски</a></li>
+							<li><a href="#">Соусы собственного приготовления</a></li>
+							<li><a href="#">Мясные блюда</a></li>
+						</ul>
+					</div>						
+				</div>
+				<div id="menu-item-5" class="menu__sub">
+					<div class="menu__sub-in">
+						<ul>
+							<li class="is-selected"><a href="#">Блюда японской кухни</a></li>
+							<li><a href="#">Cалаты</a></li>
+							<li><a href="#">Холодные закуски</a></li>
+							<li><a href="#">Соусы собственного приготовления</a></li>
+							<li><a href="#">Мясные блюда</a></li>
+						</ul>
+					</div>						
+				</div>
+				<div id="menu-item-6" class="menu__sub">
+					<div class="menu__sub-in">
+						<ul>
+							<li class="is-selected"><a href="#">Блюда японской кухни</a></li>
+							<li><a href="#">Cалаты</a></li>
+							<li><a href="#">Холодные закуски</a></li>
+							<li><a href="#">Соусы собственного приготовления</a></li>
+							<li><a href="#">Мясные блюда</a></li>
+						</ul>
+						<ul>
+							<li><a href="#">Блюда из птицы</a></li>
+							<li><a href="#">Блюда из рыбы и морепродуктов</a></li>
+							<li><a href="#">Овощные блюда, гарниры</a></li>
+							<li><a href="#">Супы</a></li>
+						</ul>
+					</div>					
+				</div>
+				<div id="menu-item-7" class="menu__sub">
+					<div class="menu__sub-in">
+						<ul>
+							<li class="is-selected"><a href="#">Блюда японской кухни</a></li>
+							<li><a href="#">Cалаты</a></li>
+							<li><a href="#">Холодные закуски</a></li>
+							<li><a href="#">Соусы собственного приготовления</a></li>
+							<li><a href="#">Мясные блюда</a></li>
+						</ul>
+					</div>				
+				</div>
+				<div id="menu-item-8" class="menu__sub">
+					<div class="menu__sub-in">
+						<ul>
+							<li class="is-selected"><a href="#">Блюда японской кухни</a></li>
+							<li><a href="#">Cалаты</a></li>
+							<li><a href="#">Холодные закуски</a></li>
+							<li><a href="#">Соусы собственного приготовления</a></li>
+							<li><a href="#">Мясные блюда</a></li>
+						</ul>
+						<ul>
+							<li><a href="#">Блюда из птицы</a></li>
+							<li><a href="#">Блюда из рыбы и морепродуктов</a></li>
+							<li><a href="#">Овощные блюда, гарниры</a></li>
+							<li><a href="#">Супы</a></li>
+						</ul>
+					</div>					
+				</div>
+				<div id="menu-item-9" class="menu__sub">
+					<div class="menu__sub-in">
+						<ul>
+							<li class="is-selected"><a href="#">Блюда японской кухни</a></li>
+							<li><a href="#">Cалаты</a></li>
+							<li><a href="#">Холодные закуски</a></li>
+							<li><a href="#">Соусы собственного приготовления</a></li>
+							<li><a href="#">Мясные блюда</a></li>
+						</ul>
+					</div>					
+				</div>
+				<div id="menu-item-10" class="menu__sub">
+					<div class="menu__sub-in">
+						<ul>
+							<li class="is-selected"><a href="#">Блюда японской кухни</a></li>
+							<li><a href="#">Cалаты</a></li>
+							<li><a href="#">Холодные закуски</a></li>
+							<li><a href="#">Соусы собственного приготовления</a></li>
+							<li><a href="#">Мясные блюда</a></li>
+						</ul>
+						<ul>
+							<li><a href="#">Блюда из птицы</a></li>
+							<li><a href="#">Блюда из рыбы и морепродуктов</a></li>
+							<li><a href="#">Овощные блюда, гарниры</a></li>
+							<li><a href="#">Супы</a></li>
+						</ul>
+					</div>						
+				</div>
+				<div id="menu-item-11" class="menu__sub">
+					<div class="menu__sub-in">
+						<ul>
+							<li class="is-selected"><a href="#">Блюда японской кухни</a></li>
+							<li><a href="#">Cалаты</a></li>
+							<li><a href="#">Холодные закуски</a></li>
+							<li><a href="#">Соусы собственного приготовления</a></li>
+							<li><a href="#">Мясные блюда</a></li>
+						</ul>
+					</div>					
+				</div>
+				<div id="menu-item-12" class="menu__sub">
+					<div class="menu__sub-in">
+						<ul>
+							<li class="is-selected"><a href="#">Блюда японской кухни</a></li>
+							<li><a href="#">Cалаты</a></li>
+							<li><a href="#">Холодные закуски</a></li>
+							<li><a href="#">Соусы собственного приготовления</a></li>
+							<li><a href="#">Мясные блюда</a></li>
+						</ul>
+					</div>			
+				</div>
+				<div id="menu-item-13" class="menu__sub">
+					<div class="menu__sub-in">
+						<ul>
+							<li class="is-selected"><a href="#">Блюда японской кухни</a></li>
+							<li><a href="#">Cалаты</a></li>
+							<li><a href="#">Холодные закуски</a></li>
+							<li><a href="#">Соусы собственного приготовления</a></li>
+							<li><a href="#">Мясные блюда</a></li>
+						</ul>
+					</div>				
+				</div>
+				<div id="menu-item-14" class="menu__sub">
+					<div class="menu__sub-in">
+						<ul>
+							<li class="is-selected"><a href="#">Блюда японской кухни</a></li>
+							<li><a href="#">Cалаты</a></li>
+							<li><a href="#">Холодные закуски</a></li>
+							<li><a href="#">Соусы собственного приготовления</a></li>
+							<li><a href="#">Мясные блюда</a></li>
+						</ul>
+						<ul>
+							<li><a href="#">Блюда из птицы</a></li>
+							<li><a href="#">Блюда из рыбы и морепродуктов</a></li>
+							<li><a href="#">Овощные блюда, гарниры</a></li>
+							<li><a href="#">Супы</a></li>
+						</ul>
+					</div>												
+				</div>
+			</div>
+		</div>		
+		<!-- END .menu -->
+	</div>
+</header>
+<!-- END .header -->
+		<!-- END .header -->
+		<!-- BEGIN .layout -->
+		<div class="layout">
+			<!-- BEGIN .position -->
+			<div class="position">
+				<div class="title">ОФОРМЛЕНИЕ ЗАКАЗА</div>
+				<div class="position__sum">Заказ на сумму 5550,00<i class="rub">Р</i> от <a href="#">John Doe</a></div>
+				<div class="position__value">
+					<div class="position__value-in">
+						<div class="position__value-1 position__last">
+							<strong>ШАГ 1.<span>АВТОРИЗАЦИя</span></strong>						
+						</div>
+						<div class="position__value-2 position__current">
+							<strong>ШАГ 2.<span>ДОСТАВКА</span></strong>						
+						</div>
+						<div class="position__value-3">
+							<strong>ШАГ 3.<span>ОПЛАТА</span></strong>						
+						</div>
+						<div class="position__progress is-half"></div>
+					</div>
+				</div>
+			</div>
+			<!-- END .position -->
+			<!-- BEGIN .reg -->
+			<div class="step">
+				<div class="step__row">
+					<div class="step__col">
+						<div class="step__title">АДРЕС ДОСТАВКИ</div>
+						<div class="step__title-sub">Укажите город и адрес, на которые нужно совершить доставку</div>
+						<fieldset class="step__fieldset step__fieldset_less">
+							<div class="label">
+								<div class="label__title">Город</div>
+								<div class="label__select js-select">
+									<span>Москва<i></i></span>
+									<ul>
+										<li>Москва</li>
+										<li>Киев</li>
+										<li>Санкт-Петербург</li>
+										<li>Одесса</li>
+									</ul>
+								</div>
+							</div>
+							<label class="label">
+								<span class="label__title">Адрес</span>
+								<input class="label__txt" type="text" value="yourmail@mail.com">
+							</label>
+							<label class="label is-disabled">
+								<span class="label__title">Номер телефона</span>
+								<input class="label__txt" type="text" value="+7 (987) 654-32-10" disabled>
+							</label>
+							<div class="step__info">Доставка осуществляется ежедневно с 08.00 до 24.00</div>
+						</fieldset>
+					</div>
+					<div class="step__col">
+						<div class="step__title">ВРЕМЯ ДОСТАВКИ</div>
+						<div class="step__title-sub">Укажите удобные вам дату и время для получения доставки</div>
+						<div class="step__date">
+							<button>Укажите дату<i></i></button>
+						</div>
+						<div class="step__time">	
+							<fieldset class="step__time-col">
+								<label class="label-check is-disabled">
+									<input type="checkbox" disabled>
+									<i></i>
+									<span>10.00 - 11.00</span>
+								</label>
+								<label class="label-check is-disabled">
+									<input type="checkbox" disabled>
+									<i></i>
+									<span>12.00 - 13.00</span>
+								</label>
+								<label class="label-check">
+									<input type="checkbox">
+									<i></i>
+									<span>15.00 - 18.00</span>
+								</label>
+							</fieldset>					
+							<fieldset class="step__time-col">
+								<label class="label-check">
+									<input type="checkbox" checked>
+									<i></i>
+									<span>19.00 - 20.00</span>
+								</label>
+								<label class="label-check">
+									<input type="checkbox" checked>
+									<i></i>
+									<span>20.00 - 22.00</span>
+								</label>
+								<label class="label-check">
+									<input type="checkbox">
+									<i></i>
+									<span>23.00 - 24.00</span>
+								</label>
+							</fieldset>							
+						</div>
+						<div class="step__title">КОММЕНТАРИЙ</div>
+						<div class="step__title-sub">Особые комментарии к вашему заказу</div>
+						<div class="step__comm">
+							<div class="label">
+								<textarea class="label__area" placeholder="Текст комментария"></textarea>
+							</div>
+						</div>						
+					</div>
+				</div>
+				<div class="step__nav">
+					<button class="btn">НАЗАД</button>
+					<button class="btn">ПРОДОЛЖИТЬ</button>
+				</div>
+			</div>			
+			<!-- END .reg -->			
+		</div>
+		<!-- END .layout -->
+		<div class="push"></div>
+	</div>
+	<!-- END .wrap -->
+	<!-- BEGIN .footer -->
+	<footer class="footer">
+	<div class="footer__in">
+		<div class="footer__left">
+			<a class="logo" href="#">
+				<span class="logo__pic"></span>
+				<span class="logo__txt">Покупки это просто</span>
+			</a>
+			<div class="social">
+				<a class="social__ok" href="#"><i></i></a>
+				<a class="social__fb" href="#"><i></i></a>
+				<a class="social__vk" href="#"><i></i></a>
+				<a class="social__tw" href="#"><i></i></a>
+				<a class="social__rss" href="#"><i></i></a>
+			</div>
+		</div>	
+		<nav class="footer__nav">
+			<ul>
+				<li>Информация</li>
+        <li><a href="#">О нас</a></li>
+        <li><a href="#">Безопасность</a></li>
+        <li><a href="#">Советы</a></li>
+        <li><a href="#">Карта сайта</a></li>
+        <li><a href="#">Помощь</a></li>
+        <li><a href="#">Контактная информация</a></li>
+    	</ul>
+    	<ul>
+    		<li>Магазины</li>
+        <li><a href="#">Глобус Гурме</a></li>
+        <li><a href="#">Перекресток</a></li>
+        <li><a href="#">Азбука Вкуса</a></li>
+        <li><a href="#">Алые Паруса</a></li>
+      </ul>
+      <ul>
+      	<li>Дополнительно</li>
+        <li><a href="#">Форум</a></li>
+        <li><a href="#">Обсуждения</a></li>
+        <li><a href="#">Аналитика</a></li>
+        <li><a href="#">Рецепты</a></li>
+    	</ul>
+		</nav>
+		<div class="copyright">© GLOBO Market 2010-2012</div>	
+	</div>
+</footer>
+
+	<!-- END .footer -->
+	<!-- BEGIN .overlay -->
+	<div class="overlay"></div>
+	<!-- END .overlay -->
+</div>
+<!-- END .page -->
+</body>
+</html>
