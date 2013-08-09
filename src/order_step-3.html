@@ -1,0 +1,89 @@
+@@include('_head.html')
+<body> 
+<!-- BEGIN .page -->
+<div class="page">
+	<!-- BEGIN .wrap -->
+	<div class="wrap">
+		<!-- BEGIN .header -->
+		@@include('_header.html')
+		<!-- END .header -->
+		<!-- BEGIN .layout -->
+		<div class="layout">
+			<!-- BEGIN .position -->
+			<div class="position">
+				<div class="title">ОФОРМЛЕНИЕ ЗАКАЗА</div>
+				<div class="position__sum">Заказ на сумму 5550,00<i class="rub">Р</i> от <a href="#">John Doe</a><span>доставка по адресу: г.Москва, ул. Победы, д.6, кв.114</span></div>
+				<div class="position__value">
+					<div class="position__value-in">
+						<div class="position__value-1 position__last">
+							<strong>ШАГ 1.<span>АВТОРИЗАЦИя</span></strong>						
+						</div>
+						<div class="position__value-2 position__last">
+							<strong>ШАГ 2.<span>ДОСТАВКА</span></strong>						
+						</div>
+						<div class="position__value-3 position__current">
+							<strong>ШАГ 3.<span>ОПЛАТА</span></strong>						
+						</div>
+						<div class="position__progress is-full"></div>
+					</div>
+				</div>
+			</div>
+			<!-- END .position -->
+			<!-- BEGIN .reg -->
+			<div class="step">
+				<div class="step__payment">
+					<div class="step__title">СПОСОБ ОПЛАТЫ</div>
+					<div class="step__title-sub">Укажите удобный вам способ оплаты заказа</div>
+					<ul class="step__payment-list">
+						<li><i class="ico-pay-sys-1"></i></li>
+						<li><i class="ico-pay-sys-2"></i></li>
+						<li><i class="ico-pay-sys-3"></i></li>
+						<li><i class="ico-pay-sys-4"></i></li>
+						<li class="is-active"><i class="ico-pay-sys-5"></i></li>
+						<li><span>Безналичный расчет</span></li>
+					</ul>
+				</div>
+				<div class="step__card">
+					<div class="step__title">КРЕДИТНАЯ КАРТА</div>
+					<div class="step__card-number">
+						<label class="label">
+							<span class="label__title">Номер кредитной карты</span>
+							<input class="label__txt" type="text" placeholder="XXXX-XXXX-XXXX-XXXX">
+						</label>
+					</div>		
+					<div class="step__card-termin">
+						<div class="label">
+							<span class="label__title">Срок действия</span>
+							<span class="label__in">
+								<input class="label__txt" type="text" placeholder="Месяц">
+								<span>/</span>
+								<input class="label__txt" type="text" placeholder="Год">
+							</span>
+						</div>
+						<label class="label">
+							<span class="label__title">CVV</span>
+							<input class="label__txt" type="text" value="728">
+						</label>
+					</div>			
+				</div>
+				<div class="step__nav">
+					<button class="btn">НАЗАД</button>
+					<button class="btn">ПРОДОЛЖИТЬ</button>
+				</div>
+			</div>			
+			<!-- END .reg -->			
+		</div>
+		<!-- END .layout -->
+		<div class="push"></div>
+	</div>
+	<!-- END .wrap -->
+	<!-- BEGIN .footer -->
+	@@include('_footer.html')
+	<!-- END .footer -->
+	<!-- BEGIN .overlay -->
+	<div class="overlay"></div>
+	<!-- END .overlay -->
+</div>
+<!-- END .page -->
+</body>
+</html>

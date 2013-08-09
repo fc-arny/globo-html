@@ -1,0 +1,116 @@
+@@include('_head.html')
+<body> 
+<!-- BEGIN .page -->
+<div class="page">
+	<!-- BEGIN .wrap -->
+	<div class="wrap">
+		<!-- BEGIN .header -->
+		@@include('_header.html')
+		<!-- END .header -->
+		<!-- BEGIN .layout -->
+		<div class="layout">
+			<!-- BEGIN .position -->
+			<div class="position">
+				<div class="title">ОФОРМЛЕНИЕ ЗАКАЗА</div>
+				<div class="position__sum">Заказ на сумму 5550,00<i class="rub">Р</i></div>
+				<div class="position__value">
+					<div class="position__value-in">
+						<div class="position__value-1 position__current">
+							<strong>ШАГ 1.<span>АВТОРИЗАЦИя</span></strong>						
+						</div>
+						<div class="position__value-2">
+							<strong>ШАГ 2.<span>ДОСТАВКА</span></strong>						
+						</div>
+						<div class="position__value-3">
+							<strong>ШАГ 3.<span>ОПЛАТА</span></strong>						
+						</div>
+						<div class="position__progress"></div>
+					</div>
+				</div>
+			</div>
+			<!-- END .position -->
+			<!-- BEGIN .reg -->
+			<div class="step">
+				<div class="step__row">
+					<div class="step__col">
+						<div class="step__title">ВОЙТИ</div>
+						<div class="step__title-sub">Авторизируйтесь, используя свои данные</div>
+						<fieldset class="step__fieldset">
+							<label class="label">
+								<span class="label__title">Логин</span>
+								<span class="label__in">
+									<i class="ico-login"></i>
+									<input class="label__txt" type="text" value="yourmail@mail.com">
+								</span>
+							</label>
+							<label class="label">
+								<span class="label__title">Пароль</span>
+								<span class="label__in">
+									<i class="ico-pass"></i>
+									<input class="label__txt" type="password" value="password">
+								</span>
+							</label>
+							<label class="label-check">
+								<input type="checkbox" checked>
+								<i></i>
+								<span>Запомнить меня</span>
+							</label>
+							<button class="btn">ВОЙТИ</button>
+							<div class="step__pass-forgot">
+								<a href="#">Забыли ваш пароль?</a>
+							</div>
+						</fieldset>
+					</div>
+					<div class="step__col">
+						<div class="step__title">НОВЫЙ ПОЛЬЗОВАТЕЛЬ</div>
+						<div class="step__title-sub">Впервые на сайте? Зарегистрируйтесь, это не займет много времени</div>
+						<fieldset class="step__fieldset">
+							<label class="label">
+								<span class="label__title">Логин *</span>
+								<span class="label__in">
+									<i class="ico-login"></i>
+									<input class="label__txt" type="text" value="yourmail@mail.com">
+								</span>
+							</label>
+							<label class="label">
+								<span class="label__title">Телефон *</span>
+								<span class="label__in">
+									<i class="ico-phone"></i>
+									<input class="label__txt" type="text" value="+7 (123) 456-78-90">
+								</span>
+							</label>
+							<label class="label">
+								<span class="label__title">Пароль</span>
+								<span class="label__in">
+									<i class="ico-pass"></i>
+									<input class="label__txt" type="password" value="password">
+								</span>
+								<span class="label__help">Пароль должен состоять минимум из 8 символов (A-Z, a-z, 0-9)</span>
+							</label>
+							<button class="btn">ГОТОВО</button>
+							<div class="step__pass-help">* Поля обьязательные для заполнения</div>
+						</fieldset>
+					</div>
+				</div>
+				<div class="step__nav">
+					<button class="btn">К ЗАКАЗУ</button>
+					<button class="btn">ПРОДОЛЖИТЬ</button>
+					<div class="step__nav-help">Не забывайте, что вам не обьязательно авторизироваться или регистрироваться для совершения заказа на нашем сайте. Вы можете пропустить этот шаг и перейти к шагу “Доставка”. Однако, в таком случае вы лишаетесь следующих преймуществ, согласно <a href="#">Пользовательскому соглашению.</a></div>
+				</div>
+			</div>			
+			<!-- END .reg -->			
+		</div>
+		<!-- END .layout -->
+		<div class="push"></div>
+	</div>
+	<!-- END .wrap -->
+	<!-- BEGIN .footer -->
+	@@include('_footer.html')
+	<!-- END .footer -->
+	<!-- BEGIN .overlay -->
+	<div class="overlay"></div>
+	<!-- END .overlay -->
+</div>
+<!-- END .page -->
+</body>
+</html>

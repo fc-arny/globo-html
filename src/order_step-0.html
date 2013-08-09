@@ -1,0 +1,158 @@
+@@include('_head.html')
+<body> 
+<!-- BEGIN .page -->
+<div class="page">
+	<!-- BEGIN .wrap -->
+	<div class="wrap">
+		<!-- BEGIN .header -->
+		@@include('_header.html')
+		<!-- END .header -->
+		<!-- BEGIN .layout -->
+		<div class="layout">
+			<!-- BEGIN .order -->
+			<div class="order">
+				<div class="order__nav">
+					<div class="title">ОФОРМЛЕНИЕ ЗАКАЗА</div>
+					<button class="btn">ОФОРМИТЬ</button>					
+					<button class="order__clear">Очистить корзину</button>
+					<button class="order__back">Вернуться к покупкам<i></i></button>
+				</div>
+				<div class="order__table">
+					<div class="order__head">
+						<div class="order__title">Общая стоимость </div>						
+						<div class="order__title order__title-weight">Количество</div>
+						<div class="order__title">Цена за 100 г.</div>
+						<div class="order__title">Название</div>
+					</div>
+					<div class="order__row-top">
+						<div class="order__row-top-in">
+							<div class="order__shop">
+								<img src="img/shop2.png" alt="">
+								<div class="order__shop-name">ГЛОБУС ГУРМЕ</div>
+							</div>					
+							<div class="order__price-sum">
+								<strong>2150<i class="rub">Р</i></strong>
+							</div>
+						</div>						
+					</div>
+					<div class="order__row-prod">
+						<div class="order__pic">
+							<button></button>
+							<a href="#"><img src="img/pic4.jpg" alt=""></a>
+						</div>						
+						<div class="order__price">
+							<span>400<i class="rub">Р</i></span>
+						</div>
+						<div class="order__weight">
+							<div class="weight js-weight">
+								<button class="weight__btn-minus"><i></i></button>
+								<div class="weight__val">
+									<input data-factor="50" type="text" maxlength="4" value="500">
+									<span>гр</span>
+								</div>								
+								<button class="weight__btn-plus"><i></i></button>					
+							</div>
+						</div>
+						<div class="order__price">
+							<span>400<i class="rub">Р</i></span>
+						</div>
+						<div class="order__prod">
+							<a href="#">Ролл с крабовыми палочками Калифорния</a>
+						</div>
+					</div>	
+					<div class="order__row-prod">
+						<div class="order__pic">
+							<button></button>
+							<a href="#"><img src="img/pic4.jpg" alt=""></a>
+						</div>						
+						<div class="order__price">
+							<span>400<i class="rub">Р</i></span>
+						</div>
+						<div class="order__weight">
+							<div class="weight js-weight">
+								<button class="weight__btn-minus"><i></i></button>
+								<div class="weight__val">
+									<input data-factor="50" type="text" maxlength="4" value="500">
+									<span>гр</span>
+								</div>								
+								<button class="weight__btn-plus"><i></i></button>					
+							</div>
+						</div>
+						<div class="order__price">
+							<span>400<i class="rub">Р</i></span>
+						</div>
+						<div class="order__prod">
+							<a href="#">Ролл с крабовыми палочками Калифорния с крабовыми палочками очень вкусный</a>
+						</div>
+					</div>
+					<div class="order__row-top">
+						<div class="order__row-top-in">
+							<div class="order__shop">
+								<img src="img/shop3.png" alt="">
+								<div class="order__shop-name">АЗБУКА ВКУСА</div>
+							</div>					
+							<div class="order__price-sum">
+								<strong>2150<i class="rub">Р</i></strong>
+							</div>
+						</div>						
+					</div>
+					<div class="order__row-prod">
+						<div class="order__pic">
+							<button></button>
+							<a href="#"><img src="img/pic4.jpg" alt=""></a>
+						</div>						
+						<div class="order__price">
+							<span>400<i class="rub">Р</i></span>
+						</div>
+						<div class="order__weight">
+							<div class="weight js-weight">
+								<button class="weight__btn-minus"><i></i></button>
+								<div class="weight__val">
+									<input data-factor="50" type="text" maxlength="4" value="500">
+									<span>гр</span>
+								</div>								
+								<button class="weight__btn-plus"><i></i></button>					
+							</div>
+						</div>
+						<div class="order__price">
+							<span>400<i class="rub">Р</i></span>
+						</div>
+						<div class="order__prod">
+							<a href="#">Ролл с крабовыми палочками Калифорния</a>
+						</div>
+					</div>
+					<div class="order__delivery">
+						<div class="order__price">
+							<span>400<i class="rub">Р</i></span>
+						</div>
+						<div class="order__delivary-title">Доставка</div>
+					</div>
+					<div class="order__total">
+						<div class="order__price">
+							<span>5550,00<i class="rub">Р</i></span>
+						</div>
+						<div class="order__total-title">Итого:</div>
+					</div>
+				</div>
+				<div class="order__nav">
+					<button class="btn">ОФОРМИТЬ</button>					
+					<button class="order__clear">Очистить корзину</button>
+					<button class="order__back">Вернуться к покупкам<i></i></button>
+				</div>
+			</div>
+			<!-- END .order -->
+		</div>
+		<!-- END .layout -->
+		<div class="push"></div>
+	</div>
+	<!-- END .wrap -->
+	<!-- BEGIN .footer -->
+	@@include('_footer.html')
+	<!-- END .footer -->
+	<!-- BEGIN .overlay -->
+	<div class="overlay"></div>
+	<!-- END .overlay -->
+</div>
+<!-- END .page -->
+</body>
+</html>
