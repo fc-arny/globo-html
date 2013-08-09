@@ -1,0 +1,95 @@
+@@include('_head.html')
+<body> 
+<!-- BEGIN .page -->
+<div class="page">
+	<!-- BEGIN .wrap -->
+	<div class="wrap">
+		<!-- BEGIN .header -->
+		@@include('_header.html')
+		<!-- END .header -->
+		<!-- BEGIN .layout -->
+		<div class="layout">
+			<!-- BEGIN . -->
+			<div class="">
+			</div>
+			<!-- END . -->
+		</div>
+		<!-- END .layout -->
+		<div class="push"></div>
+	</div>
+	<!-- END .wrap -->
+	<!-- BEGIN .footer -->
+	@@include('_footer.html')
+	<!-- END .footer -->
+	<!-- BEGIN .overlay -->
+	<div class="overlay" style="display: block"></div>
+	<!-- END .overlay -->
+</div>
+<!-- END .page -->
+<!-- BEGIN .popup -->
+<div class="popup popup_welcome js-popup">
+	<div class="popup__top">
+		<button class="popup__btn-close"></button>
+		<div class="popup__title">ДОБРО ПОЖАЛОВАТЬ</div>
+	</div>
+	<div class="popup__in">
+		<div class="popup__row">
+			<div class="popup__col">
+				<div class="popup__message">Впервые на нашем сайте? Зарегистрируйтесь! У нас это действительно быстро!</div>
+				<label class="label">
+					<span class="label__title">Логин *</span>
+					<span class="label__in">
+						<i class="ico-login"></i>
+						<input class="label__txt" type="text" value="yourmail@mail.com">
+					</span>
+				</label>
+				<label class="label">
+					<span class="label__title">Телефон *</span>
+					<span class="label__in">
+						<i class="ico-phone"></i>
+						<input class="label__txt" type="text" value="+7 (123) 456-78-90">
+					</span>
+				</label>
+				<label class="label">
+					<span class="label__title">Пароль</span>
+					<span class="label__in">
+						<i class="ico-pass"></i>
+						<input class="label__txt" type="password" value="password">
+					</span>
+					<span class="label__help">Пароль должен состоять минимум из 8 символов (A-Z, a-z, 0-9)</span>
+				</label>
+				<button class="btn">ГОТОВО</button>
+				<div class="popup__pass-help">* Поля обьязательные для заполнения</div>
+			</div>
+			<div class="popup__col">
+				<div class="popup__message">Вы здесь не впервые? Воспользуйтесь вашими данными для входа и продолжайте покупки!</div>
+				<label class="label">
+					<span class="label__title">Логин</span>
+					<span class="label__in">
+						<i class="ico-login"></i>
+						<input class="label__txt" type="text" value="yourmail@mail.com">
+					</span>
+				</label>
+				<label class="label">
+					<span class="label__title">Пароль</span>
+					<span class="label__in">
+						<i class="ico-pass"></i>
+						<input class="label__txt" type="password" value="password">
+					</span>
+				</label>
+				<label class="label-check">
+					<input type="checkbox" checked="">
+					<i></i>
+					<span>Запомнить меня</span>
+				</label>
+				<button class="btn">ВОЙТИ</button>
+				<div class="popup__pass-forgot">
+					<a href="#">Забыли ваш пароль?</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- END .popup -->
+</body>
+</html>

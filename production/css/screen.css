@@ -291,10 +291,19 @@ table { border-spacing: 0; border-collapse: collapse; }
 
 .btn { width: 100%; background: #009bea; border-radius: 2px; height: 30px; font-size: 16px; color: white; text-transform: uppercase; font-weight: bold; }
 .btn:hover { background: #2db8fe; }
+.btn.is-load { background: #65b1d7; }
+.btn.is-load img { margin-left: 10px; }
 
 .label { display: block; margin-bottom: 20px; }
 .label.is-disabled .label__title { color: #c9c9c9; }
 .label.is-disabled .label__txt { border-color: #c9c9c9; }
+.label.is-error { position: relative; }
+.label.is-error .label__txt { border-color: #e07a5e; }
+.label.is-error .label__error { position: absolute; top: 19px; right: -220px; width: 180px; min-height: 20px; padding: 10px; line-height: 20px; background: #f8f8f8; border: 1px solid #e07a5e; border-radius: 2px; box-shadow: 0 0 3px rgba(0, 0, 0, 0.3); font-size: 0; }
+.label.is-error .label__error span { display: inline-block; vertical-align: middle; font-size: 12px; line-height: 1.2; }
+.label.is-error .label__error:before, .label.is-error .label__error:after { content: ""; position: absolute; width: 0px; height: 0px; border-style: solid; }
+.label.is-error .label__error:before { top: 12px; left: -14px; border-width: 8px 14px 8px 0; border-color: transparent #e07a5e transparent transparent; }
+.label.is-error .label__error:after { top: 13px; left: -12px; border-width: 7px 12px 7px 0; border-color: transparent #f8f8f8 transparent transparent; }
 
 .label__txt, .label__area { width: 100%; border: 1px solid #7dc444; background: #fbfbfb; font-size: 16px; color: #afafaf; border-radius: 2px; -moz-box-sizing: border-box; box-sizing: border-box; }
 .label__txt:focus, .label__area:focus { background: white; }
@@ -360,6 +369,35 @@ table { border-spacing: 0; border-collapse: collapse; }
 .datepicker__wrap .ui-datepicker-calendar tbody span, .datepicker__wrap .ui-datepicker-calendar tbody a { display: block; width: 42px; height: 42px; text-align: center; line-height: 42px; font-size: 16px; color: #a3a3a3; }
 .datepicker__wrap .ui-datepicker-calendar tbody .ui-state-disabled span { color: #d2d2d2; }
 .datepicker__wrap .ui-datepicker-calendar tbody .ui-datepicker-current-day a { background: #7dc444; color: white; font-weight: bold; }
+
+.popup { position: absolute; top: 235px; left: 50%; width: 300px; margin-left: -150px; background: white; border: 1px solid #e7e7e7; z-index: 600; }
+
+.popup_welcome { width: 760px; margin-left: -380px; }
+.popup_welcome .popup__in { padding: 60px 0; }
+
+.popup__in { padding: 15px 30px 20px; }
+
+.popup__top { position: relative; padding: 15px; background: #fcfcfc; border-bottom: 1px solid #e7e7e7; }
+
+.popup__title { text-align: center; text-transform: uppercase; font-size: 24px; font-weight: bold; }
+
+.popup__btn-close { position: absolute; top: 8px; right: 8px; background: url('../img/icons-s117aa5f477.png') 0 -2368px no-repeat; width: 14px; height: 14px; }
+.popup__btn-close:hover { background: url('../img/icons-s117aa5f477.png') 0 -2216px no-repeat; width: 14px; height: 14px; }
+
+.popup__row:before, .popup__row:after { content: ""; display: table; }
+.popup__row:after { clear: both; }
+
+.popup__col { float: left; width: 50%; padding: 0 70px; -moz-box-sizing: border-box; box-sizing: border-box; border-left: 1px solid #e7e7e7; }
+.popup__col:first-child { margin-right: -1px; border-left: none; border-right: 1px solid #e7e7e7; }
+.popup__col .label { margin-bottom: 15px; }
+
+.popup__message { margin-bottom: 20px; font-size: 12px; color: #989898; }
+
+.popup__pass-help { padding-top: 17px; font-size: 12px; color: #989898; }
+
+.popup__pass-forgot { margin-top: 16px; }
+.popup__pass-forgot a { font-size: 12px; color: #009bea; }
+.popup__pass-forgot a:hover { color: #2db8fe; }
 
 .layout { position: relative; }
 
@@ -659,7 +697,7 @@ table { border-spacing: 0; border-collapse: collapse; }
 .cart__prod-price .rub:before, .cart__prod-price .rub:after { background: #666666; height: 1px; }
 .cart__prod-price .rub:before { top: 8px; }
 
-.prod { display: none; position: absolute; top: 0; left: 50%; width: 768px; padding: 40px 0; margin-left: -384px; -moz-box-sizing: border-box; box-sizing: border-box; z-index: 500; }
+.prod { display: none; position: absolute; top: 0; left: 50%; width: 768px; padding: 40px 0; margin-left: -384px; -moz-box-sizing: border-box; box-sizing: border-box; z-index: 600; }
 @media only screen and (max-width: 768px) { .prod { left: 0; right: -30px; margin-left: 0; padding: 20px; }
   .prod .prod__left, .prod .prod__right { float: none; }
   .prod .prod__left { margin-bottom: 40px; }
