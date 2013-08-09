@@ -9,6 +9,7 @@
 	<script src="js/jquery.min.js"></script>
 	<script src="js/jquery.scrollTo-1.4.3.1-min.js"></script>	
 	<script src="js/jquery.jscrollpane.min.js"></script>	
+	<script src="js/jquery-ui-1.10.3.custom.min.js"></script>	
 	<script src="js/common.js"></script>
 </head>
 
@@ -333,7 +334,10 @@
 						<div class="step__title">ВРЕМЯ ДОСТАВКИ</div>
 						<div class="step__title-sub">Укажите удобные вам дату и время для получения доставки</div>
 						<div class="step__date">
-							<button>Укажите дату<i></i></button>
+							<div class="datepicker js-datepicker">
+								<button class="datepicker__btn">Укажите дату<i></i></button>
+								<div class="datepicker__wrap"></div>
+							</div>
 						</div>
 						<div class="step__time">	
 							<fieldset class="step__time-col">

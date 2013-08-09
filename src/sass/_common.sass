@@ -903,3 +903,107 @@ table
 			border-color: #c9c9c9
 		span
 			color: #c9c9c9
+//datepicker
+.datepicker
+	position: relative
+.datepicker__wrap
+	display: none
+	position: absolute
+	top: 30px
+	left: 0
+	+no-sel	
+	z-index: 100
+	&:before, &:after
+		content: ""
+		position: absolute
+		top: -5px
+		left: 15px
+		width: 0px
+		height: 0px
+		border-style: solid
+	&:after
+		top: -8px
+		left: 40px
+		border-width: 0 8px 10px 8px
+		border-color: transparent transparent $bl transparent
+	&:before
+		top: -10px
+		left: 36px
+		border-width: 0 12px 14px 12px
+		border-color: transparent transparent #bfbfbf transparent
+	.ui-datepicker-inline
+		background: #fbfbfb
+		border: 1px solid #bfbfbf
+		box-shadow: 0 1px 3px rgba(0,0,0,.3) 
+	.ui-datepicker-header
+		position: relative
+		height: 45px
+		background: $bl
+		border-bottom: 1px solid #c9c9c9 
+	.ui-datepicker-next, .ui-datepicker-prev
+		position: absolute
+		top: 0
+		width: 45px
+		height: 45px
+		text-align: center
+		cursor: pointer
+		.ui-icon
+			display: inline-block
+			+ht
+		&:hover
+			background: $blh 
+		&.ui-state-disabled
+			display: none
+	.ui-datepicker-next
+		right: 0
+		border-left: 1px solid $blh 
+		.ui-icon
+			+s(dp-next)
+	.ui-datepicker-prev
+		left: 0
+		border-right: 1px solid $blh	
+		.ui-icon
+			+s(dp-prev)	
+	.ui-datepicker-title
+		height: 45px
+		padding: 0 50px
+		line-height: 45px
+		text-transform: uppercase
+		text-align: center
+		color: #FFF
+		font-weight: bold
+		font-size: 24px 
+		span
+			display: block
+		.ui-datepicker-year
+			display: none
+	.ui-datepicker-calendar
+		width: 100%
+		thead
+			background: #FFF
+			span
+				display: block
+				padding: 7px 0
+				font-weight: normal
+				text-transform: uppercase
+				font-size: 11px
+				color: #888 
+		tbody
+			td
+				border: 1px solid #c9c9c9
+			span, a
+				display: block
+				width: 42px
+				height: 42px
+				text-align: center
+				line-height: 42px
+				font-size: 16px
+				color: #a3a3a3 
+			.ui-state-disabled
+				span
+					color: #d2d2d2
+			.ui-datepicker-current-day
+				a
+					background: $gr
+					color: #FFF
+					font-weight: bold 

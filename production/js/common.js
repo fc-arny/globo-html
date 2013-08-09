@@ -1,6 +1,5 @@
 $(document).ready(function() {
 
-
 var body = $('body');
 var page = $('.page');
 var wrap = $('.wrap');
@@ -184,6 +183,35 @@ function submenu() {
     }
   );
 };
+
+//choice_date
+function choice_date() {
+  var el = $('.js-datepicker');
+  var btn = el.find('.datepicker__btn');
+  var wrap = el.find('.datepicker__wrap');
+  wrap.datepicker({
+    inline: true,
+    monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь',
+    'Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+    monthNamesShort: ['января','февраля','марта','апреля','мая','июня',
+    'июля','августа','сентября','октября','ноября','декабря'],
+    dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'],
+    dayNamesShort: ['вск','пнд','втр','срд','чтв','птн','сбт'],
+    dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
+    minDate: "0",
+    dateFormat: "dd M",
+    showOtherMonths: true,
+    firstDay: 1,
+    onSelect: function(date) {
+      $(this).prev().html(date + "<i></i>");
+      $(this).hide();
+    }
+  });
+  btn.click(function() {
+    $(this).next().show();
+  });
+};
+
 //menu - slider
 function slidermenu_responsive() {
   var el = $('.menu');
@@ -343,6 +371,7 @@ tabs();
 cart();
 m_slider();
 select();
+choice_date();
 
 //window resize
 $(window).resize(function() {
