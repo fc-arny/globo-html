@@ -626,10 +626,10 @@ table { border-spacing: 0; border-collapse: collapse; }
 .weight__btn-minus { border-radius: 2px 0 0 2px; }
 .weight__btn-minus i { background: url('../img/icons-s117aa5f477.png') 0 -3433px no-repeat; width: 16px; height: 16px; }
 
-.cart { position: absolute; top: 221px; right: 20px; width: 280px; margin-bottom: 20px; z-index: 600; }
+.cart { position: absolute; top: 221px; right: 20px; width: 280px; margin-bottom: 20px; }
 .cart.is-move { position: fixed; right: -280px; }
 .cart.is-open { position: absolute !important; right: 20px; z-index: 600; }
-.cart.is-fixed { position: fixed; top: 131px; z-index: 600; }
+.cart.is-fixed { position: fixed; top: 131px; }
 
 .cart__show-btn { display: none; position: absolute; top: 130px; left: -50px; width: 50px; height: 50px; border-radius: 5px 0 0 5px; background: #009bea; overflow: visible; }
 .cart__show-btn i { position: absolute; top: 10px; left: 10px; background: url('../img/icons-s117aa5f477.png') 0 -2904px no-repeat; width: 31px; height: 27px; }
