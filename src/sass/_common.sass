@@ -9,6 +9,7 @@ body
 	position: relative
 	min-width: 768px
 	background: url(../img/icons/bg.jpg) 
+	overflow-y: scroll
 	font-family: Arial, Tahoma, sans-serif
 	font-weight: normal 
 	font-size: 14px
@@ -40,8 +41,7 @@ table
 	border-spacing: 0
 	border-collapse: collapse
 // common styles
-.no-scroll
-	overflow-y: scroll
+.no-scroll	
 	.page
 		position: fixed
 		width: 100%
@@ -118,6 +118,8 @@ table
 .header__down
 	height: 71px
 	padding: 0 30px
+	+rt(768)
+		padding: 0 30px 0 0
 .logo
 	float: left
 	margin: 19px 0 0 23px
@@ -765,6 +767,9 @@ table
 	font-weight: bold
 	&:hover
 		background: $blh 
+	&:active
+		background: #0484c6
+		box-shadow: 0 0 5px rgba(0,0,0,.5) inset  
 	&.is-load
 		background: #65b1d7
 		img
@@ -783,6 +788,7 @@ table
 		.label__txt
 			border-color: #e07a5e
 		.label__error
+			display: block
 			position: absolute
 			top: 19px
 			right: -220px
@@ -816,6 +822,8 @@ table
 				left: -12px
 				border-width: 7px 12px 7px 0
 				border-color: transparent #f8f8f8 transparent transparent
+.label__error
+	display: none
 .label__txt, .label__area
 	width: 100%
 	border: 1px solid $gr
@@ -950,12 +958,13 @@ table
 //datepicker
 .datepicker
 	position: relative
+	+clr
 .datepicker__wrap
 	display: none
 	position: absolute
 	top: 30px
 	left: 0
-	+no-sel	
+	+no-sel		
 	z-index: 100
 	&:before, &:after
 		content: ""
@@ -1051,6 +1060,22 @@ table
 					background: $gr
 					color: #FFF
 					font-weight: bold 
+.datepicker__btn
+	position: relative
+	float: left
+	margin-right: 20px
+	padding-right: 23px
+	color: $bl 
+	background: none 
+	overflow: visible
+	i
+		position: absolute
+		top: 0
+		right: 0
+		+s(step-date)
+.datepicker__date
+	float: left
+	color: $bl 
 //popup
 .popup
 	position: absolute

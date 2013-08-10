@@ -279,6 +279,10 @@
 		background: $blh 
 		&:after
 			border-color: transparent transparent transparent $blh
+	&:active
+		background: #0484c6 
+		&:after
+			border-color: transparent transparent transparent #0484c6
 .catalog__sum
 	float: right
 	padding-right: 10px
@@ -347,7 +351,7 @@
 	right: 20px
 	width: 280px
 	margin-bottom: 20px
-	z-index: 100 
+	z-index: 600 
 	&.is-move
 		position: fixed
 		right: -280px
@@ -358,7 +362,7 @@
 	&.is-fixed
 		position: fixed
 		top: 131px
-		z-index: 300 
+		z-index: 600 
 .cart__show-btn
 	display: none
 	position: absolute
@@ -875,11 +879,15 @@
 	width: 100%
 	padding: 20px
 	border-bottom: 1px solid #e6e6e6 
+	cursor: pointer
 	+box
+	+no-sel
 	+clr
 .order__row-top-in
 	display: table-row
-.order__row-prod
+.order__row-items
+	display: none
+.order__row-prod	
 	padding: 10px 20px
 	background: #fafafa 
 	border-bottom: 1px dashed #e6e6e6	
@@ -1042,6 +1050,34 @@
 	background: #9b9b9b 
 	border-radius: 3px
 	text-align: center
+	&.step-first
+		.position__value-1
+			background: $gr
+			strong
+				color: $gr		
+	&.step-second
+		.position__value-1
+			background: $bl
+			strong
+				color: $bl 
+		.position__value-2
+			background: $gr
+			strong
+				color: $gr
+		.position__progress
+			width: 50%
+		.position__value-2
+	&.step-third
+		.position__value-1, .position__value-2
+			background: $bl
+			strong
+				color: $bl 
+		.position__value-3
+			background: $gr
+			strong
+				color: $gr	
+		.position__progress
+			width: 100%
 .position__progress
 	position: absolute
 	top: 0
@@ -1049,10 +1085,6 @@
 	height: 6px
 	background: $bl 
 	border-radius: 3px
-	&.is-half
-		width: 50%
-	&.is-full
-		width: 100%
 .position__value-1, .position__value-2, .position__value-3
 	position: relative
 	width: 20px
@@ -1073,14 +1105,6 @@
 	span
 		display: block
 		font-weight: normal
-	&.position__current
-		background: $gr
-		strong
-			color: $gr 
-	&.position__last
-		background: $bl
-		strong
-			color: $bl 
 .position__value-1 	
 	float: left
 .position__value-2
@@ -1172,17 +1196,6 @@
 		padding: 15px
 .step__date	
 	margin-bottom: 20px
-	.datepicker__btn
-		position: relative
-		padding-right: 23px
-		color: $bl 
-		background: none 
-		overflow: visible
-		i
-			position: absolute
-			top: 0
-			right: 0
-			+s(step-date)
 .step__time
 	margin-bottom: 10px
 	+clr
@@ -1200,6 +1213,7 @@
 	+clr
 	li
 		float: left
+		display: block
 		height: 62px
 		padding: 0 20px
 		margin: 0 10px 10px 0
@@ -1208,15 +1222,18 @@
 		border-radius: 2px 
 		line-height: 62px
 		font-size: 0
+		cursor: pointer
 		i, span
 			display: inline-block
 			vertical-align: middle
 		span
 			font-size: 16px
+			font-weight: normal
 			color: $bl
 		&.is-active
 			background: #fff
 			border-color: $gr 
+			cursor: default
 .ico-pay-sys-1
 	+s(pay-sys1)
 .ico-pay-sys-2
@@ -1227,7 +1244,7 @@
 	+s(pay-sys4)
 .ico-pay-sys-5
 	+s(pay-sys5)
-.step__card
+.step__payment-content
 	padding: 30px 70px 15px
 	border-top: 1px dashed #d7d7d7 
 .step__card-number
@@ -1247,6 +1264,6 @@
 			font-size: 16px
 	.label__txt
 		width: 70px
-
-
-
+//cabinet
+.cabinet
+	padding-top: 15px

@@ -9,6 +9,7 @@
 	<script src="js/jquery.min.js"></script>
 	<script src="js/jquery.scrollTo-1.4.3.1-min.js"></script>	
 	<script src="js/jquery.jscrollpane.min.js"></script>	
+	<script src="js/jquery-ui-1.10.3.custom.min.js"></script>	
 	<script src="js/common.js"></script>
 </head>
 
@@ -294,7 +295,7 @@
 						<div class="order__title">Цена за 100 г.</div>
 						<div class="order__title">Название</div>
 					</div>
-					<div class="order__row-top">
+					<div class="order__row-top js-accord-order is-open">
 						<div class="order__row-top-in">
 							<div class="order__shop">
 								<img src="img/shop2.png" alt="">
@@ -305,57 +306,59 @@
 							</div>
 						</div>						
 					</div>
-					<div class="order__row-prod">
-						<div class="order__pic">
-							<button></button>
-							<a href="#"><img src="img/pic4.jpg" alt=""></a>
-						</div>						
-						<div class="order__price">
-							<span>400<i class="rub">Р</i></span>
-						</div>
-						<div class="order__weight">
-							<div class="weight js-weight">
-								<button class="weight__btn-minus"><i></i></button>
-								<div class="weight__val">
-									<input data-factor="50" type="text" maxlength="4" value="500">
-									<span>гр</span>
-								</div>								
-								<button class="weight__btn-plus"><i></i></button>					
+					<div class="order__row-items" style="display: block">
+						<div class="order__row-prod">
+							<div class="order__pic">
+								<button></button>
+								<a href="#"><img src="img/pic4.jpg" alt=""></a>
+							</div>						
+							<div class="order__price">
+								<span>400<i class="rub">Р</i></span>
+							</div>
+							<div class="order__weight">
+								<div class="weight js-weight">
+									<button class="weight__btn-minus"><i></i></button>
+									<div class="weight__val">
+										<input data-factor="50" type="text" maxlength="4" value="500">
+										<span>гр</span>
+									</div>								
+									<button class="weight__btn-plus"><i></i></button>					
+								</div>
+							</div>
+							<div class="order__price">
+								<span>400<i class="rub">Р</i></span>
+							</div>
+							<div class="order__prod">
+								<a href="#">Ролл с крабовыми палочками Калифорния</a>
+							</div>
+						</div>	
+						<div class="order__row-prod">
+							<div class="order__pic">
+								<button></button>
+								<a href="#"><img src="img/pic4.jpg" alt=""></a>
+							</div>						
+							<div class="order__price">
+								<span>400<i class="rub">Р</i></span>
+							</div>
+							<div class="order__weight">
+								<div class="weight js-weight">
+									<button class="weight__btn-minus"><i></i></button>
+									<div class="weight__val">
+										<input data-factor="50" type="text" maxlength="4" value="500">
+										<span>гр</span>
+									</div>								
+									<button class="weight__btn-plus"><i></i></button>					
+								</div>
+							</div>
+							<div class="order__price">
+								<span>400<i class="rub">Р</i></span>
+							</div>
+							<div class="order__prod">
+								<a href="#">Ролл с крабовыми палочками Калифорния с крабовыми палочками очень вкусный</a>
 							</div>
 						</div>
-						<div class="order__price">
-							<span>400<i class="rub">Р</i></span>
-						</div>
-						<div class="order__prod">
-							<a href="#">Ролл с крабовыми палочками Калифорния</a>
-						</div>
-					</div>	
-					<div class="order__row-prod">
-						<div class="order__pic">
-							<button></button>
-							<a href="#"><img src="img/pic4.jpg" alt=""></a>
-						</div>						
-						<div class="order__price">
-							<span>400<i class="rub">Р</i></span>
-						</div>
-						<div class="order__weight">
-							<div class="weight js-weight">
-								<button class="weight__btn-minus"><i></i></button>
-								<div class="weight__val">
-									<input data-factor="50" type="text" maxlength="4" value="500">
-									<span>гр</span>
-								</div>								
-								<button class="weight__btn-plus"><i></i></button>					
-							</div>
-						</div>
-						<div class="order__price">
-							<span>400<i class="rub">Р</i></span>
-						</div>
-						<div class="order__prod">
-							<a href="#">Ролл с крабовыми палочками Калифорния с крабовыми палочками очень вкусный</a>
-						</div>
-					</div>
-					<div class="order__row-top">
+					</div>					
+					<div class="order__row-top js-accord-order">
 						<div class="order__row-top-in">
 							<div class="order__shop">
 								<img src="img/shop3.png" alt="">
@@ -366,31 +369,33 @@
 							</div>
 						</div>						
 					</div>
-					<div class="order__row-prod">
-						<div class="order__pic">
-							<button></button>
-							<a href="#"><img src="img/pic4.jpg" alt=""></a>
-						</div>						
-						<div class="order__price">
-							<span>400<i class="rub">Р</i></span>
-						</div>
-						<div class="order__weight">
-							<div class="weight js-weight">
-								<button class="weight__btn-minus"><i></i></button>
-								<div class="weight__val">
-									<input data-factor="50" type="text" maxlength="4" value="500">
-									<span>гр</span>
-								</div>								
-								<button class="weight__btn-plus"><i></i></button>					
+					<div class="order__row-items">
+						<div class="order__row-prod">
+							<div class="order__pic">
+								<button></button>
+								<a href="#"><img src="img/pic4.jpg" alt=""></a>
+							</div>						
+							<div class="order__price">
+								<span>400<i class="rub">Р</i></span>
+							</div>
+							<div class="order__weight">
+								<div class="weight js-weight">
+									<button class="weight__btn-minus"><i></i></button>
+									<div class="weight__val">
+										<input data-factor="50" type="text" maxlength="4" value="500">
+										<span>гр</span>
+									</div>								
+									<button class="weight__btn-plus"><i></i></button>					
+								</div>
+							</div>
+							<div class="order__price">
+								<span>400<i class="rub">Р</i></span>
+							</div>
+							<div class="order__prod">
+								<a href="#">Ролл с крабовыми палочками Калифорния</a>
 							</div>
 						</div>
-						<div class="order__price">
-							<span>400<i class="rub">Р</i></span>
-						</div>
-						<div class="order__prod">
-							<a href="#">Ролл с крабовыми палочками Калифорния</a>
-						</div>
-					</div>
+					</div>					
 					<div class="order__delivery">
 						<div class="order__price">
 							<span>400<i class="rub">Р</i></span>
