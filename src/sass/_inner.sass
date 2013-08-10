@@ -343,15 +343,22 @@
 //cart
 .cart
 	position: absolute
-	top: 0
+	top: 221px
 	right: 20px
 	width: 280px
 	margin-bottom: 20px
 	z-index: 100 
 	&.is-move
+		position: fixed
 		right: -280px
 	&.is-open
+		position: absolute !important
+		right: 20px
 		z-index: 600 
+	&.is-fixed
+		position: fixed
+		top: 131px
+		z-index: 300 
 .cart__show-btn
 	display: none
 	position: absolute
@@ -478,9 +485,12 @@
 	top: 0
 	right: 315px
 	width: 760px
+	min-width: 380px
 	border: 1px solid #e7e7e7
 	border-radius: 4px
-	background: #fff  
+	background: #fff 
+	+rt(1120)
+		width: 380px
 .cart__arr
 	position: absolute
 	top: 50px

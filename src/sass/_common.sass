@@ -6,6 +6,7 @@
 html, body 
 	height: 100%
 body	
+	position: relative
 	min-width: 768px
 	background: url(../img/icons/bg.jpg) 
 	font-family: Arial, Tahoma, sans-serif
@@ -57,8 +58,8 @@ table
 .wrap_main
 	padding: 0
 	overflow: visible
-.wrap_fixed	
-	.header, .cart, .search
+.is-fixed	
+	.header, .search
 		position: fixed
 	.header
 		top: -90px
@@ -69,7 +70,7 @@ table
 		display: none
 	.header__down
 		padding-top: 108px
-	.cart, .search
+	.search
 		top: 131px
 		z-index: 300 
 	.search
@@ -1053,7 +1054,7 @@ table
 //popup
 .popup
 	position: absolute
-	top: 235px 
+	top: 100px 
 	left: 50%
 	width: 300px
 	margin-left: -150px
@@ -1065,6 +1066,13 @@ table
 	margin-left: -380px	
 	.popup__in
 		padding: 60px 0
+	+rt(1120)
+		width: 600px 
+		margin-left: -300px
+		.popup__in
+			padding: 30px 0
+		.popup__col
+			padding: 0 30px
 .popup__in
 	padding: 15px 30px 20px
 .popup__top

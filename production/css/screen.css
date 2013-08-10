@@ -3,7 +3,7 @@
 
 html, body { height: 100%; }
 
-body { min-width: 768px; background: url(../img/icons/bg.jpg); font-family: Arial, Tahoma, sans-serif; font-weight: normal; font-size: 14px; color: #444444; line-height: 1.2; }
+body { position: relative; min-width: 768px; background: url(../img/icons/bg.jpg); font-family: Arial, Tahoma, sans-serif; font-weight: normal; font-size: 14px; color: #444444; line-height: 1.2; }
 
 a img, fieldset { border: none; }
 
@@ -29,14 +29,14 @@ table { border-spacing: 0; border-collapse: collapse; }
 
 .wrap_main { padding: 0; overflow: visible; }
 
-.wrap_fixed .header, .wrap_fixed .cart, .wrap_fixed .search { position: fixed; }
-.wrap_fixed .header { top: -90px; left: 20px; right: 20px; z-index: 400; }
-.wrap_fixed .header__top { display: none; }
-.wrap_fixed .header__down { padding-top: 108px; }
-.wrap_fixed .cart, .wrap_fixed .search { top: 131px; z-index: 300; }
-.wrap_fixed .search { left: 20px; }
-.wrap_fixed .layout { padding-top: 221px; }
-.wrap_fixed .left { padding-top: 52px; }
+.is-fixed .header, .is-fixed .search { position: fixed; }
+.is-fixed .header { top: -90px; left: 20px; right: 20px; z-index: 400; }
+.is-fixed .header__top { display: none; }
+.is-fixed .header__down { padding-top: 108px; }
+.is-fixed .search { top: 131px; z-index: 300; }
+.is-fixed .search { left: 20px; }
+.is-fixed .layout { padding-top: 221px; }
+.is-fixed .left { padding-top: 52px; }
 
 .push { height: 212px; clear: both; }
 
@@ -370,10 +370,13 @@ table { border-spacing: 0; border-collapse: collapse; }
 .datepicker__wrap .ui-datepicker-calendar tbody .ui-state-disabled span { color: #d2d2d2; }
 .datepicker__wrap .ui-datepicker-calendar tbody .ui-datepicker-current-day a { background: #7dc444; color: white; font-weight: bold; }
 
-.popup { position: absolute; top: 235px; left: 50%; width: 300px; margin-left: -150px; background: white; border: 1px solid #e7e7e7; z-index: 600; }
+.popup { position: absolute; top: 100px; left: 50%; width: 300px; margin-left: -150px; background: white; border: 1px solid #e7e7e7; z-index: 600; }
 
 .popup_welcome { width: 760px; margin-left: -380px; }
 .popup_welcome .popup__in { padding: 60px 0; }
+@media only screen and (max-width: 1120px) { .popup_welcome { width: 600px; margin-left: -300px; }
+  .popup_welcome .popup__in { padding: 30px 0; }
+  .popup_welcome .popup__col { padding: 0 30px; } }
 
 .popup__in { padding: 15px 30px 20px; }
 
@@ -611,9 +614,10 @@ table { border-spacing: 0; border-collapse: collapse; }
 .weight__btn-minus { border-radius: 2px 0 0 2px; }
 .weight__btn-minus i { background: url('../img/icons-s117aa5f477.png') 0 -3433px no-repeat; width: 16px; height: 16px; }
 
-.cart { position: absolute; top: 0; right: 20px; width: 280px; margin-bottom: 20px; z-index: 100; }
-.cart.is-move { right: -280px; }
-.cart.is-open { z-index: 600; }
+.cart { position: absolute; top: 221px; right: 20px; width: 280px; margin-bottom: 20px; z-index: 100; }
+.cart.is-move { position: fixed; right: -280px; }
+.cart.is-open { position: absolute !important; right: 20px; z-index: 600; }
+.cart.is-fixed { position: fixed; top: 131px; z-index: 300; }
 
 .cart__show-btn { display: none; position: absolute; top: 130px; left: -50px; width: 50px; height: 50px; border-radius: 5px 0 0 5px; background: #009bea; overflow: visible; }
 .cart__show-btn i { position: absolute; top: 10px; left: 10px; background: url('../img/icons-s117aa5f477.png') 0 -2904px no-repeat; width: 31px; height: 27px; }
@@ -655,7 +659,8 @@ table { border-spacing: 0; border-collapse: collapse; }
 .cart__go:hover { background: #2db8fe; }
 .cart__go:hover:after { background: url(../img/icons/wave-bl-bottom-h.png) repeat-x; }
 
-.cart__popup { display: none; position: absolute; top: 0; right: 315px; width: 760px; border: 1px solid #e7e7e7; border-radius: 4px; background: white; }
+.cart__popup { display: none; position: absolute; top: 0; right: 315px; width: 760px; min-width: 380px; border: 1px solid #e7e7e7; border-radius: 4px; background: white; }
+@media only screen and (max-width: 1120px) { .cart__popup { width: 380px; } }
 
 .cart__arr { position: absolute; top: 50px; right: -20px; width: 0px; height: 0px; border-style: solid; border-width: 15px 0 15px 20px; border-color: transparent transparent transparent #fafafa; }
 
