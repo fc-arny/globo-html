@@ -85,5 +85,8 @@ $icons: sprite-map("icons/*.png", $spacing: 10px)
 	@else if $media == 768
 		@media only screen and (max-width: 768px)
 			@content
+	@else if $media == more768
+		@media only screen and (min-width: 768px)
+			@content
 
 

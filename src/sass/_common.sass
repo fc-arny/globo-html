@@ -1,7 +1,8 @@
 @import "base"
 * 
 	margin: 0
-	padding: 0 
+	padding: 0
+	//box-shadow: 0 0 5px red
 	//-webkit-text-size-adjust: none
 html, body 
 	height: 100%
@@ -55,30 +56,31 @@ table
 	margin-bottom: -212px
 	padding: 0 20px
 	overflow: hidden
+	&.is-fixed	
+		+rt(more768)
+			.header, .search
+				position: fixed
+			.header
+				top: -90px
+				left: 20px
+				right: 20px		
+				z-index: 400 
+			.header__top
+				display: none
+			.header__down
+				padding-top: 108px
+			.search
+				top: 131px
+				z-index: 300 
+			.search
+				left: 20px
+			.layout
+				padding-top: 221px
+			.left
+				padding-top: 52px
 .wrap_main
 	padding: 0
-	overflow: visible
-.is-fixed	
-	.header, .search
-		position: fixed
-	.header
-		top: -90px
-		left: 20px
-		right: 20px		
-		z-index: 400 
-	.header__top
-		display: none
-	.header__down
-		padding-top: 108px
-	.search
-		top: 131px
-		z-index: 300 
-	.search
-		left: 20px
-	.layout
-		padding-top: 221px
-	.left
-		padding-top: 52px
+	overflow: visible	
 .push
 	height: 212px
 	clear: both
@@ -774,6 +776,14 @@ table
 		background: #65b1d7
 		img
 			margin-left: 10px
+.btn-dashed
+	background: none 
+	border-bottom: 1px dashed $bl
+	font-size: 12px
+	color: $bl
+	&:hover
+		border-color: $blh 
+		color: $blh
 //label
 .label
 	display: block
@@ -822,6 +832,10 @@ table
 				left: -12px
 				border-width: 7px 12px 7px 0
 				border-color: transparent #f8f8f8 transparent transparent
+.label_no-title
+	padding-top: 25px 
+.label_mod
+	margin-bottom: 10px
 .label__error
 	display: none
 .label__txt, .label__area
@@ -861,7 +875,7 @@ table
 	color: #989898 
 .label__select
 	position: relative
-	height: 30px
+	height: 28px
 	border: 1px solid $gr
 	background: #fbfbfb 
 	border-radius: 2px
@@ -869,7 +883,7 @@ table
 		position: relative
 		display: block
 		padding: 0 44px 0 8px
-		line-height: 30px
+		line-height: 28px
 		font-size: 16px
 		color: #afafaf 	
 		overflow: hidden
@@ -897,11 +911,12 @@ table
 	ul
 		display: none
 		position: absolute
-		top: 30px
+		top: 28px
 		left: -1px
 		right: -1px
 		border: 1px solid $gr
 		background: #fbfbfb 
+		z-index: 100 
 		li
 			padding: 3px 8px
 			font-size: 16px

@@ -936,6 +936,8 @@
 		+s(close)
 		&:hover
 			+s(close-h)
+		&.order__favorite
+			+s(star-a)
 	img
 		border: 1px solid #e5e5e5 
 .order__weight
@@ -1264,4 +1266,66 @@
 		width: 70px
 //cabinet
 .cabinet
-	padding-top: 15px
+	margin-top: 15px
+	border: 1px solid #e7e7e7
+	border-radius: 2px
+	+clr
+.cabinet__nav
+	float: left
+	padding: 25px 20px
+	margin-right: -180px
+	width: 140px
+	a
+		display: block
+		margin-bottom: 8px
+		font-size: 16px
+		color: $bl 
+		&:hover
+			color: $blh 
+		&.is-active
+			color: #666
+			cursor: default 
+.cabinet__in
+	border-left: 180px
+	border-left: 180px solid #fcfcfc
+	box-shadow: 1px 0 0 #e7e7e7 inset
+	background: #fff
+.cabinet__personal, .cabinet__address
+	padding: 25px
+.cabinet__address
+	.cabinet__col
+		&:first-child, &:last-child
+			width: 10%
+.cabinet__row
+	font-size: 0
+.cabinet__row_mod
+	margin-bottom: 20px
+.cabinet__col, .cabinet__phone	
+	display: inline-block 
+	vertical-align: top
+.cabinet__col
+	width: 25%
+	margin-right: 20px
+.cabinet__col_btn	
+	padding-top: 35px
+.cabinet__phone	
+	span
+		display: block
+		margin-bottom: 6px
+		font-size: 16px
+		color: #888888
+.cabinet__phone-in
+	padding-top: 6px
+	strong
+		margin-right: 10px
+		font-size: 16px
+		color: #888
+.cabinet__btn
+	padding: 20px 70px
+	border-top: 1px dashed #e7e7e7 
+	text-align: right
+	.btn
+		width: 240px
+	
+
+		

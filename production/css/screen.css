@@ -25,17 +25,16 @@ table { border-spacing: 0; border-collapse: collapse; }
 .page { min-height: 100%; height: 100%; }
 
 .wrap { min-height: 100%; height: auto !important; height: 100%; margin-bottom: -212px; padding: 0 20px; overflow: hidden; }
+@media only screen and (min-width: 768px) { .wrap.is-fixed .header, .wrap.is-fixed .search { position: fixed; }
+  .wrap.is-fixed .header { top: -90px; left: 20px; right: 20px; z-index: 400; }
+  .wrap.is-fixed .header__top { display: none; }
+  .wrap.is-fixed .header__down { padding-top: 108px; }
+  .wrap.is-fixed .search { top: 131px; z-index: 300; }
+  .wrap.is-fixed .search { left: 20px; }
+  .wrap.is-fixed .layout { padding-top: 221px; }
+  .wrap.is-fixed .left { padding-top: 52px; } }
 
 .wrap_main { padding: 0; overflow: visible; }
-
-.is-fixed .header, .is-fixed .search { position: fixed; }
-.is-fixed .header { top: -90px; left: 20px; right: 20px; z-index: 400; }
-.is-fixed .header__top { display: none; }
-.is-fixed .header__down { padding-top: 108px; }
-.is-fixed .search { top: 131px; z-index: 300; }
-.is-fixed .search { left: 20px; }
-.is-fixed .layout { padding-top: 221px; }
-.is-fixed .left { padding-top: 52px; }
 
 .push { height: 212px; clear: both; }
 
@@ -295,6 +294,9 @@ table { border-spacing: 0; border-collapse: collapse; }
 .btn.is-load { background: #65b1d7; }
 .btn.is-load img { margin-left: 10px; }
 
+.btn-dashed { background: none; border-bottom: 1px dashed #009bea; font-size: 12px; color: #009bea; }
+.btn-dashed:hover { border-color: #2db8fe; color: #2db8fe; }
+
 .label { display: block; margin-bottom: 20px; }
 .label.is-disabled .label__title { color: #c9c9c9; }
 .label.is-disabled .label__txt { border-color: #c9c9c9; }
@@ -305,6 +307,10 @@ table { border-spacing: 0; border-collapse: collapse; }
 .label.is-error .label__error:before, .label.is-error .label__error:after { content: ""; position: absolute; width: 0px; height: 0px; border-style: solid; }
 .label.is-error .label__error:before { top: 12px; left: -14px; border-width: 8px 14px 8px 0; border-color: transparent #e07a5e transparent transparent; }
 .label.is-error .label__error:after { top: 13px; left: -12px; border-width: 7px 12px 7px 0; border-color: transparent #f8f8f8 transparent transparent; }
+
+.label_no-title { padding-top: 25px; }
+
+.label_mod { margin-bottom: 10px; }
 
 .label__error { display: none; }
 
@@ -322,11 +328,11 @@ table { border-spacing: 0; border-collapse: collapse; }
 
 .label__help { display: block; padding-top: 7px; font-size: 12px; color: #989898; }
 
-.label__select { position: relative; height: 30px; border: 1px solid #7dc444; background: #fbfbfb; border-radius: 2px; }
-.label__select span { position: relative; display: block; padding: 0 44px 0 8px; line-height: 30px; font-size: 16px; color: #afafaf; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; cursor: pointer; -moz-user-select: none; -webkit-user-select: none; user-select: none; }
+.label__select { position: relative; height: 28px; border: 1px solid #7dc444; background: #fbfbfb; border-radius: 2px; }
+.label__select span { position: relative; display: block; padding: 0 44px 0 8px; line-height: 28px; font-size: 16px; color: #afafaf; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; cursor: pointer; -moz-user-select: none; -webkit-user-select: none; user-select: none; }
 .label__select span i { position: absolute; top: 0; right: 0; width: 34px; height: 30px; background: #7dc444; }
 .label__select span i:after { content: ""; position: absolute; top: 12px; left: 13px; width: 0px; height: 0px; border-style: solid; border-width: 6px 5px 0 5px; border-color: white transparent transparent transparent; }
-.label__select ul { display: none; position: absolute; top: 30px; left: -1px; right: -1px; border: 1px solid #7dc444; background: #fbfbfb; }
+.label__select ul { display: none; position: absolute; top: 28px; left: -1px; right: -1px; border: 1px solid #7dc444; background: #fbfbfb; z-index: 100; }
 .label__select ul li { padding: 3px 8px; font-size: 16px; color: #afafaf; cursor: pointer; }
 .label__select ul li:hover { background: #7dc444; color: white; }
 .label__select.is-open ul { display: block; }
@@ -853,6 +859,7 @@ table { border-spacing: 0; border-collapse: collapse; }
 .order__pic button, .order__pic img { display: inline-block; vertical-align: middle; }
 .order__pic button { margin-right: 20px; background: url('../img/icons-s117aa5f477.png') 0 -2368px no-repeat; width: 14px; height: 14px; }
 .order__pic button:hover { background: url('../img/icons-s117aa5f477.png') 0 -2216px no-repeat; width: 14px; height: 14px; }
+.order__pic button.order__favorite { background: url('../img/icons-s117aa5f477.png') 0 -1843px no-repeat; width: 23px; height: 22px; }
 .order__pic img { border: 1px solid #e5e5e5; }
 
 .order__weight { float: right; }
@@ -1013,4 +1020,35 @@ table { border-spacing: 0; border-collapse: collapse; }
 .step__card-termin .label__in span { margin: 5px 8px 0; font-size: 16px; }
 .step__card-termin .label__txt { width: 70px; }
 
-.cabinet { padding-top: 15px; }
+.cabinet { margin-top: 15px; border: 1px solid #e7e7e7; border-radius: 2px; }
+.cabinet:before, .cabinet:after { content: ""; display: table; }
+.cabinet:after { clear: both; }
+
+.cabinet__nav { float: left; padding: 25px 20px; margin-right: -180px; width: 140px; }
+.cabinet__nav a { display: block; margin-bottom: 8px; font-size: 16px; color: #009bea; }
+.cabinet__nav a:hover { color: #2db8fe; }
+.cabinet__nav a.is-active { color: #666666; cursor: default; }
+
+.cabinet__in { border-left: 180px; border-left: 180px solid #fcfcfc; box-shadow: 1px 0 0 #e7e7e7 inset; background: white; }
+
+.cabinet__personal, .cabinet__address { padding: 25px; }
+
+.cabinet__address .cabinet__col:first-child, .cabinet__address .cabinet__col:last-child { width: 10%; }
+
+.cabinet__row { font-size: 0; }
+
+.cabinet__row_mod { margin-bottom: 20px; }
+
+.cabinet__col, .cabinet__phone { display: inline-block; vertical-align: top; }
+
+.cabinet__col { width: 25%; margin-right: 20px; }
+
+.cabinet__col_btn { padding-top: 35px; }
+
+.cabinet__phone span { display: block; margin-bottom: 6px; font-size: 16px; color: #888888; }
+
+.cabinet__phone-in { padding-top: 6px; }
+.cabinet__phone-in strong { margin-right: 10px; font-size: 16px; color: #888888; }
+
+.cabinet__btn { padding: 20px 70px; border-top: 1px dashed #e7e7e7; text-align: right; }
+.cabinet__btn .btn { width: 240px; }
