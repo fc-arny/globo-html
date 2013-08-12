@@ -784,6 +784,32 @@ table
 	&:hover
 		border-color: $blh 
 		color: $blh
+.btn-arr
+	position: relative
+	padding: 0 40px
+	height: 30px
+	background: $bl
+	text-transform: uppercase
+	font-weight: bold
+	color: #FFF 
+	&:after
+		content: ""
+		position: absolute
+		top: 0
+		right: -8px
+		width: 0px
+		height: 0px
+		border-style: solid
+		border-width: 15px 0 15px 8px
+		border-color: transparent transparent transparent $bl
+	&:hover
+		background: $blh 
+		&:after
+			border-color: transparent transparent transparent $blh
+	&:active
+		background: #0484c6 
+		&:after
+			border-color: transparent transparent transparent #0484c6
 //label
 .label
 	display: block

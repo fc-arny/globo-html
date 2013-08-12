@@ -857,7 +857,7 @@
 	padding: 10px 20px
 	border-bottom: 1px dashed #e1e1e1
 	color: #888 
-	+clr
+	overflow: hidden
 .order__title
 	float: right
 	width: 160px
@@ -1266,7 +1266,7 @@
 		width: 70px
 //cabinet
 .cabinet
-	margin-top: 15px
+	margin: 15px 0 20px
 	border: 1px solid #e7e7e7
 	border-radius: 2px
 	+clr
@@ -1275,9 +1275,10 @@
 	padding: 25px 20px
 	margin-right: -180px
 	width: 140px
-	a
+	button
 		display: block
 		margin-bottom: 8px
+		background: none 
 		font-size: 16px
 		color: $bl 
 		&:hover
@@ -1288,13 +1289,16 @@
 .cabinet__in
 	border-left: 180px
 	border-left: 180px solid #fcfcfc
-	box-shadow: 1px 0 0 #e7e7e7 inset
 	background: #fff
+.cabinet__content
+	border-left: 1px solid #e7e7e7 
 .cabinet__personal, .cabinet__address
 	padding: 25px
 .cabinet__address
 	.cabinet__col
-		&:first-child, &:last-child
+		&:first-child
+			width: 15%
+		&:last-child
 			width: 10%
 .cabinet__row
 	font-size: 0
@@ -1304,10 +1308,16 @@
 	display: inline-block 
 	vertical-align: top
 .cabinet__col
-	width: 25%
-	margin-right: 20px
+	width: 28%
+	margin-right: 2%
 .cabinet__col_btn	
 	padding-top: 35px
+.cabinet__order
+	.order
+		padding: 0
+	.order__table 	
+		margin: 0
+		border: 0
 .cabinet__phone	
 	span
 		display: block
@@ -1326,6 +1336,92 @@
 	text-align: right
 	.btn
 		width: 240px
-	
-
-		
+//purchases
+.purchases__row
+	padding: 40px 20px
+	border-bottom: 1px dashed #e7e7e7
+	overflow: hidden
+	cursor: pointer
+.purchases__head
+	padding: 5px 20px	
+	border-bottom: 1px dashed #e7e7e7
+	overflow: hidden
+	.purchases__cell		
+		font-size: 14px
+		color: #888888
+.purchases__row-down	
+	display: none
+	padding: 0 20px
+	border-bottom: 1px dashed #e7e7e7
+	overflow: hidden
+	background: #fafafa 
+	.purchases__cell
+		width: 100%
+		padding: 20px 0	0 
+.purchases__cell
+	float: left
+	width: 250px
+	+box
+	font-size: 16px
+	color: #666 
+	.btn-dashed
+		font-size: 16px
+	.rub
+		&:before, &:after
+			background: #666666
+			height: 1px
+		&:before
+			top: 9px
+		&:after
+			top: 11px
+			width: 9px
+	+rt(1600)
+		width: 200px
+	+rt(1380)
+		width: 125px
+.purchases__prods
+	float: left
+	width: 580px
+	margin-right: 50px
+	padding-bottom: 20px
+	li
+		display: block
+		margin-bottom: 5px
+		+clr
+		&:last-child
+			padding-top: 5px
+			border-top: 1px dashed #e7e7e7 
+	span
+		float: right
+		min-width: 80px 
+	a, strong
+		padding-right: 40px
+		overflow: hidden
+	a
+		color: $bl
+		&:hover
+			color: $blh 
+	strong
+		float: right
+		font-weight: normal
+	+rt(1600)
+		width: 480px
+	+rt(1380)
+		width: 330px
+.purchases__delivery
+	float: left
+	padding-bottom: 20px
+	ul
+		li
+			margin-bottom: 10px
+		span, strong
+			display: block
+		span
+			margin-bottom: 5px
+.purchases__back
+	padding: 15px
+	a
+		font-size: 12px
+		color: $bl
+		&:hover
+			color: $blh 

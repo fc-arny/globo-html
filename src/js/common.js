@@ -159,20 +159,36 @@ page_no_fixed.click(function() {
 //order accordeon
 var order_accord = $('.js-accord-order');
 order_accord.click(function() {
-  if ($(this).hasClass('is-open')) {
-    $(this).removeClass('is-open');
-    $(this).next().slideUp();
-  }
-  else {
-    $(this).addClass('is-open');
-    $(this).next().slideDown();
-  }
+   $(this).next().slideToggle();
+});
+
+//purchases
+var purchases = $('.js-purchases');
+purchases.click(function() {
+  $(this).next().slideToggle();
 });
 
 //scroll init
 function scroll_init() {
   scroll_el.jScrollPane( {
     hideFocus: true
+  });
+};
+
+//cabinet
+function cabinet() {
+  var el = $('.cabinet__nav');
+  var item = $('.cabinet__content');
+  item.hide();
+  item.first().show();
+  el.find('button').click(function() {
+    if (!$(this).hasClass('is-active')) {
+      item.slideUp();
+      el.find('button').removeClass('is-active');
+      var val = $(this).attr('data-tab');
+      $(this).addClass('is-active');
+      $('.' + val).slideDown();
+    };
   });
 };
 
@@ -192,7 +208,7 @@ function steps() {
     current.removeClass('step-third');
     current.addClass(step); 
   });
-}
+};
 
 //payment
 function payment() {
@@ -447,6 +463,7 @@ select();
 choice_date();
 payment();
 steps();
+cabinet();
 
 //window resize
 $(window).resize(function() {
