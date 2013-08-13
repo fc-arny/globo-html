@@ -281,287 +281,239 @@
 		<!-- END .header -->
 		<!-- BEGIN .layout -->
 		<div class="layout layout_mod">
-			<aside class="left">
-				<!-- BEGIN .search -->
-				<div class="search">
-					<input type="text" placeholder="Поиск">
-					<button><i></i></button>
-				</div>
-				<!-- END .search -->
-				<!-- BEGIN .filter -->
-				<div class="filter">
-					<div class="filter__item">
-						<div class="filter__title">
-							<span>КАТЕГОРИИ<i class="filter__ico-1"></i></span>
-						</div>
-						<div class="filter__list">
-							<label class="checkbox">
-								<input type="checkbox" checked>
-								<i></i>
-								<span>Суши</span>
-							</label>
-							<label class="checkbox">
-								<input type="checkbox">
-								<i></i>
-								<span>Сашими</span>
-							</label>
-							<label class="checkbox">
-								<input type="checkbox">
-								<i></i>
-								<span>Роллы</span>
-							</label>
-							<label class="checkbox">
-								<input type="checkbox" checked>
-								<i></i>
-								<span>Японские супы</span>
-							</label>
-							<label class="checkbox">
-								<input type="checkbox">
-								<i></i>
-								<span>Японские салаты</span>
-							</label>
-							<label class="checkbox">
-								<input type="checkbox">
-								<i></i>
-								<span>Напитки</span>
-							</label>
-						</div>
-					</div>
-				</div>
-				<!-- END .filter -->
-			</aside>			
-			<div class="center">
-				<!-- BEGIN .breadcrumbs -->
-				<div class="bc">
-					<div class="bc__links">
-						<a href="#">Кулинария<i class="bc__ico-1"></i></a>		
-						<span>Блюда японской кухни</span>
-					</div>
-					<div class="bc__filter">
-						<span>Сортировать по:</span>
-						<button class="js-sort">Самое популярное</button>
+			<div class="title">ПОИСК</div>
+			<!-- BEGIN .prosearch -->
+			<div class="prosearch">				
+				<div class="prosearch__in">					
+					<div class="prosearch__shop js-shop-search">
+						<span>
+							<img src="img/shop2-l.png" alt="">
+						</span>
 						<ul>
-							<li>По цене</li>
-							<li>По рейтингу</li>
-							<li>По производителю</li>
-							<li>По рейтингу покупателей</li>
+							<li><img src="img/shop1-l.png" alt=""></li>
+							<li><img src="img/shop2-l.png" alt=""></li>
+							<li><img src="img/shop3-l.png" alt=""></li>
+							<li><img src="img/shop4-l.png" alt=""></li>
 						</ul>
 					</div>
-					<div class="bc__push"></div>
+					<div class="prosearch__txt">
+						<input type="text" placeholder="Молоко">
+					</div>
 				</div>
-				<!-- END .breadcrumbs -->
-				<!-- BEGIN .catalog -->
-				<section class="catalog">
-					<div class="catalog__list">
-						<div class="catalog__item">
-							<div class="catalog__item-in">
-								<div class="catalog__pic js-prod-open">
-									<img src="img/pic1.jpg" alt="">
-									<i class="like is-active"></i>
-								</div>
-								<div class="catalog__title js-prod-open">Плов с мясом баранины рецепту Глобус Гурмэ</div>
-								<div class="catalog__price">
-									<span>Цена (за 50 гр):</span>
-									<strong>75<sup>00</sup><i class="rub">P</i></strong>
-								</div>
-								<div class="catalog__down">
-									<div class="catalog__down-in">									
-										<div class="catalog__down-item">
-											<div class="weight js-weight">
-												<button class="weight__btn-minus"><i></i></button>
-												<div class="weight__val">
-													<input data-factor="50" type="text" maxlength="4" value="500">
-													<span>гр</span>
-												</div>								
-												<button class="weight__btn-plus"><i></i></button>					
-											</div>
-											<div class="catalog__sum">
-												<strong>750<sup>00</sup><i class="rub">P</i></strong>
-												<button class="js-del-prod">Удалить</button>
-											</div>
-										</div>
-										<div class="catalog__down-item">
-											<button class="catalog__buy-btn js-add-prod">В корзину</button>
-										</div>									
-									</div>								
-								</div>
+				<button class="btn">ИСКАТЬ</button>
+			</div>
+			<!-- END .prosearch -->
+			<!-- BEGIN .catalog -->
+			<section class="catalog">
+				<div class="catalog__list">
+					<div class="catalog__item">
+						<div class="catalog__item-in">
+							<div class="catalog__pic js-prod-open">
+								<img src="img/pic1.jpg" alt="">
+								<i class="like is-active"></i>
 							</div>
-						</div>
-						<div class="catalog__item">
-							<div class="catalog__item-in">
-								<div class="catalog__pic js-prod-open">
-									<img src="img/pic1.jpg" alt="">
-									<i class="like"></i>
-								</div>
-								<div class="catalog__title js-prod-open">Плов с мясом баранины рецепту Глобус Гурмэ</div>
-								<div class="catalog__price">
-									<span>Цена (за 50 гр):</span>
-									<strong>75<sup>00</sup><i class="rub">P</i></strong>
-								</div>
-								<div class="catalog__down">
-									<div class="catalog__down-in">									
-										<div class="catalog__down-item">
-											<div class="weight js-weight">
-												<button class="weight__btn-minus"><i></i></button>
-												<div class="weight__val">
-													<input data-factor="50" type="text" maxlength="4" value="500">
-													<span>гр</span>
-												</div>								
-												<button class="weight__btn-plus"><i></i></button>					
-											</div>
-											<div class="catalog__sum">
-												<strong>750<sup>00</sup><i class="rub">P</i></strong>
-												<button class="js-del-prod">Удалить</button>
-											</div>
-										</div>
-										<div class="catalog__down-item">
-											<button class="catalog__buy-btn js-add-prod">В корзину</button>
-										</div>									
-									</div>								
-								</div>
+							<div class="catalog__title js-prod-open">Плов с мясом баранины рецепту Глобус Гурмэ</div>
+							<div class="catalog__price">
+								<span>Цена (за 50 гр):</span>
+								<strong>75<sup>00</sup><i class="rub">P</i></strong>
 							</div>
-						</div>
-						<div class="catalog__item">
-							<div class="catalog__item-in">
-								<div class="catalog__pic js-prod-open">
-									<img src="img/pic1.jpg" alt="">
-									<i class="like is-active"></i>
-								</div>
-								<div class="catalog__title js-prod-open">Плов с мясом баранины рецепту Глобус Гурмэ</div>
-								<div class="catalog__price">
-									<span>Цена (за 50 гр):</span>
-									<strong>75<sup>00</sup><i class="rub">P</i></strong>
-								</div>
-								<div class="catalog__down">
-									<div class="catalog__down-in">									
-										<div class="catalog__down-item">
-											<div class="weight js-weight">
-												<button class="weight__btn-minus"><i></i></button>
-												<div class="weight__val">
-													<input data-factor="50" type="text" maxlength="4" value="500">
-													<span>гр</span>
-												</div>								
-												<button class="weight__btn-plus"><i></i></button>					
-											</div>
-											<div class="catalog__sum">
-												<strong>750<sup>00</sup><i class="rub">P</i></strong>
-												<button class="js-del-prod">Удалить</button>
-											</div>
+							<div class="catalog__down">
+								<div class="catalog__down-in">									
+									<div class="catalog__down-item">
+										<div class="weight js-weight">
+											<button class="weight__btn-minus"><i></i></button>
+											<div class="weight__val">
+												<input data-factor="50" type="text" maxlength="4" value="500">
+												<span>гр</span>
+											</div>								
+											<button class="weight__btn-plus"><i></i></button>					
 										</div>
-										<div class="catalog__down-item">
-											<button class="catalog__buy-btn js-add-prod">В корзину</button>
-										</div>									
-									</div>								
-								</div>
-							</div>
-						</div>
-						<div class="catalog__item">
-							<div class="catalog__item-in">
-								<div class="catalog__pic js-prod-open">
-									<img src="img/pic1.jpg" alt="">
-									<i class="like"></i>
-								</div>
-								<div class="catalog__title js-prod-open">Плов с мясом баранины рецепту Глобус Гурмэ</div>
-								<div class="catalog__price">
-									<span>Цена (за 50 гр):</span>
-									<strong>75<sup>00</sup><i class="rub">P</i></strong>
-								</div>
-								<div class="catalog__down">
-									<div class="catalog__down-in">									
-										<div class="catalog__down-item">
-											<div class="weight js-weight">
-												<button class="weight__btn-minus"><i></i></button>
-												<div class="weight__val">
-													<input data-factor="50" type="text" maxlength="4" value="500">
-													<span>гр</span>
-												</div>								
-												<button class="weight__btn-plus"><i></i></button>					
-											</div>
-											<div class="catalog__sum">
-												<strong>750<sup>00</sup><i class="rub">P</i></strong>
-												<button class="js-del-prod">Удалить</button>
-											</div>
+										<div class="catalog__sum">
+											<strong>750<sup>00</sup><i class="rub">P</i></strong>
+											<button class="js-del-prod">Удалить</button>
 										</div>
-										<div class="catalog__down-item">
-											<button class="catalog__buy-btn js-add-prod">В корзину</button>
-										</div>									
-									</div>								
-								</div>
-							</div>
-						</div>
-						<div class="catalog__item">
-							<div class="catalog__item-in">
-								<div class="catalog__pic js-prod-open">
-									<img src="img/pic1.jpg" alt="">
-									<i class="like"></i>
-								</div>
-								<div class="catalog__title js-prod-open">Плов с мясом баранины рецепту Глобус Гурмэ</div>
-								<div class="catalog__price">
-									<span>Цена (за 50 гр):</span>
-									<strong>75<sup>00</sup><i class="rub">P</i></strong>
-								</div>
-								<div class="catalog__down">
-									<div class="catalog__down-in">									
-										<div class="catalog__down-item">
-											<div class="weight js-weight">
-												<button class="weight__btn-minus"><i></i></button>
-												<div class="weight__val">
-													<input data-factor="50" type="text" maxlength="4" value="500">
-													<span>гр</span>
-												</div>								
-												<button class="weight__btn-plus"><i></i></button>					
-											</div>
-											<div class="catalog__sum">
-												<strong>750<sup>00</sup><i class="rub">P</i></strong>
-												<button class="js-del-prod">Удалить</button>
-											</div>
-										</div>
-										<div class="catalog__down-item">
-											<button class="catalog__buy-btn js-add-prod">В корзину</button>
-										</div>									
-									</div>								
-								</div>
-							</div>
-						</div>
-						<div class="catalog__item">
-							<div class="catalog__item-in">
-								<div class="catalog__pic js-prod-open">
-									<img src="img/pic1.jpg" alt="">
-									<i class="like"></i>
-								</div>
-								<div class="catalog__title js-prod-open">Плов с мясом баранины рецепту Глобус Гурмэ</div>
-								<div class="catalog__price">
-									<span>Цена (за 50 гр):</span>
-									<strong>75<sup>00</sup><i class="rub">P</i></strong>
-								</div>
-								<div class="catalog__down">
-									<div class="catalog__down-in">									
-										<div class="catalog__down-item">
-											<div class="weight js-weight">
-												<button class="weight__btn-minus"><i></i></button>
-												<div class="weight__val">
-													<input data-factor="50" type="text" maxlength="4" value="500">
-													<span>гр</span>
-												</div>								
-												<button class="weight__btn-plus"><i></i></button>					
-											</div>
-											<div class="catalog__sum">
-												<strong>750<sup>00</sup><i class="rub">P</i></strong>
-												<button class="js-del-prod">Удалить</button>
-											</div>
-										</div>
-										<div class="catalog__down-item">
-											<button class="catalog__buy-btn js-add-prod">В корзину</button>
-										</div>									
-									</div>								
-								</div>
+									</div>
+									<div class="catalog__down-item">
+										<button class="catalog__buy-btn js-add-prod">В корзину</button>
+									</div>									
+								</div>								
 							</div>
 						</div>
 					</div>
-					<button class="catalog__more-btn">Показать ещё <span>567</span> найменований</button>
-				</section>
-				<!-- END .catalog -->
-			</div>		
+					<div class="catalog__item">
+						<div class="catalog__item-in">
+							<div class="catalog__pic js-prod-open">
+								<img src="img/pic1.jpg" alt="">
+								<i class="like"></i>
+							</div>
+							<div class="catalog__title js-prod-open">Плов с мясом баранины рецепту Глобус Гурмэ</div>
+							<div class="catalog__price">
+								<span>Цена (за 50 гр):</span>
+								<strong>75<sup>00</sup><i class="rub">P</i></strong>
+							</div>
+							<div class="catalog__down">
+								<div class="catalog__down-in">									
+									<div class="catalog__down-item">
+										<div class="weight js-weight">
+											<button class="weight__btn-minus"><i></i></button>
+											<div class="weight__val">
+												<input data-factor="50" type="text" maxlength="4" value="500">
+												<span>гр</span>
+											</div>								
+											<button class="weight__btn-plus"><i></i></button>					
+										</div>
+										<div class="catalog__sum">
+											<strong>750<sup>00</sup><i class="rub">P</i></strong>
+											<button class="js-del-prod">Удалить</button>
+										</div>
+									</div>
+									<div class="catalog__down-item">
+										<button class="catalog__buy-btn js-add-prod">В корзину</button>
+									</div>									
+								</div>								
+							</div>
+						</div>
+					</div>
+					<div class="catalog__item">
+						<div class="catalog__item-in">
+							<div class="catalog__pic js-prod-open">
+								<img src="img/pic1.jpg" alt="">
+								<i class="like is-active"></i>
+							</div>
+							<div class="catalog__title js-prod-open">Плов с мясом баранины рецепту Глобус Гурмэ</div>
+							<div class="catalog__price">
+								<span>Цена (за 50 гр):</span>
+								<strong>75<sup>00</sup><i class="rub">P</i></strong>
+							</div>
+							<div class="catalog__down">
+								<div class="catalog__down-in">									
+									<div class="catalog__down-item">
+										<div class="weight js-weight">
+											<button class="weight__btn-minus"><i></i></button>
+											<div class="weight__val">
+												<input data-factor="50" type="text" maxlength="4" value="500">
+												<span>гр</span>
+											</div>								
+											<button class="weight__btn-plus"><i></i></button>					
+										</div>
+										<div class="catalog__sum">
+											<strong>750<sup>00</sup><i class="rub">P</i></strong>
+											<button class="js-del-prod">Удалить</button>
+										</div>
+									</div>
+									<div class="catalog__down-item">
+										<button class="catalog__buy-btn js-add-prod">В корзину</button>
+									</div>									
+								</div>								
+							</div>
+						</div>
+					</div>
+					<div class="catalog__item">
+						<div class="catalog__item-in">
+							<div class="catalog__pic js-prod-open">
+								<img src="img/pic1.jpg" alt="">
+								<i class="like"></i>
+							</div>
+							<div class="catalog__title js-prod-open">Плов с мясом баранины рецепту Глобус Гурмэ</div>
+							<div class="catalog__price">
+								<span>Цена (за 50 гр):</span>
+								<strong>75<sup>00</sup><i class="rub">P</i></strong>
+							</div>
+							<div class="catalog__down">
+								<div class="catalog__down-in">									
+									<div class="catalog__down-item">
+										<div class="weight js-weight">
+											<button class="weight__btn-minus"><i></i></button>
+											<div class="weight__val">
+												<input data-factor="50" type="text" maxlength="4" value="500">
+												<span>гр</span>
+											</div>								
+											<button class="weight__btn-plus"><i></i></button>					
+										</div>
+										<div class="catalog__sum">
+											<strong>750<sup>00</sup><i class="rub">P</i></strong>
+											<button class="js-del-prod">Удалить</button>
+										</div>
+									</div>
+									<div class="catalog__down-item">
+										<button class="catalog__buy-btn js-add-prod">В корзину</button>
+									</div>									
+								</div>								
+							</div>
+						</div>
+					</div>
+					<div class="catalog__item">
+						<div class="catalog__item-in">
+							<div class="catalog__pic js-prod-open">
+								<img src="img/pic1.jpg" alt="">
+								<i class="like"></i>
+							</div>
+							<div class="catalog__title js-prod-open">Плов с мясом баранины рецепту Глобус Гурмэ</div>
+							<div class="catalog__price">
+								<span>Цена (за 50 гр):</span>
+								<strong>75<sup>00</sup><i class="rub">P</i></strong>
+							</div>
+							<div class="catalog__down">
+								<div class="catalog__down-in">									
+									<div class="catalog__down-item">
+										<div class="weight js-weight">
+											<button class="weight__btn-minus"><i></i></button>
+											<div class="weight__val">
+												<input data-factor="50" type="text" maxlength="4" value="500">
+												<span>гр</span>
+											</div>								
+											<button class="weight__btn-plus"><i></i></button>					
+										</div>
+										<div class="catalog__sum">
+											<strong>750<sup>00</sup><i class="rub">P</i></strong>
+											<button class="js-del-prod">Удалить</button>
+										</div>
+									</div>
+									<div class="catalog__down-item">
+										<button class="catalog__buy-btn js-add-prod">В корзину</button>
+									</div>									
+								</div>								
+							</div>
+						</div>
+					</div>
+					<div class="catalog__item">
+						<div class="catalog__item-in">
+							<div class="catalog__pic js-prod-open">
+								<img src="img/pic1.jpg" alt="">
+								<i class="like"></i>
+							</div>
+							<div class="catalog__title js-prod-open">Плов с мясом баранины рецепту Глобус Гурмэ</div>
+							<div class="catalog__price">
+								<span>Цена (за 50 гр):</span>
+								<strong>75<sup>00</sup><i class="rub">P</i></strong>
+							</div>
+							<div class="catalog__down">
+								<div class="catalog__down-in">									
+									<div class="catalog__down-item">
+										<div class="weight js-weight">
+											<button class="weight__btn-minus"><i></i></button>
+											<div class="weight__val">
+												<input data-factor="50" type="text" maxlength="4" value="500">
+												<span>гр</span>
+											</div>								
+											<button class="weight__btn-plus"><i></i></button>					
+										</div>
+										<div class="catalog__sum">
+											<strong>750<sup>00</sup><i class="rub">P</i></strong>
+											<button class="js-del-prod">Удалить</button>
+										</div>
+									</div>
+									<div class="catalog__down-item">
+										<button class="catalog__buy-btn js-add-prod">В корзину</button>
+									</div>									
+								</div>								
+							</div>
+						</div>
+					</div>
+				</div>
+				<button class="catalog__more-btn">Показать ещё <span>567</span> найменований</button>
+			</section>
+			<!-- END .catalog -->		
 		</div>
 		<!-- END .layout -->
 		<div class="push"></div>
@@ -612,12 +564,12 @@
 	</div>
 </footer>
 
-	<!-- END .footer -->	
+	<!-- END .footer -->
+	<!-- BEGIN .overlay -->
+	<div class="overlay"></div>
+	<!-- END .overlay -->
 </div>
 <!-- END .page -->
-<!-- BEGIN .overlay -->
-<div class="overlay"></div>
-<!-- END .overlay -->
 <!-- BEGIN .prod -->
 <div class="prod">
 	<div class="prod__in">

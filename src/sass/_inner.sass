@@ -4,7 +4,7 @@
 	position: relative
 	margin-bottom: 20px	
 	input
-		width: 185px
+		width: 125px
 		height: 30px
 		padding: 0 44px 0 9px
 		border: 1px solid $gr
@@ -27,11 +27,11 @@
 .filter__item
 	margin-bottom: 20px
 .filter__title
-	padding: 14px
+	padding: 10px
 	background: $gr
 	border-radius: 3px 3px 0 0 
 	text-align: center
-	font-size: 24px
+	font-size: 16px
 	font-weight: bold
 	text-transform: uppercase
 	color: #FFF  
@@ -40,7 +40,7 @@
 		padding-left: 32px
 	i
 		position: absolute
-		top: 2px
+		top: -3px
 		left: 0
 .filter__ico-1
 	+s(filter-1)
@@ -173,11 +173,15 @@
 	min-width: 240px
 	vertical-align: top	
 	+rt(1920)
+		width: 20%
+	+rt(1720)
 		width: 25%
-	+rt(1600)
-		width: 33.3%
-	+rt(1380)
-		width: 50% 
+	+rt(1500)
+		width: 33.33% 
+	+rt(1260)
+		width: 50%
+	+rt(1000)
+		width: 100%
 	// +rt(1120)
 	// 	width: 100% 
 .catalog__item-in
@@ -217,6 +221,7 @@
 		display: block
 		width: 100%
 		border: 1px solid #eee
+		+box
 .like
 	position: absolute
 	top: 16px
@@ -240,6 +245,9 @@
 		float: left
 		font-weight: bold
 		color: #666 
+	sup
+		margin-left: 1px
+		font-size: 10px 
 	strong
 		float: right
 		color: $bl 
@@ -290,6 +298,9 @@
 	strong
 		display: block
 		color: $bl 
+	sup
+		margin-left: 1px
+		font-size: 10px
 	button
 		background: none 
 		font-size: 12px
@@ -349,54 +360,39 @@
 	position: absolute
 	top: 221px
 	right: 20px
-	width: 280px
+	width: 230px
 	margin-bottom: 20px
-	&.is-move
-		position: fixed
-		right: -280px
-	&.is-open
-		position: absolute !important
-		right: 20px
-		z-index: 600 
 	&.is-fixed
 		position: fixed
 		top: 131px
-.cart__show-btn
-	display: none
-	position: absolute
-	top: 130px
-	left: -50px
-	width: 50px
-	height: 50px
-	border-radius: 5px 0 0 5px
-	background: $bl
-	overflow: visible
-	i
-		position: absolute
-		top: 10px
-		left: 10px
-		+s(cart-ico)
-	&:hover
-		background: $blh 
-	&.is-active
-		i
-			+s(arr-right)
+	&.is-fixed, &.is-open
+		z-index: 600 
 .cart__title
-	padding: 14px
+	padding: 10px 14px
 	background: $bl
-	border-radius: 3px 3px 0 0
+	border-radius: 3px 3px 0 0	
 	text-align: center
-	font-size: 24px
-	font-weight: bold
-	text-transform: uppercase
-	color: #fff
+	span, em
+		display: inline-block
+		vertical-align: middle
 	span
-		position: relative
-		padding-left: 39px
-	i
-		position: absolute
-		top: 0
-		left: 0
+		color: #fff
+		font-weight: bold
+		font-size: 24px
+	sup
+		margin-left: 2px
+		font-size: 15px
+	.rub 
+		&:before, &:after
+			height: 3px
+			background: #FFF 
+		&:before
+			top: 13px
+		&:after
+			top: 17px
+			width: 13px
+	em
+		margin-right: 10px
 		+s(cart-ico)
 .cart__in
 	background: #FFF
@@ -406,7 +402,9 @@
 .cart__list	
 	+no-sel
 	li		
-		border-bottom: 1px dashed #e5e5e5		
+		border-top: 1px dashed #e5e5e5	
+		&:first-child
+			border-top: none	
 		&.is-empty
 			.cart__list-item
 				background: #f1f1f1
@@ -418,47 +416,29 @@
 					+gray
 .cart__list-item
 	position: relative
-	padding: 10px 20px 10px 30px
+	padding: 10px
 	font-size: 0
 	cursor: pointer
 	strong
 		position: absolute
 		top: 50%
-		right: 20px
+		right: 10px
 		margin-top: -10px
 		font-size: 16px
 		color: $bl 
+	sup
+		margin-left: 2px
+		font-size: 12px
 	.rub
 		&:after
 			top: 11px
 			width: 9px
 		&:before
 			top: 8px
-.cart__total 
-	padding: 14px 20px 14px 30px	
-	+clr
-	span
-		float: right
-		font-size: 24px
-	span
-		float: right
-		color: $bl 
-		font-weight: bold
-		&:first-child
-			float: left
-			color: #444
-	.rub 
-		&:before, &:after
-			height: 3px
-		&:before
-			top: 13px
-		&:after
-			top: 17px
-			width: 13px
 .cart__go
 	position: relative
 	width: 100%
-	height: 50px
+	height: 40px
 	background: $bl	
 	&:after
 		content: ""
@@ -485,7 +465,7 @@
 	display: none
 	position: absolute
 	top: 0
-	right: 315px
+	right: 260px
 	width: 760px
 	min-width: 380px
 	border: 1px solid #e7e7e7
@@ -543,8 +523,11 @@
 			.rub
 				&:before, &:after
 					background: #444 
-	span, 
+	span
 		margin-left: 25px 
+	sup
+		margin-left: 2px
+		font-size: 12px
 	span, .rub
 		color: $bl 
 	.rub
@@ -917,6 +900,9 @@
 	line-height: 82px
 	text-align: center
 	font-size: 16px	
+	sup
+		margin-left: 2px
+		font-size: 12px 
 	+rt(1380)
 		width: 130px	
 	+rt(1120)	
@@ -985,6 +971,7 @@
 .order__delivary-title
 	color: $bl 
 .order__total-title
+	margin-top: 2px
 	text-transform: uppercase
 	font-weight: bold
 .order__nav
@@ -1425,3 +1412,142 @@
 		color: $bl
 		&:hover
 			color: $blh 
+//prosearch
+.prosearch
+	padding-bottom: 20px
+	margin-bottom: 20px
+	border-bottom: 1px dashed #dddede 
+	+clr
+	.btn
+		float: left
+		width: 30%
+.prosearch_many
+	padding-bottom: 0
+	border: none
+.prosearch__in
+	float: left
+	width: 68%
+	margin-right: 2%
+	background: #fbfbfb
+	border: 1px solid $gr
+	border-radius: 2px 
+	+box
+.prosearch__txt
+	overflow: hidden
+	input
+		float: left
+		width: 100%
+		height: 29px
+		padding: 0 10px
+		background: none 
+		+box
+.prosearch__shop 
+	position: relative
+	float: right	
+	text-align: center
+	font-size: 0
+	span
+		display: block
+		width: 110px
+		height: 29px
+		background: #FFF 
+		border-left: 1px solid #dedede
+		line-height: 29px 
+		cursor: pointer
+		img
+			vertical-align: middle
+	ul
+		display: none
+		position: absolute
+		top: 31px
+		left: 0
+		right: 0
+		padding: 0 5px
+		background: #FFF 
+		border: 1px solid #dedede
+		z-index: 100 
+		li
+			padding: 5px 0
+			border-top: 1px dashed #dedede
+			cursor: pointer
+			&:first-child
+				border: none
+			&:hover
+				opacity: .6
+//result
+.result
+	margin-bottom: 50px
+.result__stats
+	margin-bottom: 20px
+	padding: 10px 15px
+	background: #FFF 
+	border-radius: 3px
+	border: 1px solid #e7e7e7
+	+clr
+	span, strong
+		float: left
+		margin-right: 7px
+	span
+		font-size: 14px
+		color: #888
+	strong
+		font-weight: normal
+		color: $bl 
+	.btn-dashed
+		float: right
+		margin-top: 2px
+.result__catalog
+	position: relative
+	margin-bottom: 20px
+	&:before, &:after
+		content: ""
+		position: absolute
+		top: 0
+		bottom: 0
+		width: 10px		
+		z-index: 10 
+	&:before
+		left: 0
+		+background-image(linear-gradient(left, rgba(251,251,251,1), rgba(251,251,251,.5),  rgba(251,251,251,0)))
+	&:after	
+		right: 170px
+		+background-image(linear-gradient(left, rgba(251,251,251,0), rgba(251,251,251,.5),  rgba(251,251,251,1)))
+	.catalog
+		height: 445px
+		margin-right: 170px
+		white-space: nowrap
+		overflow: auto		
+	.catalog__list
+		margin: 0
+		padding: 2px
+	.catalog__item
+		width: 260px
+		margin: 5px
+		white-space: normal
+		&:first-child
+			margin-left: 0
+	.catalog__item-in
+		margin: 0
+.result__btn-more
+	position: absolute
+	top: 120px
+	right: 0
+	width: 140px 
+	height: 140px
+	background: #FFF
+	border: 1px solid #e7e7e7 
+	border-radius: 4px
+	span
+		display: block
+		padding-top: 10px
+		color: $bl
+		font-size: 12px  
+	i
+		display: inline-block
+		+s(result-more)
+	&:hover
+		span
+			color: $blh
+		i
+			opacity: .8
+		

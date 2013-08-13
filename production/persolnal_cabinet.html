@@ -8,6 +8,7 @@
 	<!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
 	<script src="js/jquery.min.js"></script>
 	<script src="js/jquery.scrollTo-1.4.3.1-min.js"></script>	
+	<script src="js/jquery.mousewheel.min.js"></script>	
 	<script src="js/jquery.jscrollpane.min.js"></script>	
 	<script src="js/jquery-ui-1.10.3.custom.min.js"></script>	
 	<script src="js/common.js"></script>
@@ -748,7 +749,7 @@
 			<div class="prod__right">
 				<div class="prod__title">Калифорния с копченым лососем и кунжутом</div>
 				<div class="prod__desc">Состав: рис, нори, копченый лосось, авокадо, огурец, майонез, кунжут.</div>
-				<div class="prod__price">Цена (за 50 гр): <strong>75,00</strong><i class="rub">P</i></div>
+				<div class="prod__price">Цена (за 50 гр): <strong>75<sup>00</sup></strong><i class="rub">P</i></div>
 				<div class="prod__buy">
 					<div class="weight js-weight">
 						<button class="weight__btn-minus"><i></i></button>
@@ -758,7 +759,7 @@
 						</div>								
 						<button class="weight__btn-plus"><i></i></button>		
 					</div>
-					<div class="prod__total">1460,00<i class="rub">P</i></div>
+					<div class="prod__total">1460<sup>00</sup><i class="rub">P</i></div>
 				</div>
 				<div class="prod__del">
 					<button>Удалить</button>
@@ -772,8 +773,8 @@
 					<div class="tabs__content tabs__content-price">
 						<div class="tabs__title">Текущие цены</div>
 						<ul class="tabs__price">
-							<li class="is-active"><img src="img/shop1-s.png" alt=""><strong>75,00<i class="rub">P</i></strong></li>
-							<li><img src="img/shop2-s.png" alt=""><strong>75,00<i class="rub">P</i></strong></li>
+							<li class="is-active"><img src="img/shop1-s.png" alt=""><strong>75<sup>00</sup><i class="rub">P</i></strong></li>
+							<li><img src="img/shop2-s.png" alt=""><strong>75<sup>00</sup><i class="rub">P</i></strong></li>
 							<li><img src="img/shop3-s.png" alt=""><span>Недоступно</span></li>
 							<li><img src="img/shop4-s.png" alt=""><span>Недоступно</span></li>
 						</ul>
@@ -782,9 +783,9 @@
 							<img src="img/graph.jpg" alt="">
 						</div>
 						<div class="tabs__stat">
-							<li><strong>96,00<i class="rub">P</i></strong>Максимальная<br>цена</li>
-							<li><strong>90,00<i class="rub">P</i></strong>Средняя<br>цена</li>
-							<li><strong>86,00<i class="rub">P</i></strong>Минимальная<br>цена</li>
+							<li><strong>96<sup>00</sup><i class="rub">P</i></strong>Максимальная<br>цена</li>
+							<li><strong>90<sup>00</sup><i class="rub">P</i></strong>Средняя<br>цена</li>
+							<li><strong>86<sup>00</sup><i class="rub">P</i></strong>Минимальная<br>цена</li>
 						</div>
 					</div>
 					<div class="tabs__content tabs__content-compos">
@@ -839,41 +840,34 @@
 <!-- END .prod -->
 <!-- BEGIN .cart -->
 <div class="cart">
-	<button class="cart__show-btn js-cart-show"><i></i></button>
-	<div class="cart__title">
-		<span>КОРЗИНА<i></i></span>
-	</div>
+	<div class="cart__title"><em></em><span>5246<sup>00</sup><i class="rub">P</i></span></div>
 	<div class="cart__in">
 		<ul class="cart__list js-cart-popup">
 			<li>
 				<div class="cart__list-item">
-					<img src="img/shop1.png" alt="">
-					<strong>7500,00<i class="rub">P</i></strong>
+					<img src="img/shop1-s.png" alt="">
+					<strong>7500<sup>00</sup><i class="rub">P</i></strong>
 				</div>						
 			</li>
 			<li>
 				<div class="cart__list-item">
-					<img src="img/shop2.png" alt="">
-					<strong>7500,00<i class="rub">P</i></strong>
+					<img src="img/shop2-s.png" alt="">
+					<strong>7500<sup>00</sup><i class="rub">P</i></strong>
 				</div>						
 			</li>		
 			<li class="is-empty">
 				<div class="cart__list-item">
-					<img src="img/shop3.png" alt="">
-					<strong>7500,00<i class="rub">P</i></strong>
+					<img src="img/shop3-s.png" alt="">
+					<strong>7500<sup>00</sup><i class="rub">P</i></strong>
 				</div>						
 			</li>		
 			<li>
 				<div class="cart__list-item">
-					<img src="img/shop4.png" alt="">
-					<strong>7500,00<i class="rub">P</i></strong>
+					<img src="img/shop4-s.png" alt="">
+					<strong>7500<sup>00</sup><i class="rub">P</i></strong>
 				</div>						
 			</li>
 		</ul>
-		<div class="cart__total">					
-			<span>ВСЕГО:</span>
-			<span>5246,00<i class="rub">P</i></span>				    
-		</div>
 	</div>			
 	<button class="cart__go"><span>ОФОРМИТЬ ЗАКАЗ</span></button>
 	<!-- BEGIN .cart__popup -->
@@ -968,8 +962,8 @@
 			</ul>
 		</div>
 		<div class="cart__bottom">
-			<strong>Доставка:<span>400,00</span><i class="rub">P</i></strong>
-			<strong>Итого:<span>3396,00</span><i class="rub">P</i></strong>
+			<strong>Доставка:<span>400<sup>00</sup></span><i class="rub">P</i></strong>
+			<strong>Итого:<span>3396<sup>00</sup></span><i class="rub">P</i></strong>
 		</div>
 	</div>
 	<!-- END .cart__popup -->
