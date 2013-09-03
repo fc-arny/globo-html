@@ -1,0 +1,450 @@
+<!doctype html>
+<!--[if IE 8]><html lang="ru-RU" class="ie8"><![endif]-->
+<!--[if gt IE 8]><!--><html lang="ru-RU"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Globo</title>
+	<link rel="stylesheet" media="screen" href="css/screen.css" >
+	<!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.scrollTo-1.4.3.1-min.js"></script>	
+	<script src="js/jquery.mousewheel.min.js"></script>	
+	<script src="js/jquery.jscrollpane.min.js"></script>	
+	<script src="js/jquery-ui-1.10.3.custom.min.js"></script>	
+	<script src="js/common.js"></script>
+</head>
+
+<body> 
+<!-- BEGIN .page -->
+<div class="page">
+	<!-- BEGIN .wrap -->
+	<div class="wrap">
+		<!-- BEGIN .header -->
+		<!-- BEGIN .header -->
+<header class="header">
+	<div class="header__top">
+		<a class="logo" href="#">
+			<span class="logo__pic"></span>
+			<span class="logo__txt">Покупки это просто</span>
+		</a>
+		<div class="login">
+			<a href="#">John Doe</a>
+			<button class="js-login"><i></i></button>
+			<ul class="login__links">
+				<li><a class="login__link-1" href="#">Настройки<i></i></a></li>
+				<li><a class="login__link-2" href="#">Избранное<i></i></a></li>
+				<li><a class="login__link-3" href="#">Выход<i></i></a></li>
+			</ul>
+		</div>
+		<nav class="nav">
+			<a href="#">Каталог</a>
+			<a href="#">Контакты</a>
+			<a href="#">Рецепты</a>
+			<a href="#">Новости</a>
+			<a href="#">Компания</a>
+		</nav>
+	</div>
+	<div class="header__down">
+		<div class="sel-shop js-shops">
+			<div class="sel-shop__list">
+				<button>Выбраный магазин</button>
+				<ul>
+					<li><img src="img/shop2-s.png" alt=""></li>
+					<li><img src="img/shop1-s.png" alt=""></li>
+					<li><img src="img/shop3-s.png" alt=""></li>
+				</ul>
+			</div>
+			<div class="sel-shop__pic">
+				<img src="img/shop1-s.png" alt="">
+			</div>
+		</div>
+		<!-- BEGIN .menu -->
+		<div class="menu">
+			<div class="menu__list">
+				<button class="menu__btn-prev"><i></i></button>
+				<button class="menu__btn-next"><i></i></button>
+				<ul class="menu__list-in">
+					<li data-item="menu-item-1"><a class="menu__item-1" href="#">Выпечка<i></i></a></li>
+					<li data-item="menu-item-2"><a class="menu__item-2" href="#">Овощи и фрукты<i></i></a></li>
+					<li data-item="menu-item-3"><a class="menu__item-3 is-active" href="#">Молочные и яйца<i></i></a></li>
+					<li data-item="menu-item-4"><a class="menu__item-4" href="#">Мясо и рыба<i></i></a></li>
+					<li data-item="menu-item-5"><a class="menu__item-5" href="#">Морозилка<i></i></a></li>
+					<li data-item="menu-item-6"><a class="menu__item-6" href="#">Кулинария<i></i></a></li>
+					<li data-item="menu-item-7"><a class="menu__item-7" href="#">Консервы и приправы<i></i></a></li>
+					<li data-item="menu-item-8"><a class="menu__item-8" href="#">Бакалея<i></i></a></li>
+					<li data-item="menu-item-9"><a class="menu__item-9" href="#">Закуски и сладости<i></i></a></li>
+					<li data-item="menu-item-10"><a class="menu__item-10" href="#">Напитки<i></i></a></li>
+					<li data-item="menu-item-11"><a class="menu__item-11" href="#">Для дома<i></i></a></li>
+					<li data-item="menu-item-12"><a class="menu__item-12" href="#">Детское<i></i></a></li>
+					<li data-item="menu-item-13"><a class="menu__item-13" href="#">Гигиена<i></i></a></li>
+					<li data-item="menu-item-14"><a class="menu__item-14" href="#">Для животных<i></i></a></li>
+				</ul>					
+			</div>
+			<div class="menu__sub-arr"></div>	
+			<div class="menu__sub-wrap">
+				<div id="menu-item-1" class="menu__sub">
+					<div class="menu__sub-in">
+						<ul>
+							<li class="is-selected"><a href="#">Блюда японской кухни</a></li>
+							<li><a href="#">Cалаты</a></li>
+							<li><a href="#">Холодные закуски</a></li>
+							<li><a href="#">Соусы собственного приготовления</a></li>
+							<li><a href="#">Мясные блюда</a></li>
+						</ul>
+						<ul>
+							<li><a href="#">Блюда из птицы</a></li>
+							<li><a href="#">Блюда из рыбы и морепродуктов</a></li>
+							<li><a href="#">Овощные блюда, гарниры</a></li>
+							<li><a href="#">Супы</a></li>
+						</ul>
+					</div>				
+				</div>
+				<div id="menu-item-2" class="menu__sub">
+					<div class="menu__sub-in">
+						<ul>
+							<li class="is-selected"><a href="#">Блюда японской кухни</a></li>
+							<li><a href="#">Cалаты</a></li>
+							<li><a href="#">Холодные закуски</a></li>
+							<li><a href="#">Соусы собственного приготовления</a></li>
+							<li><a href="#">Мясные блюда</a></li>
+						</ul>
+					</div>				
+				</div>
+				<div id="menu-item-3" class="menu__sub">
+					<div class="menu__sub-in">
+						<ul>
+							<li class="is-selected"><a href="#">Блюда японской кухни</a></li>
+							<li><a href="#">Cалаты</a></li>
+							<li><a href="#">Холодные закуски</a></li>
+							<li><a href="#">Соусы собственного приготовления</a></li>
+							<li><a href="#">Мясные блюда</a></li>
+						</ul>
+						<ul>
+							<li><a href="#">Блюда из птицы</a></li>
+							<li><a href="#">Блюда из рыбы и морепродуктов</a></li>
+							<li><a href="#">Овощные блюда, гарниры</a></li>
+							<li><a href="#">Супы</a></li>
+						</ul>
+					</div>							
+				</div>
+				<div id="menu-item-4" class="menu__sub">
+					<div class="menu__sub-in">
+						<ul>
+							<li class="is-selected"><a href="#">Блюда японской кухни</a></li>
+							<li><a href="#">Cалаты</a></li>
+							<li><a href="#">Холодные закуски</a></li>
+							<li><a href="#">Соусы собственного приготовления</a></li>
+							<li><a href="#">Мясные блюда</a></li>
+						</ul>
+					</div>						
+				</div>
+				<div id="menu-item-5" class="menu__sub">
+					<div class="menu__sub-in">
+						<ul>
+							<li class="is-selected"><a href="#">Блюда японской кухни</a></li>
+							<li><a href="#">Cалаты</a></li>
+							<li><a href="#">Холодные закуски</a></li>
+							<li><a href="#">Соусы собственного приготовления</a></li>
+							<li><a href="#">Мясные блюда</a></li>
+						</ul>
+					</div>						
+				</div>
+				<div id="menu-item-6" class="menu__sub">
+					<div class="menu__sub-in">
+						<ul>
+							<li class="is-selected"><a href="#">Блюда японской кухни</a></li>
+							<li><a href="#">Cалаты</a></li>
+							<li><a href="#">Холодные закуски</a></li>
+							<li><a href="#">Соусы собственного приготовления</a></li>
+							<li><a href="#">Мясные блюда</a></li>
+						</ul>
+						<ul>
+							<li><a href="#">Блюда из птицы</a></li>
+							<li><a href="#">Блюда из рыбы и морепродуктов</a></li>
+							<li><a href="#">Овощные блюда, гарниры</a></li>
+							<li><a href="#">Супы</a></li>
+						</ul>
+					</div>					
+				</div>
+				<div id="menu-item-7" class="menu__sub">
+					<div class="menu__sub-in">
+						<ul>
+							<li class="is-selected"><a href="#">Блюда японской кухни</a></li>
+							<li><a href="#">Cалаты</a></li>
+							<li><a href="#">Холодные закуски</a></li>
+							<li><a href="#">Соусы собственного приготовления</a></li>
+							<li><a href="#">Мясные блюда</a></li>
+						</ul>
+					</div>				
+				</div>
+				<div id="menu-item-8" class="menu__sub">
+					<div class="menu__sub-in">
+						<ul>
+							<li class="is-selected"><a href="#">Блюда японской кухни</a></li>
+							<li><a href="#">Cалаты</a></li>
+							<li><a href="#">Холодные закуски</a></li>
+							<li><a href="#">Соусы собственного приготовления</a></li>
+							<li><a href="#">Мясные блюда</a></li>
+						</ul>
+						<ul>
+							<li><a href="#">Блюда из птицы</a></li>
+							<li><a href="#">Блюда из рыбы и морепродуктов</a></li>
+							<li><a href="#">Овощные блюда, гарниры</a></li>
+							<li><a href="#">Супы</a></li>
+						</ul>
+					</div>					
+				</div>
+				<div id="menu-item-9" class="menu__sub">
+					<div class="menu__sub-in">
+						<ul>
+							<li class="is-selected"><a href="#">Блюда японской кухни</a></li>
+							<li><a href="#">Cалаты</a></li>
+							<li><a href="#">Холодные закуски</a></li>
+							<li><a href="#">Соусы собственного приготовления</a></li>
+							<li><a href="#">Мясные блюда</a></li>
+						</ul>
+					</div>					
+				</div>
+				<div id="menu-item-10" class="menu__sub">
+					<div class="menu__sub-in">
+						<ul>
+							<li class="is-selected"><a href="#">Блюда японской кухни</a></li>
+							<li><a href="#">Cалаты</a></li>
+							<li><a href="#">Холодные закуски</a></li>
+							<li><a href="#">Соусы собственного приготовления</a></li>
+							<li><a href="#">Мясные блюда</a></li>
+						</ul>
+						<ul>
+							<li><a href="#">Блюда из птицы</a></li>
+							<li><a href="#">Блюда из рыбы и морепродуктов</a></li>
+							<li><a href="#">Овощные блюда, гарниры</a></li>
+							<li><a href="#">Супы</a></li>
+						</ul>
+					</div>						
+				</div>
+				<div id="menu-item-11" class="menu__sub">
+					<div class="menu__sub-in">
+						<ul>
+							<li class="is-selected"><a href="#">Блюда японской кухни</a></li>
+							<li><a href="#">Cалаты</a></li>
+							<li><a href="#">Холодные закуски</a></li>
+							<li><a href="#">Соусы собственного приготовления</a></li>
+							<li><a href="#">Мясные блюда</a></li>
+						</ul>
+					</div>					
+				</div>
+				<div id="menu-item-12" class="menu__sub">
+					<div class="menu__sub-in">
+						<ul>
+							<li class="is-selected"><a href="#">Блюда японской кухни</a></li>
+							<li><a href="#">Cалаты</a></li>
+							<li><a href="#">Холодные закуски</a></li>
+							<li><a href="#">Соусы собственного приготовления</a></li>
+							<li><a href="#">Мясные блюда</a></li>
+						</ul>
+					</div>			
+				</div>
+				<div id="menu-item-13" class="menu__sub">
+					<div class="menu__sub-in">
+						<ul>
+							<li class="is-selected"><a href="#">Блюда японской кухни</a></li>
+							<li><a href="#">Cалаты</a></li>
+							<li><a href="#">Холодные закуски</a></li>
+							<li><a href="#">Соусы собственного приготовления</a></li>
+							<li><a href="#">Мясные блюда</a></li>
+						</ul>
+					</div>				
+				</div>
+				<div id="menu-item-14" class="menu__sub">
+					<div class="menu__sub-in">
+						<ul>
+							<li class="is-selected"><a href="#">Блюда японской кухни</a></li>
+							<li><a href="#">Cалаты</a></li>
+							<li><a href="#">Холодные закуски</a></li>
+							<li><a href="#">Соусы собственного приготовления</a></li>
+							<li><a href="#">Мясные блюда</a></li>
+						</ul>
+						<ul>
+							<li><a href="#">Блюда из птицы</a></li>
+							<li><a href="#">Блюда из рыбы и морепродуктов</a></li>
+							<li><a href="#">Овощные блюда, гарниры</a></li>
+							<li><a href="#">Супы</a></li>
+						</ul>
+					</div>												
+				</div>
+			</div>
+		</div>		
+		<!-- END .menu -->
+	</div>
+</header>
+<!-- END .header -->
+		<!-- END .header -->
+		<!-- BEGIN .layout -->
+		<div class="layout">
+			<div class="title">контакты</div>
+			<!-- BEGIN .contacts -->
+			<div class="contacts">
+				<div class="contacts__cols">
+					<div class="contacts__column">
+						<div class="title title_small">Как нас найти</div>
+						<div class="contacts__desc">Найти нас легко. Просто свяжитесь с нами любым удобным для вас способом.</div>
+						<div class="contacts__item">
+							<div class="contacts__type">Телефоны:</div>
+							<ul class="contacts__detail">
+								<li><strong>+7 (012) 987-65-43</strong></li>
+								<li><strong>+7 (012) 987-32-10</strong></li>
+							</ul>
+						</div>
+						<div class="contacts__item">
+							<div class="contacts__type">Факс:</div>
+							<div class="contacts__detail">
+								<strong>+7 (012) 987-65-43</strong>
+							</div>
+						</div>
+						<div class="contacts__item">
+							<div class="contacts__type">Email:</div>
+							<div class="contacts__detail">
+								<a href="mailto:infogm@gbm.ru">infogm@gbm.ru</a>
+							</div>
+						</div>
+						<div class="contacts__item">
+							<div class="contacts__type">Skype:</div>
+							<ul class="contacts__detail">
+								<li><a href="skype:infogbm?call">infogbm</a></li>
+								<li><a href="skype:prmanagergbm?call">prmanagergbm</a></li>
+							</ul>
+						</div>
+						<div class="contacts__desc">
+							<p>г. Москва, ул. Волхонка, д. 14с5.</p>
+							<p>Офис "Globo Market"</p>
+						</div>
+						<div class="social social_blue">
+							<a class="social__ok" href="#"><i></i></a>
+							<a class="social__fb" href="#"><i></i></a>
+							<a class="social__vk" href="#"><i></i></a>
+							<a class="social__tw" href="#"><i></i></a>
+							<a class="social__rss" href="#"><i></i></a>
+						</div>
+					</div>
+					<div class="contacts__column">
+						<div class="title title_small">Напишите нам</div>
+						<div class="contacts__desc">Воспользуйтесь этой формой быстрой связи, для того, чтобы сразу задать нам интересующие вас вопросы.</div>
+						<div class="contacts__feedback">
+							<label class="label">
+								<span class="label__title">Как вас зовут?</span>
+								<input class="label__txt" type="text" placeholder="Вася Иванов">
+							</label>
+							<label class="label">
+								<span class="label__title">Ваш Email</span>
+								<input class="label__txt" type="text" placeholder="mail@mail.com">
+								<span class="label__help">На вышлем ответы на все ваши вопросы на указанный Email</span>
+							</label>
+							<label class="label">
+								<span class="label__title">Ваше сообщения</span>
+								<textarea class="label__area" type="text" placeholder="Текст вашего сообщения"></textarea>
+							</label>
+							<button class="btn">отправить</button>
+						</div>					
+					</div>
+					<div class="contacts__column">
+						<div class="title title_small">Наши вакансии</div>
+						<div class="contacts__desc">Мы постоянно ищем таланты для того чтобы пополнить ряды нашей команды. Не стесняйтесь слать нам свои резюме!</div>
+						<div class="vacancy">
+							<div class="vacancy__item">
+								<div class="vacancy__top">
+									<button>Frontend-разработчик</button>
+									<strong>от 85 000<i class="rub">Р</i></strong>									
+								</div>
+								<div class="vacancy__desc">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+								</div>
+							</div>
+							<div class="vacancy__item is-active">
+								<div class="vacancy__top">
+									<button>Frontend-разработчик</button>
+									<strong>от 85 000<i class="rub">Р</i></strong>		
+								</div>
+								<div class="vacancy__desc" style="display: block;">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+								</div>
+							</div>
+							<div class="vacancy__item">
+								<div class="vacancy__top">
+									<button>Frontend-разработчик</button>
+									<strong>от 85 000<i class="rub">Р</i></strong>		
+								</div>
+								<div class="vacancy__desc">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- BEGIN .map -->
+				<div class="map">
+					<iframe width="100%" height="630" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.ru/maps?f=q&amp;source=s_q&amp;hl=ru&amp;geocode=&amp;q=%D0%9A%D0%B8%D0%B5%D0%B2,+%D0%B3%D0%BE%D1%80%D0%BE%D0%B4+%D0%9A%D0%B8%D0%B5%D0%B2,+%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D0%B0&amp;aq=0&amp;oq=%D0%BA%D0%B8%D0%B5%D0%B2&amp;sll=55.354135,40.297852&amp;sspn=21.27986,67.631836&amp;ie=UTF8&amp;hq=&amp;hnear=%D0%9A%D0%B8%D0%B5%D0%B2,+%D0%B3%D0%BE%D1%80%D0%BE%D0%B4+%D0%9A%D0%B8%D0%B5%D0%B2,+%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D0%B0&amp;t=m&amp;ll=50.438757,30.578899&amp;spn=0.034439,0.162992&amp;z=14&amp;output=embed"></iframe>
+				</div>
+				<!-- END .map -->
+			</div>
+			<!-- END .contacts -->			
+		</div>
+		<!-- END .layout -->
+		<div class="push"></div>
+	</div>
+	<!-- END .wrap -->
+	<!-- BEGIN .footer -->
+	<footer class="footer">
+	<div class="footer__in">
+		<div class="footer__left">
+			<a class="logo" href="#">
+				<span class="logo__pic"></span>
+				<span class="logo__txt">Покупки это просто</span>
+			</a>
+			<div class="social">
+				<a class="social__ok" href="#"><i></i></a>
+				<a class="social__fb" href="#"><i></i></a>
+				<a class="social__vk" href="#"><i></i></a>
+				<a class="social__tw" href="#"><i></i></a>
+				<a class="social__rss" href="#"><i></i></a>
+			</div>
+		</div>	
+		<nav class="footer__nav">
+			<ul>
+				<li>Информация</li>
+        <li><a href="#">О нас</a></li>
+        <li><a href="#">Безопасность</a></li>
+        <li><a href="#">Советы</a></li>
+        <li><a href="#">Карта сайта</a></li>
+        <li><a href="#">Помощь</a></li>
+        <li><a href="#">Контактная информация</a></li>
+    	</ul>
+    	<ul>
+    		<li>Магазины</li>
+        <li><a href="#">Глобус Гурме</a></li>
+        <li><a href="#">Перекресток</a></li>
+        <li><a href="#">Азбука Вкуса</a></li>
+        <li><a href="#">Алые Паруса</a></li>
+      </ul>
+      <ul>
+      	<li>Дополнительно</li>
+        <li><a href="#">Форум</a></li>
+        <li><a href="#">Обсуждения</a></li>
+        <li><a href="#">Аналитика</a></li>
+        <li><a href="#">Рецепты</a></li>
+    	</ul>
+		</nav>
+		<div class="copyright">© GLOBO Market 2010-2012</div>	
+	</div>
+</footer>
+
+	<!-- END .footer -->
+	<!-- BEGIN .overlay -->
+	<div class="overlay"></div>
+	<!-- END .overlay -->
+</div>
+<!-- END .page -->
+</body>
+</html>

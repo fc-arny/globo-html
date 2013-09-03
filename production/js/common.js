@@ -427,6 +427,22 @@ function select() {
   });
 };
 
+//vacancy
+function vacancy() {
+  var el = $('.vacancy');
+  var items = $('.vacancy__item');
+  var desc = el.find('.vacancy__desc');
+  var btn = el.find('.vacancy__top button');
+  btn.click(function() {
+    if (!$(this).parent().parent().hasClass('is-active')) {
+      desc.slideUp(200);
+      items.removeClass('is-active');
+      $(this).parent().parent().addClass('is-active');
+      $(this).parent().next().slideDown(200);
+    };
+  });
+};
+
 //init
 submenu();
 slidermenu();
@@ -441,6 +457,7 @@ steps();
 cabinet();
 search_shop();
 scroll_init();
+vacancy();
 
 //window resize
 $(window).resize(function() {

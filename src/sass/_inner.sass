@@ -979,6 +979,7 @@
 	+clr	
 	.title
 		float: left
+		margin: 0
 		+rt(1120)
 			float: none
 			margin-bottom: 15px
@@ -1006,6 +1007,7 @@
 	+clr
 	.title
 		float: left
+		margin: 0
 .position__sum
 	float: right
 	width: 400px
@@ -1253,7 +1255,7 @@
 		width: 70px
 //cabinet
 .cabinet
-	margin: 15px 0 20px
+	margin-bottom: 20px
 	border: 1px solid #e7e7e7
 	border-radius: 2px
 	+clr
@@ -1550,4 +1552,346 @@
 			color: $blh
 		i
 			opacity: .8
-		
+//about
+.about	 
+	.container		
+		+rt(1380)
+			margin: 0
+.about__in
+	padding: 35px 40px
+	margin-bottom: 35px
+	background: #FFF
+	border: 1px solid #e7e7e7
+	border-radius: 3px
+	+rt(1120)
+		padding: 20px
+.about__column
+	-moz-column-count: 2
+	-webkit-column-count: 2
+	column-count: 2
+	-moz-column-gap: 60px
+	-webkit-column-gap: 60px
+	column-gap: 60px
+	p
+		margin-bottom: 20px 
+		font-size: 16px
+		line-height: 1.5
+	+rt(1120)
+		-moz-column-gap: 20px
+		-webkit-column-gap: 20px
+		column-gap: 20px
+//we-work & team
+.we-work, .team
+	margin-bottom: 50px
+	.title
+		margin-bottom: 15px
+		text-align: center
+	.container		
+		+rt(1380)
+			margin: 0
+.we-work__in, .team__in
+	position: relative
+	border-top: 2px dashed #c4c2c4 
+	&:before
+		content: ""
+		position: absolute
+		top: -1px
+		left: 0
+		right: 0
+		height: 2px
+		background: #FFF 
+		z-index: -1
+.we-work__in
+	padding-top: 30px
+	.container
+		font-size: 0	
+		text-align: center	
+		a
+			display: inline-block
+			width: 25%	
+			min-width: 320px
+			margin-bottom: 20px
+			vertical-align: middle
+			&:hover
+				opacity: .6				
+		img
+			vertical-align: middle
+.team__in
+	.container
+		overflow: hidden
+.team__list
+	padding-top: 20px
+	margin: 0 -70px
+	text-align: center
+	font-size: 0
+	+rt(1120)
+		margin: 0 -50
+	+rt(1000)
+		margin: 0 -20px
+.team__person
+	display: inline-block
+	margin: 0 70px 30px
+	vertical-align: top
+	text-align: center
+	+rt(1120)
+		margin: 0 50px 30px 
+	+rt(1120)
+		margin: 0 20px 30px 
+	img
+		display: block
+		margin-bottom: 30px 
+		border-radius: 50%
+	strong, span
+		display: block	
+	strong
+		margin-bottom: 10px
+		font-size: 24px
+		color: $bl 
+	span
+		display: block
+		font-size: 16px 
+//columns
+.columns
+	margin-bottom: 70px 		
+	.container		
+		+clr
+		+rt(1380)
+			margin: 0
+.columns__item
+	float: left
+	width: 30%
+	margin-left: 5%
+	&:first-child
+		margin-left: 0 
+	.title
+		padding-left: 20px 
+	+rt(1120)
+		width: 100%
+		margin: 0 0 20px 0
+.columns__in
+	min-height: 335px
+	padding: 35px 20px 20px
+	border: 1px solid #e7e7e7
+	background: #fff 
+	+rt(1120)
+		min-height: 0
+.column__down
+	text-align: right
+	a
+		font-size: 12px
+		color: $bl
+		&:hover
+			color: $blh 
+.blog__item, .faq__item
+	padding-bottom: 15px
+	margin-bottom: 15px
+	border-bottom: 2px dashed #d9d9d9 
+.blog__title, .faq__question
+	margin-bottom: 10px
+	a
+		font-size: 16px
+		font-weight: bold
+		text-transform: uppercase
+		color: $bl
+		&:hover
+			color: $blh 
+.blog__meta
+	margin-bottom: 10px
+	font-size: 12px
+	color: #888
+	a
+		color: $bl
+		&:hover
+			color: $blh 
+.blog__comms
+	position: relative	
+	padding-left: 18px
+	margin-left: 18px
+	i
+		position: absolute
+		top: 1px
+		left: 0
+		+s(comm)
+.blog__txt, .faq__answer
+	font-size: 16px
+	line-height: 1.5
+.twitter
+	border-bottom: 2px dashed #d9d9d9
+	margin-bottom: 15px 
+.twitter__item
+	margin-bottom: 25px
+	font-size: 16px
+	line-height: 1.5
+	a
+		color: $bl
+		&:hover
+			color: $blh  
+//contacts
+.contacts	
+	position: relative
+	padding-bottom: 420px
+.contacts__cols
+	position: relative
+	border: 1px solid #e1e1e1
+	background: #fff 
+	box-shadow: 0 5px 0 0 rgba(0,0,0,.2)
+	+clr
+	z-index: 10 
+.contacts__column
+	float: left
+	width: 33%
+	padding: 35px 40px 45px
+	+box
+	&:first-child
+		border: none
+	&:nth-child(2)
+		border: 1px dashed #e1e1e1
+		border-width: 0 1px
+		+rt(1120)
+			border-width: 1px 0
+	.title
+		margin-bottom: 30px
+	+rt(1120)
+		float: none
+		width: 100%
+		padding: 20px 30px
+.contacts__desc
+	margin-bottom: 25px
+	font-size: 16px
+	color: #888
+	line-height: 1.5 
+	p
+		line-height: 1.5
+.contacts__feedback
+	.label__txt, .label__help
+		width: 220px
+	.btn
+		width: 240px
+.contacts__item
+	margin-bottom: 10px
+	font-size: 16px
+	+clr
+.contacts__type
+	float: left
+	width: 100px
+	color: #888
+.contacts__detail
+	display: table
+	strong
+		color: #888 
+	a
+		color: $bl 
+		font-weight: bold
+		&:hover
+			color: $blh 
+//vacancy
+.vacancy__item
+	margin-bottom: 30px
+	&.is-active
+		.vacancy__top
+			button
+				border: none
+				color: #444 
+.vacancy__top
+	font-size: 16px
+	button
+		margin-right: 20px
+		background: none
+		border-bottom: 1px dashed	
+		color: $bl
+		font-size: 16px			
+		&:hover
+			color: $blh 
+	strong
+		display: inline-block
+		margin-right: 5px
+	.rub
+		font-weight: normal
+		&:before, &:after
+			height: 1px
+			background: #444
+		&:before
+			top: 9px
+		&:after
+			top: 11px
+.vacancy__desc
+	display: none
+	padding-top: 10px
+	p
+		padding-bottom: 5px
+		font-size: 12px
+		color: #666 
+//map
+.map
+	position: absolute
+	left: -20px
+	right: -20px
+	bottom: 0
+	z-index: 5 	
+//browser
+.browser
+	position: relative
+	padding: 55px 0 0
+	text-align: center	
+	.logo
+		float: none
+		display: inline-block
+		padding: 100px 0
+		margin: 0
+.browser__in
+	padding: 70px
+	background: #FFF
+	border: 1px solid #e1e1e1
+	border-radius: 5px 
+	+rt(1380)
+		padding: 50px
+	+rt(1120)
+		padding: 40px
+	+rt(1000)
+		padding: 30px
+	.title
+		margin-bottom: 30px
+		text-transform: none	
+.browser__help
+	padding: 0 200px
+	margin-bottom: 100px
+	font-size: 18px
+	line-height: 1.5
+	+rt(1380)
+		padding: 0 100px
+	+rt(1120)
+		padding: 0 50px
+	+rt(1000)
+		padding: 0 20px
+.browser__list 	
+	font-size: 0
+	li
+		display: inline-block
+		margin: 0 45px 45px
+		vertical-align: top
+		+rt(1380)
+			margin: 0 20px 20px
+		+rt(1120)
+			margin: 0 10px 10px
+		+rt(1000)
+			margin: 0 60px 60px
+	a
+		display: block
+		&:hover
+			span
+				color: $blh 
+	i
+		display: inline-block
+		margin-bottom: 20px
+	span
+		display: block
+		font-size: 14px
+		color: $bl 
+.browser__item-1
+	+s(browser1)
+.browser__item-2
+	+s(browser2)
+.browser__item-3
+	+s(browser3)
+.browser__item-4
+	+s(browser4)
