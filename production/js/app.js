@@ -147,6 +147,8 @@ purchases.click(function() {
 function scroll_init() {
   scroll_el.jScrollPane( {
     hideFocus: true
+    //autoReinitialise: true
+    //autoReinitialiseDelay: 500
   });
 };
 
