@@ -23,6 +23,9 @@ a img, fieldset
 	border: none
 a
 	text-decoration: none
+	color: $bl
+	&:hover
+		color: $blh 
 p
 	line-height: 1.2
 li 
@@ -99,10 +102,6 @@ table
 	text-transform: uppercase
 	color: #222 
 	font-weight: bold
-	a
-		color: $bl
-		&:hover
-			color: $blh 
 .title_small
 	font-size: 16px
 	text-transform: none 
@@ -651,6 +650,29 @@ table
 	font-size: 12px
 	text-align: center
 	color: #fdfdfd
+//share
+.share
+	font-size: 0
+	a
+		display: inline-block
+		vertical-align: top
+		margin: 0 30px 10px 0
+.share__vk
+	+s(share-vk)
+.share__fb
+	+s(share-fb)
+.share__gp
+	+s(share-gp)
+.share__mr
+	+s(share-mr)
+.share__ok
+	+s(share-ok)
+.share__tb
+	+s(share-tb)
+.share__rss
+	+s(share-rss)
+.share__tw
+	+s(share-tw)	
 //rub
 .rub
 	position: relative
@@ -792,6 +814,9 @@ table
 	&:hover
 		border-color: $blh 
 		color: $blh
+a
+	&.btn-dashed
+		display: inline-block
 .btn-arr
 	position: relative
 	padding: 0 40px
@@ -1192,9 +1217,6 @@ table
 	margin-top: 16px
 	a
 		font-size: 12px
-		color: $bl 
-		&:hover
-			color: $blh 
 //prompt
 .prompt
 	position: absolute
@@ -1244,5 +1266,78 @@ table
 	&:before
 		left: -9px
 		border-color: transparent #d6d6d6 transparent transparent
-	
-		
+//comm
+.comm
+	margin: 40px -40px -40px
+	padding: 30px 40px
+	border-top: 1px dashed #e7e7e7 
+.comm__head
+	+clr
+	.label
+		float: left
+		width: 220px
+		margin-right: 20px
+.comm__login
+	float: left
+	margin-top: 5px
+	span
+		color: $bl 
+.comm__btn
+	text-align: right
+	.btn
+		width: 240px
+.comm__item, .comm__reply
+	padding-bottom: 15px
+	margin-bottom: 15px
+	border-bottom: 1px dashed #e7e7e7 
+	+clr
+.comm__item
+	.comm__form
+		padding-top: 15px
+.comm__ava
+	float: left
+	margin-right: 15px
+	a, img
+		display: block
+		border-radius: 50% 
+	a
+		position: relative
+		&:hover
+			&:after
+				content: ""
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				bottom: 0
+				border: 5px solid $bl
+				border-radius: 50%
+.comm__detail
+	display: table
+.comm__meta
+	margin-bottom: 10px
+	font-size: 12px
+	color: #666
+	span, a
+		margin-right: 7px
+.comm__text
+	font-size: 16px
+	.btn-dashed
+		float: right
+		margin-left: 20px
+.comm__btn-reply
+	margin-top: 10px
+	text-align: right
+.comm__reply
+	position: relative
+	padding-left: 68px
+	&:before
+		content: ""
+		position: absolute
+		top: 30px
+		left: 30px
+		+s(arr-reply)
+	.comm__item
+		padding: 10px
+		background: #f9f6f6 
+		border: 1px solid #e7e7e7
