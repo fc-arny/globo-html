@@ -1667,6 +1667,13 @@
 	padding-bottom: 15px
 	margin-bottom: 15px
 	border-bottom: 2px dashed #d9d9d9 
+.blog__item-in
+	+clr
+.blog__pic
+	float: left
+	margin-right: 40px
+.blog__detail
+	display: table
 .blog__title, .faq__question
 	margin-bottom: 10px
 	font-size: 16px
@@ -2062,17 +2069,11 @@
 	float: left
 	width: 315px
 	margin-right: 20px
-	.ingreds__in
-		background: none
-		border: none 
 	.ingreds__title
-		padding: 15px 0
+		padding: 15px 7px
+	.ingreds__text
+		padding: 0 7px
 	.ingreds__list
-		label
-			padding: 7px 37px 7px 0
-			+clr
-		input, i
-			right: 0
 		span
 			display: block
 			overflow: hidden
@@ -2095,15 +2096,6 @@
 	border-radius: 3px
 	border: 1px solid #e7e7e7
 	overflow: hidden
-.recipe__comm
-	float: right
-	width: 315px
-	margin-left: 20px 
-	+rt(1260)
-		float: none
-		width: auto
-		max-width: 500px
-		overflow: hidden
 //comment
 .comment
 	margin-bottom: 20px
@@ -2113,7 +2105,7 @@
 	padding: 10px 15px
 	border: 1px solid #e7e7e7
 	border-radius: 3px
-	background: #fbfbfb
+	background: #fff
 	font-size: 16px
 	line-height: 1.4
 	color: #666  
@@ -2125,7 +2117,7 @@
 		border-style: solid
 		border-width: 14px 12px 0 0
 	&:after
-		border-color: #fbfbfb transparent transparent transparent
+		border-color: #fff transparent transparent transparent
 		bottom: -12px
 		left: 49px
 	&:before

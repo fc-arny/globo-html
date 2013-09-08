@@ -742,16 +742,17 @@ table
 	border: 1px solid #e7e7e7
 	border-width: 1px 0 	
 .jspDrag
-	background: #bbd
 	position: relative
 	top: -1px
 	left: 0
 	height: 6px
 	border-top: 2px solid #fff
 	border-radius: 2px
-	box-shadow: 0 0 0 1px #e0e0e0
-	background: #eee
-	@include background-image(linear-gradient(#eee, #e0e0e0))
+	//box-shadow: 0 0 0 1px #e0e0e0
+	box-shadow: 0 0 0 1px $bl
+	//background: #eee
+	background: $bl
+	//@include background-image(linear-gradient(#eee, #e0e0e0))
 	cursor: pointer
 .jspHorizontalBar .jspTrack,
 .jspHorizontalBar .jspDrag

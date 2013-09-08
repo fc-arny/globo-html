@@ -292,7 +292,7 @@ table { border-spacing: 0; border-collapse: collapse; }
 
 .jspTrack { position: relative; background: #cbcbcb; border: 1px solid #e7e7e7; border-width: 1px 0; }
 
-.jspDrag { background: #bbbbdd; position: relative; top: -1px; left: 0; height: 6px; border-top: 2px solid white; border-radius: 2px; box-shadow: 0 0 0 1px #e0e0e0; background: #eeeeee; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #eeeeee), color-stop(100%, #e0e0e0)); background-image: -webkit-linear-gradient(#eeeeee, #e0e0e0); background-image: -moz-linear-gradient(#eeeeee, #e0e0e0); background-image: -o-linear-gradient(#eeeeee, #e0e0e0); background-image: linear-gradient(#eeeeee, #e0e0e0); cursor: pointer; }
+.jspDrag { position: relative; top: -1px; left: 0; height: 6px; border-top: 2px solid white; border-radius: 2px; box-shadow: 0 0 0 1px #009bea; background: #009bea; cursor: pointer; }
 
 .jspHorizontalBar .jspTrack, .jspHorizontalBar .jspDrag { float: left; height: 100%; }
 
@@ -1265,6 +1265,13 @@ a.btn-dashed { display: inline-block; }
 
 .blog__item, .faq__item { padding-bottom: 15px; margin-bottom: 15px; border-bottom: 2px dashed #d9d9d9; }
 
+.blog__item-in:before, .blog__item-in:after { content: ""; display: table; }
+.blog__item-in:after { clear: both; }
+
+.blog__pic { float: left; margin-right: 40px; }
+
+.blog__detail { display: table; }
+
 .blog__title, .faq__question { margin-bottom: 10px; font-size: 16px; font-weight: bold; text-transform: uppercase; color: #009bea; }
 
 .blog__meta { margin-bottom: 10px; font-size: 12px; color: #888888; }
@@ -1447,12 +1454,8 @@ a.btn-dashed { display: inline-block; }
 .recipe__cols:after { clear: both; }
 
 .recipe__ingreds { float: left; width: 315px; margin-right: 20px; }
-.recipe__ingreds .ingreds__in { background: none; border: none; }
-.recipe__ingreds .ingreds__title { padding: 15px 0; }
-.recipe__ingreds .ingreds__list label { padding: 7px 37px 7px 0; }
-.recipe__ingreds .ingreds__list label:before, .recipe__ingreds .ingreds__list label:after { content: ""; display: table; }
-.recipe__ingreds .ingreds__list label:after { clear: both; }
-.recipe__ingreds .ingreds__list input, .recipe__ingreds .ingreds__list i { right: 0; }
+.recipe__ingreds .ingreds__title { padding: 15px 7px; }
+.recipe__ingreds .ingreds__text { padding: 0 7px; }
 .recipe__ingreds .ingreds__list span { display: block; overflow: hidden; }
 .recipe__ingreds .ingreds__list strong { float: right; margin-left: 20px; font-weight: normal; color: #666666; }
 .recipe__ingreds .ingreds__search { padding: 0 10px 25px; text-align: center; }
@@ -1461,14 +1464,11 @@ a.btn-dashed { display: inline-block; }
 
 .recipe__cooking { padding: 20px 0 20px 30px; background: white; border-radius: 3px; border: 1px solid #e7e7e7; overflow: hidden; }
 
-.recipe__comm { float: right; width: 315px; margin-left: 20px; }
-@media only screen and (max-width: 1260px) { .recipe__comm { float: none; width: auto; max-width: 500px; overflow: hidden; } }
-
 .comment { margin-bottom: 20px; }
 
-.comment__text { margin-bottom: 20px; position: relative; padding: 10px 15px; border: 1px solid #e7e7e7; border-radius: 3px; background: #fbfbfb; font-size: 16px; line-height: 1.4; color: #666666; }
+.comment__text { margin-bottom: 20px; position: relative; padding: 10px 15px; border: 1px solid #e7e7e7; border-radius: 3px; background: white; font-size: 16px; line-height: 1.4; color: #666666; }
 .comment__text:before, .comment__text:after { content: ""; position: absolute; width: 0px; height: 0px; border-style: solid; border-width: 14px 12px 0 0; }
-.comment__text:after { border-color: #fbfbfb transparent transparent transparent; bottom: -12px; left: 49px; }
+.comment__text:after { border-color: white transparent transparent transparent; bottom: -12px; left: 49px; }
 .comment__text:before { border-color: #e7e7e7 transparent transparent transparent; bottom: -15px; left: 48px; }
 
 .comment__person:before, .comment__person:after { content: ""; display: table; }
