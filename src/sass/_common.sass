@@ -105,6 +105,9 @@ table
 .title_small
 	font-size: 16px
 	text-transform: none 
+.title_big
+	font-size: 32px
+	text-transform: none 
 //header
 .header
 	position: relative
@@ -152,8 +155,6 @@ table
 		float: left
 	& > a
 		color: #FFF 
-		&:hover
-			text-decoration: underline
 	& > button
 		padding: 1px 5px 
 		margin-left: 14px 
@@ -161,7 +162,11 @@ table
 		background: none 		
 		i		
 			display: block
+			opacity: .7 
 			+s(login)
+		&:hover
+			i
+				opacity: 1 
 	&:before
 		content: ""
 		position: absolute 
@@ -172,6 +177,10 @@ table
 		border-style: solid
 		border-width: 10px 8px 10px 0
 		border-color: transparent $bl transparent transparent
+	&:hover
+		background: $blh 
+		&:before
+			border-color: transparent $blh transparent transparent
 	+rt(1120)
 		margin: 40px 0 0 20px
 .login__links
@@ -208,32 +217,10 @@ table
 	a
 		position: relative
 		display: block
-		padding: 4px 0 4px 29px
+		padding: 7px 4px
 		color: #979797 
 		&:hover
 			color: $bl 
-	i
-		position: absolute
-		top: 3px
-		left: 3px
-.login__link-1
-	i
-		+s(login-set-1)
-	&:hover
-		i
-			+s(login-set-1-h)
-.login__link-2
-	i
-		+s(login-set-2)
-	&:hover
-		i
-			+s(login-set-2-h)
-.login__link-3
-	i
-		+s(login-set-3)
-	&:hover
-		i
-			+s(login-set-3-h)
 .nav
 	float: right
 	margin-top: 42px
@@ -302,10 +289,14 @@ table
 		&:first-child
 			border: none
 		img
+			opacity: .6
 			&:hover
-				opacity: .6
+				opacity: 1
 .sel-shop__pic
 	text-align: center
+	img
+		&:hover
+			opacity: .6
 //menu
 .menu
 	position: relative
@@ -691,27 +682,6 @@ table
 	&:after		
 		top: 10px
 		width: 8px		 
-//forms
-.checkbox
-	position: relative
-	display: block
-	min-height: 18px
-	margin-bottom: 10px 
-	padding: 3px 0 0 30px
-	+no-sel
-	input, i
-		position: absolute
-		top: 0
-		left: 0
-		width: 21px
-		height: 21px
-	input
-		opacity: 0
-		&:checked + i
-			+s(checkbox)
-	i
-		border-radius: 3px
-		box-shadow: 0 1px 1px rgba(0,0,0,.25) inset
 //scroll
 .jspContainer
 	overflow: hidden
@@ -730,34 +700,29 @@ table
 	bottom: 3px
 	left: 0
 	width: 100%
-	height: 6px
-	background: red
+	height: 8px
+	z-index: 20 
 .jspCap
 	display: none
 .jspHorizontalBar .jspCap
 	float: left
 .jspTrack
 	position: relative
+	float: left
+	height: 6px
 	background: #cbcbcb
 	border: 1px solid #e7e7e7
+	border-radius: 2px
 	border-width: 1px 0 	
+	cursor: pointer	
 .jspDrag
 	position: relative
-	top: -1px
+	top: -2px
 	left: 0
-	height: 6px
-	border-top: 2px solid #fff
+	height: 10px
 	border-radius: 2px
-	//box-shadow: 0 0 0 1px #e0e0e0
-	box-shadow: 0 0 0 1px $bl
-	//background: #eee
 	background: $bl
-	//@include background-image(linear-gradient(#eee, #e0e0e0))
-	cursor: pointer
-.jspHorizontalBar .jspTrack,
-.jspHorizontalBar .jspDrag
-	float: left
-	height: 100%
+	opacity: .7 
 .jspArrow
 	background: #50506d
 	text-indent: -20000px
@@ -901,13 +866,14 @@ a
 .label__txt, .label__area
 	width: 100%
 	border: 1px solid $gr
-	background: #fbfbfb 
+	background: #fff 
 	font-size: 16px
 	color: #afafaf 
 	border-radius: 2px
+	+trans(box-shadow .2s linear)
 	+box
 	&:focus
-		background: #fff
+		box-shadow: 0 0 5px #a8dc61
 .label__txt	
 	height: 30px
 	padding: 0 8px	 
@@ -937,7 +903,7 @@ a
 	position: relative
 	height: 28px
 	border: 1px solid $gr
-	background: #fbfbfb 
+	background: #fff
 	border-radius: 2px
 	span
 		position: relative
@@ -975,7 +941,7 @@ a
 		left: -1px
 		right: -1px
 		border: 1px solid $gr
-		background: #fbfbfb 
+		background: #fff
 		z-index: 100 
 		li
 			padding: 3px 8px
@@ -1019,7 +985,7 @@ a
 	i
 		border: 1px solid $gr
 		border-radius: 2px
-		background: #fbfbfb
+		background: #fff
 	span
 		display: block
 		padding-top: 2px
@@ -1244,7 +1210,7 @@ a
 	left: 30px
 	width: 220px
 	padding: 10px
-	background: #f8f8f8 
+	background: #fff
 	border: 1px solid #d6d6d6
 	box-shadow: 0 0 3px rgba(0,0,0,.2) 
 	border-radius: 5px
@@ -1263,7 +1229,7 @@ a
 		border-width: 4px 8px 4px 0		
 	&:after
 		left: -7px
-		border-color: transparent #f8f8f8 transparent transparent
+		border-color: transparent #fff transparent transparent
 	&:before
 		left: -9px
 		border-color: transparent #d6d6d6 transparent transparent

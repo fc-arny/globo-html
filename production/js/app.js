@@ -7,8 +7,19 @@ var header = $('.header');
 
 var btn_login = $('.js-login');
 btn_login.click(function() {
-  $(this).next().fadeIn(300);
+  $(this).next().show();
 });
+btn_login.next().hover(
+  function() {
+    clearTimeout(timeout);
+  },
+  function() {
+    //$(this).hide();
+    var timeout = setTimeout(function(){
+     btn_login.next().hide();
+    }, 2000);
+  }
+);
 btn_login.click(function(event){
   event.stopPropagation();
 });
@@ -445,6 +456,19 @@ function vacancy() {
   });
 };
 
+//address
+function address() {
+  var template = $('.js-address-template').html();
+  var list = $('.js-address-list');
+  var btn_add = $('.js-address-add');
+  btn_add.click(function() {
+    list.append(template);
+  });
+  $(document).on('click', '.js-address-del', function() {
+    $(this).parent().parent().remove();
+  });
+};
+
 //init
 submenu();
 slidermenu();
@@ -460,6 +484,7 @@ cabinet();
 search_shop();
 scroll_init();
 vacancy();
+address();
 
 //window resize
 $(window).resize(function() {

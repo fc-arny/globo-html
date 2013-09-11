@@ -31,9 +31,9 @@
 			<a href="#">John Doe</a>
 			<button class="js-login"><i></i></button>
 			<ul class="login__links">
-				<li><a class="login__link-1" href="#">Настройки<i></i></a></li>
-				<li><a class="login__link-2" href="#">Избранное<i></i></a></li>
-				<li><a class="login__link-3" href="#">Выход<i></i></a></li>
+				<li><a href="#">Настройки</a></li>
+				<li><a href="#">Избранное</a></li>
+				<li><a href="#">Выход</a></li>
 			</ul>
 		</div>
 		<nav class="nav">
@@ -290,42 +290,32 @@
 				<!-- END .search -->
 				<!-- BEGIN .filter -->
 				<div class="filter">
-					<div class="filter__item">
-						<div class="filter__title">
-							<span>КАТЕГОРИИ<i class="filter__ico-1"></i></span>
-						</div>
-						<div class="filter__list">
-							<label class="checkbox">
-								<input type="checkbox" checked>
-								<i></i>
-								<span>Суши</span>
-							</label>
-							<label class="checkbox">
-								<input type="checkbox">
-								<i></i>
-								<span>Сашими</span>
-							</label>
-							<label class="checkbox">
-								<input type="checkbox">
-								<i></i>
-								<span>Роллы</span>
-							</label>
-							<label class="checkbox">
-								<input type="checkbox" checked>
-								<i></i>
-								<span>Японские супы</span>
-							</label>
-							<label class="checkbox">
-								<input type="checkbox">
-								<i></i>
-								<span>Японские салаты</span>
-							</label>
-							<label class="checkbox">
-								<input type="checkbox">
-								<i></i>
-								<span>Напитки</span>
-							</label>
-						</div>
+					<div class="filter__title">Все категории<i class="filter__ico"></i></div>
+					<div class="filter__list">
+						<label class="filter__item">
+							<input type="radio" name="filter">
+							<span>Суши</span>
+						</label>
+						<label class="filter__item">
+							<input type="radio" name="filter" checked>
+							<span>Сашими</span>
+						</label>
+						<label class="filter__item">
+							<input type="radio" name="filter">
+							<span>Роллы</span>
+						</label>
+						<label class="filter__item">
+							<input type="radio" name="filter">
+							<span>Японские супы</span>
+						</label>
+						<label class="filter__item">
+							<input type="radio" name="filter">
+							<span>Японские салаты</span>
+						</label>
+						<label class="filter__item">
+							<input type="radio" name="filter">
+							<span>Напитки</span>
+						</label>
 					</div>
 				</div>
 				<!-- END .filter -->
@@ -757,8 +747,10 @@
 				</div>						
 			</li>
 		</ul>
-	</div>			
-	<button class="cart__go"><span>ОФОРМИТЬ ЗАКАЗ</span></button>
+		<div class="cart__go">
+			<button>ОФОРМИТЬ ЗАКАЗ</button>
+		</div>
+	</div>	
 	<!-- BEGIN .cart__popup -->
 	<div class="cart__popup">
 		<div class="cart__arr"></div>
