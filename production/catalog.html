@@ -25,16 +25,21 @@
 	<div class="header__top">
 		<a class="logo" href="#">
 			<span class="logo__pic"></span>
-			<span class="logo__txt">Покупки это просто</span>
+			<span class="logo__txt">
+				<span>Globo</span>
+				<span>Market</span>				
+			</span>
 		</a>
 		<div class="login">
 			<a href="#">John Doe</a>
 			<button class="js-login"><i></i></button>
-			<ul class="login__links">
-				<li><a href="#">Настройки</a></li>
-				<li><a href="#">Избранное</a></li>
-				<li><a href="#">Выход</a></li>
-			</ul>
+			<div class="login__links">
+				<ul>
+					<li><a href="#">Настройки</a></li>
+					<li><a href="#">Избранное</a></li>
+					<li><a href="#">Выход</a></li>
+				</ul>
+			</div>
 		</div>
 		<nav class="nav">
 			<a href="#">Каталог</a>
@@ -290,7 +295,10 @@
 				<!-- END .search -->
 				<!-- BEGIN .filter -->
 				<div class="filter">
-					<div class="filter__title">Все категории<i class="filter__ico"></i></div>
+					<label class="filter__all">
+						<input type="radio" name="filter">
+						<span>Все категории</span>
+					</label>
 					<div class="filter__list">
 						<label class="filter__item">
 							<input type="radio" name="filter">
@@ -300,7 +308,7 @@
 							<input type="radio" name="filter" checked>
 							<span>Сашими</span>
 						</label>
-						<label class="filter__item">
+						<label class="filter__item"> 
 							<input type="radio" name="filter">
 							<span>Роллы</span>
 						</label>
@@ -317,7 +325,7 @@
 							<span>Напитки</span>
 						</label>
 					</div>
-				</div>
+				</div>  
 				<!-- END .filter -->
 			</aside>			
 			<div class="center">
@@ -562,9 +570,12 @@
 	<div class="footer__in">
 		<div class="footer__left">
 			<a class="logo" href="#">
-				<span class="logo__pic"></span>
-				<span class="logo__txt">Покупки это просто</span>
-			</a>
+                <span class="logo__pic"></span>
+                <span class="logo__txt">
+                    <span>Globo</span>
+                    <span>Market</span>             
+                </span>
+            </a>
 			<div class="social">
 				<a class="social__ok" href="#"><i></i></a>
 				<a class="social__fb" href="#"><i></i></a>

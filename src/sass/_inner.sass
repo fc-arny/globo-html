@@ -41,22 +41,33 @@
 		right: 0
 		height: 8px
 		background: url(../img/icons/wave.png) repeat-x 
-.filter__title
+.filter__all	
+	margin-bottom: 5px
+	cursor: pointer
+	span
+	display: block
 	position: relative
 	padding-left: 30px
-	margin-bottom: 5px
 	font-size: 17px
 	font-weight: bold
-	i
+	&:before
+		content: ""
 		position: absolute
 		top: -1px
 		left: 0
-.filter__ico
-	+s(filter-title)
+		+s(filter-title)
+	input
+		position: absolute
+		top: 3px
+		left: 3px
+		opacity: 0
+		&:checked + span
+			color: $bl 
 .filter__list
 	position: relative
 	padding: 5px 0	
 .filter__item
+	position: relative
 	display: block
 	min-height: 18px
 	margin-bottom: 10px 	
@@ -142,6 +153,7 @@
 .bc__ico-1
 	+s(bc-ico-1)
 .bc__filter
+	display: none
 	position: relative
 	span
 		margin-right: 5px 
@@ -2163,6 +2175,7 @@
 	+rt(1120)
 		float: none
 		width: auto		
+		overflow: hidden
 		margin: 0 0 20px 0
 		.comment
 			max-width: 500px 

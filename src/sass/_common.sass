@@ -3,7 +3,7 @@
 	margin: 0
 	padding: 0
 	//box-shadow: 0 0 5px red
-	//-webkit-text-size-adjust: none
+	-webkit-text-size-adjust: none
 html, body 
 	height: 100%
 body	
@@ -134,17 +134,24 @@ table
 		padding: 0 30px 0 0
 .logo
 	float: left
-	margin: 19px 0 0 23px
+	margin: 8px 0 0 45px
+	font-size: 0
+	text-align: center
 .logo__pic
-	display: block
+	display: inline-block
 	margin: 0 12px 5px 0
-	+s(logo)
+	+s(logo-new)
 .logo__txt
 	display: block
-	font-size: 12px
-	font-style: italic
-	color: #444 
-	text-align: right
+	span
+		display: inline-block
+		font-family: Georgia 
+		color: #444 
+		text-align: right
+		text-transform: uppercase
+		font-size: 15px
+		&:first-letter
+			font-size: 18px
 .login
 	position: relative
 	float: right
@@ -155,6 +162,9 @@ table
 		float: left
 	& > a
 		color: #FFF 
+		opacity: .7 
+		&:hover
+			opacity: 1 
 	& > button
 		padding: 1px 5px 
 		margin-left: 14px 
@@ -177,50 +187,49 @@ table
 		border-style: solid
 		border-width: 10px 8px 10px 0
 		border-color: transparent $bl transparent transparent
-	&:hover
-		background: $blh 
-		&:before
-			border-color: transparent $blh transparent transparent
 	+rt(1120)
 		margin: 40px 0 0 20px
 .login__links
 	display: none
 	position: absolute
-	top: 30px 
+	top: 20px 
 	right: 1px 
-	padding: 5px 8px
-	border: 1px solid #dedede
-	border-radius: 2px
-	background: #fff
-	box-shadow: 0 1px 1px rgba(0,0,0,.1)
-	z-index: 250 
-	&:before, &:after
-		content: ""
-		position: absolute
-		width: 0px
-		height: 0px
-		border-style: solid		
-	&:after
-		right: 4px
-		top: -8px
-		border-width: 0 6px 9px 6px
-		border-color: transparent transparent #fff transparent
-	&:before
-		right: 3px
-		top: -10px
-		border-width: 0 7px 10px 7px
-		border-color: transparent transparent #dedede transparent
-	li
-		border-top: 1px dotted #d6d6d6	
-		&:first-child
-			border: none
-	a
+	padding-top: 10px
+	ul
 		position: relative
-		display: block
-		padding: 7px 4px
-		color: #979797 
-		&:hover
-			color: $bl 
+		padding: 5px 8px
+		border: 1px solid #dedede
+		border-radius: 2px
+		background: #fff
+		box-shadow: 0 1px 1px rgba(0,0,0,.1)
+		z-index: 250 
+		&:before, &:after
+			content: ""
+			position: absolute
+			width: 0px
+			height: 0px
+			border-style: solid		
+		&:after
+			right: 4px
+			top: -8px
+			border-width: 0 6px 9px 6px
+			border-color: transparent transparent #fff transparent
+		&:before
+			right: 3px
+			top: -10px
+			border-width: 0 7px 10px 7px
+			border-color: transparent transparent #dedede transparent
+		li
+			border-top: 1px dotted #d6d6d6	
+			&:first-child
+				border: none
+		a
+			position: relative
+			display: block
+			padding: 7px 4px
+			color: #979797 
+			&:hover
+				color: $bl 
 .nav
 	float: right
 	margin-top: 42px
@@ -525,15 +534,11 @@ table
 		display: block
 		float: none
 		padding-bottom: 15px
-		margin: 2px 0 18px 0
-		&:after
-			content: "....................................."
-			position: absolute
-			left: 15px 
-			text-shadow: 0 0 2px #999
-			color: #999
+		margin: 2px 15px 18px 15px
+		border-bottom: 2px dotted #fff 
 	.logo__txt
-		color: #FFF 
+		span
+			color: #FFF 
 .social
 	font-size: 0
 	a
@@ -820,8 +825,6 @@ a
 			border-color: #c9c9c9
 	&.is-error
 		position: relative
-		.label__txt
-			border-color: #e07a5e
 		.label__error
 			display: block
 			position: absolute
@@ -831,7 +834,7 @@ a
 			min-height: 20px
 			padding: 10px
 			line-height: 20px 
-			background: #f8f8f8 
+			background: #fcf2f1 
 			border: 1px solid #e07a5e
 			border-radius: 2px
 			box-shadow: 0 0 3px rgba(0,0,0,.3)
@@ -856,7 +859,7 @@ a
 				top: 13px
 				left: -12px
 				border-width: 7px 12px 7px 0
-				border-color: transparent #f8f8f8 transparent transparent
+				border-color: transparent #fcf2f1 transparent transparent
 .label_no-title
 	padding-top: 25px 
 .label_mod
